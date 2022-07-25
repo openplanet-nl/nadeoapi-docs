@@ -1,0 +1,39 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Docker Image",
+            "type": "shell",
+            "command": "docker",
+            "args": [
+                "build",
+                "-t",
+                "op-nadeoapi-docs",
+                "."
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Run Docker Image",
+            "type": "shell",
+            "command": "docker",
+            "args": [
+                "run",
+                "--rm",
+                "-v",
+                "${workspaceRoot}:/var/www/html",
+                "-p",
+                "80:80",
+                "op-nadeoapi-docs"
+            ],
+            "isBackground": true,
+            "problemMatcher": []
+        }
+    ]
+}
