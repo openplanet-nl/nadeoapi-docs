@@ -74,14 +74,39 @@
 
 		<section class="section">
 			<div class="container">
-				<!-- TODO -->
-				<!-- <nav class="breadcrumb">
-					<ul>
-						<li><a href="#"></a></li>
-					</ul>
-				</nav> -->
+				<div class="columns">
+					<div class="column is-one-fifth">
+						<aside class="menu">
+							<p class="menu-label">
+								General
+							</p>
+							<ul class="menu-list">
+								<li><a>Home</a></li>
+							</ul>
+							<p class="menu-label">
+								NadeoLiveServices
+							</p>
+							<ul class="menu-list">
+								<li>
+									<a class="is-active">Tracks</a>
+									<ul>
+										<li><a class="is-active">Get map info</a></li>
+									</ul>
+								</li>
+							</ul>
+						</aside>
+					</div>
+					<div class="column">
+						<!-- TODO -->
+						<!-- <nav class="breadcrumb">
+							<ul>
+								<li><a href="#"></a></li>
+							</ul>
+						</nav> -->
 
-				<?= $content ?>
+						<?= $content ?>
+					</div>
+				</div>
 			</div>
 		</section>
 
