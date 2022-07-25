@@ -72,6 +72,8 @@
 			</div>
 		</nav>
 
+		<?= json_encode($this->renderSideMenu()) ?>
+
 		<section class="section">
 			<div class="container">
 				<div class="columns">
