@@ -12,7 +12,10 @@ nf_begin([
 	'routing' => [
 		'preferRules' => false,
 		'rules' => [
-			'/^\\/(?<path>[a-z0-9\\-_\\/]+)$/' => 'IndexController.Page',
+			'/^\\/(?<path>[a-z0-9\\-\\/]+)$/' => 'IndexController.Page',
 		],
+	],
+	'cache' => [
+		'class' => 'APCu',
 	],
 ]);

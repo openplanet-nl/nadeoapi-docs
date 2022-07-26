@@ -1,3 +1,3 @@
 <div class="content">
-	<?= $html ?>
+	<?= $page->getHtml() ?>
 </div>

@@ -1,13 +1,10 @@
----
-dirs:
-  - live
-pages:
-  - auth
----
+# Authentication
+This page explains the authentication process.
 
-# Home
-Hello this is the home
+## Why authenticate?
+Because otherwise you can't do anything.
 
+## Latin text
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

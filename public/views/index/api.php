@@ -1,19 +1,19 @@
-<p class="title"><?= Nin\Html::encode($meta['name']) ?></p>
-<p class="subtitle"><?= Nin\Html::encode($meta['audience']) ?></p>
+<p class="title"><?= Nin\Html::encode($page->meta['name']) ?></p>
+<p class="subtitle"><?= Nin\Html::encode($page->meta['audience']) ?></p>
 
 <code>
 	<span class="has-text-weight-bold has-text-<?php
-	switch ($meta['method']) {
+	switch ($page->meta['method']) {
 		case 'GET': echo 'success'; break;
 		case 'POST': echo 'danger'; break;
 	}
-	?>"><?= Nin\Html::encode($meta['method']) ?></span>
-	<span class="has-text-grey"><?= Nin\Html::encode($meta['url']) ?></span><?= $route_html ?>
+	?>"><?= Nin\Html::encode($page->meta['method']) ?></span>
+	<?= $page->getRouteHtml() ?>
 </code>
 
 <?php
-if (isset($meta['parameters'])) {
-	$params = $meta['parameters'];
+if (isset($page->meta['parameters'])) {
+	$params = $page->meta['parameters'];
 
 	if (isset($params['path'])) {
 		$params_path = $params['path'];
@@ -60,5 +60,5 @@ if (isset($meta['parameters'])) {
 <hr>
 
 <div class="content">
-	<?= $html ?>
+	<?= $page->getHtml() ?>
 </div>
