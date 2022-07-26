@@ -95,10 +95,6 @@
 			</div>
 		</section>
 
-		<section class="section">
-			<pre><?= json_encode($this->getPageIndex(), JSON_PRETTY_PRINT) ?></pre>
-		</section>
-
 		<footer class="footer">
 			<div class="content has-text-centered">
 				<p><small>This documentation is not affiliated with or endorsed by Nadeo or Ubisoft. All relevant trademarks belong to their respective owners.</small></p>
