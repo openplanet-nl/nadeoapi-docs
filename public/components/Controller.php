@@ -114,9 +114,9 @@ class Controller extends Nin\Controller
 
 	public function getPageIndex()
 	{
-		//TODO: Enable caching
-		//return nf_cache()->take('page_index', 3600, function() {
+		//TODO: Use > 1 second caching
+		return nf_cache()->take('page_index', 1, function() {
 			return $this->getPageIndexInternal();
-		//});
+		});
 	}
 }
