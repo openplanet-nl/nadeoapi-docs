@@ -1,6 +1,7 @@
 ---
 dirs:
   - live
+  - core
 pages:
   - auth
 ---
