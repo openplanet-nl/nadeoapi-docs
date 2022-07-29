@@ -46,7 +46,7 @@ Retrieves your favorite tracks along with their information.
 **Example request**:
 
 ```plain
-GET https://live-services.trackmania.nadeo.live/api/token/map/favorite?offset=0&length=1
+GET https://live-services.trackmania.nadeo.live/api/token/map/favorite?offset=0&length=1&sort=date&order=desc&mapType=Trackmania\TM_Race&playable=true
 ```
 
 **Example response**:
