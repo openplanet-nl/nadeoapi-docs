@@ -1,5 +1,5 @@
 ---
-name: Remove a map from your favorites
+name: Remove favorite map
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
@@ -14,15 +14,23 @@ parameters:
       required: true
 ---
 
-Remove a track by its UID from your favorite tracks on Nadeo Services.
+Removes a map from your favorites.
 
-Example response:
+---
+
+**Example request**:
+
+```plain
+POST https://live-services.trackmania.nadeo.live/api/token/map/favorite/EgUgXeBV8vpEth2hZgSzLhlHRs8/remove
+```
+
+**Example response**:
 
 ```plain
 Map favorite deleted
 ```
 
-Example response if a map is unknown:
+Example response if the requested map does not exist:
 
 ```json
 [
@@ -30,7 +38,7 @@ Example response if a map is unknown:
 ]
 ```
 
-Example response if a map is not on your favorite tracks:
+Example response if the requested map is not among your favorites:
 
 ```json
 [

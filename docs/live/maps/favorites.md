@@ -1,5 +1,5 @@
 ---
-name: Get your favorite maps
+name: Get favorite maps
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
@@ -10,43 +10,43 @@ parameters:
   query:
     - name: offset
       type: integer
-      description: The offset to start from
-      required: false
-      default: 0
-    - name: limit
+      description: The number of maps to skip
+      required: true
+    - name: length
       type: integer
-      description: The maximum number of tracks to return
-      required: false
+      description: The number of maps to retrieve
+      required: true
       minimum: 1
       maximum: 100
     - name: sort
       type: string
-      description: The sort order of the tracks
+      description: The sorting of the maps
       required: false
       default: "date"
     - name: order
       type: string
-      description: The order of the tracks
+      description: The order of the maps based on the sorting
       required: false
       default: "desc"
     - name: mapType
       type: string
       description: The map type filter
       required: false
+      default: "TrackMania\\TM_Race"
     - name: playable
-      type: integer
+      type: boolean
       description: Whether the map is validated and playable
       required: false
 ---
 
-Retrives your favorite tracks on Nadeo Services and get its map infos.
+Retrieves your favorite tracks along with their information.
 
 ---
 
 **Example request**:
 
 ```plain
-GET https://live-services.trackmania.nadeo.live/api/token/map/favorite?offset=0&limit=1&sort=date&order=desc&mapType=Trackmania\\TM_Race&playable=1
+GET https://live-services.trackmania.nadeo.live/api/token/map/favorite?offset=0&length=1
 ```
 
 **Example response**:

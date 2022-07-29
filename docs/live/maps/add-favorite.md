@@ -1,5 +1,5 @@
 ---
-name: Add a map to your favorites
+name: Add favorite map
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
@@ -15,15 +15,22 @@ parameters:
       required: true
 ---
 
-Adds a track by its UID to your favorite tracks on Nadeo Services.
+Adds a map to your favorites.
 
-Example response:
+---
+
+**Example request**:
+```plain
+POST https://live-services.trackmania.nadeo.live/api/token/map/favorite/EgUgXeBV8vpEth2hZgSzLhlHRs8/add
+```
+
+**Example response**:
 
 ```plain
 Map favorite created
 ```
 
-Example response if a map is unknown:
+Example response if the requested map does not exist:
 
 ```json
 [
