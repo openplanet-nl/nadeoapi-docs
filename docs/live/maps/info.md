@@ -60,4 +60,4 @@ Example response if the requested map does not exist:
 ]
 ```
 
-Note: be careful to check the response type; a valid track will return a object, but an invalid track will return an array with a string in it.
+Note: Be careful to check the response type; a valid track will return an object, but an invalid track will return an array with a string in it.

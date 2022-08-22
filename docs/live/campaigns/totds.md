@@ -1,9 +1,9 @@
 ---
-name: Get TOTDs
+name: Get TOTDs/Royal maps
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
-route: /api/token/campaign/month?length={length}&offset={offset}
+route: /api/token/campaign/month?length={length}&offset={offset}&royal={royal}
 
 audience: NadeoLiveServices
 
@@ -17,9 +17,13 @@ parameters:
       type: integer
       description: The number of months to skip (looking backwards from the current month)
       required: true
+    - name: royal
+      type: boolean
+      description: Whether to return maps for the Royal mode instead of TOTDs
+      require: false
 ---
 
-Gets Tracks of the Day by month.
+Gets Tracks of the Day (or Royal maps) by month.
 
 ---
 
@@ -80,18 +84,15 @@ GET https://live-services.trackmania.nadeo.live/api/token/campaign/month?offset=
 }
 ```
 
-If the month was before  does not exist, the response will show an empty leaderboard:
+If the month does not exist, the response will show an empty list:
 
 ```json
 {
-  "groupUid": "Personal_Best",
-  "mapUid": "ZJw6_4CItmVlRMPgELl4Q37Utw2_fake",
-  "tops": [
-    {
-      "zoneId": "301e1b69-7e13-11e8-8060-e284abfd2bc4",
-      "zoneName": "World",
-      "top": []
-    }
-  ]
+  "monthList": [
+
+  ],
+  "itemCount": 26,
+  "nextRequestTimestamp": 1661274000,
+  "relativeNextRequest": 77366
 }
 ```
