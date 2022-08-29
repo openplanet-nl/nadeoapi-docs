@@ -1,9 +1,9 @@
 ---
-name: Get player names
+name: Get player club tags
 
 url: https://prod.trackmania.core.nadeo.online
 method: GET
-route: /accounts/displayNames/?accountIdList={accountIdList}
+route: /accounts/clubTags/?accountIdList={accountIdList}
 
 audience: NadeoServices
 
@@ -15,7 +15,7 @@ parameters:
       required: true
 ---
 
-Gets player names from account IDs.
+Gets player club tags from account IDs.
 
 ---
 
@@ -26,7 +26,7 @@ Gets player names from account IDs.
 
 **Example request**:
 ```plain
-GET https://prod.trackmania.core.nadeo.online/accounts/displayNames/?accountIdList=5b4d42f4-c2de-407d-b367-cbff3fe817bc,7398eeb6-9b4e-44b8-a7a1-a2149955ac70
+GET https://prod.trackmania.core.nadeo.online/accounts/clubTags/?accountIdList=5b4d42f4-c2de-407d-b367-cbff3fe817bc
 ```
 
 **Example response**:
@@ -34,13 +34,8 @@ GET https://prod.trackmania.core.nadeo.online/accounts/displayNames/?accountIdLi
 [
   {
     "accountId": "5b4d42f4-c2de-407d-b367-cbff3fe817bc",
-    "displayName": "tooInfinite",
-    "timestamp": "2020-07-01T15:05:34+00:00"
-  },
-  {
-    "accountId": "7398eeb6-9b4e-44b8-a7a1-a2149955ac70",
-    "displayName": "Miss-tm",
-    "timestamp": "2020-06-05T19:32:19+00:00"
+    "clubTag": "$F05TSH",
+    "timestamp": "2022-04-18T10:35:43+00:00"
   }
 ]
 ```
@@ -50,10 +45,10 @@ If an `accountId` is invalid, the response will contain an error message:
 ```json
 {
   "code": "C-AA-00-03",
-    "correlation_id": "4874aee1aee172e0afd7f605100f170a",
-    "message": "There was a validation error.",
-    "info": {
-        "accountIdList": "Invalid account id."
-    }
+  "correlation_id": "8646a82e689541aff09f34244d879d88",
+  "message": "There was a validation error.",
+  "info": {
+    "accountIdList": "Invalid account id."
+  }
 }
 ```
