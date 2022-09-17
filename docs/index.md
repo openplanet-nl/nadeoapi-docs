@@ -1,7 +1,10 @@
 ---
 dirs:
-  - live
   - core
+  - live
+  - club
+  - competition
+  - matchmaking
 pages:
   - auth
 ---
