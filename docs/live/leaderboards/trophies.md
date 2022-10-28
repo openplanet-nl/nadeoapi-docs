@@ -3,7 +3,7 @@ name: Get player trophy rankings
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: api/token/leaderboard/trophy/player
+route: /api/token/leaderboard/trophy/player
 
 audience: NadeoLiveServices
 
