@@ -20,7 +20,7 @@ Gets player zones from account IDs.
 ---
 
 **Remarks**:
-- This endpoint may only be accessible to Ubisoft user accounts (as opposed to dedicated server accounts). If you encounter `401` errors using a dedicated server account, try using a Ubisoft account and see if that gives you the data you're looking for.
+- This endpoint is only accessible with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts). If you encounter `401` errors using a dedicated server account, switch to using a Ubisoft account.
 
 ---
 
