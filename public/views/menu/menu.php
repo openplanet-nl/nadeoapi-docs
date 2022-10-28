@@ -4,11 +4,11 @@
 		<?php
 		echo $this->renderPartial('/menu/item', [
 			'path' => '',
+			'icon' => 'fa-home',
 			'item' => [
 				'path' => '',
 				'name' => 'Home',
 			],
-			'show_children' => false,
 		]);
 
 		foreach ($index as $item) {
@@ -23,30 +23,18 @@
 		?>
 	</ul>
 
-	<?php
-	foreach ($index as $item) {
-		if ($item['type'] != 'dir') {
-			continue;
-		}
-		?>
-		<p class="menu-label"><?= Nin\Html::encode($item['name']) ?></p>
-		<ul class="menu-list">
-			<?php
+	<p class="menu-label">Reference</p>
+	<ul class="menu-list">
+		<?php
+		foreach ($index as $item) {
+			if ($item['type'] != 'dir') {
+				continue;
+			}
 			echo $this->renderPartial('/menu/item', [
 				'path' => '',
 				'item' => $item,
-				'show_children' => false,
 			]);
-
-			foreach ($item['children'] as $child) {
-				echo $this->renderPartial('/menu/item', [
-					'path' => $item['path'] . '/',
-					'item' => $child,
-				]);
-			}
-			?>
-		</ul>
-		<?php
-	}
-	?>
+		}
+		?>
+	</ul>
 </aside>

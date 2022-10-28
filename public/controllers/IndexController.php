@@ -53,4 +53,10 @@ class IndexController extends Controller
 			'page' => $page,
 		]);
 	}
+
+	public function actionApiIndex()
+	{
+		header('Content-Type: application/json');
+		echo json_encode($this->getPageIndex());
+	}
 }

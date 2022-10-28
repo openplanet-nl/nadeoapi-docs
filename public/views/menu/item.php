@@ -2,16 +2,22 @@
 global $nf_uri;
 
 $url = '/' . $path . $item['path'];
-$active = ($nf_uri == $url);
-
-$show_children = isset($show_children) ? $show_children : true;
+$active = false;
+if ($url != '/') {
+	$active = str_starts_with($nf_uri, $url);
+} else {
+	$active = ($nf_uri == $url);
+}
 ?>
 <li>
 	<a href="<?= Nin\Html::encode($url) ?>" <?= $active ? 'class="is-active"' : '' ?>>
+		<?php if (isset($icon)) { ?>
+			<span class="icon"><i class="fa <?= $icon ?>"></i></span>
+		<?php } ?>
 		<?= Nin\Html::encode($item['name']) ?>
 	</a>
 
-	<?php if ($show_children && isset($item['children'])) { ?>
+	<?php if ($active && isset($item['children'])) { ?>
 		<ul>
 			<?php
 			foreach ($item['children'] as $child) {
