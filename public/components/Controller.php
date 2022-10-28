@@ -150,4 +150,27 @@ class Controller extends Nin\Controller
 
 		return $info;
 	}
+
+	public function getBreadcrumbs()
+	{
+		global $nf_uri;
+		$parts = explode('/', trim($nf_uri, '/'));
+
+		$ret = [];
+
+		$path = '';
+		foreach ($parts as $part) {
+			$info = $this->getPageIndexInfo($path . $part);
+			if ($info === false) {
+				return [];
+			}
+			$ret[] = [
+				'name' => $info['name'],
+				'path' => $path . $part,
+			];
+			$path .= $part . '/';
+		}
+
+		return $ret;
+	}
 }

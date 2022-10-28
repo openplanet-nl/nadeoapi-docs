@@ -73,12 +73,24 @@
 					</div>
 
 					<div class="column docs-content">
-						<!-- TODO -->
-						<!-- <nav class="breadcrumb">
+						<nav class="breadcrumb">
 							<ul>
-								<li><a href="#"></a></li>
+								<?php
+								$crumbs = $this->getBreadcrumbs();
+								if (count($crumbs) > 1) {
+									foreach ($crumbs as $i => $crumb) {
+										?>
+										<li <?php if ($i == count($crumbs) - 1) { echo 'class="is-active"'; } ?>>
+											<a href="/<?= Nin\Html::encode($crumb['path']) ?>">
+												<?= Nin\Html::encode($crumb['name']) ?>
+											</a>
+										</li>
+										<?php
+									}
+								}
+								?>
 							</ul>
-						</nav> -->
+						</nav>
 
 						<?= $content ?>
 					</div>
