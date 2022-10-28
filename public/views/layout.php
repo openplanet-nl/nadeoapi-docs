@@ -55,19 +55,10 @@
 		<nav class="navbar">
 			<div class="container">
 				<div class="navbar-brand">
-					<span class="navbar-item">
+					<a href="/" class="navbar-item">
 						<span class="icon has-text-success"><i class="fa fa-code-fork"></i></span>
-						<b>TM API</b>
-					</span>
-				</div>
-
-				<div class="navbar-menu" id="navMenu">
-					<div class="navbar-start">
-						<a href="/" class="navbar-item">
-							<span class="icon"><i class="fa fa-home"></i></span>
-							<span>Home</span>
-						</a>
-					</div>
+						<b>Trackmania API</b>
+					</a>
 				</div>
 			</div>
 		</nav>
