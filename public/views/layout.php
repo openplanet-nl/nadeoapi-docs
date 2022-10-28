@@ -72,7 +72,7 @@
 						]) ?>
 					</div>
 
-					<div class="column">
+					<div class="column docs-content">
 						<!-- TODO -->
 						<!-- <nav class="breadcrumb">
 							<ul>

@@ -10,3 +10,7 @@ section.topheader p.openplanet a {
 	color: #f39;
 	font-weight: bold;
 }
+
+.docs-content {
+	overflow-x: auto;
+}
