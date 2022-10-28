@@ -2,7 +2,7 @@
 
 class PageInfo
 {
-	public array|bool $meta = false;
+	public array|null $meta = null;
 	public string $markdown = '';
 
 	public function __construct(string $path)
@@ -22,17 +22,17 @@ class PageInfo
 
 	public function isAPIEndpoint()
 	{
-		return $this->meta !== false && isset($this->meta['route']);
+		return $this->meta !== null && isset($this->meta['route']);
 	}
 
 	public function isAPIIndex()
 	{
-		return $this->meta !== false && isset($this->meta['index']);
+		return $this->meta !== null && isset($this->meta['index']);
 	}
 
 	public function getPosition()
 	{
-		if ($this->meta !== false && isset($this->meta['position'])) {
+		if ($this->meta !== null && isset($this->meta['position'])) {
 			return intval($this->meta['position']);
 		}
 		return 0;
@@ -40,7 +40,7 @@ class PageInfo
 
 	public function getName()
 	{
-		if ($this->meta !== false && isset($this->meta['name'])) {
+		if ($this->meta !== null && isset($this->meta['name'])) {
 			return $this->meta['name'];
 		}
 

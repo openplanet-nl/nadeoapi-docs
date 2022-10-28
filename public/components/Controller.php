@@ -31,7 +31,7 @@ class Controller extends Nin\Controller
 		if (file_exists($index_path)) {
 			$index_page = new PageInfo($index_path);
 
-			if ($index_page->meta !== false && isset($index_page->meta['dirs']) || isset($index_page->meta['pages'])) {
+			if ($index_page->meta !== null && isset($index_page->meta['dirs']) || isset($index_page->meta['pages'])) {
 				$dirs = [];
 				$pages = [];
 
