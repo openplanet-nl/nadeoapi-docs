@@ -1,3 +1,7 @@
+---
+icon: 'fa-lock'
+---
+
 # Authentication
 This guide will explain how to authenticate with Nadeo's API. There are 2 methods of doing so, one is via a Ubisoft account, and one is via a dedicated server account. Note that the dedicated server account way is easier but imposes **some** limitations on what you can access with the API, but it could be enough.
 

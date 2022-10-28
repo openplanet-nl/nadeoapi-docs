@@ -4,8 +4,6 @@ class IndexController extends Controller
 {
 	public function actionPage(string $path = '')
 	{
-		global $nf_www_dir;
-
 		if (!preg_match('/^[a-z0-9\\-_\\/]*$/', $path)) {
 			$this->displayError('Invalid path', 400);
 			return;
@@ -24,6 +22,37 @@ class IndexController extends Controller
 			return;
 		}
 
+		$indexInfo = false;
+		if ($path != '') {
+			$indexInfo = $this->getPageIndexInfo($path);
+			if ($indexInfo === false) {
+				$this->render404($path);
+				return;
+			}
+		}
+
+		$this->renderPage($path, $indexInfo);
+	}
+
+	private function render404(string $path)
+	{
+		$this->displayError('Page not found: ' . $path, 404);
+	}
+
+	private function renderIndex(string $path, $info)
+	{
+		$this->title = $info['name'];
+
+		$this->render('page-index', [
+			'path' => $path,
+			'info' => $info,
+		]);
+	}
+
+	private function renderPage(string $path, $info)
+	{
+		global $nf_www_dir;
+
 		$docs_dir = realpath($nf_www_dir . '/../docs');
 
 		$page_path = $docs_dir . '/' . $path . '.md';
@@ -35,22 +64,19 @@ class IndexController extends Controller
 				$page_path .= $path . '/index.md';
 			}
 			if (!file_exists($page_path)) {
-				$this->displayError('Page not found: ' . $path, 404);
+				$this->renderIndex($path, $info);
 				return;
 			}
 		}
 
-		$this->renderPage($page_path);
-	}
-
-	private function renderPage(string $file_path)
-	{
-		$page = new PageInfo($file_path);
+		$page = new PageInfo($page_path);
 
 		$this->title = $page->getName();
 
 		$this->render($page->getView(), [
+			'path' => $path,
 			'page' => $page,
+			'info' => $info,
 		]);
 	}
 

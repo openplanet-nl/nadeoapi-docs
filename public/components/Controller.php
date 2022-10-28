@@ -40,6 +40,7 @@ class Controller extends Nin\Controller
 						$dirs[] = [
 							'type' => 'dir',
 							'name' => str_replace('-', ' ', ucfirst($dir)),
+							'icon' => $index_page->meta['icon'] ?? '',
 							'path' => $dir,
 							'children' => $this->getPageIndexInternal($docs_dir . '/' . $dir),
 						];
@@ -58,6 +59,7 @@ class Controller extends Nin\Controller
 						$pages[] = [
 							'type' => 'page',
 							'name' => $page->getName(),
+							'icon' => $page->meta['icon'] ?? '',
 							'path' => $page_name,
 							'position' => $page->getPosition(),
 						];
@@ -85,6 +87,7 @@ class Controller extends Nin\Controller
 				$dirs[] = [
 					'type' => 'dir',
 					'name' => str_replace('-', ' ', ucfirst($filename)),
+					'icon' => '',
 					'path' => $filename,
 					'children' => $this->getPageIndexInternal($path),
 				];
@@ -104,6 +107,7 @@ class Controller extends Nin\Controller
 			$pages[] = [
 				'type' => 'page',
 				'name' => $page->getName(),
+				'icon' => $page->meta['icon'] ?? '',
 				'path' => $filename,
 				'position' => $page->getPosition(),
 			];
@@ -118,5 +122,32 @@ class Controller extends Nin\Controller
 		return nf_cache()->take('page_index', 1, function() {
 			return $this->getPageIndexInternal();
 		});
+	}
+
+	public function getPageIndexInfo(string $path)
+	{
+		$info = false;
+		$index = $this->getPageIndex();
+
+		$parts = explode('/', $path);
+		foreach ($parts as $part) {
+			$found = false;
+			foreach ($index as $page) {
+				if ($page['path'] == $part) {
+					if (!isset($page['children'])) {
+						return $page;
+					}
+					$index = $page['children'];
+					$info = $page;
+					$found = true;
+					break;
+				}
+			}
+			if (!$found) {
+				return false;
+			}
+		}
+
+		return $info;
 	}
 }

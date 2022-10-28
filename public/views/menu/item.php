@@ -11,8 +11,8 @@ if ($url != '/') {
 ?>
 <li>
 	<a href="<?= Nin\Html::encode($url) ?>" <?= $active ? 'class="is-active"' : '' ?>>
-		<?php if (isset($icon)) { ?>
-			<span class="icon"><i class="fa <?= $icon ?>"></i></span>
+		<?php if ($item['icon'] != '') { ?>
+			<span class="icon"><i class="fa <?= $item['icon'] ?>"></i></span>
 		<?php } ?>
 		<?= Nin\Html::encode($item['name']) ?>
 	</a>

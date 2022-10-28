@@ -66,7 +66,7 @@
 		<section class="section">
 			<div class="container">
 				<div class="columns">
-					<div class="column is-one-fifth">
+					<div class="column is-3">
 						<?= $this->renderPartial('/menu/menu', [
 							'index' => $this->getPageIndex(),
 						]) ?>

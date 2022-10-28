@@ -4,9 +4,9 @@
 		<?php
 		echo $this->renderPartial('/menu/item', [
 			'path' => '',
-			'icon' => 'fa-home',
 			'item' => [
 				'path' => '',
+				'icon' => 'fa-home',
 				'name' => 'Home',
 			],
 		]);
