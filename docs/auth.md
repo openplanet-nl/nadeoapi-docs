@@ -3,6 +3,8 @@ This guide will explain how to authenticate with Nadeo's API. There are 2 method
 
 Refer to Miss' [Nadeo Go package](https://github.com/codecat/gonadeo) for a complete example.
 
+---
+
 ## With a Ubisoft account
 Send a POST request to the following URL:
 
@@ -49,6 +51,8 @@ Where the `Authorization` header is a basic authorization of your dedicated serv
 
 You also have to provide a request body, which is described below in the [Authorization section](#authorization).
 
+---
+
 # Authorization
 For both authentication methods described above, you have to provide a body telling the API what to authenticate with. The body of the request must be a Json object with the desired audience name:
 
@@ -79,7 +83,7 @@ If you URL-base64-decode the payload, you get the following json object:
 	"aud":"NadeoLiveServices",
 	"usg":"Server",
 	"sid":"<uuid>",
-	"sub":"<uuod>",
+	"sub":"<uuid>",
 	"aun":"mm",
 	"rtk":false,
 	"pce":false
@@ -96,6 +100,8 @@ To refresh your token, send a POST to the following URL:
 With the `Authorization` header set to `nadeo_v1 t=<full refresh token>`.
 
 The response is the same as with normal authentication.
+
+---
 
 # Base URLs and audiences
 The API's base URL's and their necessary audiences are:
