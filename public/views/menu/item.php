@@ -3,7 +3,7 @@ global $nf_uri;
 
 $url = '/' . $path . $item['path'];
 $active = false;
-if ($url != '/') {
+if ($item['type'] == 'dir') {
 	$active = str_starts_with($nf_uri, $url);
 } else {
 	$active = ($nf_uri == $url);

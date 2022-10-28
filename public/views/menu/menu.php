@@ -5,6 +5,7 @@
 		echo $this->renderPartial('/menu/item', [
 			'path' => '',
 			'item' => [
+				'type' => 'page',
 				'path' => '',
 				'icon' => 'fa-home',
 				'name' => 'Home',
