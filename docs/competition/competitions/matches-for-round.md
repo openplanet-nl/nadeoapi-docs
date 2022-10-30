@@ -1,5 +1,5 @@
 ---
-name: Get competition matches (for a round)
+name: Get matches for a competition round
 
 url: https://competition.trackmania.nadeo.club
 method: GET
@@ -68,3 +68,4 @@ GET https://competition.trackmania.nadeo.club/api/rounds/9078/matches
 }
 ```
 
+If a `roundId` is invalid, the response will contain a `404` response code.

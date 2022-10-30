@@ -5,6 +5,7 @@ dirs:
   - club
   - competition
   - matchmaking
+  - oauth
 pages:
   - auth
 ---
