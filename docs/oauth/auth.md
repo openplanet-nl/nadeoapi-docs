@@ -1,14 +1,14 @@
 ---
-icon: 'fa-lock'
+icon: 'fa-wrench'
 ---
 
-# OAuth flows
-
-## Authorizing a user with Trackmania OAuth
+# OAuth setup
 
 This is a step-by-step instruction how to set up Trackmania OAuth for your application. It's basically a rewrite of the [official documentation](https://doc.trackmania.com/web-services/auth/) but it's aiming to provide a lot more context and explanations around the concepts at play.
 
-### Creating an OAuth app on api.trackmania.com
+---
+
+## Creating an OAuth app
 
 First, the Trackmania OAuth API needs to know about your application - in return it'll give you an identifier and a secret that you can later exchange for access tokens.
 
@@ -26,7 +26,9 @@ First, the Trackmania OAuth API needs to know about your application - in return
 
 This concludes the OAuth setup on `api.trackmania.com` - of course you can always come back and change settings later.
 
-### Getting the access token
+---
+
+## Getting the access token
 
 This part will describe the steps needed to request an access token from the Trackmania OAuth API.
 
@@ -37,13 +39,13 @@ The Trackmania OAuth API supports two OAuth flows:
 - **Authorization Code** is used for authorizing a user through the browser in order to access resources (like their identity) on `api.trackmania.com`. To use this flow, follow [the instructions in the next section](#userui-flow).
 - **Client Credentials** is not bound to a user, instead it's a way to get a generic access token in order to access general resources on `api.trackmania.com` - mainly the tools to convert between players' account IDs and display names. To use this flow, follow [the instructions for machine-to-machine communication](#machine-to-machine-flow).
 
-#### User/UI flow
+### User/UI flow
 
 This follows the **Authorization Code** OAuth flow.
 
 1. When you know a user wishes to start the OAuth flow, you need to first redirect them to the OAuth server - if the flow is started outside of a browser (e.g. inside the game through an Openplanet plugin), you'll need to ensure the link is opened in a new browser tab (and the user needs to be made aware of it).
 The page you want the user to visit is `https://api.trackmania.com/oauth/authorize` - and you need to provide a couple query parameters:
-    - `response_type` has to be set to `code` - this tells the OAuth API to use the **Authorization Code** flow (check [the OAuth explanation](../oauth#what-is-oauth) for context).
+    - `response_type` has to be set to `code` - this tells the OAuth API to use the **Authorization Code** flow (check [the OAuth explanation](/oauth#what-is-oauth) for context).
     - `client_id` has to be set to the **Identifier** from [the previous section where you registered the OAuth application](#creating-an-oauth-app). Remember, this field is not secret, so it's fine that this will be shown to the user in the URL they navigate to.
     - `scope` typically holds the authorization scopes the resulting access token should have - the Trackmania OAuth API supports the following scopes: `clubs`, `read_favorite`, and `write_favorite`. If you want to specify multiple scopes, separate them with spaces. See the API endpoints to see which scopes are required by each endpoint.
     - `redirect_uri` has to be one of the URIs that you previously defined in the OAuth application in [the previous section](#creating-an-oauth-app). This is where the user will be redirected to once they've logged in. In case it's not obvious: This has to be a link to a website you're hosting, since it's where you'll receive the code you need to retrieve the access token. Don't worry, you can keep this very simple - but without this part, the whole flow doesn't work.
@@ -101,9 +103,7 @@ _The response will look like this:_
 }
 ```
 
-If you now want to use the access token to identify the user, you may continue with [the last chapter](#authenticating-the-user).
-
-#### Machine-to-machine flow
+### Machine-to-machine flow
 
 This follows the **Client Credentials** OAuth flow.
 
@@ -140,6 +140,8 @@ _The response will look like this:_
 ```
 
 Using the access token obtained in this flow, you can't identify a user (since it's not associated with one) - but you can still use it to convert between player account IDs and their display names. Check out the *Accounts* endpoints to learn more.
+
+---
 
 ### Refreshing your access token
 
@@ -178,26 +180,5 @@ _The response will look like this:_
   "expires_in": 3600,
   "access_token": "TOKEN",
   "refresh_token": "TOKEN"
-}
-```
-
-## Authenticating the user
-
-Note that for this request to return something useful, you'll need to have obtained a user-associated access token - see [this section](#user/ui-flow) for more information.
-
-To authenticate a user, simply send a `GET` request to `https://api.trackmania.com/api/user`. The access token has to be provided in the `Authorization` header in the format `Bearer <token>`.
-
-_In summary, the request should look like this:_
-```
-GET https://api.trackmania.com/api/user
-
-  Authorization: Bearer <token>
-```
-
-_The response will look like this:_
-```json
-{
-  "accountId": "5b4d42f4-c2de-407d-b367-cbff3fe817bc",
-  "displayName": "tooInfinite"
 }
 ```

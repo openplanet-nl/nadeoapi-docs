@@ -13,7 +13,17 @@ This is an alternative documentation for Trackmania's OAuth implementation - the
 
 This is **not** related to the game's primary APIs - the OAuth API is completely separate and mostly covers different use cases.
 
-***Tip***: If you're already familiar with OAuth and you're just looking for the requests you need to send, then keep an eye out for large code blocks - they contain examples of the full requests you need to send for each of the steps.
+To get started with the OAuth API, see [the setup instructions](/oauth/auth).
+
+## What is OAuth?
+
+> OAuth (Open Authorization) is an open standard for access delegation, commonly used as a way for Internet users to grant websites or applications access to their information on other websites but without giving them the passwords.
+
+See [Wikipedia](https://en.wikipedia.org/wiki/OAuth) or [the official OAuth community website](https://oauth.net/) (which also has a useful short video that explains the concept).
+
+In a broad sense OAuth is meant for authorization as opposed to authentication (it returns an API token, not an identity) - but with an extra request we can extend it to also explicitly authenticate the user.
+
+There's a ton of useful resources on OAuth out there (note that only the **Authorization Code** and the **Client Credentials** flows are supported by Trackmania) - this guide will just focus on the Trackmania applications.
 
 ## What is this for? Why would I use it?
 
@@ -31,16 +41,3 @@ The benefit of the dedicated OAuth API is that its token can only really be used
 So it's a very bad idea to reuse a player's game API token - especially if you don't even tell the user about the potential ramifications. Even if all your code is public and you can somehow ensure transparently that you don't use the token for anything unexpected, you can never ensure the token doesn't accidentally fall into the wrong hands.
 
 **Therefore, it's strongly advised not to use a game API token for verifying a player's identity.**
-
-## What is OAuth?
-
-> OAuth (Open Authorization) is an open standard for access delegation, commonly used as a way for Internet users to grant websites or applications access to their information on other websites but without giving them the passwords.
-
-See [Wikipedia](https://en.wikipedia.org/wiki/OAuth) or [the official OAuth community website](https://oauth.net/) (which also has a useful short video that explains the concept).
-
-In a broad sense OAuth is meant for authorization as opposed to authentication (it returns an API token, not an identity) - but with an extra request we can extend it to also explicitly authenticate the user.
-
-There's a ton of useful resources on OAuth out there (note that only the **Authorization Code** and the **Client Credentials** flows are supported by Trackmania) - this guide will just focus on the Trackmania applications.
-
-
-

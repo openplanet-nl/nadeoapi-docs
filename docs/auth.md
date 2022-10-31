@@ -107,8 +107,20 @@ The response is the same as with normal authentication.
 
 ---
 
+## Using the token
+
+All game APIs require you to send the obtained token along - the format is always the same.
+
+Simply set the following header on all your requests:
+
+  Authorization: nadeo_v1 t=<token>
+
+And make sure you're using the correct audience for the endpoint (see the table below).
+
+---
+
 # Base URLs and audiences
-The API's base URL's and their necessary audiences are:
+The API base URLs and their necessary audiences are:
 
 URL | Audience
 ---|---
