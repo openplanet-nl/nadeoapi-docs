@@ -26,7 +26,7 @@ That includes not spamming the APIs, sending along a useful `User-Agent` header 
 
 ---
 
-Additionally, [the OAuth documentation](/oauth) contains extensive information about how to integrate external applications with the official TM OAuth API.
+Additionally, [the OAuth documentation](/oauth/summary) contains extensive information about how to integrate external applications with the official TM OAuth API.
 
 ---
 
