@@ -16,10 +16,17 @@ This is the (unofficial) documentation for the Trackmania (2020) game APIs, docu
 
 If you're not familiar with the authentication flow for any of the game APIs, check out [the Authentication guide](/auth).
 
-The documentation is structured by the five main API domains, each of which cover a slightly different area of the game.
+The documentation is structured by the five main API domains, each of which cover a slightly different area of the game:
 
----
+* [**Core**](/core): The main API that allows the game to authenticate to all other API's, but also has many other tasks relating to the game's native functionality. This can also be considered the game's masterserver.
+* [**Live**](/live): The live API mostly used for leaderboards and other live content such as campaigns, rooms, and tracks of the day.
+* [**Club**](/club): APIs for certain (but not all) club functionality.
+* [**Competition**](/competition): APIs for most competition related information, including cup of the day and super royal.
+* [**Matchmaking**](/matchmaking): The matchmaking API.
 
+Additionally, [the OAuth documentation](/oauth/summary) contains extensive information on integrating external applications with the official Trackmania OAuth API.
+
+## Responsible usage
 All game APIs are to be used responsibly. Nadeo/Ubisoft **can and will ban your accounts/IPs** if they detect any disruptive (sending too many requests too fast) or any other malicious behavior.
 
 Make sure you send along a useful `User-Agent` header that includes what your project is, who you are (your name or some username/handle), and how to contact you (your email address). For example:
@@ -30,10 +37,5 @@ My awesome leaderboard / @Miss#8888 / miss@example.com
 
 To report a potential security concern directly to Nadeo/Ubisoft, send an email to <contact@nadeo.com>.
 
----
-
-Additionally, [the OAuth documentation](/oauth/summary) contains extensive information about how to integrate external applications with the official TM OAuth API.
-
----
-
+## Contributing
 This is a community project that's actively being worked on - as such, the documentation is not complete in some areas. Don't hesitate to reach out or get involved if you notice any inaccuracies!
