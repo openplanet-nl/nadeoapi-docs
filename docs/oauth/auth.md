@@ -32,7 +32,7 @@ To test this flow without having to write an entire application around it, you c
 
 The Trackmania OAuth API supports two OAuth flows:
 
-- **Authorization Code** is used for authorizing a user through the browser in order to access resources (like their identity) on `api.trackmania.com`. To use this flow, follow [the instructions in the next section](#userui-flow).
+- **Authorization Code** is used for authorizing a user through the browser in order to access resources (like their identity) on `api.trackmania.com`. To use this flow, follow [the instructions in the next section](#user/ui-flow).
 - **Client Credentials** is not bound to a user, instead it's a way to get a generic access token in order to access general resources on `api.trackmania.com` - mainly the tools to convert between players' account IDs and display names. To use this flow, follow [the instructions for machine-to-machine communication](#machine-to-machine-flow).
 
 ### User/UI flow
@@ -111,7 +111,7 @@ Since you don't need to communicate with a user, this flow is considerably simpl
     - `grant_type` has to be set to `client_credentials` - this tells the OAuth API that you're just sending the OAuth application credentials in exchange for a generic access token.
     - `client_id` has to be set to the **Identifier** from earlier.
     - `client_secret` has to be set to the **Secret** from earlier.
-    - `scope` typically holds the authorization scopes the resulting access token should have - the Trackmania OAuth API only supports scopes for the [User/UI flow](#userui-flow), so this parameter isn't needed here.
+    - `scope` typically holds the authorization scopes the resulting access token should have - the Trackmania OAuth API only supports scopes for the [User/UI flow](#user/ui-flow), so this parameter isn't needed here.
 
 _In summary, the request should look like this:_
 ```
@@ -143,7 +143,7 @@ Using the access token obtained in this flow, you can't identify a user (since i
 
 Access tokens are typically valid for an hour - if you're using [Machine-to-machine flow](#machine-to-machine-flow), you can just get a new token the same way you got the original one since you already have access to all the credentials you need.
 
-If you're using [User/UI flow](#userui-flow), you don't want to keep going through the same original flow since that requires user action (or at least a logged in browser session) - instead you can use a **refresh token**, which is typically valid for an entire month.
+If you're using [User/UI flow](#user/ui-flow), you don't want to keep going through the same original flow since that requires user action (or at least a logged in browser session) - instead you can use a **refresh token**, which is typically valid for an entire month.
 
 To get a new access token with it, send a `POST` request to `https://api.trackmania.com/api/access_token` with the following parameters:
   - `grant_type` has to be set to `refresh_token` - this tells the OAuth API that you're asking for a new access token without going through the whole `code` flow.
