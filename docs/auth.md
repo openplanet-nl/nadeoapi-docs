@@ -24,7 +24,9 @@ Where the `Authorization` header is a basic authorization of your Ubisoft email 
 
 Also, make sure you pass a valid user agent that Ubisoft can understand. Ubisoft blocks certain default user agents, so make sure you pass your own. Include your project name and a way to contact you. (This counts not only for the Ubisoft API, but also Nadeo's API.) For example:
 
-	User-Agent: My amazing app / my.email.address@example.com
+```plain
+User-Agent: My amazing app / my.email.address@example.com
+```
 
 The response will contain a Ubisoft authentication ticket that you can use for Nadeo's Ubiservices authentication endpoint. Next, send a POST request to the following URL:
 
