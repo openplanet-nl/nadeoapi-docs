@@ -41,9 +41,16 @@ class Controller extends Nin\Controller
 
 				if (isset($index_page->meta['roots'])) {
 					foreach ($index_page->meta['roots'] as $root) {
+						$root_index_path = $docs_dir . '/' . $root . '/index.md';
+
+						$root_index_page = false;
+						if (file_exists($root_index_path)) {
+							$root_index_page = new PageInfo($root_index_path);
+						}
+
 						$roots[] = [
 							'type' => 'root',
-							'name' => str_replace('-', ' ', ucfirst($root)),
+							'name' => $root_index_page->meta['name'] ?? str_replace('-', ' ', ucfirst($root)),
 							'icon' => $index_page->meta['icon'] ?? '',
 							'path' => $root,
 							'children' => $this->getPageIndexInternal($docs_dir . '/' . $root),

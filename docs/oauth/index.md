@@ -1,5 +1,5 @@
 ---
-name: 'OAuth'
+name: OAuth
 pages:
   - summary
   - auth
