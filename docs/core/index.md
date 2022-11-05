@@ -20,7 +20,7 @@ Tokens authenticated through dedicated server accounts as described in [Authenti
 * `https://prod.trackmania.core.nadeo.online/api/routes?usage=Client` - Shows endpoints intended for clients
 * `https://prod.trackmania.core.nadeo.online/api/routes?usage=Server` - Shows endpoints intended for servers
 
-Important to note is that at the time of writing, servers do not have access to the [display names API](/core/accounts/displaynames), which is why most API usage should be using the Ubisoft authentication method rather than the dedicated server method.
+Important to note is that at the time of writing, servers do not have access to the [display names API](/core/accounts/display-names), which is why most API usage should be using the Ubisoft authentication method rather than the dedicated server method.
 
 ## Endpoints history
 We are tracking this endpoint API [through Github](https://github.com/openplanet-nl/core-api-tracking/commits/master) for changes Nadeo makes in real time. This is also pushed to [Discord](https://openplanet.dev/link/discord) in our `#announce` channel.
