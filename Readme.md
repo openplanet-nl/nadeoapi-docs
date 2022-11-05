@@ -7,7 +7,18 @@
 Docker is the recommended way of developing.
 
 1. Build the docker image:
-   `docker build -t op-nadeoapi-docs .`
+   ```
+   docker build -t op-nadeoapi-docs .
+   ```
 2. Start a container:
-   `docker run --rm -v $(pwd):/var/www/html -p 80:80 op-nadeoapi-docs`
+   ```
+   docker run --rm -v $(pwd):/var/www/html -p 80:80 op-nadeoapi-docs
+   ```
 3. Visit http://127.0.0.1/
+
+## Running tests
+Content tests run automatically on a push to the repository. To run them locally, you need Python and PyYAML to run the tests locally. Then, simply run the test script:
+
+```
+$ ./test.py
+```
