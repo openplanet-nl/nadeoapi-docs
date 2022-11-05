@@ -7,8 +7,6 @@ This guide will explain how to authenticate with Nadeo's API. There are 2 method
 
 Refer to Miss' [Nadeo Go package](https://github.com/codecat/gonadeo) for a complete example.
 
----
-
 ## With a Ubisoft account
 Send a POST request to the following URL:
 
@@ -56,8 +54,6 @@ With the following request headers:
 Where the `Authorization` header is a basic authorization of your dedicated server account. (In Go for example, this is via [SetBasicAuth](https://pkg.go.dev/net/http#Request.SetBasicAuth))
 
 You also have to provide a request body, which is described below in the [Authorization section](#authorization).
-
----
 
 # Authorization
 For both authentication methods described above, you have to provide a body telling the API what to authenticate with. The body of the request must be a Json object with the desired audience name:
@@ -107,8 +103,6 @@ With the `Authorization` header set to `nadeo_v1 t=<full refresh token>`.
 
 The response is the same as with normal authentication.
 
----
-
 ## Using the token
 
 All game APIs require you to send the obtained token along - the format is always the same.
@@ -118,8 +112,6 @@ Simply set the following header on all your requests:
   Authorization: nadeo_v1 t=<token>
 
 And make sure you're using the correct audience for the endpoint (see the table below).
-
----
 
 # Base URLs and audiences
 The API base URLs and their necessary audiences are:

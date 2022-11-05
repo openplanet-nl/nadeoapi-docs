@@ -2,8 +2,6 @@
 
 This is a step-by-step instruction how to set up Trackmania OAuth for your application. It's basically a rewrite of the [official documentation](https://doc.trackmania.com/web-services/auth/) but it's aiming to provide a lot more context and explanations around the concepts at play.
 
----
-
 ## Creating an OAuth app
 
 First, the Trackmania OAuth API needs to know about your application - in return it'll give you an identifier and a secret that you can later exchange for access tokens.
@@ -21,8 +19,6 @@ First, the Trackmania OAuth API needs to know about your application - in return
     - The **Secret** is required by the OAuth server for authorization requests - it proves your application's authority to initiate the OAuth flow, and should never be accessible to your users (otherwise they could impersonate you and initiate the OAuth flow for others in your name).
 
 This concludes the OAuth setup on `api.trackmania.com` - of course you can always come back and change settings later.
-
----
 
 ## Getting the access token
 
@@ -136,8 +132,6 @@ _The response will look like this:_
 ```
 
 Using the access token obtained in this flow, you can't identify a user (since it's not associated with one) - but you can still use it to convert between player account IDs and their display names. Check out the *Accounts* endpoints to learn more.
-
----
 
 ### Refreshing your access token
 
