@@ -1,6 +1,6 @@
 <p class="title"><?= Nin\Html::encode($page->meta['name']) ?></p>
 <?php if (isset($page->meta['audience'])) { ?>
-	<p class="subtitle"><?= Nin\Html::encode($page->meta['audience']) ?></p>
+	<p class="subtitle">Audience: <code><?= Nin\Html::encode($page->meta['audience']) ?></code></p>
 <?php } ?>
 
 <code>
