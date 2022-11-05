@@ -1,5 +1,7 @@
 <p class="title"><?= Nin\Html::encode($page->meta['name']) ?></p>
-<p class="subtitle"><?= Nin\Html::encode($page->meta['audience']) ?></p>
+<?php if (isset($page->meta['audience'])) { ?>
+	<p class="subtitle"><?= Nin\Html::encode($page->meta['audience']) ?></p>
+<?php } ?>
 
 <code>
 	<span class="has-text-weight-bold has-text-<?php

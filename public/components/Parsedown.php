@@ -534,6 +534,9 @@ class Parsedown
         $Block = array(
             'element' => array(
                 'name' => 'h' . min(6, $level),
+                'attributes' => array(
+                    'id' => str_replace(' ', '-', strtolower($text)),
+                ),
                 'handler' => array(
                     'function' => 'lineElements',
                     'argument' => $text,

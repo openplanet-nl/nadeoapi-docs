@@ -1,13 +1,14 @@
 ---
+pages:
+  - auth
 dirs:
   - core
   - live
   - club
   - competition
   - matchmaking
+roots:
   - oauth
-pages:
-  - auth
 ---
 
 # Home

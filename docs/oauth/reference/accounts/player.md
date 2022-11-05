@@ -4,9 +4,6 @@ name: Get authorized player
 url: https://api.trackmania.com
 method: GET
 route: /api/user
-
-audience: n/a
-
 ---
 
 Retrieves the currently authorized player account

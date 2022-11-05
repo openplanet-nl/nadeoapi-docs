@@ -15,9 +15,6 @@ parameters:
       type: integer
       description: The number of maps to skip
       required: false
-
-audience: n/a
-
 ---
 
 Retrieves the player's favorite maps.

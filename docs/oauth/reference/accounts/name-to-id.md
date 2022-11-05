@@ -11,9 +11,6 @@ parameters:
       type: string
       description: The name of the account you want to retrieve the ID for
       required: true
-
-audience: n/a
-
 ---
 
 Retrieves the `accountId` for a given account name.

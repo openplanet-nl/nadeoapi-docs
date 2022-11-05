@@ -4,18 +4,21 @@ class Controller extends Nin\Controller
 {
 	public string $description = 'Documentation on Nadeo\'s Trackmania live services API.';
 
-	private function buildPageIndexStructure(array $dirs, array $pages)
+	private function buildPageIndexStructure(array $dirs, array $pages, array $roots = [])
 	{
 		usort($pages, function($a, $b) {
 			return $a['position'] - $b['position'];
 		});
 
 		$ret = [];
+		foreach ($pages as $page) {
+			$ret[] = $page;
+		}
 		foreach ($dirs as $dir) {
 			$ret[] = $dir;
 		}
-		foreach ($pages as $page) {
-			$ret[] = $page;
+		foreach ($roots as $root) {
+			$ret[] = $root;
 		}
 		return $ret;
 	}
@@ -32,8 +35,21 @@ class Controller extends Nin\Controller
 			$index_page = new PageInfo($index_path);
 
 			if ($index_page->meta !== null && isset($index_page->meta['dirs']) || isset($index_page->meta['pages'])) {
+				$roots = [];
 				$dirs = [];
 				$pages = [];
+
+				if (isset($index_page->meta['roots'])) {
+					foreach ($index_page->meta['roots'] as $root) {
+						$roots[] = [
+							'type' => 'root',
+							'name' => str_replace('-', ' ', ucfirst($root)),
+							'icon' => $index_page->meta['icon'] ?? '',
+							'path' => $root,
+							'children' => $this->getPageIndexInternal($docs_dir . '/' . $root),
+						];
+					}
+				}
 
 				if (isset($index_page->meta['dirs'])) {
 					foreach ($index_page->meta['dirs'] as $dir) {
@@ -66,7 +82,7 @@ class Controller extends Nin\Controller
 					}
 				}
 
-				return $this->buildPageIndexStructure($dirs, $pages);
+				return $this->buildPageIndexStructure($dirs, $pages, $roots);
 			}
 		}
 

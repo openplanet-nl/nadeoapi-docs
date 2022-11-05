@@ -2,11 +2,8 @@
 name: Add favorite map
 
 url: https://api.trackmania.com
-method: GET
+method: POST
 route: /api/user/maps/favorite/add
-
-audience: n/a
-
 ---
 
 The request body is a JSON object containing the map's UID:

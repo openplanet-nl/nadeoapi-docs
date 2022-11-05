@@ -4,12 +4,9 @@ name: Get player's admin clubs
 url: https://api.trackmania.com
 method: GET
 route: /api/user/clubs/admin
-
-audience: n/a
-
 ---
 
-Retrieves the clubs the authorized played is an admin in.
+Retrieves the clubs the authorized player is an admin in.
 
 ---
 
