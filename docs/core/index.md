@@ -14,7 +14,7 @@ Through this API, tokens for specific audiences can be requested (see [Authentic
 ## Endpoints list
 There is [an endpoint that provides all of the available endpoints](/core/meta/routes). It does not require any authentication, and as such can be [viewed directly in the browser](https://prod.trackmania.core.nadeo.online/api/routes).
 
-Tokens authenticated through dedicated server accounts as described in [Authentication](/auth) can not use certain API's. You can view which API's those are by using the `usage` parameter. This means there are 3 endpoints to query:
+Tokens authenticated through dedicated server accounts as described in [Authentication](/auth) can not use certain APIs. You can view which APIs those are by using the `usage` parameter. This means there are 3 endpoints to query:
 
 * `https://prod.trackmania.core.nadeo.online/api/routes` - Shows all available endpoints
 * `https://prod.trackmania.core.nadeo.online/api/routes?usage=Client` - Shows endpoints intended for clients
