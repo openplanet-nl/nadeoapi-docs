@@ -18,10 +18,10 @@ If you're not familiar with the authentication flow for any of the game APIs, ch
 
 The documentation is structured by the five main API domains, each of which cover a slightly different area of the game:
 
-* [**Core**](/core): The main API that allows the game to authenticate to all other API's, but also has many other tasks relating to the game's native functionality. This can also be considered the game's masterserver.
-* [**Live**](/live): The live API mostly used for leaderboards and other live content such as campaigns, rooms, and tracks of the day.
+* [**Core**](/core): The main API that allows the game to authenticate to all other APIs, but also has many other tasks relating to the game's native functionality. This can also be considered the game's masterserver.
+* [**Live**](/live): The live API mostly used for leaderboards and other live content such as campaigns, rooms, and Tracks of the Day.
 * [**Club**](/club): APIs for certain (but not all) club functionality.
-* [**Competition**](/competition): APIs for most competition related information, including cup of the day and super royal.
+* [**Competition**](/competition): APIs for most competition-related information, including Cup of the Day and Super Royal.
 * [**Matchmaking**](/matchmaking): The matchmaking API.
 
 Additionally, [the OAuth documentation](/oauth/summary) contains extensive information on integrating external applications with the official Trackmania OAuth API.
