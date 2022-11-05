@@ -14,3 +14,7 @@ section.topheader p.openplanet a {
 .docs-content {
 	overflow-x: auto;
 }
+
+h1, h2, h3 {
+	border-bottom: 1px solid #2b3e50;
+}
