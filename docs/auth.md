@@ -104,7 +104,6 @@ With the `Authorization` header set to `nadeo_v1 t=<full refresh token>`.
 The response is the same as with normal authentication.
 
 ## Using the token
-
 All game APIs require you to send the obtained token along - the format is always the same.
 
 Simply set the following header on all your requests:
@@ -112,6 +111,9 @@ Simply set the following header on all your requests:
   Authorization: nadeo_v1 t=<token>
 
 And make sure you're using the correct audience for the endpoint (see the table below).
+
+## Making requests from Openplanet
+If you need to make requests to APIs from an Openplanet plugin, you don't need to do any authentication yourself. Use the [NadeoServices dependency](https://openplanet.dev/docs/reference/nadeoservices).
 
 # Base URLs and audiences
 The API base URLs and their necessary audiences are:
