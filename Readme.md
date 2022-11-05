@@ -1,4 +1,6 @@
 # Trackmania API documentation
+[![Tests](https://github.com/openplanet-nl/nadeoapi-docs/actions/workflows/tests.yml/badge.svg)](https://github.com/openplanet-nl/nadeoapi-docs/actions/workflows/tests.yml)
+
 [Visit the documentation here](https://api.openplanet.dev/).
 
 ## Running the documentation locally
