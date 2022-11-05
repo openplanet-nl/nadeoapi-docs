@@ -16,7 +16,7 @@ nf_begin([
 			'/^\\/(?<path>[a-z0-9\\-\\/]+)$/' => 'IndexController.Page',
 		],
 	],
-	// 'cache' => [
-	// 	'class' => 'APCu',
-	// ],
+	'cache' => [
+		'class' => 'APCu',
+	],
 ]);
