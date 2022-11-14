@@ -4,7 +4,7 @@
 [Visit the documentation here](https://webservices.openplanet.dev/).
 
 ## Running the documentation locally
-Docker is the recommended way of developing.
+Docker is the recommended way of developing the site, and also for testing documentation changes locally.
 
 1. Build the docker image:
    ```
@@ -17,7 +17,7 @@ Docker is the recommended way of developing.
 3. Visit http://127.0.0.1/
 
 ## Running tests
-Content tests run automatically on a push to the repository. To run them locally, you need Python and PyYAML to run the tests locally. Then, simply run the test script:
+Content tests run automatically on a push to the repository. To run them locally, you need Python and PyYAML. Then, simply run the test script:
 
 ```
 $ ./test.py
