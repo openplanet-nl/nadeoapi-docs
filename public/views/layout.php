@@ -44,7 +44,7 @@
 
 					<div class="level-right">
 						<p>
-							<a href="https://github.com/openplanet-nl/nadeoapi-docs">Contribute on Github</a>
+							<a href="https://github.com/openplanet-nl/nadeoapi-docs" target="blank" rel="noopener noreferrer">Contribute on Github</a>
 							<i class="fa fa-github"></i>
 						</p>
 					</div>
@@ -101,7 +101,7 @@
 		<footer class="footer">
 			<div class="content has-text-centered">
 				<p><small>This documentation is not affiliated with or endorsed by Nadeo or Ubisoft. All relevant trademarks belong to their respective owners.</small></p>
-				<p>This is a collaborative project, consider <a href="https://github.com/openplanet-nl/nadeoapi-docs">contributing on Github</a>!</p>
+				<p>This is a collaborative project, consider <a href="https://github.com/openplanet-nl/nadeoapi-docs" target="blank" rel="noopener noreferrer">contributing on Github</a>!</p>
 			</div>
 		</footer>
 
