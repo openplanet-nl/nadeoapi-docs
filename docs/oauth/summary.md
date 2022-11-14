@@ -32,3 +32,8 @@ The benefit of the dedicated OAuth API is that its token can only really be used
 So it's a very bad idea to reuse a player's game API token - especially if you don't even tell the user about the potential ramifications. Even if all your code is public and you can somehow ensure transparently that you don't use the token for anything unexpected, you can never ensure the token doesn't accidentally fall into the wrong hands.
 
 **Therefore, it's strongly advised not to use a game API token for verifying a player's identity.**
+
+## Useful resources
+Below you'll find some resources that can be useful when implementing Trackmania OAuth into your project:
+
+- [Trackmania Identity Provider for Keycloak](https://github.com/EvoTM/keycloak-trackmania)
