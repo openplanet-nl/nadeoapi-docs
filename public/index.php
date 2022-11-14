@@ -8,7 +8,7 @@ nf_route('/api/index', 'IndexController.ApiIndex');
 nf_begin([
 	'name' => 'Trackmania API documentation - Openplanet',
 	'debug' => [
-		'enabled' => true,
+		'enabled' => false,
 	],
 	'routing' => [
 		'preferRules' => false,
