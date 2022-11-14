@@ -59,4 +59,16 @@
 		<?php
 	}
 	?>
+
+	<p class="menu-label">Contribute</p>
+	<ul class="menu-list">
+		<li><a href="https://github.com/openplanet-nl/nadeoapi-docs" target="blank" rel="noopener noreferrer">
+			<span class="icon"><i class="fa fa-github"></i></span>
+			<span>Github</span>
+		</a></li>
+		<li><a href="https://openplanet.dev/link/discord" target="blank" rel="noopener noreferrer">
+			<span class="icon"><i class="fa fa-discord"></i></span>
+			<span>Discord</span>
+		</a></li>
+	</ul>
 </aside>
