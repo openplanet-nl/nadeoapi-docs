@@ -37,5 +37,5 @@ My awesome leaderboard / @Miss#8888 / miss@example.com
 
 To report a potential security concern directly to Nadeo/Ubisoft, send an email to <contact@nadeo.com>.
 
-## Contributing
-This is a community project that's actively being worked on - as such, the documentation is not complete in some areas. Don't hesitate to [reach out or get involved on Github](https://github.com/openplanet-nl/nadeoapi-docs)!
+## Contributing and support
+This is a community project that's actively being worked on - as such, the documentation is not complete in some areas. Don't hesitate to [reach out and get involved on Github](https://github.com/openplanet-nl/nadeoapi-docs), or [talk about the API on Discord](https://openplanet.dev/link/discord).
