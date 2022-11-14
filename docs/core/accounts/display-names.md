@@ -11,7 +11,7 @@ parameters:
   query:
     - name: accountIdList
       type: string
-      description: A comma-separated list of account IDs
+      description: A comma-separated list of account IDs (maximum 50)
       required: true
 ---
 
@@ -21,6 +21,7 @@ Gets player display names from account IDs.
 
 **Remarks**:
 - This endpoint is only accessible with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts). If you encounter `401` errors using a dedicated server account, switch to using a Ubisoft account.
+- The API returns a `400` error if more than 50 account IDs are requested.
 
 ---
 
