@@ -57,7 +57,7 @@
 				<div class="navbar-brand">
 					<a href="/" class="navbar-item">
 						<span class="icon has-text-success"><i class="fa fa-code-fork"></i></span>
-						<b>Trackmania API</b>
+						<b>Trackmania Web Services API Documentation</b>
 					</a>
 				</div>
 			</div>
