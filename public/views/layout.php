@@ -15,7 +15,7 @@
 
 		<meta property="og:title" content="<?= $title ?>">
 		<meta property="og:description" content="<?= $this->description ?>">
-		<meta property="og:url" content="https://api.openplanet.dev/">
+		<meta property="og:url" content="https://webservices.openplanet.dev/">
 		<meta property="og:image" content="https://openplanet.dev/img/logo_icon.png">
 
 		<link rel="stylesheet" href="/style.css">
