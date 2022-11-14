@@ -3,7 +3,7 @@ name: Get club asset activities
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
-route: https://live-services.trackmania.nadeo.live/api/token/club/bucket/{bucketType}/all?length={length}&offset={offset}
+route: /api/token/club/bucket/{bucketType}/all?length={length}&offset={offset}
 
 audience: NadeoLiveServices
 
