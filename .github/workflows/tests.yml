@@ -7,16 +7,11 @@ on:
 
 jobs:
   tests:
-    name: Tests
     runs-on: ubuntu-latest
     steps:
-      - name: Chackout repository
-        uses: actions/checkout@v1
-      - name: Setup Python v3.11
-        uses: actions/setup-python@v4
+      - uses: actions/checkout@v1
+      - uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-      - name: Install pyyaml
-        run: pip install pyyaml
-      - name: Run tests
-        run: python test.py
+      - run: pip install pyyaml
+      - run: python test.py
