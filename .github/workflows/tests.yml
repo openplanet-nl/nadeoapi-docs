@@ -1,17 +1,29 @@
 name: Tests
 
 on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'docs/**.md'
   push:
     branches:
       - main
+    paths:
+      - 'docs/**.md'
 
 jobs:
   tests:
+    name: Unit Tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-python@v4
+      - name: Chackout repository
+        uses: actions/checkout@v1
+      - name: Setup Python v3.11
+        uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-      - run: pip install pyyaml
-      - run: python test.py
+      - name: Install pyyaml
+        run: pip install pyyaml
+      - name: Run tests
+        run: python test.py
