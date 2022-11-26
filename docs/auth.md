@@ -16,9 +16,10 @@ With the following request headers:
 
 	Content-Type: application/json
 	Ubi-AppId: 86263886-327a-4328-ac69-527f0d20a237
-	Authorization: Basic ...
+	Authorization: Basic <email@address.com:password (base64-encoded)>
 
-Where the `Authorization` header is a basic authorization of your Ubisoft email and password. (In Go for example, this is via [SetBasicAuth](https://pkg.go.dev/net/http#Request.SetBasicAuth))
+Where the `Authorization` header is a basic authorization of your Ubisoft email and password.
+In Go for example, this is done via [SetBasicAuth](https://pkg.go.dev/net/http#Request.SetBasicAuth).
 
 Also, make sure you pass a valid user agent that Ubisoft can understand. Ubisoft blocks certain default user agents, so make sure you pass your own. Include your project name and a way to contact you. (This counts not only for the Ubisoft API, but also Nadeo's API.) For example:
 
@@ -49,9 +50,10 @@ Send a POST request to the following URL:
 With the following request headers:
 
 	Content-Type: application/json
-	Authorization: Basic ...
+	Authorization: Basic <username:password (base64-encoded)>
 
-Where the `Authorization` header is a basic authorization of your dedicated server account. (In Go for example, this is via [SetBasicAuth](https://pkg.go.dev/net/http#Request.SetBasicAuth))
+Where the `Authorization` header is a basic authorization of your dedicated server account.
+In Go for example, this is done via [SetBasicAuth](https://pkg.go.dev/net/http#Request.SetBasicAuth).
 
 You also have to provide a request body, which is described below in the [Authorization section](#authorization).
 
@@ -62,7 +64,8 @@ For both authentication methods described above, you have to provide a body tell
 {"audience":"NadeoLiveServices"}
 ```
 
-Note that if you don't provide a json body, you get a token for audience `NadeoServices`. See a mapping of APIs and available audiences [here](#base-urls-and-audiences).
+See a mapping of APIs and available audiences [here](#base-urls-and-audiences).
+Note that if you don't provide a json body, you get a token for the audience `NadeoServices`.
 
 This will give you a [JSON web token](https://en.wikipedia.org/wiki/JSON_Web_Token) together with a refresh token:
 
