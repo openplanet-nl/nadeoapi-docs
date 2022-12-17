@@ -3,7 +3,7 @@ name: Get club activities
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
-route: /api/token/club/{clubId}/member?length={length}&offset={offset}&active={active}
+route: /api/token/club/{clubId}/activity?length={length}&offset={offset}&active={active}
 
 audience: NadeoLiveServices
 
