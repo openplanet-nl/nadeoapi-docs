@@ -18,13 +18,14 @@ Retrieves the account name for a given `accountId`.
 ---
 
 **Remarks**:
+- This endpoint does not require any authentication through OAuth.
 - To convert more than one ID at a time, you can send an array of values instead of a single value - see the second example below.
 
 ---
 
 **Example request**:
 ```plain
-GET https://api.trackmania.com/api/display-names?accountId[0]=5b4d42f4-c2de-407d-b367-cbff3fe817bc
+GET https://api.trackmania.com/api/display-names?accountId[]=5b4d42f4-c2de-407d-b367-cbff3fe817bc
 ```
 
 **Example response**:
@@ -36,5 +37,5 @@ GET https://api.trackmania.com/api/display-names?accountId[0]=5b4d42f4-c2de-407d
 
 To retrieve more than one name at once, send the `accountId` values as follows:
 ```plain
-GET https://api.trackmania.com/api/display-names?accountId[0]=5b4d42f4-c2de-407d-b367-cbff3fe817bc&accountId[1]=4c803b5a-a344-4d5c-a358-d8f7455d6c85
+GET https://api.trackmania.com/api/display-names?accountId[]=5b4d42f4-c2de-407d-b367-cbff3fe817bc&accountId[]=4c803b5a-a344-4d5c-a358-d8f7455d6c85
 ```
