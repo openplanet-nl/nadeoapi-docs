@@ -20,7 +20,7 @@ Gets team information for a given match ID.
 ---
 
 **Remarks**:
-- Match information is only stored on Nadeo's servers for about a week - afterwards, requesting it will only result in a `404` response code.
+- Match information is only stored on Nadeo's servers for about a month - afterwards, requesting it will only result in a `404` response code.
 - There are two different match IDs which are both supported by this endpoint - the primary `id` is always numerical, while the `liveId` is a string typically starting with `"LID-MTCH-`.
 
 ---
