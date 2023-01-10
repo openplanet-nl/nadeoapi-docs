@@ -111,7 +111,7 @@ All game APIs require you to send the obtained token along - the format is alway
 
 Simply set the following header on all your requests:
 
-  Authorization: nadeo_v1 t=<token>
+  Authorization: nadeo_v1 t=<full access token>
 
 And make sure you're using the correct audience for the endpoint (see the table below).
 
