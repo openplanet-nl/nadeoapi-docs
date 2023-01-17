@@ -112,9 +112,12 @@ Since you don't need to communicate with a user, this flow is considerably simpl
 _In summary, the request should look like this:_
 ```
 POST https://api.trackmania.com/api/access_token
-  ?grant_type=client_credentials
-  &client_id=CLIENT_ID
-  &client_secret=CLIENT_SECRET
+
+  Content-Type: application/x-www-form-urlencoded
+  Body:
+    grant_type=client_credentials
+    &client_id=CLIENT_ID
+    &client_secret=CLIENT_SECRET
 ```
 
 2. The response to this request will contain the following fields:
