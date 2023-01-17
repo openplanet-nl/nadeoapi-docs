@@ -18,7 +18,6 @@ Retrieves the `accountId` for a given account name.
 ---
 
 **Remarks**:
-- This endpoint does not require any authentication through OAuth.
 - To convert more than one name at a time, you can send an array of values instead of a single value - see the second example below.
 
 ---
