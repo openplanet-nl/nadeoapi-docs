@@ -3,7 +3,7 @@ name: Get matches for a competition round
 
 url: https://competition.trackmania.nadeo.club
 method: GET
-route: /api/rounds/{roundId}/matches
+route: /api/rounds/{roundId}/matches?length={length}&offset={offset}
 
 audience: NadeoClubServices
 
@@ -13,6 +13,15 @@ parameters:
       type: string
       description: A valid round ID
       required: true
+  query:
+    - name: length
+      type: integer
+      description: The number of matches to retrieve
+      required: true
+    - name: offset
+      type: integer
+      description: The number of matches to skip
+      required: false
 ---
 
 Gets matches for a given round in a competition.
