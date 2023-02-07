@@ -24,7 +24,7 @@ Gets map records for a set of maps and a set of accounts.
 ---
 
 **Remarks**:
-- This endpoint only accepts `mapId`s - to translate `mapUid`s to `mapId`s, use the map info endpoint.
+- This endpoint only accepts `mapId`s - to translate `mapUid`s to `mapId`s, you can use the [map info endpoint](/core/maps/info).
 
 ---
 

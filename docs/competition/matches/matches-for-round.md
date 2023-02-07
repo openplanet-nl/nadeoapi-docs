@@ -28,6 +28,11 @@ Gets matches for a given round in a competition.
 
 ---
 
+**Remarks**:
+- Note that the match IDs in the response are competition match IDs to be used in [competition match endpoints](/competitions/matches) - they are not equivalent to the numerical match IDs used in the [club match endpoints](/club/matches). To use those endpoints based on the response from this endpoint, use the `clubMatchLiveId` field as an identifier.
+
+---
+
 **Example request**:
 ```plain
 GET https://competition.trackmania.nadeo.club/api/rounds/9078/matches

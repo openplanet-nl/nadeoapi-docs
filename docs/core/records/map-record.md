@@ -20,7 +20,7 @@ Gets a single map record using its primary identifier.
 ---
 
 **Remarks**:
-- This endpoint only accepts a `mapRecordId` - to retrieve it, use the map records endpoint.
+- This endpoint only accepts a `mapRecordId` - to retrieve it, you can use the [map records endpoint](/core/records/map-records).
 
 ---
 

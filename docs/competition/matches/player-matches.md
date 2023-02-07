@@ -25,7 +25,7 @@ Gets matches for a player in the context of a competition.
 
 **Remarks**:
 - There are two different competition IDs which are both supported by this endpoint - the primary `id` is always numerical, while the `liveId` is a string typically starting with `"LID-COMP-`.
-- For team-based competitions, the team information and match results don't seem to be correct. Use [the match results endpoint](/club/matches/results) to get the actual results.
+- For team-based competitions, the team information and match results may not be correct. Use [the match results endpoint](/club/matches/results) to get the actual results.
 
 ---
 
