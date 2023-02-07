@@ -34,7 +34,7 @@ Gets map records for a challenge ID.
 
 **Remarks**:
 - Note that challenges are different from competitions - challenges are separate leaderboard structures that can be part of a competition (for example in the form of a qualifying session).
-- This endpoint can be very similar to the [challenge leaderboard endpoint](/competitions/challenges/leaderboard) - with the difference that you can retrieve map-specific rankings instead of the overall leaderboard.
+- This endpoint can be very similar to the [challenge leaderboard endpoint](/competition/challenges/leaderboard) - with the difference that you can retrieve map-specific rankings instead of the overall leaderboard.
 
 ---
 
