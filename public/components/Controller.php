@@ -7,7 +7,16 @@ class Controller extends Nin\Controller
 	private function buildPageIndexStructure(array $dirs, array $pages, array $roots = [])
 	{
 		usort($pages, function($a, $b) {
-			return $a['position'] - $b['position'];
+			$ap = $a['position'];
+			$bp = $b['position'];
+			if ($ap == $bp) {
+				return strcmp($a['name'], $b['name']);
+			}
+			return $ap - $bp;
+		});
+
+		usort($dirs, function($a, $b) {
+			return strcmp($a['name'], $b['name']);
 		});
 
 		$ret = [];
