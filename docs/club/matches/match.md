@@ -27,10 +27,37 @@ Gets match information for a given match ID.
 
 **Example request**:
 ```plain
-GET https://club.trackmania.nadeo.club/api/matches/3018551
+GET https://club.trackmania.nadeo.club/api/matches/3650039
 ```
 
 **Example response**:
+```json
+{
+    "id": 3650039,
+    "liveId": "LID-MTCH-qvyq1ygud4nyjty",
+    "name": "Official 3v3 - match",
+    "startDate": 1675846613,
+    "endDate": 1675848413,
+    "status": "COMPLETED",
+    "participantType": "team",
+    "joinLink": "#join=5IC1PtE8TSS9PdchZDxY8A@Trackmania",
+    "serverStatus": "DELETED",
+    "manialink": "DESC"
+}
+```
+
+If a `matchId` is invalid, the response will contain a `404` response code.
+
+---
+
+This endpoint was changed in February 2023 to no longer include the `serverConfig` along with the removal of several other fields - the previous response structure can be found below for reference.
+
+**Request**:
+```plain
+GET https://club.trackmania.nadeo.club/api/matches/3018551
+```
+
+**Response**:
 ```json
 {
     "id": 3018551,
@@ -91,5 +118,3 @@ GET https://club.trackmania.nadeo.club/api/matches/3018551
     "autoMode": "ENABLED"
 }
 ```
-
-If a `matchId` is invalid, the response will contain a `404` response code.
