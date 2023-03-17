@@ -41,7 +41,7 @@ Where `Authorization` has your Ubisoft account ticket right after `t=`.
 You also have to provide a request body, which is described below in the [Authorization section](#authorization).
 
 ## With a dedicated server account
-If you don't want to or can't use a Ubisoft account for authentication, you can use a [dedicated server account](https://players.trackmania.com/server/dedicated). Note that there are some limitations on what you can do with dedicated server tokens.
+If you don't want to or can't use a Ubisoft account for authentication, you can use a [dedicated server account](https://www.trackmania.com/player/dedicated-servers). Note that there are some limitations on what you can do with dedicated server tokens.
 
 Send a POST request to the following URL:
 
