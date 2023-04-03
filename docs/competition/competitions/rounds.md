@@ -21,6 +21,8 @@ Gets rounds details for a competition ID.
 
 **Remarks**:
 - There are two different competition IDs which are both supported by this endpoint - the primary `id` is always numerical, while the `liveId` is a string typically starting with `"LID-COMP-`.
+- If a round has a qualifier attached to it (e.g. the TA qualifier in COTD), its associated `challengeId` can be found in the `qualifierChallengeId` field. This is what you'd use to get more information about the qualifier, for example when [getting the qualifier leaderboards](/competition/challenges/leaderboard).
+- To retrieve a round's matches (and their results), you can use [the round matches endpoint](/competition/matches/matches-for-round).
 
 ---
 
