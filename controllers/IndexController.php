@@ -51,9 +51,9 @@ class IndexController extends Controller
 
 	private function renderPage(string $path, $info)
 	{
-		global $nf_www_dir;
+		global $nf_project_dir;
 
-		$docs_dir = realpath($nf_www_dir . '/../docs');
+		$docs_dir = realpath($nf_project_dir . '/docs');
 
 		$page_path = $docs_dir . '/' . $path . '.md';
 		if (!file_exists($page_path)) {
