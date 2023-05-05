@@ -16,7 +16,7 @@ parameters:
   query:
     - name: length
       type: integer
-      description: The number of competitions to retrieve (maximum 100)
+      description: The number of competitions to retrieve (maximum 255)
       required: false
       default: 10
     - name: offset
