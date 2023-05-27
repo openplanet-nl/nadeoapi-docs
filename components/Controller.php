@@ -34,9 +34,9 @@ class Controller extends Nin\Controller
 
 	private function getPageIndexInternal(string|null $docs_dir = null)
 	{
-		global $nf_www_dir;
+		global $nf_project_dir;
 		if ($docs_dir === null) {
-			$docs_dir = realpath($nf_www_dir . '/../docs');
+			$docs_dir = realpath($nf_project_dir . '/docs');
 		}
 
 		$index_path = $docs_dir . '/index.md';
