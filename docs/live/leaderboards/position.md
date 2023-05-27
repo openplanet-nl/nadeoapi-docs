@@ -42,7 +42,7 @@ Gets position data for one or more records by their score/time.
 - The `groupUid` `"Personal_Best"` can be used to get the global leaderboard.
 - The `mapUid` parameter in the URL has to correspond with a map in the request body.
 - This endpoint supports up to 50 maps at once - they need to be added to the request body's array as well as to the query parameters (see example below).
-- This endpoint can sometimes be very delayed - there's been cases where it has returned data that was outdated for multiple hours.
+- This endpoint can sometimes be very delayed - there's been cases where it has returned data that was outdated for multiple hours. On average, this route should be up to date within about three hours - some maps are prioritized though (official campaign maps and current TOTDs), so they are typically updated every five minutes.
 
 ---
 
