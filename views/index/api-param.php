@@ -7,10 +7,20 @@
 		<span class="has-text-danger" title="Required">*</span>
 	<?php } ?>
 
-	<?php if (isset($item['default'])) { ?>
-		<ul><li>
-			<span>Default:</span>
-			<code><?= Nin\Html::encode($item['default']) ?></code>
-		</li></ul>
+	<?php if (isset($item['default']) || isset($item['min']) || isset($item['max'])) { ?>
+		<div class="is-size-6 has-text-grey mt-1">
+			<?php if (isset($item['min'])) { ?>
+				<span>Minimum:</span>
+				<code><?= Nin\Html::encode($item['min']) ?></code>
+			<?php } ?>
+			<?php if (isset($item['max'])) { ?>
+				<span>Maximum:</span>
+				<code><?= Nin\Html::encode($item['max']) ?></code>
+			<?php } ?>
+			<?php if (isset($item['default'])) { ?>
+				<span>Default:</span>
+				<code><?= Nin\Html::encode($item['default']) ?></code>
+			<?php } ?>
+		</div>
 	<?php } ?>
 </li>
