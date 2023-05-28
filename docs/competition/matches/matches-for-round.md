@@ -18,10 +18,13 @@ parameters:
       type: integer
       description: The number of matches to retrieve
       required: true
+      default: 10
+      max: 100
     - name: offset
       type: integer
       description: The number of matches to skip
       required: false
+      default: 0
 ---
 
 Gets matches for a given round in a competition.

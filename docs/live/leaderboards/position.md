@@ -13,6 +13,7 @@ parameters:
       type: string
       description: The UID of the map
       required: true
+      max: 50 map UIDs
   query:
     - name: score
       type: integer

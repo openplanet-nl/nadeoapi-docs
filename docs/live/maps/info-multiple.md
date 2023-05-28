@@ -11,8 +11,9 @@ parameters:
   query:
     - name: mapUidList
       type: string
-      description: A comma-separated list of map UIDs (maximum 100)
+      description: A comma-separated list of map UIDs
       required: true
+      max: 100 map UIDs
 ---
 
 Gets information about multiple maps from their UIDs.
@@ -21,7 +22,6 @@ Gets information about multiple maps from their UIDs.
 
 **Remarks**:
 - Invalid UIDs will be ignored in the result without any visible errors.
-- The API returns a `400` error if more than 100 map UIDs are requested.
 
 ---
 

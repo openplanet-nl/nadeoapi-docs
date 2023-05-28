@@ -13,10 +13,13 @@ parameters:
       type: integer
       description: The number of competitions to retrieve
       required: false
+      default: 0
+      maximum: 100
     - name: offset
       type: integer
       description: The number of competitions to skip
       required: false
+      default: 0
 ---
 
 Gets a list of competitions in clubs the current user is a member of.

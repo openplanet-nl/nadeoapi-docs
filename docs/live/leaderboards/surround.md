@@ -21,10 +21,12 @@ parameters:
       type: integer
       description: The amount of records to return that are lower than the requested score
       required: true
+      max: 1
     - name: upper
       type: integer
       description: The amount of records to return that are higher than the requested score
       required: true
+      max: 1
   query:
     - name: score
       type: integer

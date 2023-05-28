@@ -13,10 +13,13 @@ parameters:
       type: integer
       description: The number of competitions to retrieve (maximum 100)
       required: false
+      default: 10
+      max: 100
     - name: offset
       type: integer
       description: The number of competitions to skip
       required: false
+      default: 0
 ---
 
 Gets a list of competitions.

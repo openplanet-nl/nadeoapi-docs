@@ -20,12 +20,15 @@ parameters:
   query:
     - name: length
       type: integer
-      description: The number of records to retrieve (10 by default)
+      description: The number of records to retrieve
       required: false
+      default: 10
+      max: 100
     - name: offset
       type: integer
       description: The number of records to skip
       required: false
+      default: 0
 ---
 
 Gets map records for a challenge ID.

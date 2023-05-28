@@ -11,12 +11,15 @@ parameters:
   query:
     - name: length
       type: integer
-      description: The number of challenges to retrieve (10 by default)
+      description: The number of challenges to retrieve
       required: false
+      default: 10
+      max: 100
     - name: offset
       type: integer
       description: The number of challenges to skip
       required: false
+      default: 0
 ---
 
 Gets a list of challenges.

@@ -20,8 +20,10 @@ parameters:
   query:
     - name: length
       type: integer
-      description: The number of records to retrieve (5 by default, 100 is the maximum)
+      description: The number of records to retrieve
       required: false
+      default: 5
+      max: 100
     - name: onlyWorld
       type: boolean
       description: Whether to only retrieve records from the world leaderboard
@@ -30,6 +32,7 @@ parameters:
       type: integer
       description: The number of records to skip
       required: false
+      default: 0
 ---
 
 Gets surrounding records for a score on a map's leaderboard.
