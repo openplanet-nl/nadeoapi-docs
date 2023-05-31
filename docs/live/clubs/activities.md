@@ -33,7 +33,7 @@ Gets a list of club activities, including news, rooms, campaigns and others.
 ---
 
 **Remarks**:
-- For clubs you are not an admin of, `active` needs to be set to `true` - because only admins are allowed to see disabled activities. Otherwise you'll get an error complaining that you're not a member/admin of the club.
+- For clubs you are not an admin of, `active` needs to be set to `true` because only admins are allowed to see disabled activities. Otherwise you'll get an error complaining that you're not a member/admin of the club.
 
 ---
 
