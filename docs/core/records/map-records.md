@@ -25,6 +25,7 @@ Gets map records for a set of maps and a set of accounts.
 
 **Remarks**:
 - This endpoint only accepts `mapId`s - to translate `mapUid`s to `mapId`s, you can use the [map info endpoint](/core/maps/info).
+- Due to URI length limitations, the maximum number of IDs allowed is 207. Realistically, this means one map and at most 206 accounts, or more maps and fewer accounts.
 
 ---
 
