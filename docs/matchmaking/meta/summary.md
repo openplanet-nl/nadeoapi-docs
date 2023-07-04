@@ -1,5 +1,5 @@
 ---
-name: Get Matchmaking IDs
+name: Get matchmaking IDs
 
 url: https://matchmaking.trackmania.nadeo.club
 method: GET
@@ -8,7 +8,7 @@ route: /api/official/summary
 audience: NadeoClubServices
 ---
 
-Gets internal identifiers for the different Matchmaking modes.
+Gets internal identifiers for the different matchmaking modes.
 
 ---
 
