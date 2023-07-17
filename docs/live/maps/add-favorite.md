@@ -15,7 +15,7 @@ parameters:
       required: true
 ---
 
-Adds a map to your favorites.
+Adds a map to your authenticated account's favorites.
 
 ---
 

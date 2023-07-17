@@ -3,7 +3,7 @@ name: Get favorite maps
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
-route: /api/token/map/favorite?offset={offset}&limit={limit}&sort={sort}&order={order}&mapType={mapType}&playable={playable}
+route: /api/token/map/favorite?offset={offset}&length={length}&sort={sort}&order={order}&mapType={mapType}&playable={playable}
 
 audience: NadeoLiveServices
 parameters:
@@ -39,7 +39,7 @@ parameters:
       required: false
 ---
 
-Retrieves your favorite tracks along with their information.
+Retrieves your authenticated account's favorite tracks along with their information.
 
 ---
 

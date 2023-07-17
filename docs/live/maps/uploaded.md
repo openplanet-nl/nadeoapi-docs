@@ -19,7 +19,7 @@ parameters:
       required: false
 ---
 
-Gets a list of your uploaded maps, sorted by upload date.
+Gets a list of your authenticated account's uploaded maps, sorted by upload date.
 
 ---
 

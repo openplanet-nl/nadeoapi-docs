@@ -14,7 +14,7 @@ parameters:
       required: true
 ---
 
-Removes a map from your favorites.
+Removes a map from your authenticated account's favorites.
 
 ---
 
