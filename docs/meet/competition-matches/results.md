@@ -40,88 +40,59 @@ Gets results for a given competition match ID.
 
 **Example request**:
 ```plain
-GET https://meet.trackmania.nadeo.club/api/matches/6899/results
+GET https://meet.trackmania.nadeo.club/api/matches/54430/results
 ```
 
 **Example response**:
 ```json
 {
-    "matchLiveId": "LID-MTCH-zplknskyw35qrqy",
+    "matchLiveId": "LID-MTCH-wnf4y3emu43rxnk",
     "roundPosition": 0,
     "results": [
         {
-            "participant": "e8b72453-7716-441e-9e72-14817d2e563a",
+            "participant": "7c02bdeb-92dc-4435-b07b-647e0d5699a9",
             "rank": 1,
-            "score": 62,
-            "zone": "World|Europe|France|Pays-de-la-Loire|Vendée",
-            "team": null
+            "score": 0,
+            "zone": "World",
+            "team": "0c908d55-efa5-401a-b5ba-5afd1eac7686"
         },
         {
-            "participant": "8f08302a-f670-463b-9f71-fbfacffb8bd1",
+            "participant": "0120bf0b-b567-4224-bd6e-a0b4da089905",
             "rank": 2,
-            "score": 61,
-            "zone": "World|Europe|Germany|Saarland|Saarbrücken",
-            "team": null
+            "score": 0,
+            "zone": "World",
+            "team": "537a040c-dd37-4294-badf-ec7a71b0a4bf"
         },
         {
-            "participant": "b09527f2-b61d-4d9a-8cdc-73484590f81f",
+            "participant": "a61fffac-b203-4e37-8d32-0ae1b772578f",
             "rank": 3,
-            "score": 60,
-            "zone": "World|Africa|Uganda",
-            "team": null
+            "score": 0,
+            "zone": "World",
+            "team": "0c908d55-efa5-401a-b5ba-5afd1eac7686"
         },
         {
-            "participant": "af30b7a1-fc37-485f-94bf-f00e39805d8c",
+            "participant": "3905ba40-a668-4e6a-8a95-9591eb20e673",
             "rank": 4,
-            "score": 59,
-            "zone": "World|Europe|Croatia",
-            "team": null
-        },
-        {
-            "participant": "9da54743-020c-4e87-82b9-1dad80f8162d",
-            "rank": 5,
-            "score": 58,
-            "zone": "World|Europe|France|Bretagne|Finistère",
-            "team": null
-        },
-        {
-            "participant": "05477e79-25fd-48c2-84c7-e1621aa46517",
-            "rank": 6,
-            "score": 57,
-            "zone": "World|Europe|Germany|Sachsen|Dresden",
-            "team": null
-        },
-        {
-            "participant": "961d1145-8c7b-48c3-9191-0d1d91e44a4a",
-            "rank": 7,
-            "score": 56,
-            "zone": "World|Europe|Germany|Niedersachsen|Oldenburg",
-            "team": null
-        },
-        {
-            "participant": "d0a811b4-5611-4948-8865-03c9d252bcf4",
-            "rank": 8,
-            "score": 55,
-            "zone": "World|Europe|France|Île-de-France|Paris",
-            "team": null
-        },
-        {
-            "participant": "1336b019-0d7d-43f7-b227-ff336f8b7140",
-            "rank": 9,
-            "score": 54,
-            "zone": "World|Europe|Portugal|Norte",
-            "team": null
-        },
-        {
-            "participant": "4d85c941-0242-4f9f-a6d4-ee7772d95e82",
-            "rank": 10,
-            "score": 53,
-            "zone": "World|Europe|Switzerland|Bern",
-            "team": null
+            "score": 0,
+            "zone": "World",
+            "team": "537a040c-dd37-4294-badf-ec7a71b0a4bf"
         }
     ],
     "scoreUnit": "point",
-    "teams": []
+    "teams": [
+        {
+            "position": 0,
+            "team": "0c908d55-efa5-401a-b5ba-5afd1eac7686",
+            "rank": 1,
+            "score": 2
+        },
+        {
+            "position": 1,
+            "team": "537a040c-dd37-4294-badf-ec7a71b0a4bf",
+            "rank": 2,
+            "score": 0
+        }
+    ]
 }
 ```
 
