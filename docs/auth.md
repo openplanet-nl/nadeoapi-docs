@@ -125,6 +125,4 @@ URL | Audience
 ---|---
 https://prod.trackmania.core.nadeo.online/ | NadeoServices
 https://live-services.trackmania.nadeo.live/ | NadeoLiveServices
-https://club.trackmania.nadeo.club | NadeoClubServices
-https://competition.trackmania.nadeo.club | NadeoClubServices
-https://matchmaking.trackmania.nadeo.club | NadeoClubServices
+https://meet.trackmania.nadeo.club | NadeoClubServices
