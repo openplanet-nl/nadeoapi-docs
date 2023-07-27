@@ -3,7 +3,7 @@ name: Get zones
 
 url: https://prod.trackmania.core.nadeo.online
 method: GET
-route: /zones
+route: /zones/
 
 audience: NadeoServices
 
@@ -15,7 +15,7 @@ Gets all available zones.
 
 **Example request**:
 ```plain
-GET https://prod.trackmania.core.nadeo.online/zones
+GET https://prod.trackmania.core.nadeo.online/zones/
 ```
 
 **Example response**:
