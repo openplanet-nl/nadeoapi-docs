@@ -3,7 +3,7 @@ name: Get API routes
 
 url: https://prod.trackmania.core.nadeo.online
 method: GET
-route: /routes?usage={usage}
+route: /api/routes?usage={usage}
 
 audience: NadeoServices
 
