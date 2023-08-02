@@ -42,6 +42,7 @@ Gets surrounding records for a score on a map's leaderboard.
 - The `groupId` `"Personal_Best"` can be used to get the global leaderboard.
 - The `lower` and `upper` parameters used to support more than `1`, but now no more than one upper and one lower record is returned.
 - This endpoint can sometimes include a delay due to leaderboard calculations happening in the background.
+- If the authenticated account has a record on the requested map, no scores lower than that record can be requested - it's recommended to use this endpoint with an account that does not have any records.
 
 ---
 
