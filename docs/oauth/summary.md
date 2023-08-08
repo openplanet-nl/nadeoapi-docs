@@ -1,4 +1,4 @@
-# OAuth summary
+# Introduction
 
 This is an alternative documentation for Trackmania's OAuth implementation - the official one can be found [here](https://doc.trackmania.com/web-services/auth/).
 

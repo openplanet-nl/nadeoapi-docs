@@ -11,6 +11,10 @@ This API is the main API which the game talks to. Most of it endpoints requires 
 
 Through this API, tokens for specific audiences can be requested (see [Authentication](/auth)). It's also the place where most of the game's internal requests related to player accounts go to.
 
+## Deprecations
+
+- August 2023: The display names API is being removed - to continue resolving `accountID` values to user names, it's recommended to use the relevant [OAuth API endpoint](/oauth/reference/account/id-to-name) instead.
+
 ## Endpoints list
 There is [an endpoint that provides all of the available endpoints](/core/meta/routes). It does not require any authentication, and as such can be [viewed directly in the browser](https://prod.trackmania.core.nadeo.online/api/routes).
 

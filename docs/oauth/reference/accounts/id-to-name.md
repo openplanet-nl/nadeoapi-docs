@@ -3,7 +3,7 @@ name: Get account name
 
 url: https://api.trackmania.com
 method: GET
-route: /api/display-names?accountId[0]={accountId}
+route: /api/display-names?accountId[]={accountId}
 
 parameters:
   query:

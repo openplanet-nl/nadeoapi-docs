@@ -1,6 +1,6 @@
 # OAuth authorization
 
-This is a step-by-step instruction how to set up Trackmania OAuth for your application. It's basically a rewrite of the [official documentation](https://doc.trackmania.com/web-services/auth/) but it's aiming to provide a lot more context and explanations around the concepts at play.
+This is a step-by-step instruction how to set up Trackmania OAuth for your application. It's basically a rewrite of the [official documentation](https://doc.trackmania.com/web/web-services/auth/) but it's aiming to provide a lot more context and explanations around the concepts at play.
 
 ## Creating an OAuth app
 
