@@ -22,6 +22,7 @@ Gets player display names from account IDs.
 
 **Remarks**:
 - This endpoint is only accessible with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts). If you encounter `401` errors using a dedicated server account, switch to using a Ubisoft account.
+- **This endpoint is deprecated and will be removed soon. Use the relevant [OAuth API endpoint](/oauth/reference/account/id-to-name) instead.**
 
 ---
 
