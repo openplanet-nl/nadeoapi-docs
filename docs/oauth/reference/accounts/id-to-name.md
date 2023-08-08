@@ -11,6 +11,7 @@ parameters:
       type: string
       description: The ID of the account you want to retrieve the name for
       required: true
+      max: 100 account IDs
 ---
 
 Retrieves the account name for a given `accountId`.
