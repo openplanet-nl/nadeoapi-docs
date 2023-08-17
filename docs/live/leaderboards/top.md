@@ -42,7 +42,7 @@ Gets surrounding records for a score on a map's leaderboard.
 **Remarks**:
 - The `groupId` `"Personal_Best"` can be used to get the global leaderboard.
 - `onlyWorld=true` is required to retrieve more than the first five records. Without it, `length` and `offset` will have no effect.
-- This endpoint only allows you to read a leaderboard's first 100,000 records. The rest of the leaderboard is not available at this level of detail.
+- This endpoint only allows you to read a leaderboard's first 10,000 records. The rest of the leaderboard is not available at this level of detail.
 - If a `length` higher than `100` is requested, the API will successfully return only the first 100 records.
 
 ---
