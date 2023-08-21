@@ -3,13 +3,13 @@ name: Get map medal records
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
-route: /api/token/leaderboard/group/{groupId}/map/{mapUid}/medals
+route: /api/token/leaderboard/group/{groupUid}/map/{mapUid}/medals
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: groupId
+    - name: groupUid
       type: string
       description: The ID of the group/season
       required: true
@@ -24,7 +24,8 @@ Gets automatically selected medal records for a map based on its leaderboard (wh
 ---
 
 **Remarks**:
-- The `groupId` `"Personal_Best"` can be used to get the global leaderboard.
+- The `groupUid` `"Personal_Best"` can be used to get the global leaderboard.
+- Unlike some other leaderboard-related endpoints that use a `groupUid` parameter, this one also supports groups/seasons that are already closed.
 - Because this endpoint relies on leaderboard records that are close to the medal times, it doesn't always return all (or any) ghosts. Especially maps with a low number of records on the leaderboard won't work well.
 - The endpoint only returns records for the gold, silver and bronze medals.
 
@@ -66,7 +67,7 @@ GET https://live-services.trackmania.nadeo.live/api/token/leaderboard/group/Pers
 }
 ```
 
-If the `groupId` is invalid, the response will be an empty object:
+If the `groupUid` is invalid, the response will be an empty object:
 
 ```json
 {}

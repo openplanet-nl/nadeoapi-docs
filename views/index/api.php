@@ -56,6 +56,26 @@ if (isset($page->meta['parameters'])) {
 		</div>
 		<?php
 	}
+
+	if (isset($params['body'])) {
+		$params_path = $params['body'];
+		?>
+		<hr>
+		<div class="content">
+			<p><b>Body parameters:</b></p>
+			<ul>
+				<?php
+				foreach ($params_path as $item) {
+					echo $this->renderPartial('api-param', [
+						'class' => 'warning',
+						'item' => $item,
+					]);
+				}
+				?>
+			</ul>
+		</div>
+		<?php
+	}
 }
 ?>
 

@@ -3,13 +3,13 @@ name: Get surrounding records for a score
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
-route: /api/token/leaderboard/group/{groupId}/map/{mapUid}/surround/{lower}/{upper}?score={score}
+route: /api/token/leaderboard/group/{groupUid}/map/{mapUid}/surround/{lower}/{upper}?score={score}
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: groupId
+    - name: groupUid
       type: string
       description: The ID of the group/season
       required: true
@@ -39,7 +39,8 @@ Gets surrounding records for a score on a map's leaderboard.
 ---
 
 **Remarks**:
-- The `groupId` `"Personal_Best"` can be used to get the global leaderboard.
+- The `groupUid` `"Personal_Best"` can be used to get the global leaderboard.
+- When using a different `groupUid`, make sure you're only referencing currently open leaderboards. Maps with closed leaderboards will result in an empty response.
 - The `lower` and `upper` parameters used to support more than `1`, but now no more than one upper and one lower record is returned.
 - This endpoint can sometimes include a delay due to leaderboard calculations happening in the background.
 - If the authenticated account has a record on the requested map, no scores lower than that record can be requested - it's recommended to use this endpoint with an account that does not have any records.
@@ -89,7 +90,7 @@ GET https://live-services.trackmania.nadeo.live/api/token/leaderboard/group/Pers
 }
 ```
 
-If the `groupId` is invalid, the response will be an empty object:
+If the `groupUid` is invalid (or the referenced leaderboard is closed), the response will be an empty object:
 
 ```json
 {}

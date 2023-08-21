@@ -3,13 +3,13 @@ name: Get player season rankings
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
-route: /api/token/leaderboard/group/{groupId}?accountId={accountId}
+route: /api/token/leaderboard/group/{groupUid}?accountId={accountId}
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: groupId
+    - name: groupUid
       type: string
       description: The ID of the group/season
       required: true
@@ -25,8 +25,8 @@ Gets the player's regional ranks for the given group/season.
 ---
 
 **Remarks**:
-- The `groupId` `"Personal_Best"` cannot be used for this endpoint because it requires a group that refers to a campaign or season.
-- Unlike some other leaderboard-related endpoints that use a `groupId` parameter, this one also supports groups/seasons that are already closed.
+- The `groupUid` `"Personal_Best"` cannot be used for this endpoint because it requires a group that refers to a campaign or season.
+- Unlike some other leaderboard-related endpoints that use a `groupUid` parameter, this one also supports groups/seasons that are already closed.
 
 ---
 
@@ -85,7 +85,7 @@ GET https://live-services.trackmania.nadeo.live/api/token/leaderboard/group/ee54
 }
 ```
 
-If the `groupId` or the `accountId` is invalid, the response will be an empty object:
+If the `groupUid` or the `accountId` is invalid, the response will be an empty object:
 
 ```json
 {}

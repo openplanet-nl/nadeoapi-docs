@@ -3,13 +3,13 @@ name: Get map leaderboards
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
-route: /api/token/leaderboard/group/{groupId}/map/{mapUid}/top?length={length}&onlyWorld={onlyWorld}&offset={offset}
+route: /api/token/leaderboard/group/{groupUid}/map/{mapUid}/top?length={length}&onlyWorld={onlyWorld}&offset={offset}
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: groupId
+    - name: groupUid
       type: string
       description: The ID of the group/season
       required: true
@@ -40,7 +40,7 @@ Gets surrounding records for a score on a map's leaderboard.
 ---
 
 **Remarks**:
-- The `groupId` `"Personal_Best"` can be used to get the global leaderboard.
+- The `groupUid` `"Personal_Best"` can be used to get the global leaderboard.
 - `onlyWorld=true` is required to retrieve more than the first five records. Without it, `length` and `offset` will have no effect.
 - This endpoint only allows you to read a leaderboard's first 10,000 records. The rest of the leaderboard is not available at this level of detail.
 - If a `length` higher than `100` is requested, the API will successfully return only the first 100 records.
@@ -83,7 +83,7 @@ GET https://live-services.trackmania.nadeo.live/api/token/leaderboard/group/Pers
 }
 ```
 
-If the `groupId` is invalid, the response will be an empty object:
+If the `groupUid` is invalid, the response will be an empty object:
 
 ```json
 {}
