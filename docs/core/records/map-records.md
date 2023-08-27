@@ -17,6 +17,10 @@ parameters:
       type: string
       description: A comma-separated list of map IDs
       required: true
+    - name: seasonId
+      type: string
+      description: The ID of the group/season
+      required: false
 ---
 
 Gets map records for a set of maps and a set of accounts.
