@@ -3,7 +3,7 @@ name: Get map records
 
 url: https://prod.trackmania.core.nadeo.online
 method: GET
-route: /mapRecords/?accountIdList={accountIdList}&mapIdList={mapIdList}
+route: /mapRecords/?accountIdList={accountIdList}&mapIdList={mapIdList}&seasonId={seasonId}
 
 audience: NadeoServices
 
@@ -17,6 +17,10 @@ parameters:
       type: string
       description: A comma-separated list of map IDs
       required: true
+    - name: seasonId
+      type: string
+      description: The ID of the requested group/season
+      required: false
 ---
 
 Gets map records for a set of maps and a set of accounts.
@@ -26,6 +30,7 @@ Gets map records for a set of maps and a set of accounts.
 **Remarks**:
 - This endpoint only accepts `mapId`s - to translate `mapUid`s to `mapId`s, you can use the [map info endpoint](/core/maps/info).
 - This endpoint has no intrinsic limit on the number of maps/accounts requested, but it will return a 414 error if the request URI length is 8220 characters or more (e.g. corresponding to one map and just above 200 accounts, depending on how you encode the URI).
+- The `seasonId` parameter does not accept the value `"Personal_Best"`- to retrieve records on the PB leaderboards, simply omit the `seasonId` parameter from the URL.
 
 ---
 
