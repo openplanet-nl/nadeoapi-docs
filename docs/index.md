@@ -30,7 +30,7 @@ All game APIs are to be used responsibly. Nadeo/Ubisoft **can and will ban your 
 Make sure you send along a useful `User-Agent` header that includes what your project is, who you are (your name or some username/handle), and how to contact you (your email address). For example:
 
 ```plain
-My awesome leaderboard / @Miss#8888 / miss@example.com
+My awesome leaderboard / @miss / miss@example.com
 ```
 
 To report a potential security concern directly to Nadeo/Ubisoft, send an email to <contact@nadeo.com>.

@@ -7,9 +7,9 @@ dirs:
 ---
 
 # Core API
-This API is the main API which the game talks to. Most of it endpoints requires a token with the `NadeoServices` audience.
+This is the main API the game talks to. Most of its endpoints require a token with the `NadeoServices` audience.
 
-Through this API, tokens for specific audiences can be requested (see [Authentication](/auth)). It's also the place where most of the game's internal requests related to player accounts go to.
+Through this API, tokens for specific audiences can be requested (see [Authentication](/auth)).
 
 ## Deprecations
 
@@ -24,7 +24,7 @@ Tokens authenticated through dedicated server accounts as described in [Authenti
 * `https://prod.trackmania.core.nadeo.online/api/routes?usage=Client` - Shows endpoints intended for clients
 * `https://prod.trackmania.core.nadeo.online/api/routes?usage=Server` - Shows endpoints intended for servers
 
-Important to note is that at the time of writing, servers do not have access to the [display names API](/core/accounts/display-names), which is why most API usage should be using the Ubisoft authentication method rather than the dedicated server method.
+Dedicated server accounts do not have access to all accounts-related endpoints, which is why it's recommended to use the Ubisoft authentication method rather than the dedicated server method.
 
 ## Endpoints history
 We are tracking this endpoint API [through Github](https://github.com/openplanet-nl/core-api-tracking/commits/master) for changes Nadeo makes in real time. This is also pushed to [Discord](https://openplanet.dev/link/discord) in our `#announce` channel.
