@@ -3,6 +3,20 @@
 	<p class="subtitle">Audience: <code><?= Nin\Html::encode($page->meta['audience']) ?></code></p>
 <?php } ?>
 
+<?php if (isset($page->meta['warning'])) { ?>
+	<div class="notification is-warning">
+		<span class="icon"><i class="fa fa-warning"></i></span>
+		<span><?= Nin\Html::encode($page->meta['warning']) ?></span>
+	</div>
+<?php } ?>
+
+<?php if (isset($page->meta['danger'])) { ?>
+	<div class="notification is-danger">
+		<span class="icon"><i class="fa fa-ban"></i></span>
+		<span><?= Nin\Html::encode($page->meta['danger']) ?></span>
+	</div>
+<?php } ?>
+
 <code>
 	<span class="has-text-weight-bold has-text-<?php
 	switch ($page->meta['method']) {
