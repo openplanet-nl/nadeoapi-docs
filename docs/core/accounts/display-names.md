@@ -18,7 +18,7 @@ parameters:
 
 <div class="notification is-danger">
 
-This endpoint is deprecated and will be removed soon. Use the [OAuth API endpoint](/oauth/reference/accounts/id-to-name) instead.
+This endpoint has been removed on 2023-09-19. Use the [OAuth API endpoint](/oauth/reference/accounts/id-to-name) instead.
 
 </div>
 
