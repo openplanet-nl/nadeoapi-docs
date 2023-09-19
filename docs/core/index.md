@@ -13,7 +13,7 @@ Through this API, tokens for specific audiences can be requested (see [Authentic
 
 ## Deprecations
 
-- August 2023: The display names API is being removed - to continue resolving `accountID` values to user names, it's recommended to use the relevant [OAuth API endpoint](/oauth/reference/accounts/id-to-name) instead.
+- The [display names endpoint](/core/accounts/display-names) has been removed on 2023-09-19 - to continue resolving `accountID` values to user names, it's recommended to use the relevant [OAuth API endpoint](/oauth/reference/accounts/id-to-name) instead.
 
 ## Endpoints list
 There is [an endpoint that provides all of the available endpoints](/core/meta/routes). It does not require any authentication, and as such can be [viewed directly in the browser](https://prod.trackmania.core.nadeo.online/api/routes).
