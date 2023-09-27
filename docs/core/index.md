@@ -3,6 +3,7 @@ dirs:
   - accounts
   - records
   - maps
+  - skins
   - meta
 ---
 

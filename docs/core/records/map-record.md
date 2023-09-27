@@ -8,7 +8,7 @@ route: /mapRecords/{mapRecordId}
 audience: NadeoServices
 
 parameters:
-  query:
+  path:
     - name: mapRecordId
       type: string
       description: A mapRecord ID
