@@ -35,7 +35,7 @@ parameters:
       default: 0
 ---
 
-Gets surrounding records for a score on a map's leaderboard.
+Gets records from a map's leaderboard.
 
 ---
 
