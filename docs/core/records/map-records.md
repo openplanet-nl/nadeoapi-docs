@@ -16,7 +16,7 @@ parameters:
     - name: mapIdList
       type: string
       description: A comma-separated list of map IDs
-      required: true
+      required: false
     - name: seasonId
       type: string
       description: The ID of the requested group/season
@@ -31,6 +31,7 @@ Gets map records for a set of maps and a set of accounts.
 - This endpoint only accepts `mapId`s - to translate `mapUid`s to `mapId`s, you can use the [map info endpoint](/core/maps/info).
 - This endpoint has no intrinsic limit on the number of maps/accounts requested, but it will return a 414 error if the request URI length is 8220 characters or more (e.g. corresponding to one map and just above 200 accounts, depending on how you encode the URI).
 - The `seasonId` parameter does not accept the value `"Personal_Best"`- to retrieve records on the PB leaderboards, simply omit the `seasonId` parameter from the URL.
+- By omitting `mapIdList` you can request all records on all maps for a requested `accountId` - note that this only works for the currently authenticated account, requesting others' records without specifying `mapId`s will result in error `403`. This feature is not supported when using a dedicated server account's token.
 
 ---
 
