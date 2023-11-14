@@ -1,5 +1,5 @@
 ---
-name: Get club asset activities
+name: Get club upload activities
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
@@ -11,25 +11,25 @@ parameters:
   path:
     - name: bucketType
       type: string
-      description: The type of assets to retrieve (see below for accepted values)
+      description: The type of upload activity to retrieve (see below for accepted values)
       required: true
   query:
     - name: length
       type: integer
-      description: The number of assets to retrieve
+      description: The number of upload activities to retrieve
       required: true
     - name: offset
       type: integer
-      description: The number of assets to skip
+      description: The number of upload activities to skip
       required: true
 ---
 
-Gets a list of club-related asset activities (where players can upload maps, skins and items).
+Gets a list of club-related upload activities (where players can upload maps, skins and items).
 
 ---
 
 **Remarks**:
-- There are three types of asset activities you can retrieve: `map-upload`, `skin-upload` and `item-upload`. These relate to club campaign maps, club skins and club items, respectively.
+- There are three types of upload activities you can retrieve: `map-upload`, `skin-upload` and `item-upload`. These relate to club track uploads, skin uploads and item collection activities, respectively.
 
 ---
 
