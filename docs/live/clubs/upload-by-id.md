@@ -36,6 +36,7 @@ Gets the maps, items, or skins in a specific upload activity.
 
 **Remarks**:
 - The returned bucket will have one of three types : `map-upload`, `skin-upload`, or `item-upload`. These relate to club track uploads, skin uploads and item collection activities, respectively.
+- The primary identifier for items in the returned bucket is their `itemId`. For maps this will be a `mapUid` and for skins this is a `skinID`.
 
 ---
 
