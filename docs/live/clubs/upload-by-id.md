@@ -57,8 +57,8 @@ GET https://live-services.trackmania.nadeo.live/api/token/club/42175/bucket/3444
         },
         ...
         {
-            "itemId":"XoBSwvm1Ao_diasEK023Z9bIS40",
-            "position":54,
+            "itemId":"rRYRLq9YtI83LA53XbrZ2Bm4Kqg",
+            "position":9,
             "description":"",
             "mediaUrls":[]
         }
