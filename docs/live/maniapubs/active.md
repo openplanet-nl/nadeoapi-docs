@@ -14,6 +14,7 @@ Get a list of active Maniapubs (in-game ads) along with their metadata.
 
 **Remarks**:
 - This endpoint doesn't return zone-specific Maniapubs - it might depend on the account's current zone, but you can't request Maniapubs by zone directly.
+- As of 2023-12-21, this endpoint's response structure links to `.dds` files by default, while several scaled `.jpg` versions are available using separate fields (see example below for reference).
 
 ---
 
@@ -27,37 +28,39 @@ GET https://live-services.trackmania.nadeo.live/api/token/advertising/display/ac
 {
   "displayList": [
     {
-      "campaignUid": "862d3615-bee7-4e8b-ad0f-cc647f972f33",
-      "name": "Trackmania.io",
+      "campaignUid": "b7ef5b35-f1bf-41ae-a58e-7356c86b9c2d",
+      "name": "Beacon World League",
       "adType": "ugc",
-      "externalUrl": "https://trackmania.io/",
-      "screen2x3Url": "https://trackmania-prod-nls-file-store-s3.cdn.ubi.com/maniapub/screen2x3/542815c1-618e-4f1f-b86a-aeba39419278/60d31e88f23a9.jpg?updateTimestamp=1624448651.jpg",
-      "screen16x9Url": "https://trackmania-prod-nls-file-store-s3.cdn.ubi.com/maniapub/screen16x9/542815c1-618e-4f1f-b86a-aeba39419278/60d320d23cacb.jpg?updateTimestamp=1624449235.jpg",
-      "screen64x10Url": "https://trackmania-prod-nls-file-store-s3.cdn.ubi.com/maniapub/screen64x10/542815c1-618e-4f1f-b86a-aeba39419278/60d31dc654083.jpg?updateTimestamp=1624448455.jpg",
-      "mediaUrl": "https://trackmania-prod-nls-file-store-s3.cdn.ubi.com/maniapub/screen2x3/542815c1-618e-4f1f-b86a-aeba39419278/60d31e88f23a9.jpg?updateTimestamp=1624448651.jpg",
-      "displayFormat": "screen2x3",
-      "ratio": 0.667,
-      "displayRatio": 0.667,
-      "endTimestamp": 1659188620,
-      "relativeEnd": 73052
+      "externalUrl": "https://discord.gg/aJBcSYN2dj",
+      "screen2x3Url": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/3e5306aa-8e44-4cbe-bb26-aeee38a2a70f/dds/game.dds?timestamp=1702643396.dds",
+      "screen2x3UrlJpgLarge": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/3e5306aa-8e44-4cbe-bb26-aeee38a2a70f/jpg/large.jpg?timestamp=1702643396.jpg",
+      "screen2x3UrlJpgMedium": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/3e5306aa-8e44-4cbe-bb26-aeee38a2a70f/jpg/medium.jpg?timestamp=1702643396.jpg",
+      "screen2x3UrlJpgSmall": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/3e5306aa-8e44-4cbe-bb26-aeee38a2a70f/jpg/small.jpg?timestamp=1702643396.jpg",
+      "screen2x3UrlDds": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/3e5306aa-8e44-4cbe-bb26-aeee38a2a70f/dds/game.dds?timestamp=1702643396.dds",
+      "screen16x9Url": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/335586ba-e30a-4f75-8e24-8a23deab5afa/dds/game.dds?timestamp=1702987488.dds",
+      "screen16x9UrlJpgLarge": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/335586ba-e30a-4f75-8e24-8a23deab5afa/jpg/large.jpg?timestamp=1702987488.jpg",
+      "screen16x9UrlJpgMedium": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/335586ba-e30a-4f75-8e24-8a23deab5afa/jpg/medium.jpg?timestamp=1702987488.jpg",
+      "screen16x9UrlJpgSmall": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/335586ba-e30a-4f75-8e24-8a23deab5afa/jpg/small.jpg?timestamp=1702987488.jpg",
+      "screen16x9UrlDds": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/335586ba-e30a-4f75-8e24-8a23deab5afa/dds/game.dds?timestamp=1702987488.dds",
+      "screen64x41Url": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/335586ba-e30a-4f75-8e24-8a23deab5afa/dds/game.dds?timestamp=1702987488.dds",
+      "screen64x41UrlJpgLarge": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/335586ba-e30a-4f75-8e24-8a23deab5afa/jpg/large.jpg?timestamp=1702987488.jpg",
+      "screen64x41UrlJpgMedium": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/335586ba-e30a-4f75-8e24-8a23deab5afa/jpg/medium.jpg?timestamp=1702987488.jpg",
+      "screen64x41UrlJpgSmall": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/335586ba-e30a-4f75-8e24-8a23deab5afa/jpg/small.jpg?timestamp=1702987488.jpg",
+      "screen64x41UrlDds": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/335586ba-e30a-4f75-8e24-8a23deab5afa/dds/game.dds?timestamp=1702987488.dds",
+      "screen64x10Url": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/9effcdf4-66ab-49af-af68-8f85068b3d53/dds/game.dds?timestamp=1702651418.dds",
+      "screen64x10UrlJpgLarge": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/9effcdf4-66ab-49af-af68-8f85068b3d53/jpg/large.jpg?timestamp=1702651418.jpg",
+      "screen64x10UrlJpgMedium": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/9effcdf4-66ab-49af-af68-8f85068b3d53/jpg/medium.jpg?timestamp=1702651418.jpg",
+      "screen64x10UrlJpgSmall": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/9effcdf4-66ab-49af-af68-8f85068b3d53/jpg/small.jpg?timestamp=1702651418.jpg",
+      "screen64x10UrlDds": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/9effcdf4-66ab-49af-af68-8f85068b3d53/dds/game.dds?timestamp=1702651418.dds",
+      "mediaUrl": "",
+      "displayFormat": "",
+      "ratio": 0,
+      "displayRatio": 0,
+      "endTimestamp": 1703460488,
+      "relativeEnd": 282414
     },
     ...
-    {
-      "campaignUid": "74e15443-83b4-433d-8724-78935a43d353",
-      "name": "Evo",
-      "adType": "ugc",
-      "externalUrl": "https://discord.gg/evotm",
-      "screen2x3Url": "https://trackmania-prod-nls-file-store-s3.cdn.ubi.com/maniapub/screen2x3/37416ff5-d410-4643-adde-43d314b7f87d/61af70b748735.jpg?updateTimestamp=1638887610.jpg",
-      "screen16x9Url": "https://trackmania-prod-nls-file-store-s3.cdn.ubi.com/maniapub/screen16x9/37416ff5-d410-4643-adde-43d314b7f87d/61af70ef27bde.jpg?updateTimestamp=1638887666.jpg",
-      "screen64x10Url": "https://trackmania-prod-nls-file-store-s3.cdn.ubi.com/maniapub/screen64x10/37416ff5-d410-4643-adde-43d314b7f87d/61af70abd6531.jpg?updateTimestamp=1638887598.jpg",
-      "mediaUrl": "https://trackmania-prod-nls-file-store-s3.cdn.ubi.com/maniapub/screen2x3/37416ff5-d410-4643-adde-43d314b7f87d/61af70b748735.jpg?updateTimestamp=1638887610.jpg",
-      "displayFormat": "screen2x3",
-      "ratio": 0.667,
-      "displayRatio": 0.667,
-      "endTimestamp": 1659302878,
-      "relativeEnd": 187310
-    }
   ],
-  "itemCount": 9
+  "itemCount": 10
 }
 ```
