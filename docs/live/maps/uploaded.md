@@ -23,12 +23,20 @@ Gets a list of your authenticated account's uploaded maps, sorted by upload date
 
 ---
 
+**Remarks**:
+
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+
+---
+
 **Example request**:
+
 ```plain
 GET https://live-services.trackmania.nadeo.live/api/token/map?length=1&offset=0
 ```
 
 **Example response**:
+
 ```json
 {
   "mapList": [

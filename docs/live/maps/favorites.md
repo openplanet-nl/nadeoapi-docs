@@ -43,6 +43,12 @@ Retrieves your authenticated account's favorite tracks along with their informat
 
 ---
 
+**Remarks**:
+
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+
+---
+
 **Example request**:
 
 ```plain
@@ -50,6 +56,7 @@ GET https://live-services.trackmania.nadeo.live/api/token/map/favorite?offset=0&
 ```
 
 **Example response**:
+
 ```json
 {
   "mapList": [

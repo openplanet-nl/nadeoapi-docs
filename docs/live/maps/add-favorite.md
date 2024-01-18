@@ -19,7 +19,14 @@ Adds a map to your authenticated account's favorites.
 
 ---
 
+**Remarks**:
+
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+
+---
+
 **Example request**:
+
 ```plain
 POST https://live-services.trackmania.nadeo.live/api/token/map/favorite/EgUgXeBV8vpEth2hZgSzLhlHRs8/add
 ```
@@ -33,7 +40,5 @@ Map favorite created
 Example response if the requested map does not exist:
 
 ```json
-[
-  "map:error-notFound"
-]
+["map:error-notFound"]
 ```

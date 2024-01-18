@@ -13,17 +13,20 @@ Get a list of active Maniapubs (in-game ads) along with their metadata.
 ---
 
 **Remarks**:
+
 - This endpoint doesn't return zone-specific Maniapubs - it might depend on the account's current zone, but you can't request Maniapubs by zone directly.
-- As of 2023-12-21, this endpoint's response structure links to `.dds` files by default, while several scaled `.jpg` versions are available using separate fields (see example below for reference).
+- As of 2023-12-21, this endpoint's response links to `.dds` media files by default, while several scaled `.jpg` versions are available using separate fields (see example below for reference).
 
 ---
 
 **Example request**:
+
 ```plain
 GET https://live-services.trackmania.nadeo.live/api/token/advertising/display/active
 ```
 
 **Example response**:
+
 ```json
 {
   "displayList": [

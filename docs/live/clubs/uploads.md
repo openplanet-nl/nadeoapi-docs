@@ -29,74 +29,91 @@ Gets a list of club-related upload activities (where players can upload maps, sk
 ---
 
 **Remarks**:
+
 - There are three types of upload activities you can retrieve: `map-upload`, `skin-upload` and `item-upload`. These relate to club track uploads, skin uploads and item collection activities, respectively.
+- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png` versions are available using separate fields (see example below for reference).
 
 ---
 
 **Example request**:
+
 ```plain
 GET https://live-services.trackmania.nadeo.live/api/token/club/bucket/item-upload/all?length=3&offset=0
 ```
 
 **Example response**:
+
 ```json
 {
   "clubBucketList": [
     {
       "type": "item-upload",
-      "bucketItemList": [
-
-      ],
+      "bucketItemList": [],
       "bucketItemCount": 1,
       "popularityLevel": 0,
       "popularityValue": 0,
-      "mediaUrl": "https://trackmania-prod-nls-file-store-s3.cdn.ubi.com/club/card/31644/62e710715faaf.png?updateTimestamp=1659310196.png",
-      "creationTimestamp": 1659310192,
-      "id": 305333,
-      "clubId": 31644,
-      "clubName": "TMA.gg",
-      "name": "WTMT"
+      "creationTimestamp": 1698082804,
+      "creatorAccountId": "7ad33388-641e-4497-b063-c88e75552645",
+      "latestEditorAccountId": "7ad33388-641e-4497-b063-c88e75552645",
+      "id": 486055,
+      "clubId": 66661,
+      "clubName": "Ubisoft Club",
+      "name": "Laserhawk",
+      "mediaUrl": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/6af33f6f-1fe0-4f7d-bc0c-aa08d3f5eb90/dds/game.dds?timestamp=1705438118.dds",
+      "mediaUrlPngLarge": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/6af33f6f-1fe0-4f7d-bc0c-aa08d3f5eb90/png/large.png?timestamp=1705438118.png",
+      "mediaUrlPngMedium": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/6af33f6f-1fe0-4f7d-bc0c-aa08d3f5eb90/png/medium.png?timestamp=1705438118.png",
+      "mediaUrlPngSmall": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/6af33f6f-1fe0-4f7d-bc0c-aa08d3f5eb90/png/small.png?timestamp=1705438118.png",
+      "mediaUrlDds": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/6af33f6f-1fe0-4f7d-bc0c-aa08d3f5eb90/dds/game.dds?timestamp=1705438118.dds",
+      "mediaTheme": ""
     },
     {
       "type": "item-upload",
-      "bucketItemList": [
-
-      ],
+      "bucketItemList": [],
       "bucketItemCount": 1,
       "popularityLevel": 0,
       "popularityValue": 0,
-      "mediaUrl": "https://trackmania-prod-nls-file-store-s3.cdn.ubi.com/club/card/44367/62d83eaf92c2c.png?updateTimestamp=1658338994.png",
-      "creationTimestamp": 1658338991,
-      "id": 301732,
-      "clubId": 44367,
-      "clubName": "slowpiou items",
-      "name": "trackwall roads"
+      "creationTimestamp": 1697876243,
+      "creatorAccountId": "ff167c35-dd89-482c-b02b-3764aa4ce16d",
+      "latestEditorAccountId": "ff167c35-dd89-482c-b02b-3764aa4ce16d",
+      "id": 484849,
+      "clubId": 55250,
+      "clubName": "JonnyIsland",
+      "name": "Corkscrew Loops",
+      "mediaUrl": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/4dd8cfa9-44bd-4595-bb7a-e3918461af03/dds/game.dds?timestamp=1705437984.dds",
+      "mediaUrlPngLarge": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/4dd8cfa9-44bd-4595-bb7a-e3918461af03/png/large.png?timestamp=1705437984.png",
+      "mediaUrlPngMedium": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/4dd8cfa9-44bd-4595-bb7a-e3918461af03/png/medium.png?timestamp=1705437984.png",
+      "mediaUrlPngSmall": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/4dd8cfa9-44bd-4595-bb7a-e3918461af03/png/small.png?timestamp=1705437984.png",
+      "mediaUrlDds": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/4dd8cfa9-44bd-4595-bb7a-e3918461af03/dds/game.dds?timestamp=1705437984.dds",
+      "mediaTheme": ""
     },
     {
       "type": "item-upload",
-      "bucketItemList": [
-
-      ],
+      "bucketItemList": [],
       "bucketItemCount": 1,
       "popularityLevel": 0,
       "popularityValue": 0,
-      "mediaUrl": "https://trackmania-prod-nls-file-store-s3.cdn.ubi.com/club/card/31644/626629b661e54.png?updateTimestamp=1650862520.png",
-      "creationTimestamp": 1650862517,
-      "id": 271067,
-      "clubId": 31644,
-      "clubName": "TMA.gg",
-      "name": "DirtRoad_Platform"
+      "creationTimestamp": 1695505620,
+      "creatorAccountId": "3aa9e443-3e27-4778-bbbc-40946231bd78",
+      "latestEditorAccountId": "3aa9e443-3e27-4778-bbbc-40946231bd78",
+      "id": 470842,
+      "clubId": 57018,
+      "clubName": "DUCKING NANDO",
+      "name": "Gps pack",
+      "mediaUrl": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/2ddfa1e1-ff9d-470f-8fb4-095dd1f9b424/dds/game.dds?timestamp=1705436840.dds",
+      "mediaUrlPngLarge": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/2ddfa1e1-ff9d-470f-8fb4-095dd1f9b424/png/large.png?timestamp=1705436840.png",
+      "mediaUrlPngMedium": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/2ddfa1e1-ff9d-470f-8fb4-095dd1f9b424/png/medium.png?timestamp=1705436840.png",
+      "mediaUrlPngSmall": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/2ddfa1e1-ff9d-470f-8fb4-095dd1f9b424/png/small.png?timestamp=1705436840.png",
+      "mediaUrlDds": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/2ddfa1e1-ff9d-470f-8fb4-095dd1f9b424/dds/game.dds?timestamp=1705436840.dds",
+      "mediaTheme": ""
     }
   ],
-  "maxPage": 16,
-  "itemCount": 47
+  "maxPage": 13,
+  "itemCount": 39
 }
 ```
 
 Invalid bucket types will result in an error in the response:
 
 ```json
-[
-  "type:error-inArray"
-]
+["type:error-inArray"]
 ```

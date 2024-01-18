@@ -33,16 +33,20 @@ Gets a list of club activities, including news, rooms, campaigns and others.
 ---
 
 **Remarks**:
+
 - For clubs you are not an admin of, `active` needs to be set to `true` because only admins are allowed to see disabled activities. Otherwise you'll get an error complaining that you're not a member/admin of the club.
+- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png` versions are available using separate fields (see example below for reference).
 
 ---
 
 **Example request**:
+
 ```plain
 GET https://live-services.trackmania.nadeo.live/api/token/club/4764/activity?length=3&offset=0&active=true
 ```
 
 **Example response**:
+
 ```json
 {
   "activityList": [
@@ -56,12 +60,20 @@ GET https://live-services.trackmania.nadeo.live/api/token/club/4764/activity?len
       "position": 0,
       "public": true,
       "active": true,
-      "mediaUrl": "https://trackmania-prod-nls-file-store-s3.cdn.ubi.com/club/card/4764/621a7e68e441e.png?updateTimestamp=1645903469.png",
       "externalId": 0,
       "featured": false,
       "password": false,
       "itemsCount": 0,
-      "clubId": 4764
+      "clubId": 4764,
+      "editionTimestamp": 1594152754,
+      "creatorAccountId": "a26bcfd0-cd7f-4477-b514-eab711dfaf61",
+      "latestEditorAccountId": "a26bcfd0-cd7f-4477-b514-eab711dfaf61",
+      "mediaUrl": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/86ada7a9-f401-4832-be60-631bb63f01a4/dds/game.dds?timestamp=1705418454.dds",
+      "mediaUrlPngLarge": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/86ada7a9-f401-4832-be60-631bb63f01a4/png/large.png?timestamp=1705418454.png",
+      "mediaUrlPngMedium": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/86ada7a9-f401-4832-be60-631bb63f01a4/png/medium.png?timestamp=1705418454.png",
+      "mediaUrlPngSmall": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/86ada7a9-f401-4832-be60-631bb63f01a4/png/small.png?timestamp=1705418454.png",
+      "mediaUrlDds": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/86ada7a9-f401-4832-be60-631bb63f01a4/dds/game.dds?timestamp=1705418454.dds",
+      "mediaTheme": ""
     },
     {
       "id": 68012,
@@ -73,12 +85,20 @@ GET https://live-services.trackmania.nadeo.live/api/token/club/4764/activity?len
       "position": 1,
       "public": true,
       "active": true,
-      "mediaUrl": "https://trackmania-prod-nls-file-store-s3.cdn.ubi.com/club/card/4764/621a7bc9385ae.png?updateTimestamp=1645902796.png",
       "externalId": 2649,
       "featured": false,
       "password": false,
       "itemsCount": 15,
-      "clubId": 4764
+      "clubId": 4764,
+      "editionTimestamp": 1595625959,
+      "creatorAccountId": "a26bcfd0-cd7f-4477-b514-eab711dfaf61",
+      "latestEditorAccountId": "a26bcfd0-cd7f-4477-b514-eab711dfaf61",
+      "mediaUrl": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/1636a29e-bbe2-4321-acc3-a523dd2c94ef/dds/game.dds?timestamp=1705418451.dds",
+      "mediaUrlPngLarge": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/1636a29e-bbe2-4321-acc3-a523dd2c94ef/png/large.png?timestamp=1705418451.png",
+      "mediaUrlPngMedium": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/1636a29e-bbe2-4321-acc3-a523dd2c94ef/png/medium.png?timestamp=1705418451.png",
+      "mediaUrlPngSmall": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/1636a29e-bbe2-4321-acc3-a523dd2c94ef/png/small.png?timestamp=1705418451.png",
+      "mediaUrlDds": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/1636a29e-bbe2-4321-acc3-a523dd2c94ef/dds/game.dds?timestamp=1705418451.dds",
+      "mediaTheme": ""
     },
     {
       "id": 35159,
@@ -90,12 +110,20 @@ GET https://live-services.trackmania.nadeo.live/api/token/club/4764/activity?len
       "position": 3,
       "public": true,
       "active": true,
-      "mediaUrl": "https://trackmania-prod-nls-file-store-s3.cdn.ubi.com/club/card/5f624cd7ca5a9.png?updateTimestamp=1600277720.png",
       "externalId": 1094,
       "featured": false,
       "password": false,
       "itemsCount": 11,
-      "clubId": 4764
+      "clubId": 4764,
+      "editionTimestamp": 1594148450,
+      "creatorAccountId": "a26bcfd0-cd7f-4477-b514-eab711dfaf61",
+      "latestEditorAccountId": "a26bcfd0-cd7f-4477-b514-eab711dfaf61",
+      "mediaUrl": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/75ff0c45-3c4b-47c9-a99c-208f8fc017d9/dds/game.dds?timestamp=1705402100.dds",
+      "mediaUrlPngLarge": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/75ff0c45-3c4b-47c9-a99c-208f8fc017d9/png/large.png?timestamp=1705402100.png",
+      "mediaUrlPngMedium": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/75ff0c45-3c4b-47c9-a99c-208f8fc017d9/png/medium.png?timestamp=1705402100.png",
+      "mediaUrlPngSmall": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/75ff0c45-3c4b-47c9-a99c-208f8fc017d9/png/small.png?timestamp=1705402100.png",
+      "mediaUrlDds": "https://trackmania-prod-media-s3.cdn.ubi.com/media/image/live-api/75ff0c45-3c4b-47c9-a99c-208f8fc017d9/dds/game.dds?timestamp=1705402100.dds",
+      "mediaTheme": ""
     }
   ],
   "maxPage": 7,

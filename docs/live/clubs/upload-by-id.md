@@ -35,46 +35,62 @@ Gets the maps, items, or skins in a specific upload activity.
 ---
 
 **Remarks**:
+
 - The returned bucket will have one of three types : `map-upload`, `skin-upload`, or `item-upload`. These relate to club track uploads, skin uploads and item collection activities, respectively.
 - The primary identifier for items in the returned bucket is their `itemId`. For maps this will be a `mapUid` and for skins this is a `skinID`.
+- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png`/`.jpg` versions are available using separate fields (see example below for reference).
 
 ---
 
 **Example request**:
+
 ```plain
 GET https://live-services.trackmania.nadeo.live/api/token/club/42175/bucket/344426
 ```
 
 **Example response**:
+
 ```json
 {
-    "type":"map-upload",
-    "bucketItemList":[
-        {
-            "itemId":"41O6sDRjgRSVzahozZ_UmYwSU_i",
-            "position":0,
-            "description":"",
-            "mediaUrls":[]
-        },
-        ...
-        {
-            "itemId":"rRYRLq9YtI83LA53XbrZ2Bm4Kqg",
-            "position":9,
-            "description":"",
-            "mediaUrls":[]
-        }
-    ],
-    "bucketItemCount":55,
-    "popularityLevel":0,
-    "popularityValue":0,
-    "mediaUrl":"",
-    "mediaTheme":"",
-    "creationTimestamp":1673276709,
-    "creatorAccountId":"fc8467b8-b253-457f-b8bb-3bbd2bb5bfdd",
-    "latestEditorAccountId":"fc8467b8-b253-457f-b8bb-3bbd2bb5bfdd",
-    "id":344426,
-    "clubId":42175,
-    "clubName":"$Z$f72ArEyeses$fff\u0027 $888Club",
-    "name":"Randomly Generated G"
+  "type": "map-upload",
+  "bucketItemList": [
+    {
+      "itemId": "zOAI0h0WgikjTVv2RHcPShABLq0",
+      "position": 0,
+      "description": "",
+      "mediaUrls": [],
+      "mediaUrlsJpgLarge": [],
+      "mediaUrlsJpgMedium": [],
+      "mediaUrlsJpgSmall": [],
+      "mediaUrlsDds": []
+    },
+    ...
+    {
+      "itemId": "wQS2NQxwV_PVweJb1MoBwft2bs6",
+      "position": 9,
+      "description": "",
+      "mediaUrls": [],
+      "mediaUrlsJpgLarge": [],
+      "mediaUrlsJpgMedium": [],
+      "mediaUrlsJpgSmall": [],
+      "mediaUrlsDds": []
+    }
+  ],
+  "bucketItemCount": 63,
+  "popularityLevel": 0,
+  "popularityValue": 0,
+  "creationTimestamp": 1673276709,
+  "creatorAccountId": "fc8467b8-b253-457f-b8bb-3bbd2bb5bfdd",
+  "latestEditorAccountId": "fc8467b8-b253-457f-b8bb-3bbd2bb5bfdd",
+  "id": 344426,
+  "clubId": 42175,
+  "clubName": "$Z$f72ArEyeses$fff' $888Club",
+  "name": "Randomly Generated G",
+  "mediaUrl": "",
+  "mediaUrlPngLarge": "",
+  "mediaUrlPngMedium": "",
+  "mediaUrlPngSmall": "",
+  "mediaUrlDds": "",
+  "mediaTheme": ""
 }
 ```

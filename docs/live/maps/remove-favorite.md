@@ -18,6 +18,12 @@ Removes a map from your authenticated account's favorites.
 
 ---
 
+**Remarks**:
+
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+
+---
+
 **Example request**:
 
 ```plain
@@ -33,15 +39,11 @@ Map favorite deleted
 Example response if the requested map does not exist:
 
 ```json
-[
-  "map:error-notFound"
-]
+["map:error-notFound"]
 ```
 
 Example response if the requested map is not among your favorites:
 
 ```json
-[
-  "mapFavorite:error-notFound"
-]
+["mapFavorite:error-notFound"]
 ```

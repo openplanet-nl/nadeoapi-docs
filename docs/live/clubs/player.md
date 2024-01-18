@@ -12,12 +12,20 @@ Gets club-related information for your account.
 
 ---
 
+**Remarks**:
+
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+
+---
+
 **Example request**:
+
 ```plain
 GET https://live-services.trackmania.nadeo.live/api/token/club/player/info
 ```
 
 **Example response**:
+
 ```json
 {
   "hasClubVip": true,
