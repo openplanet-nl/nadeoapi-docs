@@ -24,56 +24,63 @@ Gets map information for a number of maps at once.
 ---
 
 **Remarks**:
+
 - The two parameters work the same way, but you can only use one of them at a time.
 - This endpoint has no intrinsic limit on the number of map IDs requested, but it will return a `414` error if the request URI length is 8220 characters or more (corresponding to just over 200 map IDs or almost 300 map UIDs, depending on how you encode the URI).
 
 ---
 
 **Example request**:
+
 ```plain
-GET https://prod.trackmania.core.nadeo.online/maps/?mapUidList=kgeriJWc1DqgHfAnRX6k8d3XW2c,CxVgpC7yvEvdEBSL4Kk6SKrTdue6
+GET https://prod.trackmania.core.nadeo.online/maps/?mapUidList=k45jQI6Y7XrPfe1T0hZhj4pKzY2,cmJJhEUYqesM6Tqpeds0lQudvOb
 ```
 
 **Example response**:
+
 ```json
 [
   {
-    "author": "d7c02452-7333-49df-8a31-4cf932475007",
-    "authorScore": 47017,
-    "bronzeScore": 71000,
+    "author": "73eba009-a074-4439-916f-d25d7fa7bc1c",
+    "authorScore": 102399,
+    "bronzeScore": 154000,
     "collectionName": "Stadium",
-    "filename": "Ceramic Terrace.Map.Gbx",
-    "goldScore": 50000,
+    "createdWithGamepadEditor": false,
+    "createdWithSimpleEditor": false,
+    "filename": "Laserhawk_-_Megacity_Race.Map.Gbx",
+    "goldScore": 109000,
     "isPlayable": true,
-    "mapId": "7c213041-2b35-4fd5-bf02-d2d6815b1cfe",
+    "mapId": "a74716be-d124-4de1-87c2-834304ccef5b",
     "mapStyle": "",
     "mapType": "TrackMania\\TM_Race",
-    "mapUid": "CxVgpC7yvEvdEBSL4Kk6SKrTdue",
-    "name": "Ceramic Terrace",
-    "silverScore": 57000,
-    "submitter": "d7c02452-7333-49df-8a31-4cf932475007",
-    "timestamp": "2022-05-25T15:35:51+00:00",
-    "fileUrl": "https://prod.trackmania.core.nadeo.online/storageObjects/8c8ef6fd-cbfd-4e38-acb1-ca91aeb9e3b5",
-    "thumbnailUrl": "https://prod.trackmania.core.nadeo.online/storageObjects/6ce08d22-1bce-4a35-997d-208a3ef3fa18.jpg"
+    "mapUid": "cmJJhEUYqesM6Tqpeds0lQudvOb",
+    "name": "$i$a1bLaserhawk $fff- Megacity Race",
+    "silverScore": 123000,
+    "submitter": "7ad33388-641e-4497-b063-c88e75552645",
+    "timestamp": "2023-10-23T17:05:25+00:00",
+    "fileUrl": "https://core.trackmania.nadeo.live/storageObjects/6d67fafb-1be8-451a-91ca-661e019a9087",
+    "thumbnailUrl": "https://core.trackmania.nadeo.live/storageObjects/70e82469-68b6-454a-a105-2af7c3279a4c.jpg"
   },
   {
-    "author": "3bb0d130-637d-46a6-9c19-87fe4bda3c52",
-    "authorScore": 56105,
-    "bronzeScore": 85000,
+    "author": "7cd60a75-609a-4e64-b286-16f329878249",
+    "authorScore": 26972,
+    "bronzeScore": 41000,
     "collectionName": "Stadium",
-    "filename": "Poggadopolis 2033.Map.Gbx",
-    "goldScore": 60000,
+    "createdWithGamepadEditor": false,
+    "createdWithSimpleEditor": false,
+    "filename": "SnowIsBack.Map.Gbx",
+    "goldScore": 29000,
     "isPlayable": true,
-    "mapId": "11d40c4f-5d95-48ca-a564-a7576fad1c30",
+    "mapId": "5546883f-b1ed-49e0-9397-55fc46f1d00c",
     "mapStyle": "",
     "mapType": "TrackMania\\TM_Race",
-    "mapUid": "kgeriJWc1DqgHfAnRX6k8d3XW2c",
-    "name": "$s$F90P$F91og$E92ga$E93do$E94p$E95o$D95l$D96is$D97 2$C9803$C993",
-    "silverScore": 68000,
-    "submitter": "3bb0d130-637d-46a6-9c19-87fe4bda3c52",
-    "timestamp": "2022-06-07T13:52:01+00:00",
-    "fileUrl": "https://prod.trackmania.core.nadeo.online/storageObjects/f18834d8-63ba-4bf9-b485-9ce5453c2117",
-    "thumbnailUrl": "https://prod.trackmania.core.nadeo.online/storageObjects/0e98d63f-9320-4bd0-9a10-39d1353dc1a8.jpg"
+    "mapUid": "k45jQI6Y7XrPfe1T0hZhj4pKzY2",
+    "name": "SnowIsBack",
+    "silverScore": 33000,
+    "submitter": "7cd60a75-609a-4e64-b286-16f329878249",
+    "timestamp": "2023-11-21T16:50:01+00:00",
+    "fileUrl": "https://core.trackmania.nadeo.live/storageObjects/5b244c36-da6d-45f2-bbd3-c97ed4b5efc0",
+    "thumbnailUrl": "https://core.trackmania.nadeo.live/storageObjects/647ea926-6959-439e-a6e2-e7a78caa9529.jpg"
   }
 ]
 ```
@@ -82,12 +89,12 @@ If a `mapId` is invalid, the response will contain an error message:
 
 ```json
 {
-    "code": "C-AA-00-03",
-    "correlation_id": "10d26dadac018cccf1c9bcf138e3fb1c",
-    "message": "There was a validation error.",
-    "info": {
-        "mapIdList": "Invalid uuid."
-    }
+  "code": "C-AA-00-03",
+  "correlation_id": "10d26dadac018cccf1c9bcf138e3fb1c",
+  "message": "There was a validation error.",
+  "info": {
+    "mapIdList": "Invalid uuid."
+  }
 }
 ```
 

@@ -13,6 +13,7 @@ parameters:
       type: integer
       description: The number of competitions to retrieve
       required: true
+      maximum: 250
     - name: offset
       type: integer
       description: The number of competitions to skip
@@ -28,11 +29,13 @@ Gets a list of club competitions.
 ---
 
 **Example request**:
+
 ```plain
 GET https://live-services.trackmania.nadeo.live/api/token/club/competition?length=3&offset=0
 ```
 
 **Example response**:
+
 ```json
 {
   "clubCompetitionList": [

@@ -18,6 +18,7 @@ parameters:
       type: integer
       description: The number of upload activities to retrieve
       required: true
+      maximum: 250
     - name: offset
       type: integer
       description: The number of upload activities to skip

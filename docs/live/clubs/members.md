@@ -18,6 +18,7 @@ parameters:
       type: integer
       description: The number of members to retrieve
       required: true
+      maximum: 250
     - name: offset
       type: integer
       description: The number of members to skip
@@ -29,11 +30,13 @@ Gets a list of members for a club.
 ---
 
 **Example request**:
+
 ```plain
 GET https://live-services.trackmania.nadeo.live/api/token/club/9/member?length=3&offset=0
 ```
 
 **Example response**:
+
 ```json
 {
   "clubMemberList": [
@@ -80,9 +83,7 @@ If the club does not exist, the response will contain an empty list of members:
 
 ```json
 {
-  "clubMemberList": [
-
-  ],
+  "clubMemberList": [],
   "maxPage": 0,
   "itemCount": 0
 }
