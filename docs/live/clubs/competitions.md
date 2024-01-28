@@ -40,40 +40,49 @@ GET https://live-services.trackmania.nadeo.live/api/token/club/competition?lengt
 {
   "clubCompetitionList": [
     {
-      "competitionId": 2857,
-      "mediaUrl": "https://trackmania-prod-club-public.s3-eu-west-1.amazonaws.com/manual/competitions/tmgl/logo_tmgl.png",
-      "popularityLevel": 1,
-      "popularityValue": 2447,
-      "id": 287991,
-      "clubId": 383,
-      "clubName": "Grand League",
-      "name": "World cup qualifier",
-      "creationTimestamp": 1654676009
+      "competitionId": 11125,
+      "mediaUrl": "",
+      "mediaTheme": "",
+      "popularityLevel": 3,
+      "popularityValue": 101231,
+      "id": 486751,
+      "clubId": 66661,
+      "clubName": "Ubisoft Club",
+      "name": "LASERHAWK",
+      "creationTimestamp": 1698225982,
+      "creatorAccountId": "0060a0c1-2e62-41e7-9db7-c86236af3ac4",
+      "latestEditorAccountId": "7ad33388-641e-4497-b063-c88e75552645"
     },
     {
-      "competitionId": 2469,
-      "mediaUrl": "https://trackmania-prod-club-public.s3-eu-west-1.amazonaws.com/manual/competitions/tmgl/logo_tmgl.png",
-      "popularityLevel": 1,
-      "popularityValue": 2447,
-      "id": 269522,
-      "clubId": 383,
-      "clubName": "Grand League",
-      "name": "TMGL The Final",
-      "creationTimestamp": 1650531477
+      "competitionId": 7184,
+      "mediaUrl": "",
+      "mediaTheme": "",
+      "popularityLevel": 3,
+      "popularityValue": 101231,
+      "id": 421113,
+      "clubId": 66661,
+      "clubName": "Ubisoft Club",
+      "name": "Mirage",
+      "creationTimestamp": 1687429155,
+      "creatorAccountId": "0060a0c1-2e62-41e7-9db7-c86236af3ac4",
+      "latestEditorAccountId": "50e65436-8ad7-40fb-9e02-ed09f267e55f"
     },
     {
-      "competitionId": 2417,
-      "mediaUrl": "https://trackmania-prod-club-public.s3-eu-west-1.amazonaws.com/manual/competitions/tmgl/logo_tmgl.png",
-      "popularityLevel": 1,
-      "popularityValue": 2447,
-      "id": 265140,
-      "clubId": 383,
-      "clubName": "Grand League",
-      "name": "TMGL Final Chance",
-      "creationTimestamp": 1649770818
+      "competitionId": 5636,
+      "mediaUrl": "",
+      "mediaTheme": "",
+      "popularityLevel": 3,
+      "popularityValue": 90732,
+      "id": 380198,
+      "clubId": 54094,
+      "clubName": "CUPRA",
+      "name": "Cupra cup 2",
+      "creationTimestamp": 1682528914,
+      "creatorAccountId": "6ce163d5-f240-4741-870b-f2adad843865",
+      "latestEditorAccountId": "6ce163d5-f240-4741-870b-f2adad843865"
     }
   ],
   "maxPage": 10,
-  "itemCount": 30
+  "itemCount": 28
 }
 ```
