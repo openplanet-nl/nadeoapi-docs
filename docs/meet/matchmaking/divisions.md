@@ -5,7 +5,7 @@ url: https://meet.trackmania.nadeo.club
 method: GET
 route: /api/matchmaking/{matchmakingType}/division/display-rules
 
-audience: NadeoClubServices
+audience: NadeoLiveServices
 
 parameters:
   path:
@@ -20,16 +20,19 @@ Gets division definitions/rules for the different matchmaking modes.
 ---
 
 **Remarks**:
+
 - The `matchmakingType` parameter is typically one of `2` (Ranked) or `3` (Royal). For a dynamic way of retrieving those IDs see [the matchmaking summary endpoint](/meet/matchmaking/summary).
 
 ---
 
 **Example request**:
+
 ```plain
 GET https://meet.trackmania.nadeo.club/api/matchmaking/2/division/display-rules
 ```
 
 **Example response**:
+
 ```json
 {
   "divisions": [

@@ -5,8 +5,7 @@ url: https://meet.trackmania.nadeo.club
 method: GET
 route: /api/cup-of-the-day/current
 
-audience: NadeoClubServices
-
+audience: NadeoLiveServices
 ---
 
 Gets details for the currently ongoing Cup of the Day.
@@ -14,16 +13,19 @@ Gets details for the currently ongoing Cup of the Day.
 ---
 
 **Remarks**:
+
 - This endpoint only returns data about the cross-platform/"crossplay" COTD. Platform-specific COTD instances are not included.
 
 ---
 
 **Example request**:
+
 ```plain
 GET https://meet.trackmania.nadeo.club/api/cup-of-the-day/current
 ```
 
 **Example response**:
+
 ```json
 {
   "id": 3872,

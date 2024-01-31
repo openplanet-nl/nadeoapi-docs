@@ -5,7 +5,7 @@ url: https://meet.trackmania.nadeo.club
 method: GET
 route: /api/me/club-competitions?length={length}&offset={offset}
 
-audience: NadeoClubServices
+audience: NadeoLiveServices
 
 parameters:
   query:

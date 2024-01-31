@@ -5,7 +5,7 @@ url: https://meet.trackmania.nadeo.club
 method: GET
 route: /api/matchmaking/{matchmakingType}/leaderboard?length={length}&offset={offset}
 
-audience: NadeoClubServices
+audience: NadeoLiveServices
 
 parameters:
   path:
@@ -32,6 +32,7 @@ Gets global matchmaking rankings for the specified type.
 ---
 
 **Remarks**:
+
 - The `matchmakingType` parameter is typically one of `2` (Ranked) or `3` (Royal). For a dynamic way of retrieving those IDs see [the matchmaking summary endpoint](/meet/matchmaking/summary).
 - This leaderboard doesn't have the same restrictions as the map leaderboard endpoints - you can request any position and will get an accurate rank for each player.
 - The `cardinal` field in the response is the total number of players in the ranking.
@@ -39,11 +40,13 @@ Gets global matchmaking rankings for the specified type.
 ---
 
 **Example request**:
+
 ```plain
 GET https://meet.trackmania.nadeo.club/api/matchmaking/2/leaderboard?offset=10&length=5
 ```
 
 **Example response**:
+
 ```json
 {
   "matchmakingId": 2,

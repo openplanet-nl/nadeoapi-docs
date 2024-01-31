@@ -5,7 +5,7 @@ url: https://meet.trackmania.nadeo.club
 method: GET
 route: /api/matchmaking/{matchmakingType}/leaderboard/players?players[]={accountID}
 
-audience: NadeoClubServices
+audience: NadeoLiveServices
 
 parameters:
   path:
@@ -25,6 +25,7 @@ Gets matchmaking ranks (for the specified type) for the requested players.
 ---
 
 **Remarks**:
+
 - The `matchmakingType` parameter is typically one of `2` (Ranked) or `3` (Royal). For a dynamic way of retrieving those IDs see [the matchmaking summary endpoint](/meet/matchmaking/summary).
 - The `cardinal` field in the response is the total number of players in the ranking.
 - To get data for more than one account at a time, you can send an array of values instead of a single value - see the second example below.
@@ -33,11 +34,13 @@ Gets matchmaking ranks (for the specified type) for the requested players.
 ---
 
 **Example request**:
+
 ```plain
 https://meet.trackmania.nadeo.club/api/matchmaking/2/leaderboard/players?players[]=f7fab1a3-3bcc-4ffa-8ce3-45cea7ab89c3
 ```
 
 **Example response**:
+
 ```json
 {
   "matchmakingId": 2,
@@ -53,6 +56,7 @@ https://meet.trackmania.nadeo.club/api/matchmaking/2/leaderboard/players?players
 ```
 
 To retrieve data for more than one account at once, send the `accountID` values as follows:
+
 ```plain
 GET https://matchmaking.trackmania.nadeo.club/api/matchmaking/2/leaderboard/players?players[]=f7fab1a3-3bcc-4ffa-8ce3-45cea7ab89c3&players[]=f8f7c280-8419-472e-9329-6436fe3d04c3
 ```
