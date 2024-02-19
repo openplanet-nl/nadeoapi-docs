@@ -18,16 +18,20 @@ Retrieves the `accountId` for a given account name.
 ---
 
 **Remarks**:
+
 - To convert more than one name at a time, you can send an array of values instead of a single value - see the second example below.
+- The access token has to be provided in the `Authorization` header in the format `Bearer <token>`.
 
 ---
 
 **Example request**:
+
 ```plain
 GET https://api.trackmania.com/api/display-names/account-ids?displayName[]=tooInfinite
 ```
 
 **Example response**:
+
 ```json
 {
   "tooInfinite": "5b4d42f4-c2de-407d-b367-cbff3fe817bc"
@@ -35,6 +39,7 @@ GET https://api.trackmania.com/api/display-names/account-ids?displayName[]=tooIn
 ```
 
 To retrieve more than one ID at once, send the `accountName` values as follows:
+
 ```plain
 GET https://api.trackmania.com/api/display-names/account-ids?displayName[]=tooInfinite&displayName[]=Nsgr
 ```
