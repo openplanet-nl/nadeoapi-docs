@@ -27,6 +27,7 @@ Gets map information for a number of maps at once.
 
 - The two parameters work the same way, but you can only use one of them at a time.
 - This endpoint has no intrinsic limit on the number of map IDs requested, but it will return a `414` error if the request URI length is 8220 characters or more (corresponding to just over 200 map IDs or almost 300 map UIDs, depending on how you encode the URI).
+- It is valid to exclude the `mapIdList` and `mapUidList` parameters, but in this case you must pass only a single map ID like so: `https://prod.trackmania.core.nadeo.online/maps/d2b8a048-209d-4cfa-b5a4-bc3e3cab3566`.
 
 ---
 
