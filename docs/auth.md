@@ -92,10 +92,12 @@ If you URL-base64-decode the payload, you get the following json object:
   "aud": "NadeoLiveServices",
   "usg": "Server",
   "sid": "<uuid>",
+  "sat": 1595191016,
   "sub": "<uuid>",
   "aun": "mm",
   "rtk": false,
-  "pce": false
+  "pce": false,
+  "ubiservices_uid": "<uuid>"
 }
 ```
 
