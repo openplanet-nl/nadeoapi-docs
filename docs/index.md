@@ -11,14 +11,14 @@ roots:
 
 # Home
 
-This is the (unofficial) documentation for the Trackmania (2020) game APIs, documented by the Openplanet community. It was made to be a central place for the most up-to-date documentation for the most used APIs in the game.
+This is the (unofficial) documentation for the Trackmania (2020) game APIs, documented by the Openplanet community. It was created to be a central place for the most up-to-date documentation for the most used APIs in the game.
 
 If you're not familiar with the authentication flow for any of the game APIs, check out [the Authentication guide](/auth).
 
 The documentation is structured by the three main API domains, each of which cover a slightly different area of the game:
 
 - [**Core**](/core): The main API that allows the game to authenticate to all other APIs, but also has many other tasks relating to the game's native functionality. This can also be considered the game's masterserver.
-- [**Live**](/live): The live API mostly used for leaderboards and other live content such as campaigns, rooms, clubs and Tracks of the Day.
+- [**Live**](/live): The live API is mostly used for leaderboards and other live content such as campaigns, rooms, clubs and Tracks of the Day.
 - [**Meet**](/meet): The meet API is used for competitions, matchmaking and other match infrastructure tasks.
 
 As of July 2023, the _Competition_, _Matchmaking_ and _Club_ domains have been merged into the **Meet** API. The old domains will stay functional for a while, but it's highly recommended to migrate off of them as soon as possible.
@@ -39,7 +39,7 @@ To report a potential security concern directly to Nadeo/Ubisoft, send an email 
 
 ## API status
 
-There is an [unofficial status page](https://trackmania-status.s3.eu-west-1.amazonaws.com/status.html) for the main Web Services APIs. The same data is also available [in JSON format](https://trackmania-status.s3.eu-west-1.amazonaws.com/status.json).
+There is an [unofficial status page](https://trackmania-status.cdn.ubi.com/status.html) for the main Web Services APIs. The same data is also available [in JSON format](https://trackmania-status.cdn.ubi.com/status.json).
 
 Note that these resources may not always accurately reflect unexpected outages and issues with specific endpoints - they're primarily used for communicating planned maintenance periods.
 
