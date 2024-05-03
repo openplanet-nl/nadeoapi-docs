@@ -16,21 +16,24 @@ parameters:
       max: 100 map UIDs
 ---
 
-Gets information about multiple maps from their UIDs.
+Gets information about multiple maps via their UIDs.
 
 ---
 
 **Remarks**:
+
 - Invalid UIDs will be ignored in the result without any visible errors.
 
 ---
 
 **Example request**:
+
 ```plain
 GET https://live-services.trackmania.nadeo.live/api/token/map/get-multiple?mapUidList=YewzuEnjmnh_ShMW1cX0puuZHcf,HisPAAWhTMTjQPxhMJtMak7Daud
 ```
 
 **Example response**:
+
 ```json
 {
   "mapList": [

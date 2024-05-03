@@ -15,16 +15,24 @@ parameters:
       required: true
 ---
 
-Gets information about a map from its UID.
+Gets information about a map via its UID.
+
+---
+
+**Remarks**:
+
+- This endpoint only accepts `mapUid`s - to get map information for a `mapId` (or to translate `mapId`s to `mapUid`s), you can use the [map info (multiple) endpoint](/live/maps/info-multiple).
 
 ---
 
 **Example request**:
+
 ```plain
 GET https://live-services.trackmania.nadeo.live/api/token/map/QleO8OiNAkIXrZs6r0YLSrLBjEi
 ```
 
 **Example response**:
+
 ```json
 {
   "uid": "QleO8OiNAkIXrZs6r0YLSrLBjEi",
@@ -55,9 +63,7 @@ GET https://live-services.trackmania.nadeo.live/api/token/map/QleO8OiNAkIXrZs6r0
 Example response if the requested map does not exist:
 
 ```json
-[
-  "map:error-notFound"
-]
+["map:error-notFound"]
 ```
 
 Note: Be careful to check the response type; a valid track will return an object, but an invalid track will return an array with a string in it.
