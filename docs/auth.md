@@ -12,13 +12,17 @@ Refer to Miss' [Nadeo Go package](https://github.com/codecat/gonadeo) for a comp
 
 Send a POST request to the following URL:
 
-    https://public-ubiservices.ubi.com/v3/profiles/sessions
+```plain
+https://public-ubiservices.ubi.com/v3/profiles/sessions
+```
 
 With the following request headers:
 
-    Content-Type: application/json
-    Ubi-AppId: 86263886-327a-4328-ac69-527f0d20a237
-    Authorization: Basic <email@address.com:password (base64-encoded)>
+```plain
+Content-Type: application/json
+Ubi-AppId: 86263886-327a-4328-ac69-527f0d20a237
+Authorization: Basic <email@address.com:password (base64-encoded)>
+```
 
 Where the `Authorization` header is a basic authorization of your Ubisoft email and password (e.g. `email@address.com:password` becomes `Basic ZW1haWxAYWRkcmVzcy5jb206cGFzc3dvcmQ=`).
 In Go for example, this is done via [SetBasicAuth](https://pkg.go.dev/net/http#Request.SetBasicAuth).
@@ -31,12 +35,16 @@ User-Agent: My amazing app / my.email.address@example.com
 
 The response will contain a Ubisoft authentication ticket that you can use for Nadeo's Ubiservices authentication endpoint. Next, send a POST request to the following URL:
 
-    https://prod.trackmania.core.nadeo.online/v2/authentication/token/ubiservices
+```plain
+https://prod.trackmania.core.nadeo.online/v2/authentication/token/ubiservices
+```
 
 With the following request headers:
 
-    Content-Type: application/json
-    Authorization: ubi_v1 t=<full ubi token>
+```plain
+Content-Type: application/json
+Authorization: ubi_v1 t=<full ubi token>
+```
 
 Where `Authorization` has your Ubisoft account ticket right after `t=`.
 
@@ -48,12 +56,16 @@ If you don't want to or can't use a Ubisoft account for authentication, you can 
 
 Send a POST request to the following URL:
 
-    https://prod.trackmania.core.nadeo.online/v2/authentication/token/basic
+```plain
+https://prod.trackmania.core.nadeo.online/v2/authentication/token/basic
+```
 
 With the following request headers:
 
-    Content-Type: application/json
-    Authorization: Basic <username:password (base64-encoded)>
+```plain
+Content-Type: application/json
+Authorization: Basic <username:password (base64-encoded)>
+```
 
 Where the `Authorization` header is a basic authorization of your dedicated server account (e.g. `username:password` becomes `Basic dXNlcm5hbWU6cGFzc3dvcmQ=`).
 In Go for example, this is done via [SetBasicAuth](https://pkg.go.dev/net/http#Request.SetBasicAuth).
@@ -107,7 +119,9 @@ Where `exp` defines the expiration time, and `rat` the time after which you are 
 
 To refresh your token, send a POST to the following URL:
 
-    https://prod.trackmania.core.nadeo.online/v2/authentication/token/refresh
+```plain
+https://prod.trackmania.core.nadeo.online/v2/authentication/token/refresh
+```
 
 With the `Authorization` header set to `nadeo_v1 t=<full refresh token>`.
 
@@ -119,7 +133,9 @@ All game APIs require you to send the obtained token along - the format is alway
 
 Simply set the following header on all your requests:
 
-    Authorization: nadeo_v1 t=<full access token>
+```plain
+Authorization: nadeo_v1 t=<full access token>
+```
 
 And make sure you're using the correct audience for the endpoint (see the table below).
 
