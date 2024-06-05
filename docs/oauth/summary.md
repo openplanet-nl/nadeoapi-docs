@@ -1,6 +1,6 @@
 # Introduction
 
-This is an alternative documentation for Trackmania's OAuth implementation - the official one can be found [here](https://doc.trackmania.com/web-services/auth/).
+This is an alternative documentation for Trackmania's OAuth implementation - the official one can be found [here](https://doc.trackmania.com/web/web-services/auth/).
 
 This is **not** related to the game's primary APIs - the OAuth API is completely separate and mostly covers different use cases.
 
