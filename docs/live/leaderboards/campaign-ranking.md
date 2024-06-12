@@ -1,5 +1,5 @@
 ---
-name: Get player season rankings
+name: Get season/campaign ranking for player
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
@@ -20,22 +20,25 @@ parameters:
       required: true
 ---
 
-Gets the player's regional ranks for the given group/season.
+Gets the player's regional ranks for the given group/season/campaign.
 
 ---
 
 **Remarks**:
+
 - The `groupUid` `"Personal_Best"` cannot be used for this endpoint because it requires a group that refers to a campaign or season.
 - Unlike some other leaderboard-related endpoints that use a `groupUid` parameter, this one also supports groups/seasons that are already closed.
 
 ---
 
 **Example request**:
+
 ```plain
 GET https://live-services.trackmania.nadeo.live/api/token/leaderboard/group/ee54d6c5-954c-49b9-bd82-b51f8175b3f7?accountId=5b4d42f4-c2de-407d-b367-cbff3fe817bc
 ```
 
 **Example response**:
+
 ```json
 {
   "groupUid": "ee54d6c5-954c-49b9-bd82-b51f8175b3f7",
