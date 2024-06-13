@@ -28,7 +28,8 @@ Gets map records for a set of maps and a set of accounts.
 ---
 
 **Remarks**:
-- This endpoint only accepts `mapId`s - to translate `mapUid`s to `mapId`s, you can use the [map info endpoint](/core/maps/info).
+
+- This endpoint only accepts `mapId`s - to translate `mapUid`s to `mapId`s, you can use the [map info (multiple) endpoint](/core/maps/info-multiple).
 - This endpoint has no intrinsic limit on the number of maps/accounts requested, but it will return a 414 error if the request URI length is 8220 characters or more (e.g. corresponding to one map and just above 200 accounts, depending on how you encode the URI).
 - The `seasonId` parameter does not accept the value `"Personal_Best"`- to retrieve records on the PB leaderboards, simply omit the `seasonId` parameter from the URL.
 - By omitting `mapIdList` you can request all records on all maps for a requested `accountId` - note that this only works for the currently authenticated account, requesting others' records without specifying `mapId`s will result in error `403`. This feature is not supported when using a dedicated server account's token.
@@ -36,11 +37,13 @@ Gets map records for a set of maps and a set of accounts.
 ---
 
 **Example request**:
+
 ```plain
 GET https://prod.trackmania.core.nadeo.online/mapRecords/?accountIdList=b981e0b1-2d6a-4470-9b52-c1f6b0b1d0a6&mapIdList=1f66ddaf-7f21-4d7a-82d9-5d35b1e95742,919046ce-c77c-43b9-9c24-76544110b076
 ```
 
 **Example response**:
+
 ```json
 [
   {
@@ -88,12 +91,12 @@ If a `mapId` is invalid, the response will contain an error message:
 
 ```json
 {
-    "code": "C-AA-00-03",
-    "correlation_id": "e1a8421f860c4824ee336647f2eab1a3",
-    "message": "There was a validation error.",
-    "info": {
-        "mapIdList": "Invalid uuid."
-    }
+  "code": "C-AA-00-03",
+  "correlation_id": "e1a8421f860c4824ee336647f2eab1a3",
+  "message": "There was a validation error.",
+  "info": {
+    "mapIdList": "Invalid uuid."
+  }
 }
 ```
 
@@ -101,11 +104,11 @@ If an `accountId` is invalid, the response will contain an error message:
 
 ```json
 {
-    "code": "C-AA-00-03",
-    "correlation_id": "5bcbe4ed58d0da7a1b9184bab60389d1",
-    "message": "There was a validation error.",
-    "info": {
-        "accountIdList": "Invalid account id."
-    }
+  "code": "C-AA-00-03",
+  "correlation_id": "5bcbe4ed58d0da7a1b9184bab60389d1",
+  "message": "There was a validation error.",
+  "info": {
+    "accountIdList": "Invalid account id."
+  }
 }
 ```
