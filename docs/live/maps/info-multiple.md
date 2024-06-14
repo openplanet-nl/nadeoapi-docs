@@ -89,3 +89,5 @@ GET https://live-services.trackmania.nadeo.live/api/token/map/get-multiple?mapUi
   "itemCount": 2
 }
 ```
+
+If a `mapUid` is invalid, that map will not be returned in the response.
