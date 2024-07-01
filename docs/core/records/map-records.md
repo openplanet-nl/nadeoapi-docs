@@ -21,7 +21,17 @@ parameters:
       type: string
       description: The ID of the requested group/season
       required: false
+    - name: gameMode
+      type: string
+      description: The game mode of the requested map (e.g. for Stunt maps)
+      require: false
 ---
+
+<div class="notification is-warning">
+
+This endpoint is deprecated and may be removed in the future. It's recommended to use the [v2 route](/core/records/map-records-v2) instead.
+
+</div>
 
 Gets map records for a set of maps and a set of accounts.
 
@@ -33,6 +43,7 @@ Gets map records for a set of maps and a set of accounts.
 - This endpoint has no intrinsic limit on the number of maps/accounts requested, but it will return a 414 error if the request URI length is 8220 characters or more (e.g. corresponding to one map and just above 200 accounts, depending on how you encode the URI).
 - The `seasonId` parameter does not accept the value `"Personal_Best"`- to retrieve records on the PB leaderboards, simply omit the `seasonId` parameter from the URL.
 - By omitting `mapIdList` you can request all records on all maps for a requested `accountId` - note that this only works for the currently authenticated account, requesting others' records without specifying `mapId`s will result in error `403`. This feature is not supported when using a dedicated server account's token.
+- Stunt maps (with the map type `TrackMania\TM_Stunt`) require the `gameMode` parameter to be set to `"Stunt"`, otherwise the response will contain a "Not found" error.
 
 ---
 
@@ -85,6 +96,16 @@ GET https://prod.trackmania.core.nadeo.online/mapRecords/?accountIdList=b981e0b1
     "url": "https://prod.trackmania.core.nadeo.online/storageObjects/a0dbf5b0-2dfd-4b62-9039-920e07fdb2f3"
   }
 ]
+```
+
+If a map can't be found (e.g. due to an incorrectly specified `gameMode` parameter), the response will contain an error message:
+
+```json
+{
+  "code": "C-AL-02-03",
+  "correlation_id": "b460ea6c98992a2d75beb65cc5414143",
+  "message": "Not Found"
+}
 ```
 
 If a `mapId` is invalid, the response will contain an error message:
