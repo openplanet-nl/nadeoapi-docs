@@ -16,7 +16,7 @@ parameters:
     - name: mapId
       type: string
       description: A map ID
-      required: false
+      required: true
     - name: seasonId
       type: string
       description: The ID of the requested group/season
