@@ -3,7 +3,7 @@ name: Get map records (v2)
 
 url: https://prod.trackmania.core.nadeo.online
 method: GET
-route: /v2/mapRecords/?accountIdList={accountIdList}&mapIdList={mapIdList}&seasonId={seasonId}
+route: /v2/mapRecords/?accountIdList={accountIdList}&mapId={mapId}&seasonId={seasonId}
 
 audience: NadeoServices
 
