@@ -27,7 +27,7 @@ Additionally, [the OAuth documentation](/oauth/summary) contains extensive infor
 
 ## Responsible usage
 
-All game APIs are to be used responsibly. Nadeo/Ubisoft **can and will ban your accounts/IPs** if they detect any disruptive (sending too many requests too fast) or any other malicious behavior.
+All game APIs are to be used responsibly. Nadeo/Ubisoft **can and will ban your accounts/IPs** if they detect any disruptive (sending too many requests too fast) or any other malicious behavior. There are no official rate limits, but Nadeo developers have said in the past that the upper limit of acceptable usage is at about two requests/second for short-term bursts. If you are planning to send a lot of requests throughout a long period of time (for bulk operations or semi-live monitoring), you should reduce the frequency of requests.
 
 Make sure you send along a useful `User-Agent` header that includes what your project is, who you are (your name or some username/handle), and how to contact you (your email address). For example:
 
