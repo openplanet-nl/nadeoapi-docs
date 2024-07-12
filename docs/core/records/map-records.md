@@ -40,10 +40,11 @@ Gets map records for a set of maps and a set of accounts.
 **Remarks**:
 
 - This endpoint only accepts `mapId`s - to translate `mapUid`s to `mapId`s, you can use the [map info (multiple) endpoint](/core/maps/info-multiple).
-- This endpoint has no intrinsic limit on the number of maps/accounts requested, but it will return a 414 error if the request URI length is 8220 characters or more (e.g. corresponding to one map and just above 200 accounts, depending on how you encode the URI).
+- This endpoint has no intrinsic limit on the number of maps/accounts requested, but it will return a `414` error if the request URI length is 8220 characters or more (e.g. corresponding to one map and just above 200 accounts, depending on how you encode the URI).
 - The `seasonId` parameter does not accept the value `"Personal_Best"`- to retrieve records on the PB leaderboards, simply omit the `seasonId` parameter from the URL.
 - By omitting `mapIdList` you can request all records on all maps for a requested `accountId` - note that this only works for the currently authenticated account, requesting others' records without specifying `mapId`s will result in error `403`. This feature is not supported when using a dedicated server account's token.
 - Stunt maps (with the map type `TrackMania\TM_Stunt`) require the `gameMode` parameter to be set to `"Stunt"`, otherwise the response will contain a "Not found" error.
+- As of July 12th 2024, this endpoint allows multiple `mapId`s only in combination with exactly one `accountId`. Requesting multiple accounts and multiple maps at the same time results in a `400` error response.
 
 ---
 
@@ -74,7 +75,7 @@ GET https://prod.trackmania.core.nadeo.online/mapRecords/?accountIdList=b981e0b1
     "scopeId": null,
     "scopeType": "PersonalBest",
     "timestamp": "2022-07-26T15:51:42+00:00",
-    "url": "https://prod.trackmania.core.nadeo.online/storageObjects/2b13564b-9389-4573-b3d8-682e66a26292"
+    "url": "https://core.trackmania.nadeo.live/mapRecords/3b0a7248-1a8c-401e-aa98-5aba5a220637/replay"
   },
   {
     "accountId": "b981e0b1-2d6a-4470-9b52-c1f6b0b1d0a6",
@@ -93,7 +94,7 @@ GET https://prod.trackmania.core.nadeo.online/mapRecords/?accountIdList=b981e0b1
     "scopeId": null,
     "scopeType": "PersonalBest",
     "timestamp": "2022-07-25T01:11:41+00:00",
-    "url": "https://prod.trackmania.core.nadeo.online/storageObjects/a0dbf5b0-2dfd-4b62-9039-920e07fdb2f3"
+    "url": "https://core.trackmania.nadeo.live/mapRecords/ed0b7233-17a2-4a22-a512-29db7a6a0ca2/replay"
   }
 ]
 ```
