@@ -15,6 +15,7 @@ Gets details for the currently ongoing Cup of the Day.
 **Remarks**:
 
 - This endpoint only returns data about the cross-platform/"crossplay" COTD. Platform-specific COTD instances are not included.
+- If there is no COTD currently happening, this endpoint will respond with status code `204` (No content).
 
 ---
 
@@ -89,5 +90,3 @@ GET https://meet.trackmania.nadeo.club/api/cup-of-the-day/current
   "deletedOn": null
 }
 ```
-
-If there is no COTD currently happening, this endpoint will respond with status code `204` (No content).
