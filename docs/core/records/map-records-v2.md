@@ -3,7 +3,7 @@ name: Get map records (v2)
 
 url: https://prod.trackmania.core.nadeo.online
 method: GET
-route: /v2/mapRecords/?accountIdList={accountIdList}&mapId={mapId}&seasonId={seasonId}
+route: /v2/mapRecords/?accountIdList={accountIdList}&mapId={mapId}&seasonId={seasonId}&gameMode={gameMode}
 
 audience: NadeoServices
 
@@ -24,7 +24,7 @@ parameters:
     - name: gameMode
       type: string
       description: The game mode of the requested map (e.g. for Stunt maps)
-      require: false
+      required: false
 ---
 
 Gets map records for a set of accounts on a given map.
