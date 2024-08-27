@@ -31,6 +31,7 @@ Gets a list of clubs.
 **Remarks**:
 
 - As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png`/`.jpg` versions are available using separate fields (see example below for reference).
+- This endpoint does not return all available clubs. When excluding the `name` parameter, it returns all verified clubs - otherwise the response is limited to 200 clubs.
 
 ---
 

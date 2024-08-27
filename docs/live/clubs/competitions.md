@@ -28,6 +28,12 @@ Gets a list of club competitions.
 
 ---
 
+**Remarks**:
+
+- This endpoint does not return all available club competitions. When excluding the `name` parameter, it returns all verified clubs' competitions - otherwise the response is limited to 200 competitions.
+
+---
+
 **Example request**:
 
 ```plain

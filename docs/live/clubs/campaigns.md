@@ -31,6 +31,7 @@ Gets a list of club campaigns.
 **Remarks**:
 
 - As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png` versions are available using separate fields (see example below for reference).
+- This endpoint does not return all available club campaigns. When excluding the `name` parameter, it returns all verified clubs' campaigns - otherwise the response is limited to 200 campaigns.
 
 ---
 

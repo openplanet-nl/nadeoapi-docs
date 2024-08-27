@@ -31,6 +31,7 @@ Gets a list of club rooms.
 **Remarks**:
 
 - As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png` versions are available using separate fields (see example below for reference).
+- This endpoint does not return all available club rooms. When excluding the `name` parameter, it returns all verified clubs' rooms - otherwise the response is limited to 200 rooms.
 
 ---
 
