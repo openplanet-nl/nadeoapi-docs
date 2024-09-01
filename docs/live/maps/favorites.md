@@ -32,7 +32,6 @@ parameters:
       type: string
       description: The map type filter
       required: false
-      default: "TrackMania\\TM_Race"
     - name: playable
       type: boolean
       description: Whether the map is validated and playable
@@ -46,6 +45,8 @@ Retrieves your authenticated account's favorite tracks along with their informat
 **Remarks**:
 
 - This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+- When no `mapType` filter is applied, all available maps are returned regardless of their type.
+- Examples of supported map types to filter by are `"TrackMania\TM_Race"`, `"TrackMania\TM_Royal"` and `"TrackMania\TM_Stunt"`.
 
 ---
 
