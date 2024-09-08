@@ -1,5 +1,5 @@
 ---
-name: Get all account records (v2)
+name: Get account records (v2)
 
 url: https://prod.trackmania.core.nadeo.online
 method: GET
@@ -20,13 +20,14 @@ parameters:
       required: false
 ---
 
-Gets all records for the currently authenticated account.
+Gets records for the currently authenticated account.
 
 ---
 
 **Remarks**:
 
 - This endpoint only works for the currently authenticated account, requesting others' records will result in error `403`. This feature is not supported when using a dedicated server account's token.
+- This endpoint is limited to the most recent 1,000 records driven by the currently authenticated account. Retrieving all historical records is not supported.
 - To retrieve records driven on Stunt maps (with the map type `TrackMania\TM_Stunt`), set the `gameMode` query parameter to `"Stunt"`.
 
 ---
