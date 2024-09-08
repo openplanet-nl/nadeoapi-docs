@@ -63,9 +63,6 @@ def test_page(path, frontmatter, content):
 	test_valid_frontmatter(path, frontmatter)
 	test_valid_link_targets(content)
 
-	if 'API\'s' in content:
-		raise Exception('Do not write "API\'s" with an apostrophe. Write "APIs" instead!')
-
 def test_file(path):
 	line_number = 0
 	frontmatter = False
