@@ -23,6 +23,7 @@ Gets information about multiple maps via their UIDs.
 **Remarks**:
 
 - Invalid UIDs will be ignored in the result without any visible errors.
+- This endpoint only accepts `mapUid`s - to get map information for a `mapId` (or to translate `mapId`s to `mapUid`s), you can use the [Core API's map info (multiple) endpoint](/core/maps/info-multiple).
 
 ---
 

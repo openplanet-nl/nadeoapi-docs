@@ -21,7 +21,7 @@ Gets information about a map via its UID.
 
 **Remarks**:
 
-- This endpoint only accepts `mapUid`s - to get map information for a `mapId` (or to translate `mapId`s to `mapUid`s), you can use the [map info (multiple) endpoint](/live/maps/info-multiple).
+- This endpoint only accepts `mapUid`s - to get map information for a `mapId` (or to translate `mapId`s to `mapUid`s), you can use the [Core API's map info (multiple) endpoint](/core/maps/info-multiple).
 
 ---
 
