@@ -1,6 +1,7 @@
 ---
 pages:
   - auth
+  - glossary
 dirs:
   - core
   - live
