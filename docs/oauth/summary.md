@@ -25,7 +25,7 @@ The Trackmania OAuth API can be used for a variety of use cases - typically surr
 
 Additionally, the API offers an easy way to convert player account IDs into their display names and vice versa - a common use case if your application deals with one of the two types.
 
-### Can't I just use an API token for the game APIs? That's unique as well!
+### Can't I just use an API token for the game APIs? That's unique as well
 
 The benefit of the dedicated OAuth API is that its token can only really be used for identity verification - normal game API tokens on the other hand can be used to make a variety of different requests, some of which could cause unintended changes in-game or even get the account banned if Nadeo notice suspicious behavior.
 
@@ -34,6 +34,7 @@ So it's a very bad idea to reuse a player's game API token - especially if you d
 **Therefore, it's strongly advised not to use a game API token for verifying a player's identity.**
 
 ## Useful resources
+
 Below you'll find some resources that can be useful when implementing Trackmania OAuth into your project:
 
-- [Trackmania Identity Provider for Keycloak](https://github.com/EvoTM/keycloak-trackmania)
+- [Trackmania Identity Provider for Keycloak](https://github.com/EvoEsports/keycloak-trackmania)
