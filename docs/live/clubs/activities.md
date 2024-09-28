@@ -25,8 +25,8 @@ parameters:
       required: true
     - name: active
       type: Boolean
-      description: Whether to only include currently active entries
-      required: true
+      description: Optional filter for enabled/disabled activities
+      required: false
 ---
 
 Gets a list of club activities, including news, rooms, campaigns and others.
@@ -35,8 +35,7 @@ Gets a list of club activities, including news, rooms, campaigns and others.
 
 **Remarks**:
 
-- For clubs you are not an admin of, `active` needs to be set to `true` because only admins are allowed to see disabled activities. Otherwise you'll get an error complaining that you're not a member/admin of the club.
-- If `active` is set to `false`, you will only see disabled activities. If you would like to see all enabled and disabled activites for clubs you are an admin of, you will need to send at least 2 requests.
+- Omitting the `active` parameter implicitly requests both enabled and disabled activities. For clubs you are not an admin of, `active` needs to be explicitly set to `true` because only admins are allowed to see disabled activities - otherwise you'll get an error complaining that you're not a member/admin of the club.
 - As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png` versions are available using separate fields (see example below for reference).
 
 ---
