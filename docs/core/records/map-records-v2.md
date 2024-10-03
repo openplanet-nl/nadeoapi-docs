@@ -23,7 +23,7 @@ parameters:
       required: false
     - name: gameMode
       type: string
-      description: The game mode of the requested map (e.g. for Stunt maps)
+      description: The game mode of the requested map (e.g. for Stunt or Platform maps)
       required: false
 ---
 
@@ -37,7 +37,7 @@ Gets map records for a set of accounts on a given map.
 - This endpoint only accepts a `mapId` - to translate `mapUid`s to `mapId`s, you can use the [map info (multiple) endpoint](/core/maps/info-multiple).
 - This endpoint has no intrinsic limit on the number of accounts requested, but it will return a 414 error if the request URI length is 8220 characters or more (e.g. corresponding to one map and just above 200 accounts, depending on how you encode the URI).
 - The `seasonId` parameter does not accept the value `"Personal_Best"`- to retrieve records on the PB leaderboards, simply omit the `seasonId` parameter from the URL.
-- Stunt maps (with the map type `TrackMania\TM_Stunt`) require the `gameMode` parameter to be set to `"Stunt"`, otherwise the response will contain a "Not found" error.
+- Stunt and Platform maps (with the map type `TrackMania\TM_Stunt`/`Trackmania\TM_Platform`) require the `gameMode` parameter to be set to `"Stunt"`/`"Platform"`, otherwise the response will contain a "Not found" error.
 
 ---
 
