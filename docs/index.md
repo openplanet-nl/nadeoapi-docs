@@ -44,6 +44,13 @@ There is an [unofficial status page](https://trackmania-status.cdn.ubi.com/statu
 
 Note that these resources may not always accurately reflect unexpected outages and issues with specific endpoints - they're primarily used for communicating planned maintenance periods.
 
+## Helpful community projects
+
+These useful projects are maintained by Trackmania community members - check them out if you're looking for starting points or convenient ways to test/utilize Nadeo's APIs.
+
+- [nadeo-api-bruno](https://github.com/davidbmaier/nadeo-api-bruno) is a collection of commonly-used endpoints for [Bruno](https://www.usebruno.com/)
+- [nadeo-api](https://pypi.org/project/nadeo-api/) is a Python library that includes auth and utility features alongside a collection of pre-defined endpoints
+
 ## Contributing and support
 
 This is a community project that's actively being worked on - as such, the documentation is not complete in some areas. Don't hesitate to [reach out and get involved on Github](https://github.com/openplanet-nl/nadeoapi-docs), or [talk about the API on Discord](https://openplanet.dev/link/discord).
