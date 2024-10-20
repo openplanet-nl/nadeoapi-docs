@@ -20,16 +20,20 @@ Gets the equipped skins data for the requested users.
 ---
 
 **Remarks**:
+
 - This endpoint only returns a skin's identifier - if you need to retrieve the actual skin information, you can use [the skin info endpoint](/core/skins/info).
+- This endpoint is only accessible with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts). If you encounter `401` errors using a dedicated server account, switch to using a Ubisoft account.
 
 ---
 
 **Example request**:
+
 ```plain
 GET https://prod.trackmania.core.nadeo.online/accounts/skins/?accountIdList=5b4d42f4-c2de-407d-b367-cbff3fe817bc,da4642f9-6acf-43fe-88b6-b120ff1308ba
 ```
 
 **Example response**:
+
 ```json
 [
   {
