@@ -3,15 +3,15 @@ name: Get player club tags
 
 url: https://prod.trackmania.core.nadeo.online
 method: GET
-route: /accounts/clubTags/?accountIdList[]={accountID}
+route: /accounts/clubTags/?accountIdList={accountIdList}
 
 audience: NadeoServices
 
 parameters:
   query:
-    - name: accountID
+    - name: accountIdList
       type: string
-      description: The ID of the account you want to retrieve the club tag for
+      description: A comma-separated list of account IDs
       required: true
 ---
 
@@ -22,16 +22,15 @@ Gets player club tags from account IDs.
 **Remarks**:
 
 - This endpoint is only accessible with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts). If you encounter `401` errors using a dedicated server account, switch to using a Ubisoft account.
-- This endpoint has no intrinsic limit on the number of account IDs requested, but it will return a `414` error if the request URI length is 8220 characters or more.
-- To retrieve club tags for more than one ID at a time, you can send an array of values instead of a single value - see the second example below.
-- As of 2024-11-18, the `accountIdList` query parameter no longer accepts a comma-separated list of values and requires the array format shown in the examples below.
+- This endpoint has no intrinsic limit on the number of account IDs requested, but it will return a `414` error if the request URI length is 8220 characters or more (corresponding to just over 200 account IDs, depending on how you encode the URI).
+- As of 2024-11-18, the `accountIdList` query parameter also supports the array format `accountIdList[]={accountID}`. The examples below show how to request club tags for multiple accounts using this approach.
 
 ---
 
 **Example request**:
 
 ```plain
-GET https://prod.trackmania.core.nadeo.online/accounts/clubTags/?accountIdList[]=5b4d42f4-c2de-407d-b367-cbff3fe817bc
+GET https://prod.trackmania.core.nadeo.online/accounts/clubTags/?accountIdList=5b4d42f4-c2de-407d-b367-cbff3fe817bc,45e5e4bc-d237-4e6e-8258-b60e8dc0c76a
 ```
 
 **Example response**:
@@ -39,17 +38,22 @@ GET https://prod.trackmania.core.nadeo.online/accounts/clubTags/?accountIdList[]
 ```json
 [
   {
+    "accountId": "45e5e4bc-d237-4e6e-8258-b60e8dc0c76a",
+    "clubTag": "$A00X",
+    "timestamp": "2024-03-30T05:54:17+00:00"
+  },
+  {
     "accountId": "5b4d42f4-c2de-407d-b367-cbff3fe817bc",
     "clubTag": "$F05TSH",
-    "timestamp": "2022-04-18T10:35:43+00:00"
+    "timestamp": "2024-11-21T18:30:18+00:00"
   }
 ]
 ```
 
-For multiple accounts, send the `accountID` values as follows:
+For multiple accounts, you may also send the `accountID` values as follows:
 
 ```plain
-GET https://prod.trackmania.core.nadeo.online/accounts/clubTags/?accountIdList[]=a0f1b480-7b9b-44e7-9ca3-2196fc16cb3a&accountIdList[]=041623e9-57de-4dea-8fd2-6adf967ba558
+GET https://prod.trackmania.core.nadeo.online/accounts/clubTags/?accountIdList[]=5b4d42f4-c2de-407d-b367-cbff3fe817bc&accountIdList[]=45e5e4bc-d237-4e6e-8258-b60e8dc0c76a
 ```
 
 If an `accountId` is invalid, the response will contain an error message:
