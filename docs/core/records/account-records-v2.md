@@ -29,6 +29,7 @@ Gets records for the currently authenticated account.
 - This endpoint only works for the currently authenticated account, requesting others' records will result in error `403`. This feature is not supported when using a dedicated server account's token.
 - This endpoint is limited to the most recent 1,000 records driven by the currently authenticated account. Retrieving all historical records is not supported.
 - To retrieve records driven on Stunt maps (with the map type `TrackMania\TM_Stunt`), set the `gameMode` query parameter to `"Stunt"`.
+- If the map author has set a secret threshold score for their map, this endpoint will not return any actual `time` values for some entries. Instead, those leaderboard entries will contain `4294967295` in the `time` field. Additionally, the `url` link will result in a `403` error when requested.
 
 ---
 

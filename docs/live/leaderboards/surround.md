@@ -53,6 +53,7 @@ Gets surrounding records for a score on a map's leaderboard.
 - This endpoint's response always includes the requested score as a fake record (using the requester's account information for the `accountId` and zone data) between the surrounding ones. This is because in-game this endpoint is used to determine surrounding records for your own PB (that might not have fully uploaded to the leaderboards yet), so it supports an arbitrary score value that the game sets based on your PB.
 - If the authenticated account has a record on the requested map, no scores lower than that record can be requested - it's recommended to use this endpoint with an account that does not have any records.
 - When using a Ubisoft account, the `score` parameter may be omitted to retrieve the player's PB leaderboard position and its surrounding data. When the authenticated player doesn't have a PB on the requested map (or when using a dedicated server account), any request without a `score` parameter will return an empty object (`{}`).
+- If the map author has set a secret threshold score for their map, this endpoint will not return any actual `score` values for some entries. Instead, those leaderboard entries will contain `-1` in the `score` field.
 
 ---
 

@@ -38,6 +38,7 @@ Gets map records for a set of accounts on a given map.
 - This endpoint has no intrinsic limit on the number of accounts requested, but it will return a 414 error if the request URI length is 8220 characters or more (e.g. corresponding to one map and just above 200 accounts, depending on how you encode the URI).
 - The `seasonId` parameter does not accept the value `"Personal_Best"`- to retrieve records on the PB leaderboards, simply omit the `seasonId` parameter from the URL.
 - Stunt and Platform maps (with the map type `TrackMania\TM_Stunt`/`Trackmania\TM_Platform`) require the `gameMode` parameter to be set to `"Stunt"`/`"Platform"`, otherwise the response will contain a "Not found" error.
+- If the map author has set a secret threshold score for their map, this endpoint will not return any actual `time` values for some entries. Instead, those leaderboard entries will contain `4294967295` in the `time` field. Additionally, the `url` link will result in a `403` error when requested.
 
 ---
 

@@ -44,6 +44,7 @@ Gets records from a map's leaderboard for members of a club.
 - The `groupUid` `"Personal_Best"` can be used to get the global leaderboard.
 - This endpoint only allows you to read a leaderboard's first 10,000 records. The rest of the leaderboard is not available at this level of detail.
 - If a `length` higher than `100` is requested, the API will successfully return only the first 100 records.
+- If the map author has set a secret threshold score for their map, this endpoint will not return any actual `score` values for some entries. Instead, those leaderboard entries will contain `-1` in the `score` field.
 
 ---
 

@@ -20,16 +20,20 @@ Gets a single map record using its primary identifier.
 ---
 
 **Remarks**:
+
 - This endpoint only accepts a `mapRecordId` - to retrieve it, you can use the [map records endpoint](/core/records/map-records).
+- If the map author has set a secret threshold score for their map, this endpoint will not return an actual `time` value. Instead, the response will contain `4294967295` in the `time` field. Additionally, the `url` link will result in a `403` error when requested.
 
 ---
 
 **Example request**:
+
 ```plain
 GET https://prod.trackmania.core.nadeo.online/mapRecords/ade1de4c-dd53-4a65-9d9b-89c5b1b9fa44
 ```
 
 **Example response**:
+
 ```json
 {
   "accountId": "04dd686d-0d2e-4c4c-bd37-81d57ae47656",

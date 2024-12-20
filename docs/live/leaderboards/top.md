@@ -40,19 +40,24 @@ Gets records from a map's leaderboard.
 ---
 
 **Remarks**:
+
 - The `groupUid` `"Personal_Best"` can be used to get the global leaderboard.
 - `onlyWorld=true` is required to retrieve more than the first five records. Without it, `length` and `offset` will have no effect.
 - This endpoint only allows you to read a leaderboard's first 10,000 records. The rest of the leaderboard is not available at this level of detail.
 - If a `length` higher than `100` is requested, the API will successfully return only the first 100 records.
+- As of December 11th 2024, this endpoint's response also contains a `timestamp` for each leaderboard entry, which corresponds to the time the relevant record was set.
+- If the map author has set a secret threshold score for their map, this endpoint will not return any actual `score` values for some entries. Instead, those leaderboard entries will contain `-1` in the `score` field.
 
 ---
 
 **Example request**:
+
 ```plain
 GET https://live-services.trackmania.nadeo.live/api/token/leaderboard/group/Personal_Best/map/ZJw6_4CItmVlRMPgELl4Q37Utw2/top?onlyWorld=true&length=10&offset=50
 ```
 
 **Example response**:
+
 ```json
 {
   "groupUid": "Personal_Best",
@@ -63,19 +68,21 @@ GET https://live-services.trackmania.nadeo.live/api/token/leaderboard/group/Pers
       "zoneName": "World",
       "top": [
         {
-          "accountId": "70febe5b-c279-4e1f-936f-0b02a0c6e757",
-          "zoneId": "3020a27d-7e13-11e8-8060-e284abfd2bc4",
-          "zoneName": "Norway",
+          "accountId": "6ec3711d-a722-4bc3-b952-96e80410b7ff",
+          "zoneId": "301fbe37-7e13-11e8-8060-e284abfd2bc4",
+          "zoneName": "Corrèze",
           "position": 51,
-          "score": 53156
+          "score": 53145,
+          "timestamp": 1658783398
         },
         ...
         {
-          "accountId": "21029447-5895-4e1e-829c-14dedb4af788",
-          "zoneId": "301f4e76-7e13-11e8-8060-e284abfd2bc4",
-          "zoneName": "Olomoucký kraj",
+          "accountId": "aa4e375f-d23e-4915-8d53-8b3307e06764",
+          "zoneId": "301ffccb-7e13-11e8-8060-e284abfd2bc4",
+          "zoneName": "Nürnberg",
           "position": 60,
-          "score": 53181
+          "score": 53158,
+          "timestamp": 1658772554
         }
       ]
     }
