@@ -1,5 +1,5 @@
 ---
-name: Get campaigns
+name: Get seasonal campaigns
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
