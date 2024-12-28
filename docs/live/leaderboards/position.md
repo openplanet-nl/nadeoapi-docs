@@ -50,6 +50,8 @@ Gets position data for one or more records by their score/time.
 - This endpoint supports up to 50 maps at once - they need to be added to the request body's array as well as to the query parameters (see example below).
 - This endpoint can sometimes be very delayed - there's been cases where it has returned data that was outdated for multiple hours. On average, this route should be up to date within about three hours - some maps are prioritized though (official campaign maps and current TOTDs), so they are typically updated every five minutes.
 - If the authenticated account has a record on the requested map, no scores lower than that record can be requested - it's recommended to use this endpoint with an account that does not have any records.
+- Duplicate `mapUid`s in the same group are not supported. The response will include the same position for all scores requested.
+- `score`s must be greater than or equal to 1, otherwise the result for that `mapUid` will be omitted.
 
 ---
 
