@@ -1,13 +1,14 @@
 ---
 pages:
-  - auth
   - glossary
 dirs:
+  - auth
   - core
   - live
   - meet
 roots:
   - oauth
+
 ---
 
 # Home
