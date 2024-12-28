@@ -1,3 +1,7 @@
+---
+name: Meet API
+---
+
 # Meet API
 
 The Meet API contains endpoints for interacting with competitions, matchmaking and other match infrastructure.
