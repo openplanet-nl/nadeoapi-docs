@@ -157,6 +157,7 @@ Identifier for the game mode the map is intended to be driven in. Official map t
 - `TrackMania\\TM_Race`
 - `TrackMania\\TM_Royal`
 - `TrackMania\\TM_Stunt`
+- `TrackMania\\TM_Platform`
 
 May also be used by community projects for their own custom types.
 
@@ -176,7 +177,7 @@ Not to be confused with the [match live ID](#match-live-id).
 
 ### Match Live ID
 
-A secondary ID that identifies a competition, often called `liveId`.
+A secondary ID that identifies a match, often called `liveId`.
 
 Follows the pattern `LID-MTCH-...`.
 
