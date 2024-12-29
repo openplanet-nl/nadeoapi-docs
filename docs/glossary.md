@@ -1,5 +1,6 @@
 ---
 icon: "fa-book"
+category: "general"
 ---
 
 # Glossary

@@ -1,5 +1,7 @@
 ---
 name: Authentication
+category: general
+icon: fa-lock
 pages:
   - ubi
   - dedi

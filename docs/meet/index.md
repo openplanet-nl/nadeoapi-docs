@@ -1,5 +1,6 @@
 ---
 name: Meet API
+category: reference
 ---
 
 # Meet API

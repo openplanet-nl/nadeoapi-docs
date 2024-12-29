@@ -1,5 +1,6 @@
 ---
 name: Core API
+category: reference
 ---
 
 # Core API
