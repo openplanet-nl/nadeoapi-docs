@@ -1,5 +1,6 @@
 ---
 name: Live API
+category: reference
 ---
 
 # Live API
