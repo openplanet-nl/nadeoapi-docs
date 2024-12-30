@@ -160,9 +160,9 @@ class Controller extends Nin\Controller
 
 	public function getPageIndex()
 	{
-		//return nf_cache()->take('page_index', 3600, function() {
+		return nf_cache()->take('page_index', 3600, function() {
 			return $this->getPageIndexInternal();
-		//});
+		});
 	}
 
 	public function getPageIndexInfo(string $path)
