@@ -49,8 +49,9 @@ Note that these resources may not always accurately reflect unexpected outages a
 
 These useful projects are maintained by Trackmania community members - check them out if you're looking for starting points or convenient ways to test/utilize Nadeo's APIs.
 
-- [nadeo-api-bruno](https://github.com/davidbmaier/nadeo-api-bruno) is a collection of commonly-used endpoints for [Bruno](https://www.usebruno.com/)
-- [nadeo-api](https://pypi.org/project/nadeo-api/) is a Python library that includes auth and utility features alongside a collection of pre-defined endpoints
+- [nadeo-api-bruno](https://github.com/davidbmaier/nadeo-api-bruno) is a collection of commonly-used endpoints for [Bruno](https://www.usebruno.com/) (maintained by **tooInfinite**)
+- [nadeo-api](https://pypi.org/project/nadeo-api/) is a Nadeo API Python library (maintained by **Ezio416**)
+- [nadeo-api-rs](https://crates.io/crates/nadeo-api-rs) is a Nadeo API Rust library (maintained by **XertroV**)
 
 ## Contributing and support
 
