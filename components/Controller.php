@@ -58,6 +58,7 @@ class Controller extends Nin\Controller
 
 						$roots[] = [
 							'type' => 'root',
+							'category' => $root_index_page->meta['category'] ?? '',
 							'name' => $root_index_page->meta['name'] ?? str_replace('-', ' ', ucfirst($root)),
 							'icon' => $index_page->meta['icon'] ?? '',
 							'path' => $root,
@@ -76,8 +77,9 @@ class Controller extends Nin\Controller
 
 						$dirs[] = [
 							'type' => 'dir',
+							'category' => $dir_index_page->meta['category'] ?? '',
 							'name' => $dir_index_page->meta['name'] ?? str_replace('-', ' ', ucfirst($dir)),
-							'icon' => $index_page->meta['icon'] ?? '',
+							'icon' => $dir_index_page->meta['icon'] ?? '',
 							'path' => $dir,
 							'children' => $this->getPageIndexInternal($docs_dir . '/' . $dir),
 						];
@@ -95,6 +97,7 @@ class Controller extends Nin\Controller
 
 						$pages[] = [
 							'type' => 'page',
+							'category' => $page->meta['category'] ?? '',
 							'name' => $page->getName(),
 							'icon' => $page->meta['icon'] ?? '',
 							'path' => $page_name,
@@ -123,6 +126,7 @@ class Controller extends Nin\Controller
 			if ($fileinfo->isDir()) {
 				$dirs[] = [
 					'type' => 'dir',
+					'category' => '',
 					'name' => str_replace('-', ' ', ucfirst($filename)),
 					'icon' => '',
 					'path' => $filename,
@@ -143,6 +147,7 @@ class Controller extends Nin\Controller
 
 			$pages[] = [
 				'type' => 'page',
+				'category' => $page->meta['category'] ?? '',
 				'name' => $page->getName(),
 				'icon' => $page->meta['icon'] ?? '',
 				'path' => $filename,

@@ -13,7 +13,7 @@
 		]);
 
 		foreach ($index as $item) {
-			if ($item['type'] != 'page') {
+			if ($item['category'] != 'general') {
 				continue;
 			}
 			echo $this->renderPartial('/menu/item', [
@@ -28,7 +28,7 @@
 	<ul class="menu-list">
 		<?php
 		foreach ($index as $item) {
-			if ($item['type'] != 'dir') {
+			if ($item['category'] != 'reference') {
 				continue;
 			}
 			echo $this->renderPartial('/menu/item', [
