@@ -4,7 +4,7 @@ position: 3
 
 # Using API tokens
 
-This guide explains how to use and manage Nadeo API tokens. See the [authentication overview page](/auth) for information on how to acquire tokens.
+This guide explains how to use and manage Nadeo API tokens. See the [authentication overview page](/auth) for information on how to acquire tokens (and their audiences).
 
 If you have already obtained an access token and want to get started, see the [basic usage guide](#using-the-access-token).
 

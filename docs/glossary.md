@@ -35,7 +35,7 @@ Scope of the access token you're using to interact with the API. Currently suppo
 
 Most API endpoints require authentication with the correct audience. You can find out which audience is required by an endpoint at the top of the endpoint's documentation page.
 
-See [the authentication documentation](/auth#authorization) for more information on how to request a token for a specific audience.
+See [the authentication documentation](/auth) for more information on how to request a token for a specific audience.
 
 ### Core API
 
