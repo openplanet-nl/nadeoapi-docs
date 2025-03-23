@@ -25,7 +25,7 @@ The documentation is structured by the three main API domains, each of which cov
 
 As of July 2023, the _Competition_, _Matchmaking_ and _Club_ domains have been merged into the **Meet** API. The old domains will stay functional for a while, but it's highly recommended to migrate off of them as soon as possible.
 
-Additionally, [the OAuth documentation](/oauth/summary) contains extensive information on integrating external applications with the official Trackmania OAuth API.
+Additionally, [the OAuth documentation](/oauth/summary) contains information on integrating external applications with the official Trackmania OAuth API. Note that this API is completely separate from the main game APIs, and authentication flows are not compatible between the two.
 
 ## Responsible usage
 

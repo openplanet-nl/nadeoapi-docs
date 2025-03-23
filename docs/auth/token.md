@@ -22,6 +22,8 @@ Simply set the following header on all your requests:
 Authorization: nadeo_v1 t=<access token>
 ```
 
+Note that the [NadeoServices dependency](https://openplanet.dev/docs/reference/nadeoservices) already takes care of this part as long as you use its methods for sending requests, so you don't need to set this header manually in your Openplanet plugins.
+
 ## Refreshing your tokens
 
 To refresh your tokens (i.e. to obtain a new set of tokens without going through the entire authentication process), send the following HTTP request using a tool/library of your choice:
