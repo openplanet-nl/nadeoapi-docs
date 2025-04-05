@@ -29,7 +29,7 @@ parameters:
 
 <div class="notification is-warning">
 
-This endpoint is deprecated and may be removed in the future. It's recommended to use the [v2 route](/core/records/map-records-v2) instead.
+This endpoint is deprecated and may be removed in the future. Requesting records for multiple maps is no longer supported. It's recommended to use the [v2 route](/core/records/map-records-v2) instead.
 
 </div>
 
