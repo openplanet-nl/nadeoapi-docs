@@ -8,9 +8,11 @@ Using a Ubisoft account for authentication lets you access all API endpoints as 
 
 ## Setting up a Ubisoft account
 
-It's recommended not to use your primary account for API access. Temporary or permanent restrictions or bans will affect your ability to play the game, so it's recommended to create a separate Ubisoft account for these use cases.
+It's generally recommended not to use your primary account for API access. Temporary or permanent restrictions or bans will affect your ability to play the game, so it's recommended to create a separate Ubisoft account for these use cases.
 
-Note that this does not protect you from IP bans or similar restrictions (so this is obviously not a carte blanche for irresponsable API usage), but it can prevent accidental rate limit violations from affecting your primary Ubisoft account.
+Exceptions to that recommendation apply when you're working on an Openplanet plugin (where you have easy access to the local player's access tokens) or when your use case requires one specific player's authentication information to access their own data (e.g. to retrieve their created maps or to change their account's zone). In those cases you should pay special attention to [rate limiting](/#responsible-usage) and general request frequency to avoid impacting the authenticated account's ability to play the game.
+
+Note that creating a separate account does not protect you from IP bans or similar more severe restrictions (so this is obviously not a carte blanche for irresponsable API usage), but it can prevent accidental rate limit violations from affecting your primary Ubisoft account.
 
 You can create a new account via the [Ubisoft website](https://www.ubisoft.com).
 
