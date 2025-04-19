@@ -4,20 +4,16 @@ on:
   pull_request:
     branches:
       - main
-    paths:
-      - 'docs/**.md'
   push:
     branches:
       - main
-    paths:
-      - 'docs/**.md'
 
 jobs:
   tests:
     name: Unit Tests
     runs-on: ubuntu-latest
     steps:
-      - name: Chackout repository
+      - name: Check out repository
         uses: actions/checkout@v1
       - name: Setup Python v3.11
         uses: actions/setup-python@v4
