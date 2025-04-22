@@ -37,4 +37,5 @@ POST https://api.trackmania.com/api/user/maps/favorite/remove
 ```
 
 **Example response**:
-The response will be empty with a `204` response code.
+
+A successful response has no content and a `204` response code.

@@ -32,9 +32,7 @@ POST https://live-services.trackmania.nadeo.live/api/token/map/favorite/EgUgXeBV
 
 **Example response**:
 
-```plain
-Map favorite deleted
-```
+A successful response has no content and a `204` response code.
 
 Example response if the requested map does not exist:
 
