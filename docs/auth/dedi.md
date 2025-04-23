@@ -46,4 +46,4 @@ If you plan to interact with API endpoints that require different audiences, you
 
 ## Next steps
 
-The response body contains an `access_token` and a `refresh_token` which you can use for your API requests. See the [token usage guide](/auth/token) for information on how to use and manage tokens.
+The response body contains an `accessToken` and a `refreshToken` which you can use for your API requests. See the [token usage guide](/auth/token) for information on how to use and manage tokens.
