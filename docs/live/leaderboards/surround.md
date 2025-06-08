@@ -3,7 +3,7 @@ name: Get surrounding records for a score
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
-route: /api/token/leaderboard/group/{groupUid}/map/{mapUid}/surround/{lower}/{upper}?score={score}
+route: /api/token/leaderboard/group/{groupUid}/map/{mapUid}/surround/{lower}/{upper}?score={score}&onlyWorld={onlyWorld}
 
 audience: NadeoLiveServices
 
