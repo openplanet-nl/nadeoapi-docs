@@ -16,7 +16,7 @@ parameters:
       max: 50 map UIDs
     - name: score
       type: integer
-      description: The score/time to get the position for
+      description: The score/time (in milliseconds) to get the position for
       required: true
   body:
     - name: groupUid

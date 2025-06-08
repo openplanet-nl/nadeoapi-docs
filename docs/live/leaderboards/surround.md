@@ -30,7 +30,7 @@ parameters:
   query:
     - name: score
       type: integer
-      description: The score/time to get surrounding records for
+      description: The score/time (in milliseconds) to get surrounding records for
       required: false
     - name: onlyWorld
       type: boolean
