@@ -27,12 +27,20 @@ Gets Tracks of the Day (or Royal maps) by month.
 
 ---
 
+**Remarks**:
+
+- In some cases the `nextRequestTimestamp` and `relativeNextRequest` fields may be set to `-1` when the next TOTD has not been scheduled yet.
+
+---
+
 **Example request**:
+
 ```plain
 GET https://live-services.trackmania.nadeo.live/api/token/campaign/month?offset=7&length=1
 ```
 
 **Example response**:
+
 ```json
 {
   "monthList": [
