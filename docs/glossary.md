@@ -188,9 +188,10 @@ Not to be confused with the [match ID](#match-id).
 
 Identifier for the different types of matchmaking. Primarily used in matchmaking-related endpoints that support all types. Official types include:
 
-- `2`: Ranked 3v3
-- `3`: Royal
-- `4`: Super Royal
+- `2`: Ranked 3v3 (deprecated)
+- `3`: Royal (deprecated)
+- `4`: Super Royal (deprecated)
+- `5`: Ranked 2v2
 
 Note that the [Meet API's matchmaking IDs endpoint](/meet/matchmaking/summary) can be used to dynamically retrieve the IDs in case they change in the future.
 
