@@ -28,9 +28,9 @@ parameters:
       description: The order of the maps based on the sorting
       required: false
       default: "desc"
-    - name: mapType
+    - name: mapTypeList
       type: string
-      description: The map type filter
+      description: The map type filter separated by commas
       required: false
     - name: playable
       type: boolean
@@ -46,14 +46,14 @@ Retrieves your authenticated account's favorite tracks along with their informat
 
 - This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
 - When no `mapType` filter is applied, all available maps are returned regardless of their type.
-- Examples of supported map types to filter by are `"TrackMania\TM_Race"`, `"TrackMania\TM_Royal"` and `"TrackMania\TM_Stunt"`.
+- Examples of supported map types to filter by are `"TrackMania\TM_Race"`, `"TrackMania\TM_Royal"`, `"TrackMania\TM_Stunt"`, and `"TrackMania\TM_Platform"`.
 
 ---
 
 **Example request**:
 
 ```plain
-GET https://live-services.trackmania.nadeo.live/api/token/map/favorite?offset=0&length=1&sort=date&order=desc&mapType=Trackmania\TM_Race&playable=true
+GET https://live-services.trackmania.nadeo.live/api/token/map/favorite?offset=0&length=1&sort=date&order=desc&mapTypeList=Trackmania\TM_Race&playable=true
 ```
 
 **Example response**:
