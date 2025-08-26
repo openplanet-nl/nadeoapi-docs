@@ -12,7 +12,7 @@ Docker is the recommended way of developing the site, and also for testing docum
    ```
 2. Start a container:
    ```
-   docker run --rm -v $(pwd):/var/www/html -p 80:80 op-nadeoapi-docs
+   docker run --rm -v ./var/www/html -p 80:80 op-nadeoapi-docs
    ```
 3. Visit http://127.0.0.1/
 
