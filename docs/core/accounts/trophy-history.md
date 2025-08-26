@@ -21,7 +21,7 @@ parameters:
       max: 1000
     - name: offset
       type: integer
-      description: The number of entries to skip
+      description: The number of entries to skip (looking back from the most recent)
       default: 0
 ---
 
