@@ -49,3 +49,5 @@ https://meet.trackmania.nadeo.club/api/matchmaking/5/player-status
   "matchGenerationTimer": null
 }
 ```
+
+The response field `"currentHeartbeat"` will be an object with the same data recieved as when sending a [heartbeat](/meet/matchmaking/heartbeat) request.
