@@ -46,6 +46,7 @@ Sends a heartbeat to start and persist a matchmaking queue.
 - To stop queuing, you must send a [cancel](/meet/matchmaking/cancel) request.
 - You must be careful with this endpoint - if you send heartbeats but do not join and complete a match when it becomes available, your account will be penalized!
 - The `code` parameter can be (and typically is) left blank. This might have been used for Royal before it was discontinued.
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
 
 ---
 
