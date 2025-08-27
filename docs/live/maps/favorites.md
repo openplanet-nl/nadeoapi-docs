@@ -28,7 +28,7 @@ parameters:
       description: The order of the maps based on the sorting
       required: false
       default: "desc"
-    - name: mapTypeList
+    - name: mapType
       type: string
       description: The map type filter separated by commas
       required: false
