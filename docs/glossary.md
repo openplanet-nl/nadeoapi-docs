@@ -39,7 +39,7 @@ See [the authentication documentation](/auth) for more information on how to req
 
 ### Core API
 
-One of the three primary Nadeo APIs. Covers accounts, maps, records and some global features.
+One of the three primary Nadeo APIs. Covers accounts, maps, records, and some global features.
 
 Requires a token with the `NadeoServices` [audience](#audience).
 
@@ -47,7 +47,7 @@ See [the Core API index](/core) for more information.
 
 ### Live API
 
-One of the three primary Nadeo APIs. Covers leaderboards, clubs and campaigns.
+One of the three primary Nadeo APIs. Covers leaderboards, clubs, and campaigns.
 
 Requires a token with the `NadeoLiveServices` [audience](#audience).
 

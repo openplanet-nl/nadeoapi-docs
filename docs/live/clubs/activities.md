@@ -33,7 +33,7 @@ parameters:
       required: false
 ---
 
-Gets a list of club activities, including news, rooms, campaigns and others.
+Gets a list of club activities, including news, rooms, campaigns, and others.
 
 ---
 

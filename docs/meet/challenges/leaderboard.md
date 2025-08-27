@@ -34,7 +34,7 @@ Gets leaderboard entries for a challenge ID.
 **Remarks**:
 
 - Note that challenges are different from competitions - challenges are separate leaderboard structures that can be part of a competition (for example in the form of a qualifying session).
-- Typically challenges are used for qualifiers in larger competitions - the relevant `challengeId` can be retrieved using the [competition rounds endpoint](/meet/competitions/rounds).
+- Typically, challenges are used for qualifiers in larger competitions - the relevant `challengeId` can be retrieved using the [competition rounds endpoint](/meet/competitions/rounds).
 
 ---
 

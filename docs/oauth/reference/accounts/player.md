@@ -6,13 +6,13 @@ method: GET
 route: /api/user
 ---
 
-Retrieves the currently authorized player account
+Retrieves the currently authorized player account.
 
 ---
 
 **Remarks**:
 - This endpoint can be used as an additional authentication step after the initial authorization flow.
-- This endpoint can not be used with a token obtained from the **Client Credentials** flow, because it has to be associated with a player.
+- This endpoint can not be used with a token obtained from the **Client Credentials** flow because it has to be associated with a player.
 - The access token has to be provided in the `Authorization` header in the format `Bearer <token>`.
 
 ---
