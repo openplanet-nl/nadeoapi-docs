@@ -19,8 +19,8 @@ parameters:
       description: The party code
       required: true
     - name: playWith
-      type: string
-      description: The account ID(s) of the player(s) you wish to queue with (leave blank to queue solo)
+      type: array[string]
+      description: The account IDs of the players you wish to queue with (leave empty to queue solo)
       required: true
 ---
 
@@ -29,7 +29,9 @@ The request body is an object with `code` and `playWith` fields:
 ```json
 {
   "code": "{code}",
-  "playWith": "{playWith}"
+  "playWith": [
+    "{playWith}"
+  ]
 }
 ```
 
@@ -59,7 +61,9 @@ https://meet.trackmania.nadeo.club/api/matchmaking/5/heartbeat
 ```json
 {
   "code": "",
-  "playWith": "594be80b-62f3-4705-932b-e743e97882cf"
+  "playWith": [
+    "594be80b-62f3-4705-932b-e743e97882cf"
+  ]
 }
 ```
 
