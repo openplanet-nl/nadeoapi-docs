@@ -31,7 +31,7 @@ Gets global matchmaking rankings for the specified type.
 
 **Remarks**:
 
-- See the [glossary](/glossary#matchmaking-type) for a list of available matchmaking types and their IDs.
+- The `matchmakingType` parameter is typically `5` (Ranked 2v2). This parameter may also be a string, i.e. `"ranked-2v2"`. See the [glossary](/glossary#matchmaking-type) for a list of available matchmaking types and their IDs.
 - This leaderboard doesn't have the same restrictions as the map leaderboard endpoints - you can request any position and will get an accurate rank for each player.
 - The `cardinal` field in the response is the total number of players in the ranking.
 
