@@ -7,16 +7,22 @@ route: /api/token/leaderboard/group/map
 
 audience: NadeoLiveServices
 
+parameters:
+  body:
+    - name: groupUid
+      type: string
+      description: The ID of the group/season for a specific map
+      required: true
 ---
 
-The request body is an array of requested maps:
+The request body is an array of maps, identified by their mapUids:
 
 ```json
 {
   "maps": [
     {
-      "groupUid": "Personal_Best",
-      "mapUid": "Kn63nCh9bkaRHcZZsrtf_KcLMH2"
+      "mapUid": "{mapUid}",
+      "groupUid": "{groupUid}"
     }
   ]
 }
@@ -31,7 +37,8 @@ Gets the currently authenticated user's records on multiple maps.
 **Remarks**:
 
 - The `groupUid` `"Personal_Best"` can be used to get the global leaderboard.
-- A maximum of 50 records may be requested.
+- A maximum of 50 records may be requested. If more than 50 records are requested, only the first 50 will be returned.
+- This is technically the same endpoint as [get record positions by their time](/live/leaderboards/position), but without the query parameters, it functions completely differently.
 
 ---
 
@@ -45,8 +52,8 @@ POST https://live-services.trackmania.nadeo.live/api/token/leaderboard/group/map
 {
   "maps": [
     {
-      "groupUid": "Personal_Best",
-      "mapUid": "Kn63nCh9bkaRHcZZsrtf_KcLMH2"
+      "mapUid": "Kn63nCh9bkaRHcZZsrtf_KcLMH2",
+      "groupUid": "Personal_Best"
     }
   ]
 }
@@ -101,5 +108,3 @@ POST https://live-services.trackmania.nadeo.live/api/token/leaderboard/group/map
 If a `mapUid` is duplicated, the response will show duplicate results.
 
 If a `groupUid` or `mapUid` is invalid, the response will omit that requested map.
-
-If more than 50 records are requested, only the first 50 will be returned.
