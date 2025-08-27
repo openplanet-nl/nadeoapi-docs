@@ -1,5 +1,5 @@
 ---
-name: Cancel queue
+name: Cancel matchmaking queue
 
 url: https://meet.trackmania.nadeo.club
 method: POST

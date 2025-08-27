@@ -1,5 +1,5 @@
 ---
-name: Send heartbeat
+name: Send matchmaking heartbeat
 
 url: https://meet.trackmania.nadeo.club
 method: POST
