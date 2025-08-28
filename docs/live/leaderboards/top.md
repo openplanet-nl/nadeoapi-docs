@@ -21,18 +21,15 @@ parameters:
     - name: length
       type: integer
       description: The number of records to retrieve
-      required: false
       default: 5
       max: 100
     - name: onlyWorld
       type: boolean
       description: Whether to only retrieve records from the world leaderboard
-      required: false
       default: true
     - name: offset
       type: integer
       description: The number of records to skip
-      required: false
       default: 0
 ---
 

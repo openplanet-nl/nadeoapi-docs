@@ -21,12 +21,10 @@ parameters:
     - name: length
       type: integer
       description: The number of items to retrieve
-      required: false
       default: 10
     - name: offset
       type: integer
       description: The number of items to skip
-      required: false
       default: 0
 ---
 

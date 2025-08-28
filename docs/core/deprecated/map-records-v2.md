@@ -20,11 +20,9 @@ parameters:
     - name: seasonId
       type: string
       description: The ID of the requested group/season
-      required: false
     - name: gameMode
       type: string
       description: The game mode of the requested map (e.g. for Stunt or Platform maps)
-      required: false
 ---
 
 <div class="notification is-warning">

@@ -17,13 +17,11 @@ parameters:
     - name: length
       type: integer
       description: The number of ranks to retrieve
-      required: false
       default: 10
       max: 100
     - name: offset
       type: integer
       description: The number of ranks to skip
-      required: false
       default: 0
 ---
 

@@ -12,13 +12,11 @@ parameters:
     - name: length
       type: integer
       description: The number of competitions to retrieve
-      required: false
       default: 0
       max: 100
     - name: offset
       type: integer
       description: The number of competitions to skip
-      required: false
       default: 0
 ---
 

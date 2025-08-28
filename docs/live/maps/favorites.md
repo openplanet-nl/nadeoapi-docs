@@ -21,21 +21,17 @@ parameters:
     - name: sort
       type: string
       description: The sorting of the maps
-      required: false
       default: "date"
     - name: order
       type: string
       description: The order of the maps based on the sorting
-      required: false
       default: "desc"
     - name: mapTypeList
       type: string
       description: The map type filter separated by commas
-      required: false
     - name: playable
       type: boolean
       description: Whether the map is validated and playable
-      required: false
 ---
 
 Retrieves your authenticated account's favorite tracks along with their information.
