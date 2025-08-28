@@ -51,3 +51,9 @@ If a dedicated server account is used, the response will contain an error:
   "traceId": "Root=1-68b0ce22-50e44c4054602b8e0aabf5d2"
 }
 ```
+
+If a map review type does not exist, the response will contain a 403 error:
+
+```plain
+Only official MapReview
+```
