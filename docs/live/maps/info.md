@@ -63,7 +63,9 @@ GET https://live-services.trackmania.nadeo.live/api/token/map/QleO8OiNAkIXrZs6r0
 Example response if the requested map does not exist:
 
 ```json
-["map:error-notFound"]
+{
+    "error": "NotFoundHttpException",
+    "message": "",
+    "traceId": "Root=1-68b47f2d-6c4f97f5124aa8ab32d2914e"
+}
 ```
-
-Note: Be careful to check the response type; a valid track will return an object, but an invalid track will return an array with a string in it.
