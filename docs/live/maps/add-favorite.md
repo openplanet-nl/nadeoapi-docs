@@ -35,8 +35,4 @@ POST https://live-services.trackmania.nadeo.live/api/token/map/favorite/EgUgXeBV
 
 A successful response has no content and a `204` response code.
 
-Example response if the requested map does not exist:
-
-```json
-["map:error-notFound"]
-```
+If you try to submit a map that doesn't exist, you will also get a response with no content and a `204` response code.

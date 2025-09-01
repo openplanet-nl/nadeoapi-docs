@@ -34,14 +34,4 @@ POST https://live-services.trackmania.nadeo.live/api/token/map/favorite/EgUgXeBV
 
 A successful response has no content and a `204` response code.
 
-Example response if the requested map does not exist:
-
-```json
-["map:error-notFound"]
-```
-
-Example response if the requested map is not among your favorites:
-
-```json
-["mapFavorite:error-notFound"]
-```
+If you try to remove a map that doesn't exist or a map that isn't among your favorites, you will also get a response with no content and a `204` response code.
