@@ -33,6 +33,6 @@ POST https://live-services.trackmania.nadeo.live/api/token/map/favorite/EgUgXeBV
 
 **Example response**:
 
-A successful response has no content and a `204` response code.
+Both successful and unsuccessful responses have no content and return a `204` response code.
 
-If you try to submit a map that doesn't exist, you will also get a response with no content and a `204` response code.
+An invalid `mapUid` results in a `500` response code with an error object in the response body.
