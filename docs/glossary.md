@@ -193,7 +193,7 @@ Identifier for the different types of matchmaking. Primarily used in matchmaking
 - `4`: Super Royal (deprecated)
 - `5`: Ranked 2v2
 
-Note that the [Meet API's matchmaking IDs endpoint](/meet/matchmaking/summary) can be used to dynamically retrieve the IDs in case they change in the future.
+The [Meet API's matchmaking IDs endpoint](/meet/matchmaking/summary) was previously the most accurate way to dynamically retrieve the current matchmaking types and their IDs, but it has not been updated to reflect the matchmaking changes from July 2025.
 
 ### Zone ID
 
