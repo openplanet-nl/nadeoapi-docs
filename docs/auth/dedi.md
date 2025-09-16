@@ -29,6 +29,8 @@ Body:
     { "audience": "NadeoLiveServices" }
 ```
 
+Note that **this endpoint uses the dedicated server login, not the server's account ID**. Both are shown on [Trackmania.com's dedicated servers page](https://www.trackmania.com/player/dedicated-servers), but only the login is needed.
+
 The `Authorization` header uses [Basic HTTP authentication](https://en.wikipedia.org/wiki/Basic_access_authentication#Client_side) for your dedicated server account credentials (e.g. `username:password` becomes `Basic dXNlcm5hbWU6cGFzc3dvcmQ=`).
 In Go for example, this is done via [SetBasicAuth](https://pkg.go.dev/net/http#Request.SetBasicAuth) - other languages and libraries have their own utility methods for the same purpose.
 
