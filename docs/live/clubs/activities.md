@@ -27,6 +27,10 @@ parameters:
       type: Boolean
       description: Optional filter for enabled/disabled activities
       required: false
+    - name: folderId
+      type: string
+      description: Optional filter for activities in a folder
+      required: false
 ---
 
 Gets a list of club activities, including news, rooms, campaigns and others.
@@ -37,6 +41,7 @@ Gets a list of club activities, including news, rooms, campaigns and others.
 
 - Omitting the `active` parameter implicitly requests both enabled and disabled activities. For clubs you are not an admin of, `active` needs to be explicitly set to `true` because only admins are allowed to see disabled activities - otherwise you'll get an error complaining that you're not a member/admin of the club.
 - As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png` versions are available using separate fields (see example below for reference).
+- By default, all activities (including ones nested in folders) are returned. To only retrieve activities in a specific folder, use `folderId` to filter them. Setting `folderId` to `0` only returns activities outside of folders.
 
 ---
 
