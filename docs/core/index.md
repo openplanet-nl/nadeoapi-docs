@@ -12,7 +12,8 @@ Through this API, tokens for specific audiences can be requested (see [Authentic
 ## Deprecations
 
 - September 19th 2023: The [display names endpoint](/core/accounts/display-names) has been removed. To continue resolving `accountID` values to user names, it's recommended to use the relevant [OAuth API endpoint](/oauth/reference/accounts/id-to-name) instead.
-- July 1st 2024: The [map records endpoint](/core/records/map-records) has been deprecated. It is recommended to use the [map records v2 endpoint](/core/records/map-records-v2) as a direct replacement.
+- July 1st 2024: The [map records endpoint](/core/records/map-records) has been deprecated. It is recommended to use the [map records (v2) endpoint](/core/records/map-records-v2-account) as a direct replacement.
+- January 1st 2026: The [webidentities](/core/deprecated/webidentities), [map info (multiple)](/core/deprecated/info-multiple) and [map records (v2)](/core/deprecated/map-records-v2) endpoints have been deprecated. See their documentation pages for their recommended replacements.
 
 ## Endpoints list
 

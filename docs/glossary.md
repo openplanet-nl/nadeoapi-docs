@@ -105,7 +105,7 @@ Can be converted to an [account ID](#account-id), see [here](https://gist.github
 
 ### Web identity
 
-List of connected platform identities for a player account. Useful for retrieving the Ubisoft account ID for a given Nadeo [account ID](#account-id) via the [Core API's web identity endpoint](/core/accounts/webidentities).
+List of connected platform identities for a player account. Useful for retrieving the Ubisoft account ID for a given Nadeo [account ID](#account-id) via the [Core API's web identity endpoint](/core/accounts/webidentities-account).
 
 ## Game content
 
@@ -145,7 +145,7 @@ A UUID that identifies an uploaded map on Nadeo's servers. Generated at upload t
 
 Not to be confused with the [map UID](#map-uid) (which is generated when saving the map locally in the editor).
 
-Converting between map ID and [map UID](#map-uid) is possible via the [Core API's map info (multiple) endpoint](/core/maps/info-multiple).
+Converting between map ID and [map UID](#map-uid) is possible via the Core API's [map info (multiple) ID](/core/maps/info-multiple-id) endpoint.
 
 ### Map record ID
 
@@ -168,7 +168,7 @@ Primary identifier for a map. Generated when saving the map locally in the edito
 
 Not to be confused with the [map ID](#map-id) (which is generated at upload time).
 
-Converting between [map ID](#map-id) and map UID is possible via the [Core API's map info (multiple) endpoint](/core/maps/info-multiple).
+Converting between [map ID](#map-id) and map UID is possible via the Core API's [map info (multiple) UID](/core/maps/info-multiple-uid) endpoint.
 
 ### Match ID
 
