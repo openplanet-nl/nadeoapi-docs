@@ -18,7 +18,7 @@ parameters:
       type: integer
       description: The number of members to retrieve
       required: true
-      maximum: 250
+      max: 250
     - name: offset
       type: integer
       description: The number of members to skip
