@@ -16,8 +16,8 @@ parameters:
       type: integer
       description: The number of maps to retrieve
       required: true
-      minimum: 1
-      maximum: 100
+      min: 1
+      max: 100
     - name: sort
       type: string
       description: The sorting of the maps
