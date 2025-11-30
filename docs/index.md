@@ -3,6 +3,7 @@ pages:
   - glossary
 dirs:
   - auth
+  - guides
   - core
   - live
   - meet

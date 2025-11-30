@@ -117,6 +117,14 @@ An incremental ID that identifies a club activity.
 
 Not to be confused with more specific IDs for activity types such as club campaign IDs or club room IDs.
 
+### Closed leaderboard
+
+Map leaderboards are considered closed when they no longer accept new records. Every map also has a global leaderboard that is always open for new submissions. In most API contexts it is also known as the `Personal_Best` leaderboard.
+
+Prominent examples of this concept are previous official campaigns and TOTDs.
+
+Note that some API endpoints explicitly don't support closed leaderboards.
+
 ### Competition ID
 
 An incremental ID that identifies a competition.
