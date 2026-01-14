@@ -24,6 +24,8 @@ Gets player club tags from account IDs.
 - This endpoint is only accessible with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts). If you encounter `401` errors using a dedicated server account, switch to using a Ubisoft account.
 - This endpoint has no intrinsic limit on the number of account IDs requested, but it will return a `414` error if the request URI length is 8220 characters or more (corresponding to just over 200 account IDs, depending on how you encode the URI).
 - As of 2024-11-18, the `accountIdList` query parameter also supports the array format `accountIdList[]={accountID}`. The examples below show how to request club tags for multiple accounts using this approach.
+- Each player can have exactly one club tag - this is the tag that's also displayed in-game next to the player's display name (e.g. on leaderboards). Note that it doesn't always match the currently pinned club for that player (as that is an independent concept).
+- This endpoint only returns the club tag string, it does not return a reference to the club itself. Note that club tags are not unique, so the information from this endpoint alone is not enough to determine the referenced club.
 
 ---
 
