@@ -43,7 +43,7 @@ Sends a heartbeat to start and persist a matchmaking queue.
 
 **Remarks**:
 
-- The `matchmakingType` parameter is typically `5` (Ranked 2v2). For a dynamic way of retrieving those IDs see [the matchmaking summary endpoint](/meet/matchmaking/summary). This parameter may also be a string, i.e. `"ranked-2v2"`.
+- The `matchmakingType` parameter is typically `5` (Ranked 2v2). This parameter may also be a string, i.e. `"ranked-2v2"`. See the [glossary](/glossary#matchmaking-type) for a list of available matchmaking types and their IDs.
 - When queueing normally, the game will send a heartbeat every 5 seconds.
 - To stop queuing, you must send a [cancel](/meet/matchmaking/cancel) request.
 - You must be careful with this endpoint - if you send heartbeats but do not join and complete a match when it becomes available, your account will be penalized!
