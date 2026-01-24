@@ -13,7 +13,7 @@ parameters:
       type: integer
       description: The number of campaigns to retrieve
       required: true
-      maximum: 250
+      max: 250
     - name: offset
       type: integer
       description: The number of campaigns to skip

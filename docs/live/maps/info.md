@@ -21,7 +21,7 @@ Gets information about a map via its UID.
 
 **Remarks**:
 
-- This endpoint only accepts `mapUid`s - to get map information for a `mapId` (or to translate `mapId`s to `mapUid`s), you can use the [Core API's map info (multiple) endpoint](/core/maps/info-multiple).
+- This endpoint only accepts `mapUid`s - to get map information for a `mapId` (or to translate `mapId`s to `mapUid`s), you can use the [Core API's map info (multiple) ID endpoint](/core/maps/info-multiple-id).
 
 ---
 
@@ -63,7 +63,9 @@ GET https://live-services.trackmania.nadeo.live/api/token/map/QleO8OiNAkIXrZs6r0
 Example response if the requested map does not exist:
 
 ```json
-["map:error-notFound"]
+{
+    "error": "NotFoundHttpException",
+    "message": "",
+    "traceId": "Root=1-68b47f2d-6c4f97f5124aa8ab32d2914e"
+}
 ```
-
-Note: Be careful to check the response type; a valid track will return an object, but an invalid track will return an array with a string in it.

@@ -1,5 +1,6 @@
 ---
 icon: "fa-book"
+category: "general"
 ---
 
 # Glossary
@@ -34,7 +35,7 @@ Scope of the access token you're using to interact with the API. Currently suppo
 
 Most API endpoints require authentication with the correct audience. You can find out which audience is required by an endpoint at the top of the endpoint's documentation page.
 
-See [the authentication documentation](/auth#authorization) for more information on how to request a token for a specific audience.
+See [the authentication documentation](/auth) for more information on how to request a token for a specific audience.
 
 ### Core API
 
@@ -104,7 +105,7 @@ Can be converted to an [account ID](#account-id), see [here](https://gist.github
 
 ### Web identity
 
-List of connected platform identities for a player account. Useful for retrieving the Ubisoft account ID for a given Nadeo [account ID](#account-id) via the [Core API's web identity endpoint](/core/accounts/webidentities).
+List of connected platform identities for a player account. Useful for retrieving the Ubisoft account ID for a given Nadeo [account ID](#account-id) via the [Core API's web identity endpoint](/core/accounts/webidentities-account).
 
 ## Game content
 
@@ -144,7 +145,7 @@ A UUID that identifies an uploaded map on Nadeo's servers. Generated at upload t
 
 Not to be confused with the [map UID](#map-uid) (which is generated when saving the map locally in the editor).
 
-Converting between map ID and [map UID](#map-uid) is possible via the [Core API's map info (multiple) endpoint](/core/maps/info-multiple).
+Converting between map ID and [map UID](#map-uid) is possible via the Core API's [map info (multiple) ID](/core/maps/info-multiple-id) endpoint.
 
 ### Map record ID
 
@@ -157,6 +158,7 @@ Identifier for the game mode the map is intended to be driven in. Official map t
 - `TrackMania\\TM_Race`
 - `TrackMania\\TM_Royal`
 - `TrackMania\\TM_Stunt`
+- `TrackMania\\TM_Platform`
 
 May also be used by community projects for their own custom types.
 
@@ -166,7 +168,7 @@ Primary identifier for a map. Generated when saving the map locally in the edito
 
 Not to be confused with the [map ID](#map-id) (which is generated at upload time).
 
-Converting between [map ID](#map-id) and map UID is possible via the [Core API's map info (multiple) endpoint](/core/maps/info-multiple).
+Converting between [map ID](#map-id) and map UID is possible via the Core API's [map info (multiple) UID](/core/maps/info-multiple-uid) endpoint.
 
 ### Match ID
 
@@ -176,7 +178,7 @@ Not to be confused with the [match live ID](#match-live-id).
 
 ### Match Live ID
 
-A secondary ID that identifies a competition, often called `liveId`.
+A secondary ID that identifies a match, often called `liveId`.
 
 Follows the pattern `LID-MTCH-...`.
 
@@ -186,11 +188,12 @@ Not to be confused with the [match ID](#match-id).
 
 Identifier for the different types of matchmaking. Primarily used in matchmaking-related endpoints that support all types. Official types include:
 
-- `2`: Ranked 3v3
-- `3`: Royal
-- `4`: Super Royal
+- `2`: Ranked 3v3 (deprecated)
+- `3`: Royal (deprecated)
+- `4`: Super Royal (deprecated)
+- `5`: Ranked 2v2
 
-Note that the [Meet API's matchmaking IDs endpoint](/meet/matchmaking/summary) can be used to dynamically retrieve the IDs in case they change in the future.
+The [Meet API's matchmaking IDs endpoint](/meet/matchmaking/summary) was previously the most accurate way to dynamically retrieve the current matchmaking types and their IDs, but it has not been updated to reflect the matchmaking changes from July 2025.
 
 ### Zone ID
 

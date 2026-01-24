@@ -21,8 +21,9 @@ Gets a single map record using its primary identifier.
 
 **Remarks**:
 
-- This endpoint only accepts a `mapRecordId` - to retrieve it, you can use the [map records endpoint](/core/records/map-records).
+- This endpoint only accepts a `mapRecordId` - you can use the [map records by accounts (v2) endpoint](/core/records/map-records-v2-account) to find these identifiers.
 - If the map author has set a secret threshold score for their map, this endpoint will not return an actual `time` value. Instead, the response will contain `4294967295` in the `time` field. Additionally, the `url` link will result in a `403` error when requested.
+- To retrieve multiple records at once (using their `mapRecordId`s), you can use the [map records by IDs (v2) endpoint](/core/records/map-records-v2-id).
 
 ---
 

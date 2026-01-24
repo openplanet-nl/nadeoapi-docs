@@ -1,5 +1,5 @@
 ---
-name: Get campaigns
+name: Get seasonal campaigns
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
@@ -19,16 +19,24 @@ parameters:
       required: true
 ---
 
+<div class="notification is-warning">
+
+This endpoint is deprecated and may be removed in the future. It's recommended to use the [v2 route](/live/campaigns/campaigns-v2) instead.
+
+</div>
+
 Gets official campaigns.
 
 ---
 
 **Example request**:
+
 ```plain
 GET https://live-services.trackmania.nadeo.live/api/token/campaign/official?offset=7&length=1
 ```
 
 **Example response**:
+
 ```json
 {
   "itemCount": 9,

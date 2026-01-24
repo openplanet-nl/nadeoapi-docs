@@ -1,13 +1,14 @@
 ---
 pages:
-  - auth
   - glossary
 dirs:
+  - auth
   - core
   - live
   - meet
 roots:
   - oauth
+
 ---
 
 # Home
@@ -24,11 +25,13 @@ The documentation is structured by the three main API domains, each of which cov
 
 As of July 2023, the _Competition_, _Matchmaking_ and _Club_ domains have been merged into the **Meet** API. The old domains will stay functional for a while, but it's highly recommended to migrate off of them as soon as possible.
 
-Additionally, [the OAuth documentation](/oauth/summary) contains extensive information on integrating external applications with the official Trackmania OAuth API.
+Additionally, [the OAuth documentation](/oauth/summary) contains information on integrating external applications with the official Trackmania OAuth API. Note that this API is completely separate from the main game APIs, and authentication flows are not compatible between the two.
 
 ## Responsible usage
 
-All game APIs are to be used responsibly. Nadeo/Ubisoft **can and will ban your accounts/IPs** if they detect any disruptive (sending too many requests too fast) or any other malicious behavior. There are no official rate limits, but Nadeo developers have said in the past that the upper limit of acceptable usage is at about two requests/second for short-term bursts. If you are planning to send a lot of requests throughout a long period of time (for bulk operations or semi-live monitoring), you should reduce the frequency of requests.
+All game APIs are to be used responsibly. Nadeo/Ubisoft **can and will ban your accounts/IPs** if they detect any disruptive (sending too many requests too fast) or any other malicious behavior.
+
+There are no official rate limits, but Nadeo developers have said in the past that the upper limit of acceptable usage is at about **two requests/second for short-term bursts**. If you are planning to send a lot of requests throughout a long period of time (for bulk operations or semi-live monitoring), you should reduce the frequency of requests.
 
 Make sure you send along a useful `User-Agent` header that includes what your project is, who you are (your name or some username/handle), and how to contact you (your email address). For example:
 
@@ -48,8 +51,10 @@ Note that these resources may not always accurately reflect unexpected outages a
 
 These useful projects are maintained by Trackmania community members - check them out if you're looking for starting points or convenient ways to test/utilize Nadeo's APIs.
 
-- [nadeo-api-bruno](https://github.com/davidbmaier/nadeo-api-bruno) is a collection of commonly-used endpoints for [Bruno](https://www.usebruno.com/)
-- [nadeo-api](https://pypi.org/project/nadeo-api/) is a Python library that includes auth and utility features alongside a collection of pre-defined endpoints
+- [nadeo-api-bruno](https://github.com/davidbmaier/nadeo-api-bruno) is a collection of commonly-used endpoints for [Bruno](https://www.usebruno.com/) (maintained by **tooInfinite**)
+- [nadeo-api](https://pypi.org/project/nadeo-api/) is a Nadeo API **Python** library (maintained by **Ezio416**)
+- [nadeo-api-rs](https://crates.io/crates/nadeo-api-rs) is a Nadeo API **Rust** library (maintained by **XertroV**)
+- [ManiaAPI.NadeoAPI](https://www.nuget.org/packages/ManiaAPI.NadeoAPI) is a Nadeo API **C#** library (maintained by **BigBang1112**)
 
 ## Contributing and support
 

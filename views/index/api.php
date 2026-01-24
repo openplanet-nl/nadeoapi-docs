@@ -1,7 +1,4 @@
 <p class="title"><?= Nin\Html::encode($page->meta['name']) ?></p>
-<?php if (isset($page->meta['audience'])) { ?>
-	<p class="subtitle">Audience: <code><?= Nin\Html::encode($page->meta['audience']) ?></code></p>
-<?php } ?>
 
 <?php if (isset($page->meta['warning'])) { ?>
 	<div class="notification is-warning">
@@ -26,6 +23,19 @@
 	?>"><?= Nin\Html::encode($page->meta['method']) ?></span>
 	<?= $page->getRouteHtml() ?>
 </code>
+
+<?php if (isset($page->meta['audience'])) { ?>
+	<hr>
+	<div class="content">
+		<p><b>Headers:</b></p>
+		<ul>
+			<li>
+				<code>Authorization: nadeo_v1 t=<span class="has-text-weight-bold has-text-primary">{token}</span></code>
+				<span>An <a href="/glossary#access-token">access token</a> for the <code><?= Nin\Html::encode($page->meta['audience']) ?></code> <a href="/glossary#audience">audience</a></span>
+			</li>
+		</ul>
+	</div>
+<?php } ?>
 
 <?php
 if (isset($page->meta['parameters'])) {
@@ -72,14 +82,14 @@ if (isset($page->meta['parameters'])) {
 	}
 
 	if (isset($params['body'])) {
-		$params_path = $params['body'];
+		$params_body = $params['body'];
 		?>
 		<hr>
 		<div class="content">
 			<p><b>Body parameters:</b></p>
 			<ul>
 				<?php
-				foreach ($params_path as $item) {
+				foreach ($params_body as $item) {
 					echo $this->renderPartial('api-param', [
 						'class' => 'warning',
 						'item' => $item,

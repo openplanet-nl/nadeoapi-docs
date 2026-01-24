@@ -16,7 +16,7 @@ parameters:
       max: 50 map UIDs
     - name: score
       type: integer
-      description: The score/time to get the position for
+      description: The score/time (in milliseconds) to get the position for
       required: true
   body:
     - name: groupUid
@@ -26,6 +26,7 @@ parameters:
 ---
 
 The request body is an array of maps, identified by their mapUids:
+
 ```json
 {
   "maps": [
@@ -44,6 +45,7 @@ Gets position data for one or more records by their score/time.
 ---
 
 **Remarks**:
+
 - The `groupUid` `"Personal_Best"` can be used to get the global leaderboard.
 - When using a different `groupUid`, make sure you're only referencing currently open leaderboards. Maps with closed leaderboards will not be included in the response.
 - The `mapUid` parameter in the URL has to correspond with a map in the request body.
@@ -52,13 +54,16 @@ Gets position data for one or more records by their score/time.
 - If the authenticated account has a record on the requested map, no scores lower than that record can be requested - it's recommended to use this endpoint with an account that does not have any records.
 - Duplicate `mapUid`s in the same group are not supported. The response will include the same position for all scores requested.
 - `score`s must be greater than or equal to 1, otherwise the result for that `mapUid` will be omitted.
+- The positions returned by this endpoint don't correspond to existing records, instead they tell you what a new record's position would be given the requested score.
 
 ---
 
 **Example request**:
+
 ```plain
 POST https://live-services.trackmania.nadeo.live/api/token/leaderboard/group/map?scores[gjt2DWATrQ_NdrbrXG0G9oDpTfh]=15800&scores[XiGZvMOqIgT3_g0TdeFa0lxMp46]=17500
 ```
+
 ```json
 {
     "maps": [
@@ -75,6 +80,7 @@ POST https://live-services.trackmania.nadeo.live/api/token/leaderboard/group/map
 ```
 
 **Example response**:
+
 ```json
 [
     {

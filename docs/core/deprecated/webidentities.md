@@ -15,22 +15,31 @@ parameters:
       required: true
 ---
 
+<div class="notification is-warning">
+
+This endpoint is deprecated and may be removed in the future. Use the [account-specific webidentities endpoint](/core/accounts/webidentities-account) instead.
+
+</div>
+
 Gets player webIdentities from account IDs.
 
 ---
 
 **Remarks**:
+
 - The `timestamp` field is the creation date of the account - effectively the date when the account started playing Trackmania.
 - Due to the `ubiServices` and `uplay` providers being handled separately (potentially for historical reasons), there are typically two objects for each requested account. They will otherwise be identical.
 
 ---
 
 **Example request**:
+
 ```plain
 GET https://prod.trackmania.core.nadeo.online/webidentities/?accountIdList=5b4d42f4-c2de-407d-b367-cbff3fe817bc,7398eeb6-9b4e-44b8-a7a1-a2149955ac70
 ```
 
 **Example response**:
+
 ```json
 [
     {

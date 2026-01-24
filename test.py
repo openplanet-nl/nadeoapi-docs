@@ -17,7 +17,11 @@ def test_valid_link(link):
 	if not link.startswith('/'):
 		raise Exception('Internal link must start with a slash: "' + link + '"')
 
-	path, anchor = re.findall('^/(.+?)(#.+)?$', link)[0]
+	path, anchor = re.findall('^/([^#\s]+)?(#.+)?$', link)[0]
+
+	# fall back to root index file if there is no path
+	if path == '' or path.endswith('/'):
+		path += 'index'
 
 	if not os.path.exists('docs/' + path) and not os.path.exists('docs/' + path + '.md'):
 		raise Exception('Internal link goes to a non-existing page: "' + link + '"')
@@ -68,7 +72,7 @@ def test_file(path):
 	frontmatter = False
 	content = ''
 
-	fh = open(path, 'r')
+	fh = open(path, 'r', encoding='utf8')
 	while True:
 		line = fh.readline()
 		if not line:

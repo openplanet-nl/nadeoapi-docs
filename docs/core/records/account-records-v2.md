@@ -3,7 +3,7 @@ name: Get account records (v2)
 
 url: https://prod.trackmania.core.nadeo.online
 method: GET
-route: /v2/accounts/{accountId}/mapRecords?gameMode={gameMode}
+route: /v2/accounts/{accountId}/mapRecords?mapIdList={mapIdList}&seasonIdList={seasonIdList}&gameMode={gameMode}
 
 audience: NadeoServices
 
@@ -14,11 +14,25 @@ parameters:
       description: An account ID
       required: true
   query:
+    - name: mapIdList
+      type: string
+      description: A comma-separated list of map IDs
+      required: false
+    - name: seasonIdList
+      type: string
+      description: A comma-separated list of season IDs (only official campaigns supported)
+      required: false
     - name: gameMode
       type: string
       description: The game mode of the requested records (e.g. for Stunt maps)
       required: false
 ---
+
+<div class="notification is-warning">
+
+Starting in January 2026, this endpoint will no longer support retrieving a player's most recent records, and it will require supplying specific map/season IDs.
+
+</div>
 
 Gets records for the currently authenticated account.
 
@@ -29,6 +43,9 @@ Gets records for the currently authenticated account.
 - This endpoint only works for the currently authenticated account, requesting others' records will result in error `403`. This feature is not supported when using a dedicated server account's token.
 - This endpoint is limited to the most recent 1,000 records driven by the currently authenticated account. Retrieving all historical records is not supported.
 - To retrieve records driven on Stunt maps (with the map type `TrackMania\TM_Stunt`), set the `gameMode` query parameter to `"Stunt"`.
+- `mapIdList` and `seasonIdList` should not both be provided in the same request as they both get applied on every result.
+- This endpoint's `mapIdList` parameter only accepts `mapId`s - to translate `mapUid`s to `mapId`s, you can use the [map info (multiple) UID endpoint](/core/maps/info-multiple-uid).
+- This endpoint has no intrinsic limit on the number of map/season IDs requested, but it will return a `414` error if the request URI length is 8220 characters or more (corresponding to just over 200 map IDs, depending on how you encode the URI).
 - If the map author has set a secret threshold score for their map, this endpoint will not return any actual `time` values for some entries. Instead, those leaderboard entries will contain `4294967295` in the `time` field. Additionally, the `url` link will result in a `403` error when requested.
 
 ---
@@ -36,7 +53,7 @@ Gets records for the currently authenticated account.
 **Example request**:
 
 ```plain
-GET https://prod.trackmania.core.nadeo.online/v2/accounts/5b4d42f4-c2de-407d-b367-cbff3fe817bc/mapRecords
+GET https://prod.trackmania.core.nadeo.online/v2/accounts/5b4d42f4-c2de-407d-b367-cbff3fe817bc/mapRecords?seasonIdList=3987d489-03ae-4645-9903-8f7679c3a418
 ```
 
 **Example response**:
@@ -45,42 +62,42 @@ GET https://prod.trackmania.core.nadeo.online/v2/accounts/5b4d42f4-c2de-407d-b36
 [
   {
     "accountId": "5b4d42f4-c2de-407d-b367-cbff3fe817bc",
-    "filename": "Replays\\Downloaded\\8c6913ab-45aa-4d28-84be-4945b7da74b2_5b4d42f4-c2de-407d-b367-cbff3fe817bc_(0'42''67).replay.gbx",
+    "filename": "Replays\\Downloaded\\73edcfb9-0f84-4fd8-9c52-272dae4e82e5_5b4d42f4-c2de-407d-b367-cbff3fe817bc_(0'19''1).replay.gbx",
     "gameMode": "TimeAttack",
     "gameModeCustomData": "",
-    "mapId": "8c6913ab-45aa-4d28-84be-4945b7da74b2",
-    "mapRecordId": "002e5a7f-473d-4122-9ad6-7b8b7e0b1d89",
+    "mapId": "73edcfb9-0f84-4fd8-9c52-272dae4e82e5",
+    "mapRecordId": "054eb4c1-8e99-4011-bd55-09a376e4b998",
     "medal": 4,
     "recordScore": {
       "respawnCount": 4294967295,
       "score": 0,
-      "time": 42670
+      "time": 19013
     },
     "removed": false,
-    "scopeId": null,
-    "scopeType": "PersonalBest",
-    "timestamp": "2020-12-16T17:51:47+00:00",
-    "url": "https://core.trackmania.nadeo.live/storageObjects/16aab3d3-1d31-46b3-b68b-a2b5268ebb4a"
+    "scopeId": "3987d489-03ae-4645-9903-8f7679c3a418",
+    "scopeType": "Season",
+    "timestamp": "2020-07-02T18:32:47+00:00",
+    "url": "https://core.trackmania.nadeo.live/storageObjects/f80e7239-771f-491e-a812-2b05cfb91d40"
   },
   ...
   {
     "accountId": "5b4d42f4-c2de-407d-b367-cbff3fe817bc",
-    "filename": "Replays\\Downloaded\\75a92412-bc14-43eb-9a90-179b5628faa6_5b4d42f4-c2de-407d-b367-cbff3fe817bc_(0'47''24).replay.gbx",
+    "filename": "Replays\\Downloaded\\bb5ed92d-f2af-462e-a912-7aeb686ff90c_5b4d42f4-c2de-407d-b367-cbff3fe817bc_(0'15''61).replay.gbx",
     "gameMode": "TimeAttack",
     "gameModeCustomData": "",
-    "mapId": "75a92412-bc14-43eb-9a90-179b5628faa6",
-    "mapRecordId": "ffc85e08-3335-40d5-9165-c6031d705aed",
+    "mapId": "bb5ed92d-f2af-462e-a912-7aeb686ff90c",
+    "mapRecordId": "edc36276-d0c5-4917-bbfa-e1c99b116e65",
     "medal": 4,
     "recordScore": {
       "respawnCount": 4294967295,
       "score": 0,
-      "time": 47242
+      "time": 15614
     },
     "removed": false,
-    "scopeId": null,
-    "scopeType": "PersonalBest",
-    "timestamp": "2022-01-28T23:04:01+00:00",
-    "url": "https://core.trackmania.nadeo.live/storageObjects/5b711ed4-6114-4b9f-b7c5-860f5ab69047"
+    "scopeId": "3987d489-03ae-4645-9903-8f7679c3a418",
+    "scopeType": "Season",
+    "timestamp": "2020-08-25T16:07:04+00:00",
+    "url": "https://core.trackmania.nadeo.live/storageObjects/cff99c66-93ee-4e50-ba5a-34fd04072ed1"
   }
 ]
 ```
@@ -88,7 +105,7 @@ GET https://prod.trackmania.core.nadeo.online/v2/accounts/5b4d42f4-c2de-407d-b36
 **Example request** for Stunt records:
 
 ```plain
-GET https://prod.trackmania.core.nadeo.online/v2/accounts/5b4d42f4-c2de-407d-b367-cbff3fe817bc/mapRecords?gameMode=Stunt
+GET https://prod.trackmania.core.nadeo.online/v2/accounts/5b4d42f4-c2de-407d-b367-cbff3fe817bc/mapRecords?mapIdList=623730d0-6b4c-4a83-bddc-246dea88df22&gameMode=Stunt
 ```
 
 **Example response**:
@@ -113,26 +130,6 @@ GET https://prod.trackmania.core.nadeo.online/v2/accounts/5b4d42f4-c2de-407d-b36
     "scopeType": "PersonalBest",
     "timestamp": "2024-07-02T18:11:11+00:00",
     "url": "https://core.trackmania.nadeo.live/storageObjects/f1ad31f8-aceb-43f7-844d-623e0aca2de0"
-  },
-  ...
-  {
-    "accountId": "5b4d42f4-c2de-407d-b367-cbff3fe817bc",
-    "filename": "Replays\\Downloaded\\4cc348de-1ccf-4744-8f0a-c2fd3c0b6986_5b4d42f4-c2de-407d-b367-cbff3fe817bc_(500-0'12''7).replay.gbx",
-    "gameMode": "Stunt",
-    "gameModeCustomData": "",
-    "mapId": "4cc348de-1ccf-4744-8f0a-c2fd3c0b6986",
-    "mapRecordId": "d753d0af-06b3-4424-8e0a-753341fe0e63",
-    "medal": 1,
-    "recordScore": {
-      "respawnCount": 4294967295,
-      "score": 500,
-      "time": 12070
-    },
-    "removed": false,
-    "scopeId": null,
-    "scopeType": "PersonalBest",
-    "timestamp": "2024-06-30T10:26:17+00:00",
-    "url": "https://core.trackmania.nadeo.live/storageObjects/4711e17b-8959-45d9-a930-705b64486513"
   }
 ]
 ```
@@ -141,9 +138,9 @@ If the `accountId` does not match the currently authenticated account, the respo
 
 ```json
 {
-  "code": "C-AA-00-07",
-  "correlation_id": "1de197bc1958b39483e330e6b79fb3f6",
-  "message": "You are not allowed to do this action on this account"
+  "code": "C-AA-00-19",
+  "correlation_id": "2d733fd542604afb77b8fc7cc595f322",
+  "message": "Forbidden."
 }
 ```
 
@@ -152,10 +149,10 @@ If the `accountId` is invalid, the response will contain an error message:
 ```json
 {
   "code": "C-AA-00-03",
-  "correlation_id": "27131a8db1972a29ebb9b9bd967e5021",
+  "correlation_id": "a6aee422ec4c6769c4a4e4fb77ca0e70",
   "message": "There was a validation error.",
   "info": [
-    "accountId: Invalid account id."
+    "accountId: \"5b4d42f4-c2de-407d-b367-cbff3fe817bx\" is not a valid UUID."
   ]
 }
 ```

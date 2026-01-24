@@ -33,12 +33,6 @@ POST https://live-services.trackmania.nadeo.live/api/token/map/favorite/EgUgXeBV
 
 **Example response**:
 
-```plain
-Map favorite created
-```
+Both successful and unsuccessful responses have no content and return a `204` response code.
 
-Example response if the requested map does not exist:
-
-```json
-["map:error-notFound"]
-```
+An invalid `mapUid` results in a `500` response code with an error object in the response body.
