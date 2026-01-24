@@ -103,7 +103,7 @@ GET https://prod.trackmania.core.nadeo.online/accounts/594be80b-62f3-4705-932b-e
 }
 ```
 
-If the `accountId` is a valid UUID but does not correspond to a real account, the response will contain all 0's:
+If the `accountId` is a valid UUID but does not correspond to a real account, the response will not have an error, but will contain all 0's:
 
 ```json
 {
