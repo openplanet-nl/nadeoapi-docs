@@ -1,6 +1,6 @@
 <?php
 
-include('/var/www/nin/nf.php');
+include('../../nin/nf.php');
 
 nf_route('/', 'IndexController.Page');
 nf_route('/api/index', 'IndexController.ApiIndex');

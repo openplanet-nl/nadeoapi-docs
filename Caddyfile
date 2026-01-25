@@ -1,0 +1,14 @@
+:80
+
+header * {
+	-Server
+	-X-Powered-By
+}
+
+encode gzip
+root /app/public
+
+route {
+	try_files {path} index.php
+	php_server
+}

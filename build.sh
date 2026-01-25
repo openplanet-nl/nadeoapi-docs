@@ -1,2 +1,2 @@
 #!/bin/sh
-docker build -t registry.mrag.nl/openplanet/nadeo-api .
+docker build -t git.bun-dory.ts.net/registry/openplanet-nadeoapi-docs .
