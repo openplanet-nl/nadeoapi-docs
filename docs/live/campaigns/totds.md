@@ -20,7 +20,7 @@ parameters:
     - name: royal
       type: boolean
       description: Whether to return maps for the Royal mode instead of TOTDs
-      default: 0
+      default: false
 ---
 
 Gets Tracks of the Day (or Royal maps) by month.
