@@ -153,12 +153,12 @@ A UUID that identifies a player's record on a map. This ID may stay the same whe
 
 ### Map type
 
-Identifier for the game mode the map is intended to be driven in. Official map types include:
+Identifier for the game mode the map is intended to be driven in. Official map types include (note the backslashes - you may need to escape these depending on your implementation):
 
-- `TrackMania\\TM_Race`
-- `TrackMania\\TM_Royal`
-- `TrackMania\\TM_Stunt`
-- `TrackMania\\TM_Platform`
+- `TrackMania\TM_Race`
+- `TrackMania\TM_Royal`
+- `TrackMania\TM_Stunt`
+- `TrackMania\TM_Platform`
 
 May also be used by community projects for their own custom types.
 

@@ -42,7 +42,7 @@ Retrieves your authenticated account's favorite tracks along with their informat
 
 - This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
 - When no `mapTypeList` filter is applied, all available maps are returned regardless of their type.
-- Examples of supported map types to filter by are `"TrackMania\\TM_Race"`, `"TrackMania\\TM_Royal"`, `"TrackMania\\TM_Stunt"`, and `"TrackMania\\TM_Platform"`.
+- See the [glossary](/glossary#map-type) for examples of supported map types.
 
 ---
 
