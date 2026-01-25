@@ -32,7 +32,7 @@ Gets automatically selected medal records for a map based on its leaderboard (wh
 
 **Example request**:
 ```plain
-GET https://live-services.trackmania.nadeo.live/api/token/leaderboard/group/Personal_Best/map/q1kDVh5fq1OCKfyFjJ2QAnB9UW8/medals
+GET https://live-services.trackmania.nadeo.live/api/token/leaderboard/group/Personal_Best/map/Kn63nCh9bkaRHcZZsrtf_KcLMH2/medals
 ```
 
 **Example response**:
