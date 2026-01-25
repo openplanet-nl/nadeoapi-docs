@@ -195,6 +195,11 @@ Identifier for the different types of matchmaking. Primarily used in matchmaking
 
 The [Meet API's matchmaking IDs endpoint](/meet/matchmaking/summary) was previously the most accurate way to dynamically retrieve the current matchmaking types and their IDs, but it has not been updated to reflect the matchmaking changes from July 2025.
 
+Endpoints that accept a matchmaking type should also accept a string in its place, but there is no known way to retrieve available types in this format:
+
+- `"ranked-3v3"` (deprecated)
+- `"ranked-2v2"`
+
 ### Zone ID
 
 UUID that identifies a zone. The full list of zones (including their hierarchical structure) is available via the [Core API's zones endpoint](/core/meta/zones).
