@@ -17,7 +17,7 @@ def test_valid_link(link):
 	if not link.startswith('/'):
 		raise Exception('Internal link must start with a slash: "' + link + '"')
 
-	path, anchor = re.findall('^/([^#\s]+)?(#.+)?$', link)[0]
+	path, anchor = re.findall('^/([^#\\s]+)?(#.+)?$', link)[0]
 
 	# fall back to root index file if there is no path
 	if path == '' or path.endswith('/'):
