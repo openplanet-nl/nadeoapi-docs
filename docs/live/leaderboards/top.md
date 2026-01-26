@@ -41,7 +41,7 @@ Gets records from a map's leaderboard.
 
 - The `groupUid` `"Personal_Best"` can be used to get the global leaderboard.
 - `onlyWorld=true` is required to retrieve more than the first five records. Without it, `length` and `offset` will have no effect.
-- If `onlyWorld` is set to `false`, a token authenticated through a Ubisoft user account is required (as opposed to a dedicated server account).
+- If using a token authenticated through a dedicated server account, since there cannot be zones associated with one, only the first five world records will be returned.
 - This endpoint only allows you to read a leaderboard's first 10,000 records. The rest of the leaderboard is not available at this level of detail.
 - If a `length` higher than `100` is requested, the API will successfully return only the first 100 records.
 - As of December 11th 2024, this endpoint's response also contains a `timestamp` for each leaderboard entry, which corresponds to the time the relevant record was set.
