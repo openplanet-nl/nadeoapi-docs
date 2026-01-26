@@ -26,7 +26,6 @@ parameters:
     - name: onlyWorld
       type: boolean
       description: Whether to only retrieve records from the world leaderboard
-      default: true
     - name: offset
       type: integer
       description: The number of records to skip
@@ -41,6 +40,7 @@ Gets records from a map's leaderboard.
 
 - The `groupUid` `"Personal_Best"` can be used to get the global leaderboard.
 - `onlyWorld=true` is required to retrieve more than the first five records. Without it, `length` and `offset` will have no effect.
+- If using a token authenticated through a Ubisoft account, `onlyWorld` is `false` by default.
 - If using a token authenticated through a dedicated server account, since there cannot be zones associated with one, `onlyWorld` will be ignored and only the first five world records will be returned.
 - Nadeo has recommended that we always pass `onlyWorld=true`, however it's not strictly required.
 - This endpoint only allows you to read a leaderboard's first 10,000 records. The rest of the leaderboard is not available at this level of detail.
