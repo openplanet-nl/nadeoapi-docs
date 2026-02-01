@@ -26,7 +26,8 @@ Gets a list of competitions.
 
 **Remarks**:
 
-- The response includes Super Royal and COTD instances as well as community-made competitions.
+- The response includes official cup instances as well as community-made competitions.
+- If you are specifically looking for official cups (e.g. COTD, COTW, or Grand Enduro Race), consider using [the cups endpoint](/meet/competitions/cups) as it allows for filtering by the type of cup.
 
 ---
 
