@@ -39,7 +39,7 @@ See [the authentication documentation](/auth) for more information on how to req
 
 ### Core API
 
-One of the three primary Nadeo APIs. Covers accounts, maps, records and some global features.
+One of the three primary Nadeo APIs. Covers accounts, maps, records, and some global features.
 
 Requires a token with the `NadeoServices` [audience](#audience).
 
@@ -47,7 +47,7 @@ See [the Core API index](/core) for more information.
 
 ### Live API
 
-One of the three primary Nadeo APIs. Covers leaderboards, clubs and campaigns.
+One of the three primary Nadeo APIs. Covers leaderboards, clubs, and campaigns.
 
 Requires a token with the `NadeoLiveServices` [audience](#audience).
 
@@ -153,12 +153,12 @@ A UUID that identifies a player's record on a map. This ID may stay the same whe
 
 ### Map type
 
-Identifier for the game mode the map is intended to be driven in. Official map types include:
+Identifier for the game mode the map is intended to be driven in. Official map types include (note the backslashes - you may need to escape these depending on your implementation):
 
-- `TrackMania\\TM_Race`
-- `TrackMania\\TM_Royal`
-- `TrackMania\\TM_Stunt`
-- `TrackMania\\TM_Platform`
+- `TrackMania\TM_Race`
+- `TrackMania\TM_Royal`
+- `TrackMania\TM_Stunt`
+- `TrackMania\TM_Platform`
 
 May also be used by community projects for their own custom types.
 
@@ -194,6 +194,11 @@ Identifier for the different types of matchmaking. Primarily used in matchmaking
 - `5`: Ranked 2v2
 
 The [Meet API's matchmaking IDs endpoint](/meet/matchmaking/summary) was previously the most accurate way to dynamically retrieve the current matchmaking types and their IDs, but it has not been updated to reflect the matchmaking changes from July 2025.
+
+Endpoints that accept a matchmaking type should also accept a string in its place, but there is no known way to retrieve available types in this format:
+
+- `"ranked-3v3"` (deprecated)
+- `"ranked-2v2"`
 
 ### Zone ID
 

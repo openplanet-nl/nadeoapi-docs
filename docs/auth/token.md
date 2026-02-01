@@ -8,7 +8,7 @@ This guide explains how to use and manage Nadeo API tokens. See the [authenticat
 
 If you have already obtained an access token and want to get started, see the [basic usage guide](#using-the-access-token).
 
-To learn how to refresh your tokens without re-authenticating using a Ubisoft account of a dedicated server account, read the [section on refreshing your tokens](#refreshing-your-tokens).
+To learn how to refresh your tokens without re-authenticating using a Ubisoft account or a dedicated server account, read the [section on refreshing your tokens](#refreshing-your-tokens).
 
 For more detailed information on the tokens' purposes and contents, refer to the [explanations below](#understanding-the-tokens).
 

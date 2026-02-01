@@ -17,13 +17,11 @@ parameters:
     - name: length
       type: integer
       description: The number of participants to retrieve
-      required: false
       default: 10
       max: 255
     - name: offset
       type: integer
       description: The number of participants to skip
-      required: false
       default: 0
 ---
 

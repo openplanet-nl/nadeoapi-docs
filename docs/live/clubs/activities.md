@@ -26,14 +26,12 @@ parameters:
     - name: active
       type: Boolean
       description: Optional filter for enabled/disabled activities
-      required: false
     - name: folderId
       type: string
       description: Optional filter for activities in a folder
-      required: false
 ---
 
-Gets a list of club activities, including news, rooms, campaigns and others.
+Gets a list of club activities, including news, rooms, campaigns, and others.
 
 ---
 

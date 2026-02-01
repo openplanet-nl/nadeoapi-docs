@@ -12,15 +12,15 @@ parameters:
     - name: length
       type: integer
       description: The number of months to retrieve
-      required: true
+      default: 1
     - name: offset
       type: integer
       description: The number of months to skip (looking backwards from the current month)
-      required: true
+      default: 0
     - name: royal
       type: boolean
       description: Whether to return maps for the Royal mode instead of TOTDs
-      require: false
+      default: false
 ---
 
 Gets Tracks of the Day (or Royal maps) by month.

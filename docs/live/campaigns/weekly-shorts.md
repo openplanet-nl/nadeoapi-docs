@@ -12,11 +12,11 @@ parameters:
     - name: length
       type: integer
       description: The number of weekly shorts campaigns to retrieve
-      required: true
+      default: 1
     - name: offset
       type: integer
       description: The number of weekly shorts campaigns to skip (looking backwards from the current campaign)
-      required: true
+      default: 0
 ---
 
 Gets weekly shorts campaigns.

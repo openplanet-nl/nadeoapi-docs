@@ -50,8 +50,8 @@ Gets position data for one or more records by their score/time.
 - When using a different `groupUid`, make sure you're only referencing currently open leaderboards. Maps with closed leaderboards will not be included in the response.
 - The `mapUid` parameter in the URL has to correspond with a map in the request body.
 - This endpoint supports up to 50 maps at once - they need to be added to the request body's array as well as to the query parameters (see example below).
-- This endpoint can sometimes be very delayed - there's been cases where it has returned data that was outdated for multiple hours. On average, this route should be up to date within about three hours - some maps are prioritized though (official campaign maps and current TOTDs), so they are typically updated every five minutes.
-- If the authenticated account has a record on the requested map, no scores lower than that record can be requested - it's recommended to use this endpoint with an account that does not have any records.
+- This endpoint can sometimes be very delayed - there have been cases where it has returned data that was outdated for multiple hours. On average, this route should be up to date within about three hours - some maps are prioritized though (official campaign maps and current TOTDs), so they are typically updated every five minutes.
+- If the authenticated account has a record on the requested map, no scores worse than that record can be requested - it's recommended to use this endpoint with an account that does not have any records.
 - The positions returned by this endpoint don't correspond to existing records, instead they tell you what a new record's position would be given the requested score.
 
 ---

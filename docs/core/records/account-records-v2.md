@@ -17,15 +17,12 @@ parameters:
     - name: mapIdList
       type: string
       description: A comma-separated list of map IDs
-      required: false
     - name: seasonIdList
       type: string
       description: A comma-separated list of season IDs (only official campaigns supported)
-      required: false
     - name: gameMode
       type: string
       description: The game mode of the requested records (e.g. for Stunt maps)
-      required: false
 ---
 
 <div class="notification is-warning">

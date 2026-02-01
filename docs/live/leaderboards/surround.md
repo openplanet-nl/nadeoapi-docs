@@ -31,11 +31,9 @@ parameters:
     - name: score
       type: integer
       description: The score/time (in milliseconds) to get surrounding records for
-      required: false
     - name: onlyWorld
       type: boolean
       description: Whether to only retrieve records from the world leaderboard
-      required: false
 ---
 
 Gets surrounding records for a score on a map's leaderboard.

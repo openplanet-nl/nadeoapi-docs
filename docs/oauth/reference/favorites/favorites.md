@@ -9,12 +9,13 @@ parameters:
   path:
     - name: length
       type: integer
-      description: The number of maps to retrieve (10 by default, 100 is the maximum)
-      required: false
+      description: The number of maps to retrieve
+      default: 10
+      max: 100
     - name: offset
       type: integer
       description: The number of maps to skip
-      required: false
+      default: 0
 ---
 
 Retrieves the player's favorite maps.
@@ -23,7 +24,7 @@ Retrieves the player's favorite maps.
 
 **Remarks**:
 - This endpoint requires the `read_favorite` scope.
-- This endpoint can not be used with a token obtained from the **Client Credentials** flow, because it has to be associated with a player.
+- This endpoint can not be used with a token obtained from the **Client Credentials** flow because it has to be associated with a player.
 - The access token has to be provided in the `Authorization` header in the format `Bearer <token>`.
 
 ---

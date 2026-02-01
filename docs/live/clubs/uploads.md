@@ -31,7 +31,7 @@ Gets a list of club-related upload activities (where players can upload maps, sk
 
 **Remarks**:
 
-- There are three types of upload activities you can retrieve: `map-upload`, `skin-upload` and `item-upload`. These relate to club track uploads, skin uploads and item collection activities, respectively.
+- There are three types of upload activities you can retrieve: `map-upload`, `skin-upload`, and `item-upload`. These relate to club track uploads, skin uploads, and item collection activities, respectively.
 - As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png` versions are available using separate fields (see example below for reference).
 
 ---

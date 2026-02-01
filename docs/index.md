@@ -20,10 +20,10 @@ If you're not familiar with the authentication flow for any of the game APIs, ch
 The documentation is structured by the three main API domains, each of which cover a slightly different area of the game:
 
 - [**Core**](/core): The main API that allows the game to authenticate to all other APIs, but also has many other tasks relating to the game's native functionality. This can also be considered the game's masterserver.
-- [**Live**](/live): The live API is mostly used for leaderboards and other live content such as campaigns, rooms, clubs and Tracks of the Day.
-- [**Meet**](/meet): The meet API is used for competitions, matchmaking and other match infrastructure tasks.
+- [**Live**](/live): The live API is mostly used for leaderboards and other live content such as campaigns, rooms, clubs, and Tracks of the Day.
+- [**Meet**](/meet): The meet API is used for competitions, matchmaking, and other match infrastructure tasks.
 
-As of July 2023, the _Competition_, _Matchmaking_ and _Club_ domains have been merged into the **Meet** API. The old domains will stay functional for a while, but it's highly recommended to migrate off of them as soon as possible.
+As of July 2023, the _Competition_, _Matchmaking_, and _Club_ domains have been merged into the **Meet** API. The old domains will stay functional for a while, but it's highly recommended to migrate off of them as soon as possible.
 
 Additionally, [the OAuth documentation](/oauth/summary) contains information on integrating external applications with the official Trackmania OAuth API. Note that this API is completely separate from the main game APIs, and authentication flows are not compatible between the two.
 

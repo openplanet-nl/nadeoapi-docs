@@ -3,7 +3,7 @@ name: Get favorite maps
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
-route: /api/token/map/favorite?offset={offset}&length={length}&sort={sort}&order={order}&mapType={mapType}&playable={playable}
+route: /api/token/map/favorite?offset={offset}&length={length}&sort={sort}&order={order}&mapTypeList={mapTypeList}&playable={playable}
 
 audience: NadeoLiveServices
 parameters:
@@ -21,21 +21,17 @@ parameters:
     - name: sort
       type: string
       description: The sorting of the maps
-      required: false
       default: "date"
     - name: order
       type: string
       description: The order of the maps based on the sorting
-      required: false
       default: "desc"
     - name: mapTypeList
       type: string
       description: The map type filter separated by commas
-      required: false
     - name: playable
       type: boolean
       description: Whether the map is validated and playable
-      required: false
 ---
 
 Retrieves your authenticated account's favorite tracks along with their information.
@@ -45,15 +41,15 @@ Retrieves your authenticated account's favorite tracks along with their informat
 **Remarks**:
 
 - This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
-- When no `mapType` filter is applied, all available maps are returned regardless of their type.
-- Examples of supported map types to filter by are `"TrackMania\TM_Race"`, `"TrackMania\TM_Royal"`, `"TrackMania\TM_Stunt"`, and `"TrackMania\TM_Platform"`.
+- When no `mapTypeList` filter is applied, all available maps are returned regardless of their type.
+- See the [glossary](/glossary#map-type) for examples of supported map types.
 
 ---
 
 **Example request**:
 
 ```plain
-GET https://live-services.trackmania.nadeo.live/api/token/map/favorite?offset=0&length=1&sort=date&order=desc&mapTypeList=Trackmania\TM_Race&playable=true
+GET https://live-services.trackmania.nadeo.live/api/token/map/favorite?offset=0&length=1&sort=date&order=desc&mapTypeList=Trackmania\\TM_Race&playable=true
 ```
 
 **Example response**:
