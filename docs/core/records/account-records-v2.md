@@ -39,7 +39,8 @@ Gets records for the currently authenticated account.
 
 - This endpoint only works for the currently authenticated account, requesting others' records will result in error `403`. This feature is not supported when using a dedicated server account's token.
 - This endpoint is limited to the most recent 1,000 records driven by the currently authenticated account. Retrieving all historical records is not supported.
-- To retrieve records driven on Stunt maps (with the map type `TrackMania\TM_Stunt`), set the `gameMode` query parameter to `"Stunt"`.
+- To retrieve records driven on Stunt / Platform maps (with the map type `TrackMania\TM_Stunt`/`Trackmania\TM_Platform`) set the `gameMode` parameter to `"Stunt"`/`"Platform"`.
+- Race maps with clones require the `gameMode` parameter to be set to `"TimeAttackClone"`, otherwise the response will contain an empty list.
 - `mapIdList` and `seasonIdList` should not both be provided in the same request as they both get applied on every result.
 - This endpoint's `mapIdList` parameter only accepts `mapId`s - to translate `mapUid`s to `mapId`s, you can use the [map info (multiple) UID endpoint](/core/maps/info-multiple-uid).
 - This endpoint has no intrinsic limit on the number of map/season IDs requested, but it will return a `414` error if the request URI length is 8220 characters or more (corresponding to just over 200 map IDs, depending on how you encode the URI).
