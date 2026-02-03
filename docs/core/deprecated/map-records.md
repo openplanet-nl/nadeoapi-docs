@@ -3,7 +3,7 @@ name: Get map records
 
 url: https://prod.trackmania.core.nadeo.online
 method: GET
-route: /mapRecords/?accountIdList={accountIdList}&mapIdList={mapIdList}&seasonId={seasonId}
+route: /mapRecords/?accountIdList={accountIdList}&mapIdList={mapIdList}&seasonId={seasonId}&gameMode={gameMode}
 
 audience: NadeoServices
 
@@ -41,7 +41,8 @@ Gets map records for a set of maps and a set of accounts.
 - This endpoint has no intrinsic limit on the number of maps/accounts requested, but it will return a `414` error if the request URI length is 8220 characters or more (e.g. corresponding to one map and just above 200 accounts, depending on how you encode the URI).
 - The `seasonId` parameter does not accept the value `"Personal_Best"`- to retrieve records on the PB leaderboards, simply omit the `seasonId` parameter from the URL.
 - By omitting `mapIdList` you can request all records on all maps for a requested `accountId` - note that this only works for the currently authenticated account, requesting others' records without specifying `mapId`s will result in error `403`. This feature is not supported when using a dedicated server account's token.
-- Stunt maps (with the map type `TrackMania\TM_Stunt`) require the `gameMode` parameter to be set to `"Stunt"`, otherwise the response will contain a "Not found" error.
+- Stunt and Platform maps (with the map type `TrackMania\TM_Stunt`/`Trackmania\TM_Platform`) require the `gameMode` parameter to be set to `"Stunt"`/`"Platform"`, otherwise the response will contain a "Not found" error.
+- When omitting the `seasonId` parameter, Race maps with clones require the `gameMode` parameter to be set to `"TimeAttackClone"`, otherwise the response will contain an empty list. It's recommended to always pass the `gameMode` parameter for consistency. To find out if a map has clones, you can use the Core API's [map info (multiple) ID](/core/maps/info-multiple-id) or [map info (multiple) UID](/core/maps/info-multiple-uid) endpoints.
 - As of July 12th 2024, this endpoint allows multiple `mapId`s only in combination with exactly one `accountId`. Requesting multiple accounts and multiple maps at the same time results in a `400` error response.
 
 ---

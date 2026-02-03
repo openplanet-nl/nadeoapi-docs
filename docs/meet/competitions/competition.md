@@ -41,6 +41,8 @@ GET https://meet.trackmania.nadeo.club/api/competitions/3633
   "name": "Baltic Weekly #2",
   "participantType": "PLAYER",
   "description": "Single Elimination Cup mode event for all Baltic players.\n\n Format\nTime Attack -> (Top 16) Single Elimination Cup Mode\nMaps: FastPoint",
+  "activityId": 315965,
+  "clubId": 110,
   "registrationStart": 1663399920,
   "registrationEnd": 1663422900,
   "startDate": 1663425300,

@@ -134,3 +134,11 @@ GET https://live-services.trackmania.nadeo.live/api/token/club/4764/activity?len
   "itemCount": 20
 }
 ```
+
+If the club does not exist or the player is not a member of the club, the response will contain an error:
+
+```json
+[
+  "clubMemberRole:error-notMember"
+]
+```

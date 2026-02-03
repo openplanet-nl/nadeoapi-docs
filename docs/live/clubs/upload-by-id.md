@@ -92,3 +92,11 @@ GET https://live-services.trackmania.nadeo.live/api/token/club/42175/bucket/3444
   "mediaTheme": ""
 }
 ```
+
+If the club or upload activity does not exist, the response will contain an error:
+
+```json
+[
+  "activity:error-notFound"
+]
+```
