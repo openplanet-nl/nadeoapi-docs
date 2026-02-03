@@ -122,3 +122,11 @@ GET https://live-services.trackmania.nadeo.live/api/token/club/19489/campaign/28
   "mediaTheme": ""
 }
 ```
+
+If the club or campaign does not exist, the response will contain an error:
+
+```json
+[
+  "activity:error-notFound"
+]
+```

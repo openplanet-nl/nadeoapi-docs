@@ -104,3 +104,11 @@ GET https://live-services.trackmania.nadeo.live/api/token/club/25/room/381929
   "mediaTheme": ""
 }
 ```
+
+If the club or room does not exist, the response will contain an error:
+
+```json
+[
+  "activity:error-notFound"
+]
+```
