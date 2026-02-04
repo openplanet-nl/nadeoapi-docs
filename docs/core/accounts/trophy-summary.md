@@ -21,6 +21,7 @@ Gets a summary of a player's earned trophies over the past year.
 
 **Remarks**:
 
+- Trophies and trophy points expire one year after obtaining them. This endpoint will only return those which are not expired. This number of trophy points determines a player's global and regional ranks.
 - This endpoint is only accessible with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts). If you encounter `401` errors using a dedicated server account, switch to using a Ubisoft account.
 
 ---
