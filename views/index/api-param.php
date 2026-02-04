@@ -19,7 +19,13 @@
 			<?php } ?>
 			<?php if (isset($item['default'])) { ?>
 				<span>Default:</span>
-				<code><?= Nin\Html::encode($item['default']) ?></code>
+				<code><?php
+					if (is_bool($item['default'])) {
+						echo $item['default'] ? 'true' : 'false';
+					} else {
+						echo Nin\Html::encode($item['default']);
+					}
+				?></code>
 			<?php } ?>
 		</div>
 	<?php } ?>

@@ -33,6 +33,7 @@ GET https://live-services.trackmania.nadeo.live/api/token/club/player/info
   "hasFollower": true,
   "tagClubId": 12730,
   "tag": "$F05TSH",
-  "pinnedClub": 12730
+  "pinnedClub": 12730,
+  "pinnedClubName": "TM SCENERY HUB"
 }
 ```

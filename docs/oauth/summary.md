@@ -2,7 +2,7 @@
 
 This is an alternative documentation for Trackmania's OAuth implementation - the official one can be found [here](https://doc.trackmania.com/web/web-services/auth/).
 
-This is **not** related to the game's primary APIs - the OAuth API is completely separate, uses different authentication flows (and tokens) and mostly covers different use cases.
+This is **not** related to the game's primary APIs - the OAuth API is completely separate, uses different authentication flows (and tokens), and mostly covers different use cases.
 
 To get started with the OAuth API, see [the setup instructions](/oauth/auth).
 
@@ -21,7 +21,7 @@ There's a ton of useful resources on OAuth out there (note that only the **Autho
 The Trackmania OAuth API can be used for a variety of use cases - typically surrounding verifying a Trackmania player's identity. A couple examples:
 
 - External websites may want to offer a log-in for players that shows personalized data or lets them perform certain actions that only make sense once their identity has been confirmed.
-- [Openplanet](https://openplanet.nl/) plugins might want to verify a player is who they claim they are. This can especially be helpful if the plugin needs to communicate with an external service on behalf of the player.
+- [Openplanet](https://openplanet.dev/) plugins might want to verify a player is who they claim they are. This can especially be helpful if the plugin needs to communicate with an external service on behalf of the player.
 
 Additionally, the API offers an easy way to convert player account IDs into their display names and vice versa - a common use case if your application deals with one of the two types.
 

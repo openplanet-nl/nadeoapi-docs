@@ -21,7 +21,6 @@ parameters:
     - name: name
       type: string
       description: A string to search for in the club names
-      required: false
 ---
 
 Gets a list of clubs.

@@ -21,12 +21,10 @@ parameters:
     - name: length
       type: integer
       description: The number of items to retrieve
-      required: false
       default: 10
     - name: offset
       type: integer
       description: The number of items to skip
-      required: false
       default: 0
 ---
 
@@ -93,4 +91,12 @@ GET https://live-services.trackmania.nadeo.live/api/token/club/42175/bucket/3444
   "mediaUrlDds": "",
   "mediaTheme": ""
 }
+```
+
+If the club or upload activity does not exist, the response will contain an error:
+
+```json
+[
+  "activity:error-notFound"
+]
 ```

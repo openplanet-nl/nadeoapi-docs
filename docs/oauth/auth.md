@@ -1,6 +1,6 @@
 # OAuth authorization
 
-This is a step-by-step instruction how to set up Trackmania OAuth for your application. It's basically a rewrite of the [official documentation](https://doc.trackmania.com/web/web-services/auth/) but it's aiming to provide a lot more context and explanations around the concepts at play.
+This is a step-by-step instruction how to set up Trackmania OAuth for your application. It's basically a rewrite of the [official documentation](https://doc.trackmania.com/web/web-services/auth/), but it aims to provide a lot more context and explanations around the concepts at play.
 
 ## Creating an OAuth app
 
@@ -11,7 +11,7 @@ First, the Trackmania OAuth API needs to know about your application - in return
 3. Fill in all the fields and save the application:
     - **Application's name** is self-explanatory - just pick a name that uniquely identifies the app you're working on.
     - **Homepage** is where you put a link to the application you're working on. It doesn't seem to be used to check the origin domain or anything like that, so it's more of an informational field to reference the associated real-world app.
-    - **Description** should be straight-forward - just quickly describe what the application does.
+    - **Description** should be straightforward - just quickly describe what the application does.
     - **Redirect Uris** are all the possible URIs the OAuth server will accept when you ask it to redirect the user - in essence, these are the possible callback destinations where your users will be returned after they logged in. If you ask the OAuth server to redirect the user elsewhere, it will refuse and the flow will be stopped. This ensures the user cannot be redirected to an unexpected website that could potentially use their information for nefarious purposes.
     - **Confidential** is an extra setting that determines which type of client you're using. Public (i.e. not confidential) clients typically use the **Implicit grant** flow, which is no longer supported by the Trackmania OAuth API - therefore **you always want to set this to Confidential**. See [a more detailed explanation](https://oauth.net/2/client-types/) for reference. **Note that this field cannot be edited in an existing OAuth application so make sure you set this correctly when you create your application.**
 4. The newly created OAuth application now shows two new fields at the top of the page:

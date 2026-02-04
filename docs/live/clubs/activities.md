@@ -26,14 +26,12 @@ parameters:
     - name: active
       type: Boolean
       description: Optional filter for enabled/disabled activities
-      required: false
     - name: folderId
       type: string
       description: Optional filter for activities in a folder
-      required: false
 ---
 
-Gets a list of club activities, including news, rooms, campaigns and others.
+Gets a list of club activities, including news, rooms, campaigns, and others.
 
 ---
 
@@ -135,4 +133,12 @@ GET https://live-services.trackmania.nadeo.live/api/token/club/4764/activity?len
   "maxPage": 7,
   "itemCount": 20
 }
+```
+
+If the club does not exist or the player is not a member of the club, the response will contain an error:
+
+```json
+[
+  "clubMemberRole:error-notMember"
+]
 ```

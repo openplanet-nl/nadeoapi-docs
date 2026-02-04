@@ -43,6 +43,7 @@ GET https://prod.trackmania.core.nadeo.online/maps/d2b8a048-209d-4cfa-b5a4-bc3e3
   "createdWithSimpleEditor": false,
   "filename": "Spring 2024 - 01.Map.Gbx",
   "goldScore": 31000,
+  "hasClones": false,
   "isPlayable": true,
   "mapId": "d2b8a048-209d-4cfa-b5a4-bc3e3cab3566",
   "mapStyle": "",

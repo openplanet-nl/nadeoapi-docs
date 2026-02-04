@@ -60,3 +60,5 @@ GET https://meet.trackmania.nadeo.club/api/matchmaking/2/division/display-rules
   ]
 }
 ```
+
+If the requested `matchmakingType` does not exist, the response will contain an error.

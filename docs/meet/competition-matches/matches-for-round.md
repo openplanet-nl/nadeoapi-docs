@@ -23,7 +23,6 @@ parameters:
     - name: offset
       type: integer
       description: The number of matches to skip
-      required: false
       default: 0
 ---
 

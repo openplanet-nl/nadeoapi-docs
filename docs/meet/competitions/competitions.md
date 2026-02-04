@@ -12,13 +12,11 @@ parameters:
     - name: length
       type: integer
       description: The number of competitions to retrieve (maximum 100)
-      required: false
       default: 10
       max: 100
     - name: offset
       type: integer
       description: The number of competitions to skip
-      required: false
       default: 0
 ---
 
@@ -28,7 +26,8 @@ Gets a list of competitions.
 
 **Remarks**:
 
-- The response includes Super Royal and COTD instances as well as community-made competitions.
+- The response includes official cup instances as well as community-made competitions.
+- If you are specifically looking for official cups (e.g. COTD, COTW, or Grand Enduro Race), consider using [the cups endpoint](/meet/competitions/cups) as it allows for filtering by the type of cup.
 
 ---
 
@@ -49,6 +48,8 @@ GET https://meet.trackmania.nadeo.club/api/competitions?length=3&offset=5
     "name": "Baltic Weekly #2",
     "participantType": "PLAYER",
     "description": "Single Elimination Cup mode event for all Baltic players.\n\n Format\nTime Attack -> (Top 16) Single Elimination Cup Mode\nMaps: FastPoint",
+    "activityId": 315965,
+    "clubId": 110,
     "registrationStart": 1663399920,
     "registrationEnd": 1663422900,
     "startDate": 1663425300,
@@ -69,6 +70,7 @@ GET https://meet.trackmania.nadeo.club/api/competitions?length=3&offset=5
       "World|Europe|Lithuania"
     ],
     "deletedOn": null,
+    "partition": "crossplay",
     "autoNormalizeSeeds": true,
     "region": null,
     "autoGetParticipantSkillLevel": "DISABLED",
@@ -81,6 +83,8 @@ GET https://meet.trackmania.nadeo.club/api/competitions?length=3&offset=5
     "name": "Cup of the Day 2022-09-16 #3",
     "participantType": "PLAYER",
     "description": null,
+    "activityId": null,
+    "clubId": null,
     "registrationStart": null,
     "registrationEnd": null,
     "startDate": 1663406190,
@@ -97,6 +101,7 @@ GET https://meet.trackmania.nadeo.club/api/competitions?length=3&offset=5
     "verticalUrl": null,
     "allowedZones": [],
     "deletedOn": null,
+    "partition": "crossplay",
     "autoNormalizeSeeds": true,
     "region": "eu-west",
     "autoGetParticipantSkillLevel": "DISABLED",
@@ -109,6 +114,8 @@ GET https://meet.trackmania.nadeo.club/api/competitions?length=3&offset=5
     "name": "Super royal 2022-09-16 #2",
     "participantType": "TEAM",
     "description": null,
+    "activityId": null,
+    "clubId": null,
     "registrationStart": null,
     "registrationEnd": null,
     "startDate": 1663381260,
@@ -125,6 +132,7 @@ GET https://meet.trackmania.nadeo.club/api/competitions?length=3&offset=5
     "verticalUrl": null,
     "allowedZones": [],
     "deletedOn": null,
+    "partition": "crossplay",
     "autoNormalizeSeeds": false,
     "region": null,
     "autoGetParticipantSkillLevel": "DISABLED",

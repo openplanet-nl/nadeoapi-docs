@@ -21,7 +21,7 @@ Removes a map from the player's favorite maps.
 
 **Remarks**:
 - This endpoint requires the `write_favorite` scope.
-- This endpoint can not be used with a token obtained from the **Client Credentials** flow, because it has to be associated with a player.
+- This endpoint can not be used with a token obtained from the **Client Credentials** flow because it has to be associated with a player.
 - The access token has to be provided in the `Authorization` header in the format `Bearer <token>`.
 
 ---

@@ -12,7 +12,7 @@ Retrieves the clubs the authorized player is an admin in.
 
 **Remarks**:
 - This endpoint requires the `clubs` scope.
-- This endpoint can not be used with a token obtained from the **Client Credentials** flow, because it has to be associated with a player.
+- This endpoint can not be used with a token obtained from the **Client Credentials** flow because it has to be associated with a player.
 - The access token has to be provided in the `Authorization` header in the format `Bearer <token>`.
 
 ---

@@ -12,11 +12,11 @@ parameters:
     - name: length
       type: integer
       description: The number of campaigns to retrieve
-      required: true
+      default: 1
     - name: offset
       type: integer
       description: The number of campaigns to skip (looking backwards from the current campaign)
-      required: true
+      default: 0
 ---
 
 <div class="notification is-warning">

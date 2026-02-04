@@ -12,11 +12,9 @@ parameters:
     - name: offset
       type: integer
       description: The number of maps to skip
-      required: false
     - name: length
       type: integer
       description: The number of maps to retrieve
-      required: false
 ---
 
 Gets a list of your authenticated account's uploaded maps, sorted by upload date.

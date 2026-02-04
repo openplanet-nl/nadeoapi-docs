@@ -27,41 +27,47 @@ Gets automatically selected medal records for a map based on its leaderboard (wh
 - The `groupUid` `"Personal_Best"` can be used to get the global leaderboard.
 - Unlike some other leaderboard-related endpoints that use a `groupUid` parameter, this one also supports groups/seasons that are already closed.
 - Because this endpoint relies on leaderboard records that are close to the medal times, it doesn't always return all (or any) ghosts. Especially maps with a low number of records on the leaderboard won't work well.
-- The endpoint only returns records for the gold, silver and bronze medals.
 
 ---
 
 **Example request**:
 ```plain
-GET https://live-services.trackmania.nadeo.live/api/token/leaderboard/group/Personal_Best/map/q1kDVh5fq1OCKfyFjJ2QAnB9UW8/medals
+GET https://live-services.trackmania.nadeo.live/api/token/leaderboard/group/Personal_Best/map/Kn63nCh9bkaRHcZZsrtf_KcLMH2/medals
 ```
 
 **Example response**:
 ```json
 {
   "groupUid": "Personal_Best",
-  "mapUid": "q1kDVh5fq1OCKfyFjJ2QAnB9UW8",
+  "mapUid": "Kn63nCh9bkaRHcZZsrtf_KcLMH2",
   "medals": [
     {
+      "medal": "Author",
+      "accountId": "a5f21e96-c8cb-4330-800d-90b506f7b15d",
+      "zoneId": "3022e90b-7e13-11e8-8060-e284abfd2bc4",
+      "zoneName": "Ohio",
+      "score": 21500
+    },
+    {
       "medal": "Gold",
-      "accountId": "75328b1f-a38e-4ac0-9233-09a98dffd8ca",
-      "zoneId": "3022973a-7e13-11e8-8060-e284abfd2bc4",
-      "zoneName": "Zürich",
-      "score": 46690
+      "accountId": "213a4b97-fb65-481d-961c-79a258df8115",
+      "zoneId": "301e2c9d-7e13-11e8-8060-e284abfd2bc4",
+      "zoneName": "Argentina",
+      "score": 23000
     },
     {
       "medal": "Silver",
-      "accountId": "188a5a83-0a14-493b-8155-11986db487ad",
-      "zoneId": "3022a07d-7e13-11e8-8060-e284abfd2bc4",
-      "zoneName": "Ukraine",
-      "score": 49210
+      "accountId": "118c8f84-4e41-4919-9e02-decb80ab7944",
+      "zoneId": "3022e7ba-7e13-11e8-8060-e284abfd2bc4",
+      "zoneName": "North Carolina",
+      "score": 26000
     },
     {
       "medal": "Bronze",
-      "accountId": "fbfee29a-76e3-43d8-96d7-bc9b425cfe33",
-      "zoneId": "3022e90b-7e13-11e8-8060-e284abfd2bc4",
-      "zoneName": "Ohio",
-      "score": 52980
+      "accountId": "fb25a307-c42c-46ec-8af2-94b0c0641490",
+      "zoneId": "30204664-7e13-11e8-8060-e284abfd2bc4",
+      "zoneName": "Greece",
+      "score": 33000
     }
   ]
 }

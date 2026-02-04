@@ -1,2 +1,2 @@
 #!/bin/sh
-docker push registry.mrag.nl/openplanet/nadeo-api
+docker push git.bun-dory.ts.net/registry/openplanet-nadeoapi-docs
