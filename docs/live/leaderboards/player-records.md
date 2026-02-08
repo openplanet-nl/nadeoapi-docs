@@ -38,7 +38,7 @@ Gets the currently authenticated user's records on multiple maps.
 
 - The `groupUid` `"Personal_Best"` can be used to get the global leaderboard.
 - A maximum of 50 records may be requested. If more than 50 records are requested, only the first 50 will be returned.
-- This is technically the same endpoint as [get record positions by their time](/live/leaderboards/position), but without the query parameters, it functions completely differently.
+- This is technically the same endpoint as [get record positions by their time](/live/leaderboards/position), but works differently if not given query parameters.
 
 ---
 

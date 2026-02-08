@@ -53,7 +53,7 @@ Gets position data for one or more records by their score/time.
 - This endpoint can sometimes be very delayed - there have been cases where it has returned data that was outdated for multiple hours. On average, this route should be up to date within about three hours - some maps are prioritized though (official campaign maps and current TOTDs), so they are typically updated every five minutes.
 - If the authenticated account has a record on the requested map, no scores worse than that record can be requested - it's recommended to use this endpoint with an account that does not have any records.
 - The positions returned by this endpoint don't correspond to existing records, instead they tell you what a new record's position would be given the requested score.
-- This is technically the same endpoint as [get player records](/live/leaderboards/player-records), but with the query parameters, it functions completely differently.
+- This is technically the same endpoint as [get player records](/live/leaderboards/player-records), but works differently if given query parameters.
 
 ---
 
