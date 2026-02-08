@@ -54,6 +54,7 @@ Gets position data for one or more records by their score/time.
 - If the authenticated account has a record on the requested map, no scores worse than that record can be requested - it's recommended to use this endpoint with an account that does not have any records.
 - The positions returned by this endpoint don't correspond to existing records, instead they tell you what a new record's position would be given the requested score.
 - This is technically the same endpoint as [get player records](/live/leaderboards/player-records), but works differently if given query parameters.
+- This endpoint may sometimes return an empty list (`[]`) even when passed valid parameters. It is not known why but it seems to be inconsistent.
 
 ---
 
