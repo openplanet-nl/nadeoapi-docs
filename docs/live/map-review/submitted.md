@@ -37,6 +37,7 @@ Retrieves your maps submitted to map review.
 
 - This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
 - The `withFeedback` and `withMapInfo` query parameters do not seem to change what is actually returned in the response, but the game sets these to `true` when requesting maps.
+- The data returned from this endpoint is largely the same data that can be accessed through the player's tracks on the [official website](https://trackmania.com).
 - Examples of supported review types can be found in the [glossary](/glossary#map-review-type).
 
 ---
