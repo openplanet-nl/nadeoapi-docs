@@ -20,7 +20,7 @@ Retrieves information on how long a player must wait before their map is the cur
 
 **Remarks**:
 
-- Examples of supported review types are `"totd"` and `"weekly-shorts"`.
+- Examples of supported review types can be found in the [glossary](/glossary#map-review-type).
 
 ---
 

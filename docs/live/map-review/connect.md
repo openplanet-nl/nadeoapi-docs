@@ -21,7 +21,7 @@ Retrieves information to connect to a map review server.
 **Remarks**:
 
 - This endpoint is only accessible with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
-- Examples of supported review types are `"totd"` and `"weekly-shorts"`.
+- Examples of supported review types can be found in the [glossary](/glossary#map-review-type).
 
 ---
 
