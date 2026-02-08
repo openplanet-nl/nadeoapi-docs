@@ -151,6 +151,14 @@ Converting between map ID and [map UID](#map-uid) is possible via the Core API's
 
 A UUID that identifies a player's record on a map. This ID may stay the same when a player improves their previous record.
 
+### Map review type
+
+Identifier for the type of map submitted to Nadeo for review. Available types include:
+
+- `totd`
+- `weekly-shorts`
+- `royal` (deprecated)
+
 ### Map type
 
 Identifier for the game mode the map is intended to be driven in. Official map types include (note the backslashes - you may need to escape these depending on your implementation):

@@ -16,6 +16,8 @@ Docker is the recommended way of developing the site, and also for testing docum
    ```
 3. Visit http://127.0.0.1/
 
+Note: while the container is running, you may simply edit the files and reload the corresponding page in your browser. You do not need to rebuild the image every time.
+
 ## Running tests
 Content tests run automatically on a push to the repository. To run them locally, you need Python and PyYAML. Then, simply run the test script:
 

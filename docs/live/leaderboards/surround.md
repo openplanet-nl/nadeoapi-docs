@@ -46,6 +46,7 @@ Gets surrounding records for a score on a map's leaderboard.
 - When using a different `groupUid`, make sure you're only referencing currently open leaderboards. Maps with closed leaderboards will result in an empty response.
 - The `lower` and `upper` parameters used to support more than `1`, but now no more than one upper and one lower record is returned.
 - This endpoint can sometimes include a delay due to leaderboard calculations happening in the background.
+- If there exist multiple leaderboard entries with the same `score` as is being passed, the `position` returned may be inaccurate.
 - This endpoint returns precise positions for the first 100,000 records - anything beyond that is not available at the same level of detail.
 - When authenticated through a Ubisoft user account that has a zone assigned, the response will include multiple entries in the `tops` array - one for each of the account's assigned sub-zones (representing the leaderboards of the continent, country, city, etc.). Use `onlyWorld` to only retrieve data for the global leaderboard.
 - This endpoint's response always includes the requested score as a fake record (using the requester's account information for the `accountId` and zone data) between the surrounding ones. This is because in-game this endpoint is used to determine surrounding records for your own PB (that might not have fully uploaded to the leaderboards yet), so it supports an arbitrary score value that the game sets based on your PB.
