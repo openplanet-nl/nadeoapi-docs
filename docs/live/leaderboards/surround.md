@@ -3,7 +3,7 @@ name: Get surrounding records for a score
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
-route: /api/token/leaderboard/group/{groupUid}/map/{mapUid}/surround/{lower}/{upper}?score={score}&onlyWorld={onlyWorld}
+route: /api/token/leaderboard/group/{groupUid}/map/{mapUid}/surround/{lower}/{upper}?score={score}&onlyWorld={onlyWorld}&zoneId={zoneId}
 
 audience: NadeoLiveServices
 
@@ -34,6 +34,9 @@ parameters:
     - name: onlyWorld
       type: boolean
       description: Whether to only retrieve records from the world leaderboard
+    - name: zoneId
+      type: string
+      description: The desired zone to get records for
 ---
 
 Gets surrounding records for a score on a map's leaderboard.
@@ -52,6 +55,8 @@ Gets surrounding records for a score on a map's leaderboard.
 - If the authenticated account has a record on the requested map, no scores lower than that record can be requested - it's recommended to use this endpoint with an account that does not have any records.
 - When using a Ubisoft account, the `score` parameter may be omitted to retrieve the player's PB leaderboard position and its surrounding data. When the authenticated player doesn't have a PB on the requested map (or when using a dedicated server account), any request without a `score` parameter will return an empty object (`{}`).
 - If the map author has set a secret threshold score for their map, this endpoint will not return any actual `score` values for some entries. Instead, those leaderboard entries will contain `-1` in the `score` field.
+- If using `onlyWorld=true`, the `zoneId` will be ignored.
+- See the [zones](/core/meta/zones) endpoint for available zone IDs.
 
 ---
 
