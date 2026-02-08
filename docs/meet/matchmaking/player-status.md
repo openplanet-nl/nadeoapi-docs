@@ -23,6 +23,7 @@ Gets the matchmaking status of the currently authenticated user.
 
 - See the [glossary](/glossary#matchmaking-type) for a list of available matchmaking types and their IDs.
 - This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+- The response field `"currentHeartbeat"` will be an object with the same data received as when sending a [heartbeat](/meet/matchmaking/heartbeat) request.
 
 ---
 
@@ -49,5 +50,3 @@ https://meet.trackmania.nadeo.club/api/matchmaking/5/player-status
   "matchGenerationTimer": null
 }
 ```
-
-The response field `"currentHeartbeat"` will be an object with the same data recieved as when sending a [heartbeat](/meet/matchmaking/heartbeat) request.
