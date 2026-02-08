@@ -36,7 +36,7 @@ Gets matchmaking progressions (for the specified type) for the requested players
 **Example request**:
 
 ```plain
-https://meet.trackmania.nadeo.club/api/matchmaking/2/leaderboard/players?players[]=01fe5b11-5ada-48a0-9da7-367e153ac3ad
+https://meet.trackmania.nadeo.club/api/matchmaking/5/progression/players?players[]=94232bb9-9774-41f8-9016-3e653581ce9a
 ```
 
 **Example response**:
@@ -45,9 +45,9 @@ https://meet.trackmania.nadeo.club/api/matchmaking/2/leaderboard/players?players
 {
   "progressions": [
     {
-      "player": "01fe5b11-5ada-48a0-9da7-367e153ac3ad",
+      "player": "94232bb9-9774-41f8-9016-3e653581ce9a",
       "division": "bd7282b7-04c4-4c25-b672-1f538ef7b5f9",
-      "progression": 5141
+      "progression": 5257
     }
   ]
 }
@@ -56,7 +56,7 @@ https://meet.trackmania.nadeo.club/api/matchmaking/2/leaderboard/players?players
 To retrieve data for more than one account at once, send the `accountID` values as follows:
 
 ```plain
-GET https://matchmaking.trackmania.nadeo.club/api/matchmaking/2/progression/players?players[]=01fe5b11-5ada-48a0-9da7-367e153ac3ad&players[]=18f49288-fbbf-488c-bb28-083df93f0447
+GET https://matchmaking.trackmania.nadeo.club/api/matchmaking/5/progression/players?players[]=01fe5b11-5ada-48a0-9da7-367e153ac3ad&players[]=18f49288-fbbf-488c-bb28-083df93f0447
 ```
 
 If the requested `matchmakingType` does not exist, the response will contain an error.
