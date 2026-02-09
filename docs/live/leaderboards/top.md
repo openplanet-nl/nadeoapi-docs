@@ -32,7 +32,7 @@ parameters:
       default: 0
     - name: zoneId
       type: string
-      description: The desired zone to get records for
+      description: The desired zone to get records for (only top 5, see remarks below)
 ---
 
 Gets records from a map's leaderboard.
