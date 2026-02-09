@@ -29,7 +29,7 @@ Gets matchmaking progressions (for the specified type) for the requested players
 - See the [glossary](/glossary#matchmaking-type) for a list of available matchmaking types and their IDs.
 - To get data for more than one account at a time, you can send an array of values instead of a single value - see the second example below.
 - This endpoint has no intrinsic limit on the number of account IDs requested, but it will return a `414` error if the request URI length is 8220 characters or more (corresponding to just over 150 account IDs, depending on how you encode the URI).
-- This endpoint is very similar to the [ranking](/meet/matchmaking/player-ranking) endpoint, but slightly less useful.
+- This endpoint is very similar to the [ranking](/meet/matchmaking/player-ranking) endpoint, but returns slightly different data (e.g. division ID instead of rank).
 
 ---
 

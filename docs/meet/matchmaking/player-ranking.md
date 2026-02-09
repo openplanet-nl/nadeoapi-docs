@@ -30,7 +30,7 @@ Gets matchmaking ranks (for the specified type) for the requested players.
 - The `cardinal` field in the response is the total number of players in the ranking.
 - To get data for more than one account at a time, you can send an array of values instead of a single value - see the second example below.
 - This endpoint has no intrinsic limit on the number of account IDs requested, but it will return a `414` error if the request URI length is 8220 characters or more (corresponding to just over 150 account IDs, depending on how you encode the URI).
-- This endpoint is very similar to the [progression](/meet/matchmaking/player-progression) endpoint, but slightly more useful.
+- This endpoint is very similar to the [progression](/meet/matchmaking/player-progression) endpoint, but returns slightly different data (e.g. rank instead of division ID).
 
 ---
 
