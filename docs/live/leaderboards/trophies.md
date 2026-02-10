@@ -1,5 +1,5 @@
 ---
-name: Get player trophy rankings
+name: Get player trophy rankings (multiple)
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
