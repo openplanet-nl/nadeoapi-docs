@@ -17,7 +17,6 @@ parameters:
       description: The number of maps to retrieve
       required: true
       min: 1
-      max: 100
     - name: sort
       type: string
       description: The sorting of the maps
