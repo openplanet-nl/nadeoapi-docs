@@ -3,7 +3,7 @@ name: Get favorite maps
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
-route: /api/token/map/favorite?offset={offset}&length={length}&sort={sort}&order={order}&mapTypeList={mapTypeList}&playable={playable}
+route: /api/token/map/favorite?offset={offset}&length={length}&sort={sort}&order={order}&mapTypeList={mapTypeList}&playable={playable}&onlyMine={onlyMine}
 
 audience: NadeoLiveServices
 parameters:
@@ -31,6 +31,9 @@ parameters:
     - name: playable
       type: boolean
       description: Whether the map is validated and playable
+    - name: onlyMine
+      type: boolean
+      description: Whether the map was created by the current authenticated account
 ---
 
 Retrieves your authenticated account's favorite tracks along with their information.
@@ -40,6 +43,7 @@ Retrieves your authenticated account's favorite tracks along with their informat
 **Remarks**:
 
 - This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+- The `sort` parameter can be set to `"date"` (when the map was added to your favorite tracks) or `"name"` (the map name).
 - When no `mapTypeList` filter is applied, all available maps are returned regardless of their type.
 - See the [glossary](/glossary#map-type) for examples of supported map types.
 
@@ -48,7 +52,7 @@ Retrieves your authenticated account's favorite tracks along with their informat
 **Example request**:
 
 ```plain
-GET https://live-services.trackmania.nadeo.live/api/token/map/favorite?offset=0&length=1&sort=date&order=desc&mapTypeList=Trackmania\\TM_Race&playable=true
+GET https://live-services.trackmania.nadeo.live/api/token/map/favorite?offset=0&length=1&sort=date&order=desc&mapTypeList=Trackmania\TM_Race&playable=true&onlyMine=false
 ```
 
 **Example response**:
