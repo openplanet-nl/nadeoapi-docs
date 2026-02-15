@@ -52,7 +52,7 @@ Retrieves your authenticated account's favorite tracks along with their informat
 **Example request**:
 
 ```plain
-GET https://live-services.trackmania.nadeo.live/api/token/map/favorite?offset=0&length=1&sort=date&order=desc&mapTypeList=Trackmania\\TM_Race&playable=true&onlyMine=false
+GET https://live-services.trackmania.nadeo.live/api/token/map/favorite?offset=0&length=1&sort=date&order=desc&mapTypeList=Trackmania\TM_Race&playable=true&onlyMine=false
 ```
 
 **Example response**:

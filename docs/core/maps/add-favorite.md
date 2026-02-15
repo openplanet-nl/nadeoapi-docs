@@ -15,7 +15,7 @@ parameters:
       required: true
 ---
 
-The request body contains the map to add, identified by its mapUid
+The request body contains the map to add, identified by its mapUid:
 
 ```json
 {

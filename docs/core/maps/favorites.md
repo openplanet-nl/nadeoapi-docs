@@ -55,7 +55,7 @@ Retrieves your authenticated account's favorite tracks.
 **Example request**:
 
 ```plain
-GET https://prod.trackmania.core.nadeo.online/maps/favorites?offset=0&length=1&sort=date&order=desc&mapTypeList=Trackmania\\TM_Race&playable=true&onlyMine=false
+GET https://prod.trackmania.core.nadeo.online/maps/favorites?offset=0&length=1&sort=date&order=desc&mapTypeList=Trackmania\TM_Race&playable=true&onlyMine=false
 ```
 
 **Example response**:

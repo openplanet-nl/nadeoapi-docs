@@ -15,7 +15,7 @@ parameters:
       required: true
 ---
 
-The request body contains the map to remove, identified by its mapUid
+The request body contains the map to remove, identified by its mapUid:
 
 ```json
 {
