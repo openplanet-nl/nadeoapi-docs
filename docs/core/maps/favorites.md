@@ -44,10 +44,11 @@ Retrieves your authenticated account's favorite tracks.
 **Remarks**:
 
 - This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+- The `sort` parameter can be set to `"date"` (when the map was added to your favorite tracks) or `"name"` (the map name).
 - When no `mapTypeList` filter is applied, all available maps are returned regardless of their type.
 - See the [glossary](/glossary#map-type) for examples of supported map types.
 - The `timestamp` field is when the map was added to your favorite tracks.
-- This endpoint behaves similarly to the [Live API's Get favorite map endpoint](/live/maps/favorites), but the response data model is different, with the Live endpoint also including the map information.
+- This endpoint behaves similarly to the [Live API's Get favorite map endpoint](/live/maps/favorites), but the response data model is different, with the Live endpoint also including additional map information.
 
 ---
 

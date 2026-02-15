@@ -52,6 +52,6 @@ POST https://prod.trackmania.core.nadeo.online/maps/favorites
 null
 ```
 
-Both successful and unsuccessful responses (including requests for maps that don't exist) have no content and return a `200` response code.
+Both successful and unsuccessful responses (including requests for maps that don't exist) return a `200` response code.
 
 An invalid `mapUid` results in a `400` response code with an error object in the response body.

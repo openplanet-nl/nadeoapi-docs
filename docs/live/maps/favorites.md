@@ -43,6 +43,7 @@ Retrieves your authenticated account's favorite tracks along with their informat
 **Remarks**:
 
 - This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+- The `sort` parameter can be set to `"date"` (when the map was added to your favorite tracks) or `"name"` (the map name).
 - When no `mapTypeList` filter is applied, all available maps are returned regardless of their type.
 - See the [glossary](/glossary#map-type) for examples of supported map types.
 
