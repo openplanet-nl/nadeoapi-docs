@@ -26,7 +26,7 @@ Gets cup of the week campaigns.
 **Remarks**:
 
 - The COTW maps are structured in weekly campaigns (just like weekly shorts) even though each campaign only contains one map.
-- The `name` field does not correspond to the date on which the COTW is played; it seems to be one week behind.
+- The `name` field is the date the map first appears in the COTW server room.
 
 ---
 
