@@ -19,7 +19,7 @@ parameters:
       description: The party code
       required: true
     - name: playWith
-      type: array[string]
+      type: string[]
       description: The account IDs of the players you wish to queue with (leave empty to queue solo)
       required: true
 ---
@@ -28,10 +28,8 @@ The request body is an object with `code` and `playWith` fields:
 
 ```json
 {
-  "code": "{code}",
-  "playWith": [
-    "{playWith}"
-  ]
+  "code": code,
+  "playWith": playWith
 }
 ```
 

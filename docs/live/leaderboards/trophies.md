@@ -7,17 +7,26 @@ route: /api/token/leaderboard/trophy/player
 
 audience: NadeoLiveServices
 
+parameters:
+  body:
+    - name: listPlayer
+      type: object[]
+      description: The list of players to be requested
+      required: true
+      children:
+        - name: accountId
+          type: string
+          description: The player's account ID
+          required: true
 ---
 
-The request body is an array of players, identified by their account IDs:
+The request body contains an array of players, each identified by their `accountId`:
+
 ```json
 {
   "listPlayer": [
     {
-      "accountId": "5b4d42f4-c2de-407d-b367-cbff3fe817bc"
-    },
-    {
-      "accountId": "7398eeb6-9b4e-44b8-a7a1-a2149955ac70"
+      "accountId": accountId
     }
   ]
 }
@@ -30,9 +39,11 @@ Gets the specified players' trophy leaderboard positions for each of their zones
 ---
 
 **Example request**:
+
 ```plain
 POST https://live-services.trackmania.nadeo.live/api/token/leaderboard/trophy/player
 ```
+
 ```json
 {
   "listPlayer": [
@@ -47,6 +58,7 @@ POST https://live-services.trackmania.nadeo.live/api/token/leaderboard/trophy/pl
 ```
 
 **Example response**:
+
 ```json
 {
   "rankings": [

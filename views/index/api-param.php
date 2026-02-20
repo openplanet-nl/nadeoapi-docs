@@ -29,4 +29,17 @@
 			<?php } ?>
 		</div>
 	<?php } ?>
+
+	<?php if (isset($item['children'])) { ?>
+		<ul>
+			<?php
+			foreach ($item['children'] as $child) {
+				echo $this->renderPartial('api-param', [
+					'class' => 'warning',
+					'item' => $child,
+				]);
+			}
+			?>
+		</ul>
+	<?php } ?>
 </li>

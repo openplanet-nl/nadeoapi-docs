@@ -13,6 +13,11 @@ parameters:
       type: string
       description: The UID of the map
       required: true
+  body:
+    - name: vote
+      type: integer
+      description: The vote value (see remarks for details)
+      required: true
 
 ---
 
@@ -20,7 +25,7 @@ The request body contains the vote value:
 
 ```json
 {
-  "vote": 1
+  "vote": vote
 }
 ```
 

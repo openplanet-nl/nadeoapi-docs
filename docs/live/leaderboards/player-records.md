@@ -9,20 +9,29 @@ audience: NadeoLiveServices
 
 parameters:
   body:
-    - name: groupUid
-      type: string
-      description: The ID of the group/season for a specific map
+    - name: maps
+      type: object[]
+      description: The list of maps (needs to match query parameters)
       required: true
+      children:
+      - name: mapUid
+        type: string
+        description: The UID of the map
+        required: true
+      - name: groupUid
+        type: string
+        description: The ID of the group/season for a specific map
+        required: true
 ---
 
-The request body is an array of maps, identified by their mapUids:
+The request body contains an array of maps, each identified by its `mapUid`:
 
 ```json
 {
   "maps": [
     {
-      "mapUid": "{mapUid}",
-      "groupUid": "{groupUid}"
+      "mapUid": mapUid,
+      "groupUid": groupUid
     }
   ]
 }
