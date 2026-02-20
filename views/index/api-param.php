@@ -1,6 +1,6 @@
 <li>
 	<code class="has-text-weight-bold has-text-<?= $class ?>">{<?= Nin\Html::encode($item['name']) ?>}</code>
-	<span class="has-text-grey"><code class="has-text-grey"><?= Nin\Html::encode($item['type']) ?></code></span>
+	<code class="has-text-grey"><?= Nin\Html::encode($item['type']) ?></code>
 	<span><?= Nin\Html::encode($item['description']) ?></span>
 
 	<?php if (isset($item['required']) && $item['required']) { ?>
