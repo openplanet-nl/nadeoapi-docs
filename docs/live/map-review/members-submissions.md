@@ -3,16 +3,16 @@ name: Get member submissions to club map review
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
-route: /api/token/club/{clubID}/map-review/{mapReviewID}/map?offset={offset}&length={length}
+route: /api/token/club/{clubId}/map-review/{mapReviewId}/map?offset={offset}&length={length}
 
 audience: NadeoLiveServices
 parameters:
   path:
-    - name: clubID
+    - name: clubId
       type: integer
       description: The ID of the club the map review activity belongs to
       required: true
-    - name: mapReviewID
+    - name: mapReviewId
       type: integer
       description: The ID of the map review activity
       required: true

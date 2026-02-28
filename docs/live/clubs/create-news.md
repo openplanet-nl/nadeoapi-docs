@@ -3,13 +3,13 @@ name: Create club news article
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: /api/token/club/{clubID}/news/create
+route: /api/token/club/{clubId}/news/create
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: clubID
+    - name: clubId
       type: integer
       description: The ID of the club where the news article should be created
       required: true
@@ -27,7 +27,7 @@ parameters:
       type: string
       description: The news body
       max: 2000 characters
-    - name: folderID
+    - name: folderId
       type: integer
       description: The ID of the folder where the news article should be created
 ---
@@ -39,11 +39,17 @@ The request body is an object containing the news article details:
   "name": name,
   "headline": headline,
   "body": body,
-  "folderId": folderID
+  "folderId": folderId
 }
 ```
 
 Creates a news article in a club.
+
+---
+
+**Remarks**:
+
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
 
 ---
 

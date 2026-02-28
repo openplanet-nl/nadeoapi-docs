@@ -3,23 +3,29 @@ name: Unset VIP club member
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: /api/token/club/{clubID}/vip/{accountID}/unset
+route: /api/token/club/{clubId}/vip/{accountId}/unset
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: clubID
+    - name: clubId
       type: integer
       description: The ID of the club where the user should stop being VIP
       required: true
-    - name: accountID
+    - name: accountId
       type: integer
       description: The account ID of the club member
       required: true
 ---
 
 Removes a club member as a VIP.
+
+---
+
+**Remarks**:
+
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
 
 ---
 
@@ -45,7 +51,7 @@ POST https://live-services.trackmania.nadeo.live/api/token/club/131063/vip/69f31
 }
 ```
 
-If the `accountID` is invalid or does not belong to a member of the club, the response will contain an error:
+If the `accountId` is invalid or does not belong to a member of the club, the response will contain an error:
 
 ```json
 [

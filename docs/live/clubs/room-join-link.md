@@ -3,17 +3,17 @@ name: Get club room join link
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: /api/token/club/{clubID}/room/{roomID}/join
+route: /api/token/club/{clubId}/room/{roomId}/join
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: clubID
+    - name: clubId
       type: integer
       description: The ID of the club the room belongs to
       required: true
-    - name: roomID
+    - name: roomId
       type: integer
       description: The ID of the room to be requested
       required: true

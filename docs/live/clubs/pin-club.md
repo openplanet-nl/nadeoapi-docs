@@ -3,13 +3,13 @@ name: Pin club
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: /api/token/club/{clubID}/pin
+route: /api/token/club/{clubId}/pin
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: clubID
+    - name: clubId
       type: integer
       description: The ID of the club to be pinned
       required: true
@@ -21,6 +21,7 @@ Pins a club for the current authenticated account.
 
 **Remarks**:
 
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
 - If the club is already pinned, using this endpoint will unpin it.
 - When a club is pinned, the game will display its assets while editing / playing a map in solo, and the club will be used for the club leaderboards in-game.
 

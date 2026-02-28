@@ -3,7 +3,7 @@ name: Get season/campaign club leaderboard
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
-route: /api/token/leaderboard/group/{groupUid}/club/{clubID}/top?length={length}&offset={offset}
+route: /api/token/leaderboard/group/{groupUid}/club/{clubId}/top?length={length}&offset={offset}
 
 audience: NadeoLiveServices
 
@@ -13,7 +13,7 @@ parameters:
       type: string
       description: The ID of the group/season
       required: true
-    - name: clubID
+    - name: clubId
       type: string
       description: The ID of the club
       required: true
@@ -22,7 +22,6 @@ parameters:
       type: integer
       description: The number of ranks to retrieve
       default: 5
-      max: 100
     - name: offset
       type: integer
       description: The number of ranks to skip
@@ -95,7 +94,7 @@ GET https://live-services.trackmania.nadeo.live/api/token/leaderboard/group/dccd
 }
 ```
 
-If the `clubID` is invalid, the response will contain an empty list:
+If the `clubId` is invalid, the response will contain an empty list:
 
 ```json
 {

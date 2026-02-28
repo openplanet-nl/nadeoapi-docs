@@ -3,23 +3,29 @@ name: Get club news by ID
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
-route: /api/token/club/{clubID}/news/{newsID}
+route: /api/token/club/{clubId}/news/{newsId}
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: clubID
+    - name: clubId
       type: integer
       description: The ID of the club the news belongs to
       required: true
-    - name: newsID
+    - name: newsId
       type: integer
       description: The ID of the news to be requested
       required: true
 ---
 
 Gets the details of a specific club news.
+
+---
+
+**Remarks**:
+
+- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png`/`.jpg` versions are available using separate fields (see example below for reference).
 
 ---
 

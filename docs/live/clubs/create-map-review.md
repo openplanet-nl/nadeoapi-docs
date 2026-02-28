@@ -3,13 +3,13 @@ name: Create club map review activity
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: /api/token/club/{clubID}/map-review/create
+route: /api/token/club/{clubId}/map-review/create
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: clubID
+    - name: clubId
       type: integer
       description: The ID of the club where the map review activity should be created
       required: true
@@ -41,7 +41,7 @@ parameters:
       type: integer
       description: Whether to allow players to only submit a single track per hour (1) or not (0)
       default: 0
-    - name: folderID
+    - name: folderId
       type: integer
       description: The ID of the folder where the map review activity should be created
       default: 0
@@ -57,11 +57,17 @@ The request body is an object containing the map review details:
   "maxPlayer": maxPlayer,
   "allowVoteSkipMap": allowVoteSkipMap,
   "submissionLimitation": submissionLimitation,
-  "folderId": folderID
+  "folderId": folderId
 }
 ```
 
 Creates a map review activity in a club.
+
+---
+
+**Remarks**:
+
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
 
 ---
 
@@ -87,30 +93,30 @@ https://live-services.trackmania.nadeo.live/api/token/club/103034/map-review/cre
 
 ```json
 {
-	"creationTimestamp": 1772060908,
-	"clubName": "Fort's club",
-	"id": 1008026,
-	"scalable": true,
-	"public": true,
-	"game2webUrl": "https://www.trackmania.com/clubs/103034/track-reviews/1008026",
-	"activityId": 1008026,
-	"name": "My tracks",
-	"clubId": 103034,
-	"mediaUrlPngSmall": "",
-	"mediaUrl": "",
-	"latestEditorAccountId": "69f31664-4252-48e0-a433-024c49caee8c",
-	"mapReviewUid": "club_103034_1008026",
-	"mediaUrlPngLarge": "",
-	"maxPlayer": 64,
-	"mediaTheme": "",
-	"popularityLevel": 0,
-	"submittedMapCount": 0,
-	"submissionLimitation": false,
-	"creatorAccountId": "69f31664-4252-48e0-a433-024c49caee8c",
-	"timeLimit": 180,
-	"allowVoteSkipMap": false,
-	"mediaUrlDds": "",
-	"mediaUrlPngMedium": ""
+  "creationTimestamp": 1772060908,
+  "clubName": "Fort's club",
+  "id": 1008026,
+  "scalable": true,
+  "public": true,
+  "game2webUrl": "https://www.trackmania.com/clubs/103034/track-reviews/1008026",
+  "activityId": 1008026,
+  "name": "My tracks",
+  "clubId": 103034,
+  "mediaUrlPngSmall": "",
+  "mediaUrl": "",
+  "latestEditorAccountId": "69f31664-4252-48e0-a433-024c49caee8c",
+  "mapReviewUid": "club_103034_1008026",
+  "mediaUrlPngLarge": "",
+  "maxPlayer": 64,
+  "mediaTheme": "",
+  "popularityLevel": 0,
+  "submittedMapCount": 0,
+  "submissionLimitation": false,
+  "creatorAccountId": "69f31664-4252-48e0-a433-024c49caee8c",
+  "timeLimit": 180,
+  "allowVoteSkipMap": false,
+  "mediaUrlDds": "",
+  "mediaUrlPngMedium": ""
 }
 ```
 

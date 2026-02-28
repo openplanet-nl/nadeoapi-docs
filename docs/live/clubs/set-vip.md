@@ -3,17 +3,17 @@ name: Set VIP club member
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: /api/token/club/{clubID}/vip/{accountID}/set
+route: /api/token/club/{clubId}/vip/{accountId}/set
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: clubID
+    - name: clubId
       type: integer
       description: The ID of the club where the user should become VIP
       required: true
-    - name: accountID
+    - name: accountId
       type: integer
       description: The account ID of the club member
       required: true
@@ -25,6 +25,7 @@ Sets a club member as a VIP.
 
 **Remarks**:
 
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
 - VIP members will be displayed in the Club VIP leaderboard in-game while playing a map.
 
 ---

@@ -3,17 +3,17 @@ name: Get map review activity by ID
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
-route: /api/token/club/{clubID}/map-review/{mapReviewID}
+route: /api/token/club/{clubId}/map-review/{mapReviewId}
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: clubID
+    - name: clubId
       type: integer
       description: The ID of the club the map review activity belongs to
       required: true
-    - name: mapReviewID
+    - name: mapReviewId
       type: integer
       description: The ID of the map review activity to be requested
       required: true
@@ -22,6 +22,10 @@ parameters:
 Gets the details of a specific map review activity.
 
 ---
+
+**Remarks**:
+
+- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png`/`.jpg` versions are available using separate fields (see example below for reference).
 
 **Example request**:
 

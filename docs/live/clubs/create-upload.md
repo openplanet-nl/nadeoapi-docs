@@ -3,13 +3,13 @@ name: Create club upload activity
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: /api/token/club/{clubID}/bucket/create
+route: /api/token/club/{clubId}/bucket/create
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: clubID
+    - name: clubId
       type: integer
       description: The ID of the club where the upload activity should be created
       required: true
@@ -23,7 +23,7 @@ parameters:
       type: string
       description: The type of upload activity to be created (see remarks below)
       required: true
-    - name: folderID
+    - name: folderId
       type: integer
       description: The ID of the folder where the upload activity should be created
 ---
@@ -34,7 +34,7 @@ The request body is an object containing the upload activity details:
 {
   "name": name,
   "type": type,
-  "folderId": folderID
+  "folderId": folderId
 }
 ```
 
@@ -44,7 +44,8 @@ Creates an upload activity in a club for maps, items, or skins.
 
 **Remarks**:
 
-- The `type` parameter supports 3 types: Track uploads (`"map-upload"`), Skin uploads (`"skin-upload"`), and Item collections (`"item-upload"`).
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+- The `type` parameter supports three types: Track uploads (`"map-upload"`), Skin uploads (`"skin-upload"`), and Item collections (`"item-upload"`).
 
 ---
 

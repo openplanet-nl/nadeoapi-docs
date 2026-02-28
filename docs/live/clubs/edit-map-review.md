@@ -3,17 +3,17 @@ name: Edit club map review activity
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: /api/token/club/{clubID}/map-review/{mapReviewID}/edit
+route: /api/token/club/{clubId}/map-review/{mapReviewId}/edit
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: clubID
+    - name: clubId
       type: integer
       description: The ID of the club where the map review activity should be created
       required: true
-    - name: mapReviewID
+    - name: mapReviewId
       type: integer
       description: The ID of the map review activity to be edited
       required: true
@@ -55,6 +55,12 @@ The request body is an object containing the map review details:
 ```
 
 Edits a map review activity in a club.
+
+---
+
+**Remarks**:
+
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
 
 ---
 

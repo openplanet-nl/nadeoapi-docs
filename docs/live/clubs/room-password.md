@@ -3,23 +3,29 @@ name: Get club room password
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
-route: /api/token/club/{clubID}/room/{roomID}/get-password
+route: /api/token/club/{clubId}/room/{roomId}/get-password
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: clubID
+    - name: clubId
       type: integer
       description: The ID of the club the room belongs to
       required: true
-    - name: roomID
+    - name: roomId
       type: integer
       description: The ID of the room to be requested
       required: true
 ---
 
 Gets the password of a club room.
+
+---
+
+**Remarks**:
+
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
 
 ---
 

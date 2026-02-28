@@ -3,17 +3,17 @@ name: Delete club activity
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: /api/token/club/{clubID}/activity/{activityID}/delete
+route: /api/token/club/{clubId}/activity/{activityId}/delete
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: clubID
+    - name: clubId
       type: integer
       description: The ID of the club the activity belongs to
       required: true
-    - name: activityID
+    - name: activityId
       type: integer
       description: The ID of the activity to delete
       required: true
@@ -25,6 +25,7 @@ Deletes an activity from a club.
 
 **Remarks**:
 
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
 - When deleting a folder with other activities inside it, they will be moved outside the folder.
 
 ---

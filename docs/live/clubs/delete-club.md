@@ -3,13 +3,13 @@ name: Delete club
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: /api/token/club/{clubID}/delete
+route: /api/token/club/{clubId}/delete
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: clubID
+    - name: clubId
       type: integer
       description: The ID of the club to delete
       required: true
@@ -21,6 +21,7 @@ Deletes a club the player has created.
 
 **Remarks**:
 
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
 - Only the club creator can delete a club.
 - Deleting a club will reset your tag and pinned club, regardless of the club deleted.
 

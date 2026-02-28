@@ -3,17 +3,17 @@ name: Edit club campaign
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: /api/token/club/{clubID}/campaign/{campaignID}/edit
+route: /api/token/club/{clubId}/campaign/{campaignId}/edit
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: clubID
+    - name: clubId
       type: integer
       description: The ID of the club the campaign belongs to
       required: true
-    - name: campaignID
+    - name: campaignId
       type: integer
       description: The ID of the campaign to be edited
       required: true
@@ -54,6 +54,7 @@ Edits a campaign in a club.
 
 **Remarks**:
 
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
 - The position of the maps in the campaign seems to be determined by their order in the `playlist` array in the request body, rather than by their `position` parameter. It is still recommended to pass the desired position.
 - If a map is missing its `mapUid` or `position`, the campaign will be edited, but the map will be skipped.
 

@@ -3,17 +3,17 @@ name: Delete club member
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: /api/token/club/{clubID}/member/{accountID}/delete
+route: /api/token/club/{clubId}/member/{accountId}/delete
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: clubID
+    - name: clubId
       type: integer
       description: The ID of the club the player is a member of
       required: true
-    - name: accountID
+    - name: accountId
       type: string
       description: The account ID of the member to be deleted
       required: true
@@ -25,8 +25,8 @@ Deletes a member of a club.
 
 **Remarks**:
 
-- This endpoint is only accessible with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts). If you encounter `401` errors using a dedicated server account, switch to using a Ubisoft account.
-- To leave a club, set `accountID` to your account ID.
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+- To leave a club, set `accountId` to your account ID.
 - When trying to leave a club you are the creator of, the response will still return a `200` response code, but the account will not leave the club.
 
 ---

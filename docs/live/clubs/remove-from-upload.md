@@ -3,17 +3,17 @@ name: Remove items from club upload activity
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: /api/token/club/{clubID}/bucket/{bucketID}/remove
+route: /api/token/club/{clubId}/bucket/{bucketId}/remove
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: clubID
+    - name: clubId
       type: integer
       description: The ID of the club the upload activity belongs to
       required: true
-    - name: bucketID
+    - name: bucketId
       type: integer
       description: The ID of the upload activity where the items should be removed from
       required: true
@@ -38,6 +38,7 @@ Removes a list of maps, items, or skins from an upload activity in a club.
 
 **Remarks**:
 
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
 - The IDs needed for the `itemIdList` parameter depend on the type of upload activity requested. For maps uploads, it requires their `mapUid`, while skins and items require their `skinID` and `itemID`, respectively.
 
 ---

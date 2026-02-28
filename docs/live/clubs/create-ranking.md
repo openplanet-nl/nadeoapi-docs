@@ -3,13 +3,13 @@ name: Create club ranking
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: /api/token/club/{clubID}/ranking/create
+route: /api/token/club/{clubId}/ranking/create
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: clubID
+    - name: clubId
       type: integer
       description: The ID of the club where the ranking should be created
       required: true
@@ -23,10 +23,10 @@ parameters:
       type: string
       description: The use case of the ranking (see remarks below)
       required: true
-    - name: campaignID
+    - name: campaignId
       type: integer
       description: The campaignID of a campaign from the club (see remarks below)
-    - name: folderID
+    - name: folderId
       type: integer
       description: The ID of the folder where the ranking should be created
 ---
@@ -37,8 +37,8 @@ The request body is an object containing the ranking details:
 {
   "name": name,
   "useCase": useCase,
-  "campaignId": campaignID,
-  "folderId": folderID
+  "campaignId": campaignId,
+  "folderId": folderId
 }
 ```
 
@@ -48,7 +48,8 @@ Creates a ranking in a club.
 
 **Remarks**:
 
-- The `useCase` parameter supports 3 cases: Current Quarterly Campaign (`"ranking-official"`), Daily Track (`"ranking-daily"`), and Club Campaign (`"ranking-club"`).
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+- The `useCase` parameter supports three cases: Current Quarterly Campaign (`"ranking-official"`), Daily Track (`"ranking-daily"`), and Club Campaign (`"ranking-club"`).
 - When creating a Club Campaign ranking, it is required to set the `campaignId` parameter to the campaignID of a campaign from the club.
 - If the club campaign is not a campaign from the club, or it does not exist, the ranking will be created, but an error will be displayed in-game when accessing the ranking.
 

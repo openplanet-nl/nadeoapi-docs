@@ -3,13 +3,13 @@ name: Create club campaign
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: /api/token/club/{clubID}/campaign/create
+route: /api/token/club/{clubId}/campaign/create
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: clubID
+    - name: clubId
       type: integer
       description: The ID of the club where the campaign should be created
       required: true
@@ -29,7 +29,7 @@ parameters:
         - name: mapUid
           type: string
           description: The UID of a specific map
-    - name: folderID
+    - name: folderId
       type: integer
       description: The ID of the folder where the campaign should be created
 ---
@@ -45,7 +45,7 @@ The request body is an object containing the campaign details:
       "mapUid": mapUid
     }
   ],
-  "folderId": folderID
+  "folderId": folderId
 }
 ```
 
@@ -55,6 +55,7 @@ Creates a campaign in a club.
 
 **Remarks**:
 
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
 - Campaigns created using this endpoint will be deactivated by default. To activate it, use the [Edit activity Live endpoint](/live/clubs/edit-activity.md).
 - The position of the maps in the campaign seems to be determined by their order in the `playlist` array in the request body, rather than by their `position` parameter. It is still recommended to pass the desired position.
 - If a map is missing its `mapUid` or `position`, the campaign will be created, but the map will be skipped.

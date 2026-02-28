@@ -3,13 +3,13 @@ name: Create club folder
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: /api/token/club/{clubID}/folder/create
+route: /api/token/club/{clubId}/folder/create
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: clubID
+    - name: clubId
       type: integer
       description: The ID of the club where the folder should be created
       required: true
@@ -18,7 +18,7 @@ parameters:
       type: string
       description: The name of the new folder
       required: true
-    - name: folderID
+    - name: folderId
       type: integer
       description: The ID of the parent folder
 ---
@@ -28,11 +28,17 @@ The request body is an object containing the name of the club folder and its par
 ```json
 {
   "name": name,
-  "folderId": folderID,
+  "folderId": folderId,
 }
 ```
 
 Creates a folder in a club.
+
+---
+
+**Remarks**:
+
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
 
 ---
 

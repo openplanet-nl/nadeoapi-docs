@@ -3,17 +3,17 @@ name: Edit club activity
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: /api/token/club/{clubID}/activity/{activityID}/edit
+route: /api/token/club/{clubId}/activity/{activityId}/edit
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: clubID
+    - name: clubId
       type: integer
       description: The ID of the club the activity belongs to
       required: true
-    - name: activityID
+    - name: activityId
       type: integer
       description: The ID of the activity to be edited
       required: true
@@ -27,7 +27,7 @@ parameters:
     - name: featured
       type: integer
       description: Whether the activity should be featured in the club (1) or not (0)
-    - name: folderID
+    - name: folderId
       type: integer
       description: The ID of the folder in the club where the activity should be moved
     - name: mediaTheme
@@ -48,7 +48,7 @@ The request body is an object with the activity details to be edited:
   "name": name,
   "active": active,
   "featured": featured,
-  "folderId": folderID,
+  "folderId": folderId,
   "mediaTheme": mediaTheme,
   "position": position,
   "public": public
@@ -61,6 +61,7 @@ Edits an activity in a club.
 
 **Remarks**:
 
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
 - To move an activity out of a folder, set `folderID` to `0`.
 - A valid `position` depends on the other activities in the club, including deactivated and deleted ones. It's recommended to use one of the positions returned by the [Get club activities Live endpoint](/live/clubs/activities.md).
 - A list of theme presets that can be used for the `mediaTheme` parameter can be found in the following directory when selecting an image for a club activity: `Manialinks\Nadeo\CMGame\OfficialThemes`.

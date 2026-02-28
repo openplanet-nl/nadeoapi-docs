@@ -3,17 +3,17 @@ name: Edit club member
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: /api/token/club/{clubID}/member/{accountID}/edit
+route: /api/token/club/{clubId}/member/{accountId}/edit
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: clubID
+    - name: clubId
       type: integer
       description: The ID of the club the members belongs to
       required: true
-    - name: accountID
+    - name: accountId
       type: integer
       description: The account ID of the club member
       required: true
@@ -37,7 +37,8 @@ Edits a member in the club.
 
 **Remarks**:
 
-- The `role` parameter supports 3 roles: Member (`"Member"`), Content Creator (`"Content Creator"`), and Admin (`"Admin"`).
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+- The `role` parameter supports three roles: Member (`"Member"`), Content Creator (`"Content Creator"`), and Admin (`"Admin"`).
 - For more information about member roles, including their permissions, read the [Club Organisation page](https://wiki.trackmania.io/en/content-creation/club-organisation#member-management) in the Trackmania wiki.
 
 ---

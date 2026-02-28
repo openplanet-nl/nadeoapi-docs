@@ -3,17 +3,17 @@ name: Edit club news article
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: /api/token/club/{clubID}/news/{newsID}/edit
+route: /api/token/club/{clubId}/news/{newsId}/edit
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: clubID
+    - name: clubId
       type: integer
       description: The ID of the club the news article belongs to
       required: true
-    - name: newsID
+    - name: newsId
       type: integer
       description: The ID of the news article to be edited
       required: true
@@ -43,6 +43,13 @@ The request body is an object containing the news article details:
 ```
 
 Edits a news article in a club.
+
+---
+
+**Remarks**:
+
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png`/`.jpg` versions are available using separate fields (see example below for reference).
 
 ---
 

@@ -3,13 +3,13 @@ name: Create club room
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: /api/token/club/{clubID}/room/create
+route: /api/token/club/{clubId}/room/create
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: clubID
+    - name: clubId
       type: integer
       description: The ID of the club where the room should be created
       required: true
@@ -53,13 +53,16 @@ parameters:
     - name: scalable
       type: integer
       description: Whether a new server should be created when the room is full (1) or not (0)
+      default: 0
     - name: password
       type: integer
       description: Whether a password will be required to join the room (1) or not (0)
+      default: 0
     - name: shufflePlaylist
       type: integer
       description: Whether the list of maps should be shuffled each time the room is started (1) or not (0)
-    - name: folderID
+      default: 0
+    - name: folderId
       type: integer
       description: The ID of the folder where the room should be created
 ---
@@ -83,7 +86,7 @@ The request body is an object containing the room details:
   "scalable": scalable,
   "password": password,
   "shufflePlaylist": shufflePlaylist,
-  "folderId": folderID
+  "folderId": folderId
 }
 ```
 
@@ -93,8 +96,9 @@ Creates a room in a club.
 
 **Remarks**:
 
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
 - Duplicated `mapUid` will be ignored when creating the room.
-- The `region` parameter supports 3 servers: EU West (`"eu-west"`), Canada Central (`"ca-central"`), and Asia Pacific (`"ap-southeast"`).
+- The `region` parameter supports three servers: EU West (`"eu-west"`), Canada Central (`"ca-central"`), and Asia Pacific (`"ap-southeast"`).
 - For more information about the supported game mode scripts that can be passed to the `script` parameter, including how to create your own, read the [Gamemode documentation](https://wiki.trackmania.io/en/ManiaScript/Advanced/Gamemode) in the Trackmania Wiki.
 - When passing an invalid `script`, the room will fail to start, displaying an error in-game.
 - For a list of supported `settings` for each game mode, alongside their type and values, read the [Gamemode Settings documentation](https://wiki.trackmania.io/en/dedicated-server/Usage/OfficialGameModesSettings) in the Trackmania Wiki.

@@ -3,17 +3,17 @@ name: Edit club room
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: /api/token/club/{clubID}/room/{roomID}/edit
+route: /api/token/club/{clubId}/room/{roomId}/edit
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: clubID
+    - name: clubId
       type: integer
       description: The ID of the club the room belongs to
       required: true
-    - name: roomID
+    - name: roomId
       type: integer
       description: The ID of the room to be edited
       required: true
@@ -85,8 +85,9 @@ Edits a club room.
 
 **Remarks**:
 
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
 - Duplicated `mapUid` will be ignored when editing the room.
-- The `region` parameter supports 3 servers: EU West (`"eu-west"`), Canada Central (`"ca-central"`), and Asia Pacific (`"ap-southeast"`).
+- The `region` parameter supports three servers: EU West (`"eu-west"`), Canada Central (`"ca-central"`), and Asia Pacific (`"ap-southeast"`).
 - For more information about the supported game mode scripts that can be passed to the `script` parameter, including how to create your own, read the [Gamemode documentation](https://wiki.trackmania.io/en/ManiaScript/Advanced/Gamemode) in the Trackmania Wiki.
 - When passing an invalid `script`, the room will stop on map switch and fail to restart, displaying an error in-game.
 - For a list of supported `settings` for each game mode, alongside their type and values, read the [Gamemode Settings documentation](https://wiki.trackmania.io/en/dedicated-server/Usage/OfficialGameModesSettings) in the Trackmania Wiki.
@@ -220,7 +221,7 @@ If the club / room does not exist or the player is not a member of the club, the
 ]
 ```
 
-If the player doesn't have enough permissions in the club to edit rooms, the response will contain an error:
+If the player does not have enough permissions in the club to edit rooms, the response will contain an error:
 
 ```json
 [

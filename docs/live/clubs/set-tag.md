@@ -3,13 +3,13 @@ name: Use club tag
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: /api/token/club/{clubID}/tag
+route: /api/token/club/{clubId}/tag
 
 audience: NadeoLiveServices
 
 parameters:
   path:
-    - name: clubID
+    - name: clubId
       type: integer
       description: The ID of the club with the tag to be used
       required: true
@@ -21,6 +21,7 @@ Use the tag of a club for display.
 
 **Remarks**:
 
+- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
 - If the authenticated account is already using the club's tag, using this endpoint will unpin it.
 - When using a club tag, it will be displayed in-game next to the player's display name.
 
