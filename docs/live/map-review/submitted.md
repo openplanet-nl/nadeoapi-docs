@@ -3,7 +3,7 @@ name: Get submitted maps
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
-route: /api/token/map/map-review/{reviewType}/submitted-map?length={length}&offset={offset}&withFeedback={withFeedback}&withMapInfo={withMapInfo}
+route: /api/token/map/map-review/{reviewType}/submitted-map?length={length}&offset={offset}
 
 audience: NadeoLiveServices
 parameters:
@@ -21,12 +21,6 @@ parameters:
       type: integer
       description: The number of maps to skip
       required: true
-    - name: withFeedback
-      type: boolean
-      description: Whether to include given feedback for each applicable map
-    - name: withMapInfo
-      type: boolean
-      description: Whether to include detailed info on each map
 ---
 
 Retrieves your maps submitted to map review.
@@ -36,7 +30,6 @@ Retrieves your maps submitted to map review.
 **Remarks**:
 
 - This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
-- The `withFeedback` and `withMapInfo` query parameters do not seem to change what is actually returned in the response, but the game sets these to `true` when requesting maps.
 - The data returned from this endpoint is largely the same data that can be accessed through the player's tracks on the [official website](https://trackmania.com).
 - Examples of supported review types can be found in the [glossary](/glossary#map-review-type).
 
