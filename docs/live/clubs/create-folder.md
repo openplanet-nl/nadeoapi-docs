@@ -39,6 +39,8 @@ Creates a folder in a club.
 **Remarks**:
 
 - This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png`/`.jpg` versions are available using separate fields (see example below for reference).
+- See the [glossary](/glossary#club-folders) for more information about folders.
 
 ---
 

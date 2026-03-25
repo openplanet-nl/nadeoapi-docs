@@ -87,10 +87,11 @@ Edits a club room.
 
 - This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
 - Duplicated `mapUid` will be ignored when editing the room.
-- The `region` parameter supports three servers: EU West (`"eu-west"`), Canada Central (`"ca-central"`), and Asia Pacific (`"ap-southeast"`).
+- See the [glossary](/glossary#room-regions) for a list of available regions.
 - For more information about the supported game mode scripts that can be passed to the `script` parameter, including how to create your own, read the [Gamemode documentation](https://wiki.trackmania.io/en/ManiaScript/Advanced/Gamemode) in the Trackmania Wiki.
 - When passing an invalid `script`, the room will stop on map switch and fail to restart, displaying an error in-game.
 - For a list of supported `settings` for each game mode, alongside their type and values, read the [Gamemode Settings documentation](https://wiki.trackmania.io/en/dedicated-server/Usage/OfficialGameModesSettings) in the Trackmania Wiki.
+- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png`/`.jpg` versions are available using separate fields (see example below for reference).
 
 ---
 

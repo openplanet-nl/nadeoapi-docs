@@ -1,5 +1,5 @@
 ---
-name: Get your season/campaign club ranking
+name: Get season/campaign club ranking for player
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
@@ -29,7 +29,6 @@ Gets the authenticated account's rank in a club for the given group/season/campa
 - The `groupUid` `"Personal_Best"` cannot be used for this endpoint because it requires a group that refers to a campaign or season.
 - Unlike some other leaderboard-related endpoints that use a `groupUid` parameter, this one also supports groups/seasons that are already closed.
 - The `position` field is the rank of the player within the club, instead of their rank in the season/campaign itself.
-- An invalid `clubId` will result in a response with the `position` field set to `1`.
 
 ---
 
@@ -55,3 +54,5 @@ If the `groupUid` is invalid or the authenticated account has not played the cam
 ```json
 {}
 ```
+
+An invalid `clubId` results in a response with the `position` field set to `1`.

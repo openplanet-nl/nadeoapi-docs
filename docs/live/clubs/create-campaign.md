@@ -56,9 +56,12 @@ Creates a campaign in a club.
 **Remarks**:
 
 - This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
-- Campaigns created using this endpoint will be deactivated by default. To activate it, use the [Edit activity Live endpoint](/live/clubs/edit-activity.md).
+- Campaigns created using this endpoint will be deactivated by default. To activate them, use the [Edit activity Live endpoint](/live/clubs/edit-activity.md).
 - The position of the maps in the campaign seems to be determined by their order in the `playlist` array in the request body, rather than by their `position` parameter. It is still recommended to pass the desired position.
 - If a map is missing its `mapUid` or `position`, the campaign will be created, but the map will be skipped.
+- Maps used for this endpoint must be uploaded to Nadeo's servers beforehand.
+- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png`/`.jpg` versions are available using separate fields (see example below for reference).
+- See the [glossary](/glossary#club-folders) for more information about folders.
 
 ---
 

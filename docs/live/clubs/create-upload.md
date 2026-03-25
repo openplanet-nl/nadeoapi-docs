@@ -45,7 +45,9 @@ Creates an upload activity in a club for maps, items, or skins.
 **Remarks**:
 
 - This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
-- The `type` parameter supports three types: Track uploads (`"map-upload"`), Skin uploads (`"skin-upload"`), and Item collections (`"item-upload"`).
+- See the [glossary](/glossary#club-upload-activity-types) for a list of available upload types.
+- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png`/`.jpg` versions are available using separate fields (see example below for reference).
+- See the [glossary](/glossary#club-folders) for more information about folders.
 
 ---
 

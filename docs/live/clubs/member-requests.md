@@ -28,6 +28,12 @@ Gets a list of pending member requests for a club.
 
 ---
 
+**Remarks**:
+
+- This endpoint is only useful for clubs with their privacy level set to `"private-open"`. For other privacy settings, the endpoint will return an empty list.
+
+---
+
 **Example request**:
 
 ```plain

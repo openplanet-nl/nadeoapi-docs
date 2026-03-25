@@ -15,14 +15,14 @@ parameters:
       required: true
 ---
 
-Use the tag of a club for display.
+Use the club tag for the authenticated account.
 
 ---
 
 **Remarks**:
 
 - This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
-- If the authenticated account is already using the club's tag, using this endpoint will unpin it.
+- If the authenticated account is already using the club's tag, using this endpoint will remove it.
 - When using a club tag, it will be displayed in-game next to the player's display name.
 
 ---

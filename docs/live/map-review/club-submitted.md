@@ -42,8 +42,10 @@ Retrieves your maps submitted to a club map review activity.
 **Remarks**:
 
 - This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
-- The data returned from this endpoint is largely the same data that can be accessed through the player's tracks on the [official website](https://trackmania.com).
+- The data returned from this endpoint is largely the same data that can be accessed through the club on the [official website](https://trackmania.com).
 - If the `withFeedback` parameter is set to `false`, the `noteInfo` field in the response will be `null`. Similarly, if the `withMapInfo` parameter is set to `false`, the `map` field will be `null`.
+- The relevant `mapReviewId` can be retrieved using the [club activities endpoint](/live/clubs/activities).
+- This endpoint is only useful for club activities. To retrieve maps submitted to Nadeo for official game modes, use the [submitted maps endpoint](/live/map-review/submitted).
 
 ---
 

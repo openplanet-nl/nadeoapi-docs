@@ -60,7 +60,7 @@ POST https://live-services.trackmania.nadeo.live/api/token/club/103034/bucket/10
 
 **Example response**:
 
-```json
+```plain
 Items removed.
 ```
 

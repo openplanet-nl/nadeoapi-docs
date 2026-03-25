@@ -32,6 +32,7 @@ Retrieves your maps submitted to map review.
 - This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
 - The data returned from this endpoint is largely the same data that can be accessed through the player's tracks on the [official website](https://trackmania.com).
 - Examples of supported review types can be found in the [glossary](/glossary#map-review-type).
+- This endpoint is only useful for maps submitted for official game modes. To retrieve maps submitted to club activities, use the [submitted maps to club map review endpoint](/live/map-review/club-submitted).
 
 ---
 

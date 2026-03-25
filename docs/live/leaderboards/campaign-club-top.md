@@ -37,7 +37,6 @@ Gets the leaderboard of a club for the given group/season/campaign.
 - The `groupUid` `"Personal_Best"` cannot be used for this endpoint because it requires a group that refers to a campaign or season.
 - Unlike some other leaderboard-related endpoints that use a `groupUid` parameter, this one also supports groups/seasons that are already closed.
 - The `position` field is the rank of the player within the club, instead of their rank in the season/campaign itself.
-- An invalid `groupUid` will result in a `200` response code and an empty response.
 
 ---
 
@@ -104,3 +103,5 @@ If the `clubId` is invalid, the response will contain an empty list:
   "length": 0
 }
 ```
+
+An invalid `groupUid` results in a `200` response code and an empty response.

@@ -22,6 +22,7 @@ Deletes a club the player has created.
 **Remarks**:
 
 - This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+- Deleting a club will also delete all its content, which will not be able to be recovered afterwards.
 - Only the club creator can delete a club.
 - Deleting a club will reset your tag and pinned club, regardless of the club deleted.
 

@@ -78,10 +78,11 @@ Edits a club.
 **Remarks**:
 
 - This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
-- The `state` parameter supports three privacy levels: Public - Open to everyone (`"public"`), Private - Accept requests (`"private-open"`), and Private (`"private-closed"`).
-- For more information about club customization, including how to create your own images, read the [Club Organisation page](https://wiki.trackmania.io/en/content-creation/club-organisation) in the Trackmania wiki.
+- See the [glossary](/glossary#club-privacy-levels) for a list of available privacy levels.
+- When setting the `state` privacy level to `"public"`, players with a pending member request will automatically join the club.
 - A list of theme presets that can be used for the theme parameters can be found in the following directory when selecting an image for a club activity: `Manialinks\Nadeo\CMGame\OfficialThemes`.
 - As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png`/`.jpg` versions are available using separate fields (see example below for reference).
+- The `tag` field supports text styling, which does not count towards the maximum character length. See the [Text Styling documentation](https://wiki.trackmania.io/en/content-creation/text-styling) for more information about the supported styles and syntax.
 
 ---
 

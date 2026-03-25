@@ -211,3 +211,35 @@ Endpoints that accept a matchmaking type should also accept a string in its plac
 ### Zone ID
 
 UUID that identifies a zone. The full list of zones (including their hierarchical structure) is available via the [Core API's zones endpoint](/core/meta/zones).
+
+### Club privacy levels
+
+Privacy levels for new members that can be set when creating / editing a club. These include:
+
+* `"public"`: Public - Open to everyone. Allows everyone to join the club directly.
+* `"private-open"`: Private - Accept requests. Players can request to join the club in-game. Requests need to be approved by a moderator.
+* `"private-closed"`: Private. The club does not accept new members. The club will still be visible in-game.
+
+### Room regions
+
+Server regions where a room can be hosted. This can be set when creating / editing a club room. Regions include:
+
+* `"eu-west"`: EU West.
+* `"ca-central"`: Canada Central.
+* `"ap-southeast"`: Asia Pacific.
+
+### Club upload activity types
+
+Activity types supported for assets when creating a club upload activity. These include:
+
+* `"map-upload"`: Track uploads.
+* `"skin-upload"`: Skin uploads.
+* `"item-upload"`: Item collections. A group of items that players can add to their map editor in-game.
+
+Item collections need to be compressed as a .zip file and placed in the `ItemCollections` folder in the Trackmania Documents folder.
+
+### Club folders
+
+Folders in clubs that can be used to organize activities. Nested folders are supported.
+
+If the folder ID of an activity is set to `0`, the activity will be moved outside the folder. Similarly, deleting a folder will move the activities outside it.
