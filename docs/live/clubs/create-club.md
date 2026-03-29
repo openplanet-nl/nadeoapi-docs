@@ -78,7 +78,7 @@ Creates a new club.
 - See the [glossary](/glossary#club-privacy-levels) for a list of available privacy levels.
 - A list of theme presets that can be used for the theme parameters can be found in the following directory when selecting an image for a club activity: `Manialinks\Nadeo\CMGame\OfficialThemes`.
 - The `tag` field supports text styling, which does not count towards the maximum character length. See the [Text Styling documentation](https://wiki.trackmania.io/en/content-creation/text-styling) for more information about the supported styles and syntax.
-- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png`/`.jpg` versions are available using separate fields (see example below for reference).
+- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png`/`.jpg` versions are available using separate fields (see example below for reference). This only applies for custom media files, and not for preset themes.
 
 ---
 

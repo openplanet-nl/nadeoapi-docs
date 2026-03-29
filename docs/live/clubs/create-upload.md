@@ -46,7 +46,7 @@ Creates an upload activity in a club for maps, items, or skins.
 
 - This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
 - See the [glossary](/glossary#club-upload-activity-types) for a list of available upload types.
-- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png`/`.jpg` versions are available using separate fields (see example below for reference).
+- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png`/`.jpg` versions are available using separate fields (see example below for reference). This only applies for custom media files, and not for preset themes.
 - See the [glossary](/glossary#club-folders) for more information about folders.
 
 ---

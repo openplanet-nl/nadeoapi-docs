@@ -49,7 +49,7 @@ Creates a ranking in a club.
 **Remarks**:
 
 - This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
-- The `useCase` parameter supports three cases: Current Quarterly Campaign (`"ranking-official"`), Daily Track (`"ranking-daily"`), and Club Campaign (`"ranking-club"`).
+- The `useCase` parameter supports three cases: Current Quarterly Campaign (`"ranking-official"`), Daily Track / TOTD (`"ranking-daily"`), and Club Campaign (`"ranking-club"`).
 - When creating a Club Campaign ranking, it is required to set the `campaignId` parameter to the campaignID of a campaign from the club.
 - If the club campaign is not a campaign from the club, or it does not exist, the ranking will be created, but an error will be displayed in-game when accessing the ranking.
 - See the [glossary](/glossary#club-folders) for more information about folders.

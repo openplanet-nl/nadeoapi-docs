@@ -91,7 +91,7 @@ Edits a club room.
 - For more information about the supported game mode scripts that can be passed to the `script` parameter, including how to create your own, read the [Gamemode documentation](https://wiki.trackmania.io/en/ManiaScript/Advanced/Gamemode) in the Trackmania Wiki.
 - When passing an invalid `script`, the room will stop on map switch and fail to restart, displaying an error in-game.
 - For a list of supported `settings` for each game mode, alongside their type and values, read the [Gamemode Settings documentation](https://wiki.trackmania.io/en/dedicated-server/Usage/OfficialGameModesSettings) in the Trackmania Wiki.
-- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png`/`.jpg` versions are available using separate fields (see example below for reference).
+- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png`/`.jpg` versions are available using separate fields (see example below for reference). This only applies for custom media files, and not for preset themes.
 
 ---
 

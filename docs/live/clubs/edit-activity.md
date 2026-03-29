@@ -65,7 +65,7 @@ Edits an activity in a club.
 - To move an activity out of a folder, set `folderID` to `0`.
 - A valid `position` depends on the other activities in the club, including deactivated and deleted ones. It's recommended to use one of the positions returned by the [Get club activities Live endpoint](/live/clubs/activities.md).
 - A list of theme presets that can be used for the `mediaTheme` parameter can be found in the following directory when selecting an image for a club activity: `Manialinks\Nadeo\CMGame\OfficialThemes`.
-- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png`/`.jpg` versions are available using separate fields (see example below for reference).
+- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png`/`.jpg` versions are available using separate fields (see example below for reference). This only applies for custom media files, and not for preset themes.
 - See the [glossary](/glossary#club-folders) for more information about folders.
 
 ---

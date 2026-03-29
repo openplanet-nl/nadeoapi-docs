@@ -49,7 +49,7 @@ Edits a news article in a club.
 **Remarks**:
 
 - This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
-- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png`/`.jpg` versions are available using separate fields (see example below for reference).
+- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png`/`.jpg` versions are available using separate fields (see example below for reference). This only applies for custom media files, and not for preset themes.
 - The `body` field supports text styling, which does not count towards the maximum character length. See the [Text Styling documentation](https://wiki.trackmania.io/en/content-creation/text-styling) for more information about the supported styles and syntax.
 
 ---

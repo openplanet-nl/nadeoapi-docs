@@ -103,7 +103,7 @@ Creates a room in a club.
 - When passing an invalid `script`, the room will fail to start, displaying an error in-game.
 - For a list of supported `settings` for each game mode, alongside their type and values, read the [Gamemode Settings documentation](https://wiki.trackmania.io/en/dedicated-server/Usage/OfficialGameModesSettings) in the Trackmania Wiki.
 - The password of the new room can be retrieved using the [Get club room password endpoint](/live/clubs/room-password).
-- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png`/`.jpg` versions are available using separate fields (see example below for reference).
+- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png`/`.jpg` versions are available using separate fields (see example below for reference). This only applies for custom media files, and not for preset themes.
 - See the [glossary](/glossary#club-folders) for more information about folders.
 
 ---

@@ -36,7 +36,7 @@ Gets the maps, items, or skins in a specific upload activity.
 
 - See the [glossary](/glossary#club-upload-activity-types) for a list of upload types that can be returned by this endpoint.
 - The primary identifier for items in the returned bucket is their `itemId`. For maps this will be a `mapUid` and for skins this is a `skinID`.
-- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png`/`.jpg` versions are available using separate fields (see example below for reference).
+- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png`/`.jpg` versions are available using separate fields (see example below for reference). This only applies for custom media files, and not for preset themes.
 
 ---
 

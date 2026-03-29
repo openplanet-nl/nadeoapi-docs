@@ -32,7 +32,7 @@ Gets a list of club-related upload activities (where players can upload maps, sk
 **Remarks**:
 
 - See the [glossary](/glossary#club-upload-activity-types) for a list of available upload types that can be retrieved.
-- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png` versions are available using separate fields (see example below for reference).
+- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png` versions are available using separate fields (see example below for reference). This only applies for custom media files, and not for preset themes.
 
 ---
 
