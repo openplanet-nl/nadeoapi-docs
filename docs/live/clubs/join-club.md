@@ -24,6 +24,7 @@ Join a club as a new member.
 - This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
 - If the club is private, but accepts requests, the `role` field in the response body will be `"Apply"`.
 - If the current authenticated account has already joined the club, the endpoint will return the member information.
+- To leave a club you have joined, you can use the [Delete club member Live endpoint](/live/club-management/delete-member.md).
 
 ---
 
