@@ -26,7 +26,7 @@ Gets clubs that you are a member of.
 **Remarks**:
 
 - This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts) as the response depends on a specific user's club memberships.
-- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png`/`.jpg` versions are available using separate fields (see example below for reference).
+- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png`/`.jpg` versions are available using separate fields (see example below for reference). This only applies for custom media files, and not for preset themes.
 
 ---
 
@@ -118,7 +118,7 @@ GET https://live-services.trackmania.nadeo.live/api/token/club/mine?length=1&off
 }
 ```
 
-If you aren't a member of any clubs, the reponse will contain an empty list:
+If you aren't a member of any clubs, the response will contain an empty list:
 
 ```json
 {

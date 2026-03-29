@@ -38,7 +38,7 @@ Gets a list of club activities, including news, rooms, campaigns, and others.
 **Remarks**:
 
 - Omitting the `active` parameter implicitly requests both enabled and disabled activities. For clubs you are not an admin of, `active` needs to be explicitly set to `true` because only admins are allowed to see disabled activities - otherwise you'll get an error complaining that you're not a member/admin of the club.
-- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png` versions are available using separate fields (see example below for reference).
+- As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png` versions are available using separate fields (see example below for reference). This only applies for custom media files, and not for preset themes.
 - By default, all activities (including ones nested in folders) are returned. To only retrieve activities in a specific folder, use `folderId` to filter them. Setting `folderId` to `0` only returns activities outside of folders.
 
 ---
