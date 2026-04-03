@@ -102,6 +102,7 @@ class Controller extends Nin\Controller
 							'icon' => $page->meta['icon'] ?? '',
 							'path' => $page_name,
 							'position' => $page->getPosition(),
+							'hidden' => $page->meta['hidden'] ?? false,
 						];
 					}
 				}

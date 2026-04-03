@@ -1,8 +1,18 @@
 ---
-position: 2
+hidden: true
 ---
 
 # Ubisoft account
+
+<div class="notification is-warning">
+
+As of April 2026, this authentication method no longer works.
+
+Nadeo have implemented a permanent direct replacement using [Nadeo-managed service accounts](/auth/service).
+
+This documentation is still available for reference but should not be used anymore.
+
+</div>
 
 Using a Ubisoft account for authentication lets you access all API endpoints as a real user. This process mimicks the game's authentication procedure.
 
@@ -24,6 +34,14 @@ The Ubisoft account authentication process requires you to send two separate req
 - Using that `ticket`, the second request authenticates your account with Nadeo's account management API, giving you an access token.
 
 ### Acquiring a Ubisoft ticket
+
+<div class="notification is-warning">
+
+As of April 2026, this endpoint only replies with HTTP status code <code>429 - Too many requests</code>.
+
+The response body also includes the message <code>Too many calls per IP address</code>, and there have been reports of people being unable to log in to Ubisoft Connect or any Ubisoft website for several hours after they sent the request. It is therefore highly discouraged to attempt to use this endpoint.
+
+</div>
 
 Send the following HTTP request using a tool/library of your choice:
 

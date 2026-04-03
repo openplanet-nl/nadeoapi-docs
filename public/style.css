@@ -17,3 +17,7 @@ section.topheader p.openplanet a {
 h1, h2, h3 {
 	border-bottom: 1px solid #2b3e50;
 }
+
+.notification.is-warning code, .notification.is-warning pre {
+	color: #f39;
+}
