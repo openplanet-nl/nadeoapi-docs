@@ -15,7 +15,7 @@ parameters:
       required: true
     - name: campaignId
       type: integer
-      description: The ID of the campaign to be edited
+      description: The campaign ID of the campaign to be edited
       required: true
   body:
     - name: name

@@ -3,7 +3,7 @@ name: Edit club map review activity
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: /api/token/club/{clubId}/map-review/{mapReviewId}/edit
+route: /api/token/club/{clubId}/map-review/{activityId}/edit
 
 audience: NadeoLiveServices
 
@@ -13,9 +13,9 @@ parameters:
       type: integer
       description: The ID of the club where the map review activity should be created
       required: true
-    - name: mapReviewId
+    - name: activityId
       type: integer
-      description: The ID of the map review activity to be edited
+      description: The activity ID of the map review activity to be edited
       required: true
   body:
     - name: name

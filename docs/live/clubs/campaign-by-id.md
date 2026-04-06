@@ -3,7 +3,7 @@ name: Get club campaign by ID
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
-route: /api/token/club/{clubID}/campaign/{campaignID}
+route: /api/token/club/{clubID}/campaign/{campaignId}
 
 audience: NadeoLiveServices
 
@@ -13,9 +13,9 @@ parameters:
       type: integer
       description: The ID of the club the campaign belongs to
       required: true
-    - name: campaignID
+    - name: campaignId
       type: integer
-      description: The ID of the campaign to be requested
+      description: The campaign ID of the campaign to be requested
       required: true
 ---
 

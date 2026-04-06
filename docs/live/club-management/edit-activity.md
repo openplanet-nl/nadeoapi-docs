@@ -15,7 +15,7 @@ parameters:
       required: true
     - name: activityId
       type: integer
-      description: The ID of the activity to be edited
+      description: The activity ID of the activity to be edited
       required: true
   body:
     - name: name

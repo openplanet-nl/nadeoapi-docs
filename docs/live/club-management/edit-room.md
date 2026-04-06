@@ -3,7 +3,7 @@ name: Edit club room
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: /api/token/club/{clubId}/room/{roomId}/edit
+route: /api/token/club/{clubId}/room/{activityId}/edit
 
 audience: NadeoLiveServices
 
@@ -13,9 +13,9 @@ parameters:
       type: integer
       description: The ID of the club the room belongs to
       required: true
-    - name: roomId
+    - name: activityId
       type: integer
-      description: The ID of the room to be edited
+      description: The activity ID of the room to be edited
       required: true
   body:
     - name: name

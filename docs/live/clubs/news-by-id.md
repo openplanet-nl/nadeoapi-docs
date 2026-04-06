@@ -3,7 +3,7 @@ name: Get club news by ID
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
-route: /api/token/club/{clubId}/news/{newsId}
+route: /api/token/club/{clubId}/news/{activityId}
 
 audience: NadeoLiveServices
 
@@ -13,9 +13,9 @@ parameters:
       type: integer
       description: The ID of the club the news belongs to
       required: true
-    - name: newsId
+    - name: activityId
       type: integer
-      description: The ID of the news to be requested
+      description: The activity ID of the news to be requested
       required: true
 ---
 

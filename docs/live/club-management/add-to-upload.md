@@ -3,7 +3,7 @@ name: Add items to club upload activity
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: /api/token/club/{clubId}/bucket/{bucketId}/add
+route: /api/token/club/{clubId}/bucket/{activityId}/add
 
 audience: NadeoLiveServices
 
@@ -13,9 +13,9 @@ parameters:
       type: integer
       description: The ID of the club the upload activity belongs to
       required: true
-    - name: bucketId
+    - name: activityId
       type: integer
-      description: The ID of the upload activity where the items should be added
+      description: The activity ID of the upload activity where the items should be added
       required: true
   body:
     - name: itemIdList

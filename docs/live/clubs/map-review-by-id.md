@@ -3,7 +3,7 @@ name: Get map review activity by ID
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
-route: /api/token/club/{clubId}/map-review/{mapReviewId}
+route: /api/token/club/{clubId}/map-review/{activityId}
 
 audience: NadeoLiveServices
 
@@ -13,9 +13,9 @@ parameters:
       type: integer
       description: The ID of the club the map review activity belongs to
       required: true
-    - name: mapReviewId
+    - name: activityId
       type: integer
-      description: The ID of the map review activity to be requested
+      description: The activity ID of the map review activity to be requested
       required: true
 ---
 

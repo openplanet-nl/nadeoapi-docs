@@ -3,7 +3,7 @@ name: Remove items from club upload activity
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: /api/token/club/{clubId}/bucket/{bucketId}/remove
+route: /api/token/club/{clubId}/bucket/{activityId}/remove
 
 audience: NadeoLiveServices
 
@@ -13,9 +13,9 @@ parameters:
       type: integer
       description: The ID of the club the upload activity belongs to
       required: true
-    - name: bucketId
+    - name: activityId
       type: integer
-      description: The ID of the upload activity where the items should be removed from
+      description: The activity ID of the upload activity where the items should be removed from
       required: true
   body:
     - name: itemIdList

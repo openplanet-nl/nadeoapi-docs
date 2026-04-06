@@ -15,7 +15,7 @@ parameters:
       required: true
     - name: activityId
       type: integer
-      description: The ID of the activity to delete
+      description: The activity ID of the activity to delete
       required: true
 ---
 
