@@ -10,7 +10,7 @@ audience: NadeoLiveServices
 parameters:
   path:
     - name: clubId
-      type: string
+      type: integer
       description: The club's ID
       required: true
     - name: memberName

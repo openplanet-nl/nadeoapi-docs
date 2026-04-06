@@ -18,7 +18,7 @@ parameters:
       description: The UID of the map
       required: true
     - name: clubId
-      type: string
+      type: integer
       description: The ID of the club
       required: true
 ---
