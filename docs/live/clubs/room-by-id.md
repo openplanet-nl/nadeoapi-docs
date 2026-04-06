@@ -89,6 +89,7 @@ GET https://live-services.trackmania.nadeo.live/api/token/club/25/room/381929
         "type": "integer"
       }
     },
+    "shufflePlaylist": true,
     "serverInfo": null
   },
   "popularityLevel": 0,
@@ -105,10 +106,26 @@ GET https://live-services.trackmania.nadeo.live/api/token/club/25/room/381929
 }
 ```
 
-If the club or room does not exist, the response will contain an error:
+If the club or room does not exist, the response will contain an error (status 404):
 
 ```json
-[
-  "activity:error-notFound"
-]
+["activity:error-notFound"]
+```
+
+If the room is private and the player is not a member of the club, the response will contain an error (status 403):
+
+```json
+["clubMemberRole:error-notMember"]
+```
+
+Sometimes a room is consistently not found (despite the activity existing) for unknown reasons, and the response will contain an error (status 404):
+
+```json
+["playerServer:error-notFound"]
+```
+
+or for some rooms the error will instead be
+
+```json
+["room:error-notFound"] 
 ```

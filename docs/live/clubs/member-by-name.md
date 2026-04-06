@@ -59,10 +59,8 @@ If the club does not exist or the player is not a member of the club, the respon
 }
 ```
 
-If the player name can't be resolved to an account, the response will contain an error:
+If the player name can't be resolved to an account, the response will contain an error (status 404):
 
 ```json
-[
-  "player:error-notFound"
-]
+["player:error-notFound"]
 ```

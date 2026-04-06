@@ -50,18 +50,14 @@ POST https://live-services.trackmania.nadeo.live/api/token/club/103034/member/cr
 }
 ```
 
-If the club does not exist, the response will contain an error:
+If the club does not exist, the response will contain an error (status 404):
 
 ```json
-[
-  "club:error-notFound"
-]
+["club:error-notFound"]
 ```
 
-If the club is private, the response will contain an error:
+If the club is private, the response will contain an error (status 500):
 
 ```json
-[
-  "clubState:error-wrongState"
-]
+["clubState:error-wrongState"]
 ```

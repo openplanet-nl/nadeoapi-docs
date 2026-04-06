@@ -106,7 +106,7 @@ GET https://live-services.trackmania.nadeo.live/api/token/club/9
 }
 ```
 
-If the club does not exist, the response will contain an error:
+If the club does not exist, the response will contain an error (status 404):
 
 ```json
 ["club:error-notFound"]
