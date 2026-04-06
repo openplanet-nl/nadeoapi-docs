@@ -93,10 +93,8 @@ GET https://live-services.trackmania.nadeo.live/api/token/map-review/totd/submit
 }
 ```
 
-If a map review type does not exist, the response will contain an error:
+If a map review type does not exist, the response will contain an error (status 404):
 
 ```json
-[
-  "mapReview:error-notFound"
-]
+["mapReview:error-notFound"]
 ```

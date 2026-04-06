@@ -51,7 +51,7 @@ GET https://live-services.trackmania.nadeo.live/api/campaign/map/ClF9ty2T55DZq4a
 }
 ```
 
-Example response if the requested map does not exist or is not part of any campaigns or TOTDs:
+Example response if the requested map does not exist or is not part of any campaigns or TOTDs (status 200):
 
 ```json
 {

@@ -60,12 +60,12 @@ GET https://live-services.trackmania.nadeo.live/api/token/map/QleO8OiNAkIXrZs6r0
 }
 ```
 
-Example response if the requested map does not exist:
+If the map does not exist, the response will contain an error (status 500):
 
 ```json
 {
     "error": "NotFoundHttpException",
-    "message": "",
+    "message": "Nadeo Live Services Internal Log",
     "traceId": "Root=1-68b47f2d-6c4f97f5124aa8ab32d2914e"
 }
 ```
