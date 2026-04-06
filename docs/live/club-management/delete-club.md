@@ -40,18 +40,14 @@ POST https://live-services.trackmania.nadeo.live/api/token/club/131063/delete
 Club deleted.
 ```
 
-If the club does not exist or the player is not a member of the club, the response will contain an error:
+If the club does not exist or the player is not a member of the club, the response will contain an error (status 403):
 
 ```json
-[
-  "clubMemberRole:error-notMember"
-]
+["clubMemberRole:error-notMember"]
 ```
 
-If the player is not the creator of the club, the response will contain an error:
+If the player is not the creator of the club, the response will contain an error (status 403):
 
 ```json
-[
-  "clubMemberRole:error-notCreator"
-]
+["clubMemberRole:error-notCreator"]
 ```

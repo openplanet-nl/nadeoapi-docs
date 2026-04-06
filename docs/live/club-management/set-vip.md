@@ -52,26 +52,20 @@ POST https://live-services.trackmania.nadeo.live/api/token/club/131063/vip/69f31
 }
 ```
 
-If the `accountID` is invalid or does not belong to a member of the club, the response will contain an error:
+If the club does not exist or the authenticated account is not a member of the club, the response will contain an error (status 403):
 
 ```json
-[
-  "clubMember:error-notFound"
-]
+["clubMemberRole:error-notMember"]
 ```
 
-If the club does not exist or the authenticated account is not a member of the club, the response will contain an error:
+If the authenticated account does not have enough permissions in the club to manage VIP members, the response will contain an error (status 403):
 
 ```json
-[
-  "clubMemberRole:error-notMember"
-]
+["clubMemberRole:error-notAdmin"]
 ```
 
-If the authenticated account does not have enough permissions in the club to manage VIP members, the response will contain an error:
+If the `accountID` is invalid or does not belong to a member of the club, the response will contain an error (status 404):
 
 ```json
-[
-  "clubMemberRole:error-notAdmin"
-]
+["clubMember:error-notFound"]
 ```

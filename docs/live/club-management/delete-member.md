@@ -43,18 +43,14 @@ POST https://live-services.trackmania.nadeo.live/api/token/club/383/member/69f31
 Club member deleted
 ```
 
-If the club or account does not exist, or the player is not a member of the club, the response will contain an error:
+If the club does not exist, or the authenticated account is not an admin in the club and its account ID does not match the `accountId` parameter, the response will contain an error (status 403):
 
 ```json
-[
-  "clubMember:error-notFound"
-]
+["clubMemberRole:error-notAdmin"]
 ```
 
-If the authenticated account is not an admin in the club and its account ID does not match the `accountId` parameter, the response will contain an error:
+If the account does not exist, or the player is not a member of the club, the response will contain an error (status 404):
 
 ```json
-[
-  "clubMemberRole:error-notAdmin"
-]
+["clubMember:error-notFound"]
 ```

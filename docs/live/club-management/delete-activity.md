@@ -42,26 +42,20 @@ POST https://live-services.trackmania.nadeo.live/api/token/club/103034/activity/
 Activity deleted
 ```
 
-If the club does not exist or the authenticated account is not a member of the club, the response will contain an error:
+If the club does not exist or the authenticated account is not a member of the club, the response will contain an error (status 403):
 
 ```json
-[
-  "clubMemberRole:error-notMember"
-]
+["clubMemberRole:error-notMember"]
 ```
 
-If the activity does not exist, the response will contain an error:
+If the activity does not exist, the response will contain an error (status 404):
 
 ```json
-[
-  "activity:error-notFound"
-]
+["activity:error-notFound"]
 ```
 
-If the player does not have enough permissions in the club to delete activities, the response will contain an error:
+If the player does not have enough permissions in the club to delete activities, the response will contain an error (status 403):
 
 ```json
-[
-  "clubMemberRole:error-notContentCreator"
-]
+["clubMemberRole:error-notAdmin"]
 ```
