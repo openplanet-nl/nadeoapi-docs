@@ -3,7 +3,7 @@ name: Get club room password
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
-route: /api/token/club/{clubId}/room/{roomId}/get-password
+route: /api/token/club/{clubId}/room/{activityId}/get-password
 
 audience: NadeoLiveServices
 
@@ -13,9 +13,9 @@ parameters:
       type: integer
       description: The ID of the club the room belongs to
       required: true
-    - name: roomId
+    - name: activityId 
       type: integer
-      description: The ID of the room to be requested
+      description: The activity ID of the room to be requested
       required: true
 ---
 

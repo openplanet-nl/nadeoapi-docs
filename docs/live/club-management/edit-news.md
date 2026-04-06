@@ -3,7 +3,7 @@ name: Edit club news article
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
-route: /api/token/club/{clubId}/news/{newsId}/edit
+route: /api/token/club/{clubId}/news/{activityId}/edit
 
 audience: NadeoLiveServices
 
@@ -13,9 +13,9 @@ parameters:
       type: integer
       description: The ID of the club the news article belongs to
       required: true
-    - name: newsId
+    - name: activityId
       type: integer
-      description: The ID of the news article to be edited
+      description: The activity ID of the news article to be edited
       required: true
   body:
     - name: name

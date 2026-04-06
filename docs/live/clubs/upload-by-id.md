@@ -3,7 +3,7 @@ name: Get club upload activity by ID
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
-route: /api/token/club/{clubID}/bucket/{bucketID}?length={length}&offset={offset}
+route: /api/token/club/{clubID}/bucket/{activityId}?length={length}&offset={offset}
 
 audience: NadeoLiveServices
 
@@ -13,9 +13,9 @@ parameters:
       type: integer
       description: The ID of the club the upload activity belongs to
       required: true
-    - name: bucketID
+    - name: activityId
       type: integer
-      description: The ID of the upload activity to be requested
+      description: The activity ID of the upload activity to be requested
       required: true
   query:
     - name: length
