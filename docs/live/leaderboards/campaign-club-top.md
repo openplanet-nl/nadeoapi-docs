@@ -93,15 +93,6 @@ GET https://live-services.trackmania.nadeo.live/api/token/leaderboard/group/dccd
 }
 ```
 
-If the `clubId` is invalid, the response will contain an empty list:
-
-```json
-{
-  "top": [],
-  "clubId": 1239790,
-  "groupUid": "dccdf820-6a24-4ab1-9078-58fea41282db",
-  "length": 0
-}
-```
+If the `clubId` is invalid, the response will contain an empty list.
 
 An invalid `groupUid` results in a `200` response code and an empty response.

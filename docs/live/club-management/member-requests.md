@@ -84,12 +84,4 @@ GET https://live-services.trackmania.nadeo.live/api/token/club/354/member/reques
 }
 ```
 
-If the club does not exist or support requests, the response will contain an empty list of pending member requests:
-
-```json
-{
-  "clubMemberList": [],
-  "maxPage": 0,
-  "itemCount": 0
-}
-```
+If the `clubId` is invalid, or the club does not support requests, the response will contain an empty list of pending member requests.

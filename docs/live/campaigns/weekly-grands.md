@@ -72,14 +72,3 @@ GET https://live-services.trackmania.nadeo.live/api/campaign/weekly-grands?offse
   "relativeNextRequest": 17115
 }
 ```
-
-If the campaign does not exist, the response will show an empty list:
-
-```json
-{
-  "itemCount": 1,
-  "campaignList": [],
-  "nextRequestTimestamp": 1769965200,
-  "relativeNextRequest": 17097
-}
-```

@@ -79,14 +79,4 @@ If the `groupUid` is invalid, the response will be an empty object:
 {}
 ```
 
-If the map does not exist, the response will return an empty list of medals:
-
-```json
-{
-  "groupUid": "Personal_Best",
-  "mapUid": "q1kDVh5fq1OCKfyFjJ2QAnB9UW8_fake",
-  "medals": [
-
-  ]
-}
-```
+If the map does not exist, the response will return an empty list of medals.
