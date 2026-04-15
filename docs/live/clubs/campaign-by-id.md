@@ -134,3 +134,6 @@ If the campaign is private and the player is not a member of the club, the respo
 ```json
 ["clubMemberRole:error-notMember"]
 ```
+
+In some rare cases the response may be empty for unknown reasons (status 200):  
+This is consistent for a given campaign; and campaigns with this issue still appear as normal in [get club activities](/live/clubs/activities).
