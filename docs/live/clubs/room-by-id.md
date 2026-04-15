@@ -27,6 +27,7 @@ Gets the details of a specific club room.
 
 - Club rooms connected to a dedicated server will have less information available - specifically, `maps` and `scriptSettings` will likely be empty.
 - As of 2024-01-17, this endpoint's response links to `.dds` media files by default, while several scaled `.png` versions are available using separate fields (see example below for reference). This only applies for custom media files, and not for preset themes.
+- In some rare cases, the room's maps will be returned as an object whose keys are integers starting from `0`, instead of an array.
 
 ---
 
