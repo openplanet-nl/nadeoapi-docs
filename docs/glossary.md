@@ -124,14 +124,14 @@ Not to be confused with more specific IDs for activity types such as [campaign I
 ### Campaign ID
 
 An incremental ID that identifies a club campaign (starting from 1).  
-Many campaign api routes require a campaign ID to be used, rather than an activity ID
+Many campaign API routes require a campaign ID to be used, rather than an activity ID
 
 Not to be confused with the campaign's activity ID.
 
 ### Room ID
 
 An incremental ID that identifies a club room (starting from 1).  
-This is only given when requesting a room's info, and not used in room api routes.
+This is only given when requesting a room's info, and not used in room API routes.
 
 Not to be confused with the room's activity ID.
 
