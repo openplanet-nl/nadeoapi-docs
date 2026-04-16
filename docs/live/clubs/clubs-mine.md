@@ -117,13 +117,3 @@ GET https://live-services.trackmania.nadeo.live/api/token/club/mine?length=1&off
   "clubCount": 41
 }
 ```
-
-If you aren't a member of any clubs, the response will contain an empty list:
-
-```json
-{
-  "clubList": [],
-  "maxPage": 0,
-  "clubCount": 0
-}
-```

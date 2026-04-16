@@ -159,26 +159,20 @@ GET https://live-services.trackmania.nadeo.live/api/token/club/103034/map-review
 }
 ```
 
-If the club does not exist or the authenticated account is not a member of the club, the response will contain an error:
+If the club does not exist or the authenticated account is not a member of the club, the response will contain an error (status 403):
 
 ```json
-[
-  "clubMemberRole:error-notMember"
-]
+["clubMemberRole:error-notMember"]
 ```
 
-If the map review activity does not exist, the response will contain an error:
+If the authenticated account does not have enough permissions in the club to manage map review activities, the response will contain an error (status 403):
 
 ```json
-[
-  "activity:error-notFound"
-]
+["clubMemberRole:error-notContentCreator"]
 ```
 
-If the authenticated account does not have enough permissions in the club to manage map review activities, the response will contain an error:
+If the map review activity does not exist, the response will contain an error (status 404):
 
 ```json
-[
-  "clubMemberRole:error-notContentCreator"
-]
+["activity:error-notFound"]
 ```

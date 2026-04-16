@@ -57,10 +57,14 @@ GET https://live-services.trackmania.nadeo.live/api/token/club/103034/news/10068
 }
 ```
 
-If the club or news does not exist, the response will contain an error:
+If the club or news does not exist, the response will contain an error (status 404):
 
 ```json
-[
-  "activity:error-notFound"
-]
+["activity:error-notFound"]
+```
+
+If the news is private and the player is not a member of the club, the response will contain an error (status 403):
+
+```json
+["clubMemberRole:error-notMember"]
 ```

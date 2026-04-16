@@ -10,7 +10,7 @@ audience: NadeoLiveServices
 parameters:
   path:
     - name: clubId
-      type: string
+      type: integer
       description: The club's ID
       required: true
   query:
@@ -79,12 +79,4 @@ GET https://live-services.trackmania.nadeo.live/api/token/club/9/member?length=3
 }
 ```
 
-If the club does not exist, the response will contain an empty list of members:
-
-```json
-{
-  "clubMemberList": [],
-  "maxPage": 0,
-  "itemCount": 0
-}
-```
+If the `clubId` is invalid, the response will contain an empty list of members.

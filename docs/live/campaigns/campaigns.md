@@ -138,16 +138,3 @@ GET https://live-services.trackmania.nadeo.live/api/token/campaign/official?offs
   "relativeNextRequest": 3439884
 }
 ```
-
-If the campaign does not exist, the response will show an empty list:
-
-```json
-{
-  "itemCount": 9,
-  "campaignList": [
-
-  ],
-  "nextRequestTimestamp": 1664636400,
-  "relativeNextRequest": 3439827
-}
-```

@@ -64,10 +64,14 @@ GET https://live-services.trackmania.nadeo.live/api/token/club/31644/map-review/
 }
 ```
 
-If the club or map review does not exist, the response will contain an error:
+If the club or map review does not exist, the response will contain an error (status 404):
 
 ```json
-[
-  "activity:error-notFound"
-]
+["activity:error-notFound"]
+```
+
+If the map review is private and the player is not a member of the club, the response will contain an error (status 403):
+
+```json
+["clubMemberRole:error-notMember"]
 ```

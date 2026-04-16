@@ -103,10 +103,8 @@ GET https://live-services.trackmania.nadeo.live/api/token/club/103034/map-review
 }
 ```
 
-If the club or map review activity does not exist, the response will contain an error:
+If the club or map review activity does not exist, the response will contain an error (status 404):
 
 ```json
-[
-  "activity:error-notFound"
-]
+["activity:error-notFound"]
 ```

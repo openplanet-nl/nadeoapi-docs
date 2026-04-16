@@ -47,23 +47,28 @@ POST https://live-services.trackmania.nadeo.live/api/token/club/25/room/381929/j
 If the requested room has been deactivated in the club, the response will contain an error:
 
 ```json
-[
-  "roomServer:error-NoServerAvailable"
-]
+["roomServer:error-NoServerAvailable"]
 ```
 
-If the club or room does not exist, the response will contain an error:
+If the club or room does not exist, the response will contain an error (status 404):
 
 ```json
-[
-  "activity:error-notFound"
-]
+["activity:error-notFound"]
 ```
 
-If the requested room is private and the authenticated account is not a member of the club, the response will contain an error:
+If the room is private and the player is not a member of the club, the response will contain an error (status 403):
 
 ```json
-[
-  "clubMemberRole:error-notMember"
-]
+["clubMemberRole:error-notMember"]
+```
+
+In some rare cases the response may contain one of the following errors for unknown reasons (status 404):  
+This is consistent for a given room; and rooms with this error still appear as normal in [get club activities](/live/clubs/activities).
+
+```json
+["playerServer:error-notFound"]
+```
+
+```json
+["room:error-notFound"] 
 ```

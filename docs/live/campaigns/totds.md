@@ -91,16 +91,3 @@ GET https://live-services.trackmania.nadeo.live/api/token/campaign/month?offset=
   "relativeNextRequest": 4041
 }
 ```
-
-If the month does not exist, the response will show an empty list:
-
-```json
-{
-  "monthList": [
-
-  ],
-  "itemCount": 26,
-  "nextRequestTimestamp": 1661274000,
-  "relativeNextRequest": 77366
-}
-```

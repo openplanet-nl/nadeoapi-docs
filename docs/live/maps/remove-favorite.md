@@ -34,4 +34,12 @@ POST https://live-services.trackmania.nadeo.live/api/token/map/favorite/EgUgXeBV
 
 Both successful and unsuccessful responses (including requests for maps that are not part of your favorites) have no content and return a `204` response code.
 
-An invalid `mapUid` results in a `500` response code with an error object in the response body.
+If the map does not exist, the response will contain an error (status 500):
+
+```json
+{
+  "error":"InternalServerError",
+  "message":"Nadeo Live Services Internal Log",
+  "traceId":"Root=1-69d40bd6-34cab79440814f711e17f38a"
+}
+```

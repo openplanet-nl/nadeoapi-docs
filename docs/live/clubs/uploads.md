@@ -113,7 +113,7 @@ GET https://live-services.trackmania.nadeo.live/api/token/club/bucket/item-uploa
 }
 ```
 
-Invalid bucket types will result in an error in the response:
+Invalid bucket types will result in an error in the response (status 400):
 
 ```json
 ["type:error-inArray"]

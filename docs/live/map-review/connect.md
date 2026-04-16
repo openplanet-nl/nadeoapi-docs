@@ -52,7 +52,7 @@ If a dedicated server account is used, the response will contain an error:
 }
 ```
 
-If a map review type does not exist, the response will contain a 403 error:
+If a map review type does not exist, the response will contain an error (status 403):
 
 ```plain
 Only official MapReview

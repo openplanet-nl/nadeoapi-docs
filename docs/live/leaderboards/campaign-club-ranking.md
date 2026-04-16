@@ -14,7 +14,7 @@ parameters:
       description: The ID of the group/season
       required: true
     - name: clubId
-      type: string
+      type: integer
       description: The ID of the club
       required: true
 ---

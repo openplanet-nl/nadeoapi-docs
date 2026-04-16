@@ -84,14 +84,3 @@ GET https://live-services.trackmania.nadeo.live/api/campaign/weekly-shorts?offse
   "relativeNextRequest": 449802
 }
 ```
-
-If the campaign does not exist, the response will show an empty list:
-
-```json
-{
-  "itemCount": 2,
-  "campaignList": [],
-  "nextRequestTimestamp": 1735491600,
-  "relativeNextRequest": 449777
-}
-```

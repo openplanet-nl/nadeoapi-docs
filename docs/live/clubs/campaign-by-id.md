@@ -123,10 +123,17 @@ GET https://live-services.trackmania.nadeo.live/api/token/club/19489/campaign/28
 }
 ```
 
-If the club or campaign does not exist, the response will contain an error:
+If the club or campaign does not exist, the response will contain an error (status 404):
 
 ```json
-[
-  "activity:error-notFound"
-]
+["activity:error-notFound"]
 ```
+
+If the campaign is private and the player is not a member of the club, the response will contain an error (status 403):
+
+```json
+["clubMemberRole:error-notMember"]
+```
+
+In some rare cases the response may be empty for unknown reasons (status 200):  
+This is consistent for a given campaign; and campaigns with this issue still appear as normal in [get club activities](/live/clubs/activities).

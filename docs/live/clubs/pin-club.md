@@ -44,10 +44,8 @@ POST https://live-services.trackmania.nadeo.live/api/token/club/131063/pin
 }
 ```
 
-If the club does not exist or the authenticated account is not a member of the club, the response will contain an error:
+If the club does not exist or the player is not a member of the club, the response will contain an error (status 403):
 
 ```json
-[
-  "clubMemberRole:error-notMember"
-]
+["clubMemberRole:error-notMember"]
 ```

@@ -111,11 +111,29 @@ List of connected platform identities for a player account. Useful for retrievin
 
 Game content-specific terms and identifiers.
 
+### Club ID
+
+An incremental ID that identifies a club (starting from 1).
+
 ### Activity ID
 
-An incremental ID that identifies a club activity.
+An incremental ID that identifies a club activity (starting from 1).
 
-Not to be confused with more specific IDs for activity types such as club campaign IDs or club room IDs.
+Not to be confused with more specific IDs for activity types such as [campaign IDs](#campaign-id) or [room IDs](#room-id).
+
+### Campaign ID
+
+An incremental ID that identifies a club campaign (starting from 1).  
+Many campaign API routes require a campaign ID to be used, rather than an activity ID
+
+Not to be confused with the campaign's activity ID.
+
+### Room ID
+
+An incremental ID that identifies a club room (starting from 1).  
+This is only given when requesting a room's info, and not used in room API routes.
+
+Not to be confused with the room's activity ID.
 
 ### Competition ID
 
