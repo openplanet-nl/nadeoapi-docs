@@ -25,7 +25,9 @@ Gets a join link for a club room.
 
 **Remarks**:
 
-- If the requested room is inactive, using this endpoint will start it. `joinLink` will be an empty string while the room isn't ready.
+- If the requested room is inactive, using this endpoint will start it. `joinLink` will be an empty string while the room isn't ready, which is also reflected by `starting`.
+- Nadeo's code retries the request every 2 seconds for club rooms and 5 seconds for the track of the day channel.
+- You should stop retrying for a room to start when any error is returned.
 
 ---
 
