@@ -26,6 +26,7 @@ Gets a join link for a club room.
 **Remarks**:
 
 - If the requested room is inactive, using this endpoint will start it. `joinLink` will be an empty string while the room isn't ready, which is also reflected by `starting`.
+- `starting` may still be `true` even though a `joinLink` has already been assigned, which means the server is still starting. At that point, Nadeo's code will stop calling this endpoint entirely and instead query the server directly using [CGameManiaTitleControlScriptAPI::GetServerInfo](https://next.openplanet.dev/Game/CGameManiaTitleControlScriptAPI#:~:text=GetServerInfo).
 - Nadeo's code retries the request every 2 seconds for club rooms and 5 seconds for the track of the day channel.
 - You should stop retrying for a room to start when any error is returned.
 
