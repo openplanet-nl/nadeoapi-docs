@@ -3,7 +3,7 @@ name: Get player trophy history
 
 url: https://prod.trackmania.core.nadeo.online
 method: GET
-route: /accounts/{accountId}/trophies?count={count}&offset={offset}
+route: /accounts/{accountId}/trophies?count={count}&offset={offset}&trophyType={trophyType}
 
 audience: NadeoServices
 
@@ -23,6 +23,11 @@ parameters:
       type: integer
       description: The number of entries to skip (looking back from the most recent)
       default: 0
+    - name: trophyType
+      type: integer
+      description: The level of trophy to filter for
+      min: 1
+      max: 9
 ---
 
 Gets a player's earned trophy history, sorted newest to oldest.
