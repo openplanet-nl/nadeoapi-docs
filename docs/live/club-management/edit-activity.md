@@ -61,7 +61,7 @@ Edits an activity in a club.
 
 **Remarks**:
 
-- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+- This endpoint does not accept requests by dedicated server accounts. See [the Authentication guide](/auth) for more information.
 - To move an activity out of a folder, set `folderID` to `0`.
 - A valid `position` depends on the other activities in the club, including deactivated and deleted ones. It's recommended to use one of the positions returned by the [Get club activities Live endpoint](/live/clubs/activities-by-club).
 - A list of theme presets that can be used for the `mediaTheme` parameter can be found in the following directory when selecting an image for a club activity: `Manialinks\Nadeo\CMGame\OfficialThemes`.

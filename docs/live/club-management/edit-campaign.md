@@ -54,7 +54,7 @@ Edits a campaign in a club.
 
 **Remarks**:
 
-- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+- This endpoint does not accept requests by dedicated server accounts. See [the Authentication guide](/auth) for more information.
 - The position of the maps in the campaign seems to be determined by their order in the `playlist` array in the request body, rather than by their `position` parameter. It is still recommended to pass the desired position.
 - If a map is missing its `mapUid` or `position`, the campaign will be edited, but the map will be skipped.
 - Maps used for this endpoint must be uploaded to Nadeo's servers beforehand.

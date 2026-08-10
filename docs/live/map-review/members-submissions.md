@@ -33,7 +33,7 @@ Retrieves map submissions of all club members to a club map review activity.
 
 **Remarks**:
 
-- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+- This endpoint does not accept requests by dedicated server accounts. See [the Authentication guide](/auth) for more information.
 - The relevant `activityId` can be retrieved using the [Get club activities endpoint](/live/clubs/activities-by-club).
 - The data returned from this endpoint is largely the same data that can be accessed through the club's admin page on the [official website](https://trackmania.com).
 - The response data model is similar to the [submitted maps endpoint](/live/map-review/submitted), with this endpoint including additional map information accessible to admins, including player counts data, scores, playing time, and more.

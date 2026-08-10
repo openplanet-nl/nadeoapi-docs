@@ -25,7 +25,7 @@ Deletes an activity from a club.
 
 **Remarks**:
 
-- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+- This endpoint does not accept requests by dedicated server accounts. See [the Authentication guide](/auth) for more information.
 - When deleting a folder with other activities inside it, they will be moved outside the folder.
 
 ---

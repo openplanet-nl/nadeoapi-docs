@@ -20,7 +20,7 @@ Retrieves information to connect to a map review server.
 
 **Remarks**:
 
-- This endpoint is only accessible with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+- This endpoint does not accept requests by dedicated server accounts. See [the Authentication guide](/auth) for more information.
 - Examples of supported review types can be found in the [glossary](/glossary#map-review-type).
 
 ---

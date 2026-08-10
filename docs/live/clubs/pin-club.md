@@ -21,7 +21,7 @@ Pins a club for the current authenticated account.
 
 **Remarks**:
 
-- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+- This endpoint does not accept requests by dedicated server accounts. See [the Authentication guide](/auth) for more information.
 - If the club is already pinned, using this endpoint will unpin it.
 - When a club is pinned, the game will display its assets while editing / playing a map in solo, and the club will be used for the club leaderboards in-game.
 

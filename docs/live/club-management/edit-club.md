@@ -77,7 +77,7 @@ Edits a club.
 
 **Remarks**:
 
-- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+- This endpoint does not accept requests by dedicated server accounts. See [the Authentication guide](/auth) for more information.
 - See the [glossary](/glossary#club-privacy-levels) for a list of available privacy levels.
 - When setting the `state` privacy level to `"public"`, players with a pending member request will automatically join the club.
 - A list of theme presets that can be used for the theme parameters can be found in the following directory when selecting an image for a club activity: `Manialinks\Nadeo\CMGame\OfficialThemes`.

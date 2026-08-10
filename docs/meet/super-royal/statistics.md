@@ -12,6 +12,12 @@ Gets Super Royal statistics for the authenticated account.
 
 ---
 
+**Remarks**:
+
+- This endpoint does not accept requests by dedicated server accounts. See [the Authentication guide](/auth) for more information.
+
+---
+
 **Example request**:
 
 ```plain

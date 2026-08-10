@@ -31,7 +31,7 @@ Gets a list of club campaigns for a specified club.
 
 **Remarks**:
 
-- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+- This endpoint does not accept requests by dedicated server accounts. See [the Authentication guide](/auth) for more information.
 - It is not possible to retrieve inactive campaigns using this endpoint.
 - It is not possible to retrieve campaigns from a specific folder.
 - The campaigns returned by this endpoint are in order of most recently created, not the display order inside the club.

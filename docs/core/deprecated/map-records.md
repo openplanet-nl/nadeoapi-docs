@@ -43,7 +43,7 @@ Gets map records for a set of maps and a set of accounts.
 - By omitting `mapIdList` you can request all records on all maps for a requested `accountId` - note that this only works for the authenticated account; requesting others' records without specifying `mapId`s will result in error `403`. This feature is not supported when using a dedicated server account's token.
 - Stunt and Platform maps (with the map type `TrackMania\TM_Stunt`/`Trackmania\TM_Platform`) require the `gameMode` parameter to be set to `"Stunt"`/`"Platform"`, otherwise the response will contain a "Not found" error.
 - When omitting the `seasonId` parameter, Race maps with clones require the `gameMode` parameter to be set to `"TimeAttackClone"`, otherwise the response will contain an empty list. It's recommended to always pass the `gameMode` parameter for consistency. To find out if a map has clones, you can use the Core API's [map info (multiple) ID](/core/maps/info-multiple-id) or [map info (multiple) UID](/core/maps/info-multiple-uid) endpoints.
-- As of July 12th 2024, this endpoint allows multiple `mapId`s only in combination with exactly one `accountId`. Requesting multiple accounts and multiple maps at the same time results in a `400` error response.
+- As of 2024-12-11, this endpoint allows multiple `mapId`s only in combination with exactly one `accountId`. Requesting multiple accounts and multiple maps at the same time results in a `400` error response.
 
 ---
 

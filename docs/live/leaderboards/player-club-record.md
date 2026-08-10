@@ -29,9 +29,9 @@ Gets the authenticated account's map record and leaderboard position in referenc
 
 **Remarks**:
 
+- This endpoint does not accept requests by dedicated server accounts. See [the Authentication guide](/auth) for more information.
 - The `groupUid` `"Personal_Best"` can be used to get the global leaderboard.
 - The returned `position` may incorrectly be shown as `1` (implying the user has world record even when they don't). On subsequent requests, this value is corrected to the actual position of the player in the club.
-- This endpoint is only accessible with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
 
 ---
 

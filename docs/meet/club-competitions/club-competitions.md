@@ -26,7 +26,7 @@ Gets a list of competitions in clubs the current user is a member of.
 
 **Remarks**:
 
-- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+- This endpoint does not accept requests by dedicated server accounts. See [the Authentication guide](/auth) for more information.
 - This endpoint requires the current user to own Club Access - otherwise they can't join any clubs, and this endpoint will always respond with an empty list.
 
 ---

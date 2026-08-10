@@ -37,7 +37,7 @@ Edits a member in the club.
 
 **Remarks**:
 
-- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+- This endpoint does not accept requests by dedicated server accounts. See [the Authentication guide](/auth) for more information.
 - The `role` parameter supports three roles: Member (`"Member"`), Content Creator (`"Content Creator"`), and Admin (`"Admin"`).
 - For more information about member roles, including their permissions, read the [Club Organisation page](https://wiki.trackmania.io/en/content-creation/club-organisation#member-management) in the Trackmania wiki.
 

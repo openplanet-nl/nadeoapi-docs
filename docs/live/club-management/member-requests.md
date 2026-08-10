@@ -30,6 +30,7 @@ Gets a list of pending member requests for a club.
 
 **Remarks**:
 
+- This endpoint does not accept requests by dedicated server accounts. See [the Authentication guide](/auth) for more information.
 - This endpoint is only useful for clubs with their privacy level set to `"private-open"`. For other privacy settings, the endpoint will return an empty list.
 
 ---

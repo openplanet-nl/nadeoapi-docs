@@ -38,7 +38,7 @@ Adds a list of maps, items, or skins to an upload activity in a club.
 
 **Remarks**:
 
-- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+- This endpoint does not accept requests by dedicated server accounts. See [the Authentication guide](/auth) for more information.
 - The IDs needed for the `itemIdList` parameter depend on the type of upload activity requested. For maps uploads, it requires their `mapUid`, while skins and items require their `skinID` and `itemID`, respectively.
 - When passing an invalid ID, including IDs for other upload types, the items will be added, but an error might be displayed in-game when accessing the activity.
 - Assets used for this endpoint must be uploaded to Nadeo's servers beforehand.
