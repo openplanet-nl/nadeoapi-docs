@@ -8,7 +8,7 @@ route: /api/token/club/player/info
 audience: NadeoLiveServices
 ---
 
-Gets club-related information for your account.
+Gets club-related information for the authenticated account.
 
 ---
 

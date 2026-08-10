@@ -1,5 +1,5 @@
 ---
-name: Get player trophy rankings (self)
+name: Get your player trophy rankings
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
@@ -9,7 +9,7 @@ audience: NadeoLiveServices
 
 ---
 
-Gets the currently authenticated player's trophy leaderboard positions for each of their zones.
+Gets the currently authenticated account's trophy leaderboard positions for each of their zones.
 
 ---
 
@@ -20,11 +20,13 @@ Gets the currently authenticated player's trophy leaderboard positions for each 
 ---
 
 **Example request**:
+
 ```plain
 GET https://live-services.trackmania.nadeo.live/api/token/leaderboard/trophy
 ```
 
 **Example response**:
+
 ```json
 {
   "countPoint": 1361289,

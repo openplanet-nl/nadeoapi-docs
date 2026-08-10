@@ -1,5 +1,5 @@
 ---
-name: Get Super Royal statistics
+name: Get your Super Royal statistics
 
 url: https://meet.trackmania.nadeo.club
 method: GET
@@ -8,7 +8,7 @@ route: /api/me/super-royal/stats
 audience: NadeoLiveServices
 ---
 
-Gets Super Royal statistics for the current account.
+Gets Super Royal statistics for the authenticated account.
 
 ---
 

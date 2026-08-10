@@ -19,7 +19,7 @@ parameters:
       required: true
 ---
 
-Gets clubs that you are a member of.
+Gets clubs that the authenticated account is a member of.
 
 ---
 

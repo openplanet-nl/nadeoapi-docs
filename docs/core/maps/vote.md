@@ -1,5 +1,5 @@
 ---
-name: Get map vote
+name: Get your map vote
 
 url: https://prod.trackmania.core.nadeo.online
 method: GET
@@ -16,7 +16,7 @@ parameters:
 
 ---
 
-Gets the currently authenticated user's vote for a map.
+Gets the currently authenticated account's vote for a map.
 
 ---
 

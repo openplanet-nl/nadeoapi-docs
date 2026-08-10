@@ -1,5 +1,5 @@
 ---
-name: Get submitted maps
+name: Get your submitted maps
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
@@ -23,7 +23,7 @@ parameters:
       required: true
 ---
 
-Retrieves your maps submitted to map review.
+Retrieves maps submitted to map review by the authenticated account.
 
 ---
 

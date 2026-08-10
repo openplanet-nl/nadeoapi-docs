@@ -1,5 +1,5 @@
 ---
-name: Get favorite maps by UIDs
+name: Get your favorite maps by UIDs
 
 url: https://prod.trackmania.core.nadeo.online
 method: GET
@@ -15,7 +15,7 @@ parameters:
       required: true
 ---
 
-Gets maps in your authenticated account's favorite tracks via their UIDs.
+Gets the authenticated account's favorite maps via their UIDs.
 
 ---
 

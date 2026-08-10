@@ -1,5 +1,5 @@
 ---
-name: Get favorite maps
+name: Get your favorite maps
 
 url: https://prod.trackmania.core.nadeo.online
 method: GET
@@ -37,7 +37,7 @@ parameters:
       description: Whether the map was created by the current authenticated account
 ---
 
-Retrieves your authenticated account's favorite tracks.
+Retrieves the authenticated account's favorite tracks.
 
 ---
 

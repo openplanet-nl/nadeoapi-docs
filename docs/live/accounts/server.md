@@ -1,5 +1,5 @@
 ---
-name: Get dedicated server accounts
+name: Get your dedicated server accounts
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
@@ -9,21 +9,24 @@ audience: NadeoLiveServices
 
 ---
 
-Gets the currently authenticated user's dedicated server accounts.
+Gets the currently authenticated account's dedicated server accounts.
 
 ---
 
 **Remarks**:
+
 - This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
 
 ---
 
 **Example request**:
+
 ```plain
 GET https://live-services.trackmania.nadeo.live/api/token/server/player-server/account
 ```
 
 **Example response**:
+
 ```json
 {
   "playerServerAccount": [

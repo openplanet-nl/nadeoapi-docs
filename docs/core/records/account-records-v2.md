@@ -1,5 +1,5 @@
 ---
-name: Get account records (v2)
+name: Get your account records (v2)
 
 url: https://prod.trackmania.core.nadeo.online
 method: GET

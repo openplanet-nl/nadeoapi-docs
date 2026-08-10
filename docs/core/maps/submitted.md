@@ -1,5 +1,5 @@
 ---
-name: Get submitted maps
+name: Get your submitted maps
 
 url: https://prod.trackmania.core.nadeo.online
 method: GET
@@ -8,7 +8,7 @@ route: /maps/by-submitter
 audience: NadeoServices
 ---
 
-Gets all maps submitted/uploaded by the currently authenticated user.
+Gets all maps submitted/uploaded by the currently authenticated account.
 
 ---
 

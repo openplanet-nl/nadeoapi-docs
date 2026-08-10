@@ -1,5 +1,5 @@
 ---
-name: Get authored maps
+name: Get your authored maps
 
 url: https://prod.trackmania.core.nadeo.online
 method: GET

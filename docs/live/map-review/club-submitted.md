@@ -1,5 +1,5 @@
 ---
-name: Get submitted maps to club map review
+name: Get your submitted maps to club map review
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
@@ -35,7 +35,7 @@ parameters:
       default: false
 ---
 
-Retrieves your maps submitted to a club map review activity.
+Retrieves maps submitted to a club map review activity by the authenticated account.
 
 ---
 
