@@ -9,7 +9,7 @@ audience: NadeoLiveServices
 
 ---
 
-Gets the currently authenticated account's trophy leaderboard positions for each of their zones.
+Gets the authenticated account's trophy leaderboard positions for each of their zones.
 
 ---
 

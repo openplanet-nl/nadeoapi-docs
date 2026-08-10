@@ -16,13 +16,13 @@ parameters:
 
 ---
 
-Gets the currently authenticated account's vote for a map.
+Gets the authenticated account's vote for a map.
 
 ---
 
 **Remarks**:
 
-- Because this endpoint only works for the currently authenticated user, it cannot be used by a dedicated server account.
+- Because this endpoint only works for the authenticated account, it cannot be used by a dedicated server account.
 - The `vote` field in the response can be `-1` for a dislike, or `1` for a like. `0` indicates the user has not voted or has removed a previous vote again.
 - The `voteDate` field in the response contains the day of the vote (i.e. the last change to the given map's vote), but not an exact timestamp.
 

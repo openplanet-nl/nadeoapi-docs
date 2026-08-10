@@ -1,5 +1,5 @@
 ---
-name: Get player map record in a club
+name: Get your player map record in a club
 
 url: https://live-services.trackmania.nadeo.live
 method: GET
@@ -23,7 +23,7 @@ parameters:
       required: true
 ---
 
-Gets the currently authenticated user's map record and leaderboard position in reference to a club.
+Gets the authenticated account's map record and leaderboard position in reference to a club.
 
 ---
 
@@ -59,7 +59,7 @@ If the `groupUid` is invalid or the map does not exist, the response will be an 
 {}
 ```
 
-If the currently authenticated user is not a member of the requested club, the response will contain an error:
+If the authenticated account is not a member of the requested club, the response will contain an error:
 
 ```json
 [

@@ -31,14 +31,14 @@ Starting in January 2026, this endpoint will no longer support retrieving a play
 
 </div>
 
-Gets records for the currently authenticated account.
+Gets records for the authenticated account.
 
 ---
 
 **Remarks**:
 
-- This endpoint only works for the currently authenticated account, requesting others' records will result in error `403`. This feature is not supported when using a dedicated server account's token.
-- This endpoint is limited to the most recent 1,000 records driven by the currently authenticated account. Retrieving all historical records is not supported.
+- This endpoint only works for the authenticated account, requesting others' records will result in error `403`. This feature is not supported when using a dedicated server account's token.
+- This endpoint is limited to the most recent 1,000 records driven by the authenticated account. Retrieving all historical records is not supported.
 - To retrieve records driven on Stunt / Platform maps (with the map type `TrackMania\TM_Stunt`/`Trackmania\TM_Platform`) set the `gameMode` parameter to `"Stunt"`/`"Platform"`.
 - When omitting the `seasonIdList` parameter, Race maps with clones require the `gameMode` parameter to be set to `"TimeAttackClone"`, otherwise the response will contain an empty list. It's recommended to always pass the `gameMode` parameter for consistency. To find out if a map has clones, you can use the Core API's [map info (multiple) ID](/core/maps/info-multiple-id) or [map info (multiple) UID](/core/maps/info-multiple-uid) endpoints.
 - `mapIdList` and `seasonIdList` should not both be provided in the same request as they both get applied on every result.
@@ -132,7 +132,7 @@ GET https://prod.trackmania.core.nadeo.online/v2/accounts/5b4d42f4-c2de-407d-b36
 ]
 ```
 
-If the `accountId` does not match the currently authenticated account, the response will contain an error message:
+If the `accountId` does not match the authenticated account, the response will contain an error message:
 
 ```json
 {

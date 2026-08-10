@@ -1,5 +1,5 @@
 ---
-name: Get player records
+name: Get your player records
 
 url: https://live-services.trackmania.nadeo.live
 method: POST
@@ -39,7 +39,7 @@ The request body contains an array of maps, each identified by its `mapUid`:
 
 ---
 
-Gets the currently authenticated user's records on multiple maps.
+Gets the authenticated account's records on multiple maps.
 
 ---
 

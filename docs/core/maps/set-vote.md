@@ -31,13 +31,13 @@ The request body contains the vote value:
 
 ---
 
-Sets a like/dislike vote for a map as the currently authenticated user.
+Sets a like/dislike vote for a map as the authenticated account.
 
 ---
 
 **Remarks**:
 
-- Because this endpoint only works for the currently authenticated user, it cannot be used by a dedicated server account.
+- Because this endpoint only works for the authenticated account, it cannot be used by a dedicated server account.
 - The `vote` field can be set to `-1` for a dislike, or `1` for a like. `0` can be used to unset the vote.
 
 ---

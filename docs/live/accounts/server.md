@@ -9,7 +9,7 @@ audience: NadeoLiveServices
 
 ---
 
-Gets the currently authenticated account's dedicated server accounts.
+Gets the authenticated account's dedicated server accounts.
 
 ---
 

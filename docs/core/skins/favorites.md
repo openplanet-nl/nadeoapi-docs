@@ -11,17 +11,17 @@ parameters:
   path:
     - name: accountId
       type: string
-      description: The account ID of the authenticated user
+      description: The account ID of the authenticated account
       required: true
 ---
 
-Gets the favorited/garage skins data for the currently authenticated user.
+Gets the favorited/garage skins data for the authenticated account.
 
 ---
 
 **Remarks**:
 
-- Because this endpoint only works for the currently authenticated user, it cannot be used by a dedicated server account.
+- Because this endpoint only works for the authenticated account, it cannot be used by a dedicated server account.
 - The `timestamp` value for each skin corresponds to when it got added to the user's favorites.
 - This endpoint only returns a skin's identifier - if you need to retrieve the actual skin information, you can use [the skin info endpoint](/core/skins/info).
 
@@ -64,7 +64,7 @@ If the `accountId` is invalid, the response will contain an error message (along
 }
 ```
 
-If the `accountId` belongs to a user that's not currently authenticated, the response will contain an error message (along with status `403`):
+If the `accountId` does not match the authenticated account, the response will contain an error message (along with status `403`):
 
 ```json
 {

@@ -66,7 +66,7 @@ See below for the available payload data in a typical access token (using a Ubis
   "usg": "Client", // usage: either "Client" for a Ubisoft account or "Server" for a dedicated server account
   "sid": "<uuid>", // session ID
   "sat": 1735394983, // timestamp of signing, typically equal to "iat"
-  "sub": "5b4d42f4-c2de-407d-b367-cbff3fe817bc", // subject: Nadeo account ID of the authenticated user
+  "sub": "5b4d42f4-c2de-407d-b367-cbff3fe817bc", // subject: Nadeo account ID of the authenticated account
   "aun": "tooInfinite", // display name of the user/dedicated server account
   "rtk": false, // flag to indicate refresh tokens, always false for access tokens
   "pce": false, // always false
@@ -97,7 +97,7 @@ See below for the available payload data in a typical refresh token (using a Ubi
   "usg": "Client", // usage: either "Client" for a Ubisoft account or "Server" for a dedicated server account
   "sid": "<uuid>", // session ID
   "sat": 1735394983, // timestamp of signing, typically equal to "iat"
-  "sub": "5b4d42f4-c2de-407d-b367-cbff3fe817bc", // subject: Nadeo account ID of the authenticated user
+  "sub": "5b4d42f4-c2de-407d-b367-cbff3fe817bc", // subject: Nadeo account ID of the authenticated account
   "aun": "tooInfinite", // display name of the user/dedicated server account
   "rtk": true, // flag to indicate refresh tokens, always true for refresh tokens
   "pce": false, // always false

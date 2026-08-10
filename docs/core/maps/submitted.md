@@ -8,13 +8,13 @@ route: /maps/by-submitter
 audience: NadeoServices
 ---
 
-Gets all maps submitted/uploaded by the currently authenticated account.
+Gets all maps submitted/uploaded by the authenticated account.
 
 ---
 
 **Remarks**:
 
-- Because this endpoint only works for the currently authenticated user, it cannot be used by a dedicated server account.
+- Because this endpoint only works for the authenticated account, it cannot be used by a dedicated server account.
 - Submitted maps are defined as maps that were uploaded by the current user - who initially authored/created the maps is irrelevant for this endpoint. To get a list of maps authored by the current user, use [the authored maps endpoint](/core/maps/authored).
 
 ---

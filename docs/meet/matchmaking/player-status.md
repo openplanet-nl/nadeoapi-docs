@@ -1,5 +1,5 @@
 ---
-name: Get player matchmaking status
+name: Get your player matchmaking status
 
 url: https://meet.trackmania.nadeo.club
 method: GET
@@ -15,7 +15,7 @@ parameters:
       required: true
 ---
 
-Gets the matchmaking status of the currently authenticated user.
+Gets the matchmaking status of the authenticated account.
 
 ---
 
