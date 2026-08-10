@@ -20,16 +20,19 @@ Gets the skin information for the requested skin ID.
 ---
 
 **Remarks**:
-- This endpoint is only accessible with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts). If you encounter `401` errors using a dedicated server account, switch to using a Ubisoft account.
+
+- This endpoint does not accept requests by dedicated server accounts. See [the Authentication guide](/auth) for more information.
 
 ---
 
 **Example request**:
+
 ```plain
 GET https://prod.trackmania.core.nadeo.online/skins/dca3a74a-acf5-4780-8842-15ba80c3b673
 ```
 
 **Example response**:
+
 ```json
 {
   "creatorId": "3468343f-bc7f-4ddd-938f-0f118d13cdc9",

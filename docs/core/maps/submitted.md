@@ -14,7 +14,7 @@ Gets all maps submitted/uploaded by the authenticated account.
 
 **Remarks**:
 
-- Because this endpoint only works for the authenticated account, it cannot be used by a dedicated server account.
+- This endpoint does not accept requests by dedicated server accounts. See [the Authentication guide](/auth) for more information.
 - Submitted maps are defined as maps that were uploaded by the current user - who initially authored/created the maps is irrelevant for this endpoint. To get a list of maps authored by the current user, use [the authored maps endpoint](/core/maps/authored).
 
 ---

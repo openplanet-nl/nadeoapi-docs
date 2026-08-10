@@ -15,14 +15,14 @@ parameters:
       required: true
 ---
 
-Gets the equipped skins data for the requested users.
+Gets the equipped skins data for the requested accounts.
 
 ---
 
 **Remarks**:
 
+- This endpoint does not accept requests by dedicated server accounts. See [the Authentication guide](/auth) for more information.
 - This endpoint only returns a skin's identifier - if you need to retrieve the actual skin information, you can use [the skin info endpoint](/core/skins/info).
-- This endpoint is only accessible with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts). If you encounter `401` errors using a dedicated server account, switch to using a Ubisoft account.
 
 ---
 

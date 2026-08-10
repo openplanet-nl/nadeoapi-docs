@@ -20,7 +20,8 @@ Gets player zones from account IDs.
 ---
 
 **Remarks**:
-- This endpoint is only accessible with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts). If you encounter `401` errors using a dedicated server account, switch to using a Ubisoft account.
+
+- This endpoint does not accept requests by dedicated server accounts. See [the Authentication guide](/auth) for more information.
 - This endpoint has no intrinsic limit on the number of account IDs requested, but it will return a `414` error if the request URI length is 8220 characters or more (corresponding to just over 200 account IDs, depending on how you encode the URI).
 - To translate `zoneId` values to names, reference the response from [the global zones endpoint](/core/meta/zones).
 - If you'd prefer a response that already contains zone names as well as the full zone hierarchy for a player, take a look at [the player trophies endpoint](/live/leaderboards/trophies).
@@ -28,11 +29,13 @@ Gets player zones from account IDs.
 ---
 
 **Example request**:
+
 ```plain
 GET https://prod.trackmania.core.nadeo.online/accounts/zones/?accountIdList=5b4d42f4-c2de-407d-b367-cbff3fe817bc,7398eeb6-9b4e-44b8-a7a1-a2149955ac70
 ```
 
 **Example response**:
+
 ```json
 [
   {

@@ -21,7 +21,7 @@ Gets the favorited/garage skins data for the authenticated account.
 
 **Remarks**:
 
-- Because this endpoint only works for the authenticated account, it cannot be used by a dedicated server account.
+- This endpoint does not accept requests by dedicated server accounts. See [the Authentication guide](/auth) for more information.
 - The `timestamp` value for each skin corresponds to when it got added to the user's favorites.
 - This endpoint only returns a skin's identifier - if you need to retrieve the actual skin information, you can use [the skin info endpoint](/core/skins/info).
 

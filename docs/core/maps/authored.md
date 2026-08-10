@@ -14,7 +14,7 @@ Gets all maps authored/created by the authenticated account.
 
 **Remarks**:
 
-- Because this endpoint only works for the authenticated account, it cannot be used by a dedicated server account.
+- This endpoint does not accept requests by dedicated server accounts. See [the Authentication guide](/auth) for more information.
 - Authored maps are defined as maps that were created/last saved by the current user - who initially uploaded/submitted the maps to Nadeo's servers is irrelevant for this endpoint. To get a list of maps uploaded by the current user, use [the submitted maps endpoint](/core/maps/submitted).
 
 ---

@@ -21,7 +21,7 @@ Gets the authenticated account's favorite maps via their UIDs.
 
 **Remarks**:
 
-- This endpoint is only useful with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts).
+- This endpoint does not accept requests by dedicated server accounts. See [the Authentication guide](/auth) for more information.
 - The `timestamp` field is when the map was added to your favorite tracks.
 
 ---

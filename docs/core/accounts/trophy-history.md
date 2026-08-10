@@ -36,7 +36,7 @@ Gets a player's earned trophy history, sorted newest to oldest.
 
 **Remarks**:
 
-- This endpoint is only accessible with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts). If you encounter `401` errors using a dedicated server account, switch to using a Ubisoft account.
+- This endpoint does not accept requests by dedicated server accounts. See [the Authentication guide](/auth) for more information.
 
 ---
 

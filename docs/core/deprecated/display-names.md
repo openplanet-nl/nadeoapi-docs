@@ -27,16 +27,19 @@ Gets player display names from account IDs.
 ---
 
 **Remarks**:
-- This endpoint is only accessible with tokens authenticated through Ubisoft user accounts (as opposed to dedicated server accounts). If you encounter `401` errors using a dedicated server account, switch to using a Ubisoft account.
+
+- This endpoint does not accept requests by dedicated server accounts. See [the Authentication guide](/auth) for more information.
 
 ---
 
 **Example request**:
+
 ```plain
 GET https://prod.trackmania.core.nadeo.online/accounts/displayNames/?accountIdList=5b4d42f4-c2de-407d-b367-cbff3fe817bc,7398eeb6-9b4e-44b8-a7a1-a2149955ac70
 ```
 
 **Example response**:
+
 ```json
 [
   {
