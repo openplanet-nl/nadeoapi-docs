@@ -1,6 +1,6 @@
 ---
 title: Meet API
-icon: book
+icon: groups
 
 menus:
   main:

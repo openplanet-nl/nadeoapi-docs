@@ -1,6 +1,6 @@
 ---
 title: Live API
-icon: book
+icon: sensors
 
 menus:
   main:

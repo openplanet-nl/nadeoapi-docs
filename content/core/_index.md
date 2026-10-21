@@ -1,6 +1,6 @@
 ---
 title: Core API
-icon: book
+icon: computer
 
 menus:
   main:
