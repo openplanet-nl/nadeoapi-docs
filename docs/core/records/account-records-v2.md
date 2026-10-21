@@ -3,7 +3,7 @@ name: Get account records (v2)
 
 url: https://prod.trackmania.core.nadeo.online
 method: GET
-route: /v2/accounts/{accountId}/mapRecords?mapIdList={mapIdList}&seasonIdList={seasonIdList}&gameMode={gameMode}
+route: /v2/accounts/{accountId}/mapRecords?mapIdList={mapIdList}&seasonIdList={seasonIdList}&gameMode={gameMode}&offset={offset}
 
 audience: NadeoServices
 
@@ -23,11 +23,14 @@ parameters:
     - name: gameMode
       type: string
       description: The game mode of the requested records (e.g. for Stunt maps)
+    - name: offset
+      type: integer
+      description: The number of records to skip
 ---
 
 <div class="notification is-warning">
 
-Starting in January 2026, this endpoint will no longer support retrieving a player's most recent records, and it will require supplying specific map/season IDs.
+Note: Nadeo has indicated they may restrict this endpoint's functionality in the future due to performance concerns, especially the ability to retrieve all recent records for the currently authenticated account.
 
 </div>
 
