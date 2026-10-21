@@ -1,0 +1,50 @@
+---
+title: Get waiting time
+description: Retrieves information on how long a player must wait before their map is the current one if they were to submit it to a map review server.
+layout: api
+
+menus:
+  main:
+    parent: Map Review
+
+params:
+  url: https://live-services.trackmania.nadeo.live
+  method: GET
+  route: /api/token/map-review/{reviewType}/waiting-time
+
+  audience: NadeoLiveServices
+
+  path:
+    - name: reviewType
+      type: string
+      description: The type of review server
+      required: true
+---
+
+**Remarks**:
+
+- Examples of supported review types can be found in the [glossary](/glossary#map-review-type).
+
+---
+
+**Example request**:
+
+```plain
+GET https://live-services.trackmania.nadeo.live/api/token/map-review/totd/waiting-time
+```
+
+**Example response**:
+
+```json
+{
+  "seconds": 540
+}
+```
+
+The `"seconds"` field in the response should be a multiple of 180 seconds (3 minutes).
+
+If a map review type does not exist, the response will contain an error (status 403):
+
+```plain
+Only official MapReview
+```

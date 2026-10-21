@@ -1,0 +1,101 @@
+body.theme.openplanet {
+	--bg: #1b2834;
+	--bg-deep: #273949;
+	--bg-subtle: #070707;
+
+	--fg: #d7e0e9;
+	--fg-link: #2199ef;
+	--fg-danger: #c9492c;
+	--fg-dim: rgb(from var(--fg) r g b / 0.5);
+
+	& .primary   { --sub-bg: #33a3f9;                      --sub-bg-subtle: oklch(from var(--sub-bg) calc(l - 0.25) calc(c - 0.05) h); }
+	& .secondary { --sub-bg: #2397be; --sub-fg: var(--bg); --sub-bg-subtle: oklch(from var(--sub-bg) calc(l - 0.25) calc(c - 0.05) h); }
+	& .success   { --sub-bg: #20ac2b; --sub-fg: var(--bg); --sub-bg-subtle: oklch(from var(--sub-bg) calc(l - 0.2) calc(c - 0.05) h); }
+	& .warning   { --sub-bg: #d89400; --sub-fg: var(--bg); --sub-bg-subtle: oklch(from var(--sub-bg) calc(l - 0.2) calc(c - 0.05) h); }
+	& .danger    { --sub-bg: #c9492c;                      --sub-bg-subtle: oklch(from var(--sub-bg) calc(l - 0.2) calc(c - 0.05) h); }
+	& .link      { --sub-bg: #04508b;                      --sub-bg-subtle: oklch(from var(--sub-bg) calc(l - 0.2) calc(c - 0.05) h); }
+	& .deep {
+		--sub-bg: var(--bg-deep);
+		--sub-fg-subtle: #fff;
+		--sub-bg-subtle: oklch(from var(--sub-bg) calc(l - 0.3) calc(c - 0.05) h);
+	}
+	& .subtle {
+		--sub-bg: #7090b0;
+		--sub-fg-subtle: #fff;
+		--sub-bg-subtle: oklch(from var(--sub-bg) calc(l - 0.3) calc(c - 0.05) h);
+	}
+}
+
+.op-service-header {
+	background: #000;
+	color: #fff;
+	padding: 0.5em 0;
+
+	& .openplanet {
+		color: #f39 !important;
+		font-weight: bold;
+	}
+}
+
+footer {
+	background: var(--bg-deep);
+}
+
+span.op-method {
+	font-weight: bold;
+	&.get { color: #20ac2b; }
+	&.post { color: #c9492c; }
+}
+
+.docs-content {
+	overflow-x: auto;
+}
+
+.content {
+	p, li {
+		line-height: 1.5;
+	}
+}
+
+div.highlight:not(:first-child) {
+	margin-top: 1em;
+}
+
+/* TODO: Move to Feneko */
+@media screen and (max-width: 1024px) {
+	.hidden-mobile {
+		display: none;
+	}
+}
+
+nav.tree {
+	& .header {
+		color: var(--fg-dim);
+	}
+
+	& a.item {
+		background: transparent;
+		&.active { background: var(--item-bg); }
+	}
+}
+
+pre > code {
+	/* todo: we should just *not match* code when it's inside of a pre instead of
+	 *       whatever this shit is */
+	background: transparent;
+	border: 0;
+	padding: 0;
+	font-size: inherit;
+	font-family: inherit;
+	border-radius: 0;
+}
+
+.content {
+	& ul > li + li {
+		margin-top: 0.35em;
+	}
+
+	& h1, & h2, & h3, & h4, & h5, & h6 {
+		border-bottom: 1px solid var(--sub-bg);
+	}
+}

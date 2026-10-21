@@ -1,1 +1,3 @@
-.venv
+public/
+*.lock
+makefile

@@ -1,0 +1,10 @@
+baseURL = 'https://webservices.openplanet.dev/'
+languageCode = 'en-us'
+title = 'Trackmania API Documentation - Openplanet'
+disableKinds = [ 'taxonomy', 'sitemap', 'rss' ]
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.highlight]
+style = 'github-dark'

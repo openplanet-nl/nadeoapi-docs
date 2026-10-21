@@ -1,0 +1,125 @@
+{{ define "main" }}
+	<h1>{{ .Title }}</h1>
+	<p>{{ .Description }}</p>
+
+	{{ with .Params }}
+		{{ with .info }}
+			<div class="notification">
+				<i class="icon">info</i>
+				<div>{{ . | markdownify }}</div>
+			</div>
+		{{ end }}
+
+		{{ with .warning }}
+			<div class="notification warning">
+				<i class="icon">warning</i>
+				<div>{{ . | markdownify }}</div>
+			</div>
+		{{ end }}
+
+		{{ with .danger }}
+			<div class="notification danger">
+				<i class="icon">warning</i>
+				<div>{{ . | markdownify }}</div>
+			</div>
+		{{ end }}
+
+		<code><span class="op-method {{ .method | lower }}">{{ .method }}</span>
+			<span class="text-color subtle">{{ .url }}</span>
+			{{- if findRE `(.*?)(\{[a-zA-Z0-9]+\})` .route -}}
+				{{- range findRESubmatch `(.*?)(\{[a-zA-Z0-9]+\})` .route -}}
+					{{- index . 1 -}}
+					<span class="text-color warning">{{ index . 2 }}</span>
+				{{- end -}}
+			{{- else }}{{ .route }}{{ end -}}
+
+			{{- $n := strings.Contains .route "?" -}}
+			{{- range .query -}}
+				{{- if eq .required false -}}
+					{{- if not $n }}?{{ else }}&{{ end -}}
+					{{- $n = true -}}
+					{{- .name }}=<span class="text-color primary">{{"{"}}{{ .name }}{{"}"}}</span>
+				{{- end -}}
+			{{- end}}</code>
+
+		{{ if .audience }}
+			<hr>
+			<div class="content">
+				<p><b>Headers</b>:</p>
+				<ul>
+					<li>
+						<code>Authorization: nadeo_v1 t=<span class="text-color primary">{token}</span></code>
+						<span>An <a href="/glossary#access-token">access token</a> for the <code>{{ .audience }}</code> <a href="/glossary#audience">audience</a></span>
+					</li>
+				</ul>
+			</div>
+		{{ end }}
+
+		{{ with .path }}
+			{{ partial "inline/api/params.html" (dict "name" "Path parameters" "class" "warning" "params" .) }}
+		{{ end }}
+
+		{{ with .query }}
+			{{ partial "inline/api/params.html" (dict "name" "Query parameters" "class" "primary" "params" .) }}
+		{{ end }}
+
+		{{ with .body }}
+			{{ partial "inline/api/params.html" (dict "name" "Body parameters" "class" "primary" "params" .) }}
+		{{ end }}
+	{{ end }}
+
+	<hr>
+
+	<div class="content">
+		{{ .Content }}
+	</div>
+{{ end }}
+
+{{ define "_partials/inline/api/params.html" }}
+	{{ $class := .class }}
+	<hr>
+	<div class="content">
+		<p><b>{{ .name }}</b>:</p>
+		<ul>
+			{{ range .params }}
+				{{ partial "inline/api/param.html" (merge . (dict "class" $class)) }}
+			{{ end }}
+		</ul>
+	</div>
+{{ end }}
+
+{{ define "_partials/inline/api/param.html" }}
+	<li>
+		<code><span class="text-color {{ .class }}">{{"{"}}{{ .name }}{{"}"}}</span></code>
+		<code><span class="text-color subtle">{{ .type }}</span></code>
+		<span>{{ .description }}</span>
+
+		{{ if eq .required true }}
+			<span class="text-color danger" title="Required">*</span>
+		{{ end }}
+
+		{{ if or (ne .default nil) (ne .min nil) (ne .max nil)  }}
+			<br>
+			{{ if ne .min nil }}
+				<span class="text-color subtle">Minimum:</span>
+				<code>{{ .min }}</code>
+			{{ end }}
+
+			{{ if ne .max nil }}
+				<span class="text-color subtle">Maximum:</span>
+				<code>{{ .max }}</code>
+			{{ end }}
+
+			{{ if ne .default nil }}
+				<span class="text-color subtle">Default:</span>
+				<code>{{ .default }}</code>
+			{{ end }}
+		{{ end }}
+
+		{{ range .children }}
+			<ul>
+				{{ partial "inline/api/param.html" . }}
+			</ul>
+		{{ end }}
+	</li>
+{{ end }}

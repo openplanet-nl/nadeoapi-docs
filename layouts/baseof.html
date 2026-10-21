@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>{{ .Title }} - {{ .Site.Title }}</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+		<link rel="manifest" href="/manifest.json">
+		<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
+
+		<meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+		{{ if .Description -}}
+			<meta property="og:description" content="{{ .Description }}">
+		{{- else -}}
+			<meta property="og:description" content="Documentation on Nadeo's Trackmania live services API.">
+		{{- end }}
+		<meta property="og:url" content="https://webservices.openplanet.dev/">
+		<meta property="og:image" content="https://openplanet.dev/img/logo_icon.png">
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feneko@0.2.3/feneko.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feneko@0.2.3/feneko-fonts.css">
+		<link rel="stylesheet" href="/style.css">
+	</head>
+
+	<body class="theme openplanet">
+		<section class="op-service-header hidden-mobile">
+			<div class="container">
+				<div class="columns vcenter">
+					<div class="column">
+						<p>Service provided by
+							<a class="openplanet" href="https://openplanet.dev/" target="blank" rel="noopener noreferrer">
+								<i class="icon">ecg_heart</i>
+								Openplanet
+							</a>
+							-
+							<a href="https://openplanet.dev/link/discord" target="blank" rel="noopener noreferrer">
+								Join Discord
+								<i class="icon">chat</i>
+							</a>
+						</p>
+					</div>
+
+					<div class="column narrow">
+						<a href="https://github.com/openplanet-nl/nadeoapi-docs" target="blank" rel="noopener noreferrer">
+							Contribute on Github
+							<i class="icon">code</i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<nav class="bar">
+			<div class="container">
+				<a href="/" class="item brand">
+					<i class="icon text-color success">code</i>
+					Trackmania Web Services API Documentation
+				</a>
+			</div>
+		</nav>
+
+		<section>
+			<div class="container">
+				<div class="columns">
+					<div class="column quarter">
+						{{ partial "menu.html" . }}
+					</div>
+
+					<div class="column docs-content">
+						{{ partial "breadcrumbs.html" . }}
+
+						{{ block "main" . }}
+						{{ end }}
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<p><small>This documentation is not affiliated with or endorsed by Nadeo or Ubisoft. All relevant trademarks belong to their respective owners.</small></p>
+			<p>This is a collaborative project, consider <a href="https://github.com/openplanet-nl/nadeoapi-docs" target="blank" rel="noopener noreferrer">contributing on Github</a>!</p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,74 @@
+---
+title: Get map info
+description: Gets information about a map via its UID.
+layout: api
+
+menus:
+  main:
+    identifier: LiveGetMapInfo
+    parent: LiveMaps
+
+params:
+  url: https://live-services.trackmania.nadeo.live
+  method: GET
+  route: /api/token/map/{mapUid}
+
+  audience: NadeoLiveServices
+
+  path:
+    - name: mapUid
+      type: string
+      description: The UID of the map
+      required: true
+---
+
+**Remarks**:
+
+- This endpoint only accepts `mapUid`s - to get map information for a `mapId` (or to translate `mapId`s to `mapUid`s), you can use the [Core API's map info (multiple) ID endpoint](/core/maps/info-multiple-id).
+
+---
+
+**Example request**:
+
+```plain
+GET https://live-services.trackmania.nadeo.live/api/token/map/QleO8OiNAkIXrZs6r0YLSrLBjEi
+```
+
+**Example response**:
+
+```json
+{
+  "uid": "QleO8OiNAkIXrZs6r0YLSrLBjEi",
+  "mapId": "606e4e16-f1d6-467c-9859-f1837a452166",
+  "name": "MIDNIGHT METROPOLIS",
+  "author": "144fce06-9b90-4af9-a5b0-9148bcc0566f",
+  "submitter": "144fce06-9b90-4af9-a5b0-9148bcc0566f",
+  "authorTime": 55910,
+  "goldTime": 60000,
+  "silverTime": 68000,
+  "bronzeTime": 84000,
+  "nbLaps": 0,
+  "valid": false,
+  "downloadUrl": "https://prod.trackmania.core.nadeo.online/storageObjects/9c20aff3-2046-4d7c-aa9b-52617d8d99e2",
+  "thumbnailUrl": "https://prod.trackmania.core.nadeo.online/storageObjects/4889bf39-a4f3-40b2-a582-9fa926e41930.jpg",
+  "uploadTimestamp": 1631578171,
+  "updateTimestamp": 1658421115,
+  "fileSize": null,
+  "public": false,
+  "favorite": false,
+  "playable": true,
+  "mapStyle": "TrackMania\\TM_Race",
+  "mapType": "TrackMania\\TM_Race",
+  "collectionName": "Stadium"
+}
+```
+
+If the map does not exist, the response will contain an error (status 500):
+
+```json
+{
+    "error": "NotFoundHttpException",
+    "message": "Nadeo Live Services Internal Log",
+    "traceId": "Root=1-68b47f2d-6c4f97f5124aa8ab32d2914e"
+}
+```

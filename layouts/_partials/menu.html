@@ -1,0 +1,61 @@
+{{- $page := . }}
+
+<nav class="tree">
+	<div class="header">General</div>
+	{{- with site.Menus.general }}
+		{{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+	{{- end }}
+
+	<div class="header">Reference</div>
+	{{- with site.Menus.main }}
+		{{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+	{{- end }}
+
+	<div class="header">OAuth</div>
+	{{- with site.Menus.oauth }}
+		{{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+	{{- end }}
+
+	<div class="header">Contribute</div>
+	<a class="item" href="https://github.com/openplanet-nl/nadeoapi-docs" target="_blank" rel="noopener">
+		Github
+	</a>
+	<a class="item" href="https://openplanet.dev/link/discord" target="_blank" rel="noopener">
+		Discord
+	</a>
+</nav>
+
+{{- define "_partials/inline/menu/walk.html" }}
+	{{- $page := .page }}
+	{{- range .menuEntries }}
+		{{- $attrs := dict "class" "item" "href" .URL }}
+		{{- if $page.IsMenuCurrent .Menu . }}
+			{{- $attrs = merge $attrs (dict "class" "item active" "aria-current" "page") }}
+		{{- end }}
+		{{- $name := .Name }}
+		{{- with .Identifier }}
+			{{- with T . }}
+				{{- $name = . }}
+			{{- end }}
+		{{- end }}
+		<a
+			{{- range $k, $v := $attrs }}
+				{{- with $v }}
+					{{- printf " %s=%q" $k $v | safeHTMLAttr }}
+				{{- end }}
+			{{- end -}}
+		>
+			{{ with .Page.Params.icon -}}
+				<i class="icon">{{ . }}</i>
+			{{ end }}
+			{{ $name }}
+		</a>
+		{{- if or ($page.IsMenuCurrent .Menu .) ($page.HasMenuCurrent .Menu .) -}}
+			{{- with .Children }}
+				<div class="group">
+					{{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+				</div>
+			{{- end -}}
+		{{- end }}
+	{{- end }}
+{{- end }}
