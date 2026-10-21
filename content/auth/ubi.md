@@ -9,7 +9,7 @@ menus:
 
 # Ubisoft account
 
-<div class="notification danger">
+<div class="notification danger outline">
 
 In April 2026 this authentication method stopped working, and has been replaced by [Nadeo-managed service accounts](/auth/service). This method may still work, but it should not be used anymore.
 

@@ -11,14 +11,14 @@
 		{{ end }}
 
 		{{ with .warning }}
-			<div class="notification warning">
+			<div class="notification warning outline">
 				<i class="icon">warning</i>
 				<div>{{ . | markdownify }}</div>
 			</div>
 		{{ end }}
 
 		{{ with .danger }}
-			<div class="notification danger">
+			<div class="notification danger outline">
 				<i class="icon">warning</i>
 				<div>{{ . | markdownify }}</div>
 			</div>

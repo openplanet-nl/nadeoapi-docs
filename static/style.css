@@ -4,13 +4,13 @@ body.theme.openplanet {
 	--bg-subtle: #070707;
 
 	--fg: #d7e0e9;
-	--fg-link: #2199ef;
+	--fg-link: #5fb6f4;
 	--fg-danger: #c9492c;
 	--fg-dim: rgb(from var(--fg) r g b / 0.5);
 
 	& .primary   { --sub-bg: #33a3f9;                      --sub-bg-subtle: oklch(from var(--sub-bg) calc(l - 0.25) calc(c - 0.05) h); }
 	& .secondary { --sub-bg: #2397be; --sub-fg: var(--bg); --sub-bg-subtle: oklch(from var(--sub-bg) calc(l - 0.25) calc(c - 0.05) h); }
-	& .success   { --sub-bg: #20ac2b; --sub-fg: var(--bg); --sub-bg-subtle: oklch(from var(--sub-bg) calc(l - 0.2) calc(c - 0.05) h); }
+	& .success   { --sub-bg: #22b92f; --sub-fg: var(--bg); --sub-bg-subtle: oklch(from var(--sub-bg) calc(l - 0.2) calc(c - 0.05) h); }
 	& .warning   { --sub-bg: #d89400; --sub-fg: var(--bg); --sub-bg-subtle: oklch(from var(--sub-bg) calc(l - 0.2) calc(c - 0.05) h); }
 	& .danger    { --sub-bg: #c9492c;                      --sub-bg-subtle: oklch(from var(--sub-bg) calc(l - 0.2) calc(c - 0.05) h); }
 	& .link      { --sub-bg: #04508b;                      --sub-bg-subtle: oklch(from var(--sub-bg) calc(l - 0.2) calc(c - 0.05) h); }
