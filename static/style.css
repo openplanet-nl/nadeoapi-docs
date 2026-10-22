@@ -68,34 +68,6 @@ div.highlight:not(:first-child) {
 }
 
 /* TODO: Move to Feneko */
-@media screen and (max-width: 1024px) {
-	.hidden-mobile {
-		display: none;
-	}
-}
-
-nav.tree {
-	& .header {
-		color: var(--fg-dim);
-	}
-
-	& a.item {
-		background: transparent;
-		&.active { background: var(--item-bg); }
-	}
-}
-
-pre > code {
-	/* todo: we should just *not match* code when it's inside of a pre instead of
-	 *       whatever this shit is */
-	background: transparent;
-	border: 0;
-	padding: 0;
-	font-size: inherit;
-	font-family: inherit;
-	border-radius: 0;
-}
-
 .content {
 	& ul > li + li {
 		margin-top: 0.35em;
