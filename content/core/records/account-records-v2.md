@@ -39,13 +39,19 @@ params:
 **Remarks**:
 
 - This endpoint only works for the currently authenticated account, requesting others' records will result in error `403`. This feature is not supported when using a dedicated server account's token.
-- This endpoint is limited to the most recent 1,000 records driven by the currently authenticated account. Retrieving all historical records is not supported.
+- This endpoint is limited to the most recent 1,000 records per gamemode driven by the currently authenticated account. Retrieving all historical records is not supported.
 - To retrieve records driven on Stunt / Platform maps (with the map type `TrackMania\TM_Stunt`/`Trackmania\TM_Platform`) set the `gameMode` parameter to `"Stunt"`/`"Platform"`.
 - When omitting the `seasonIdList` parameter, Race maps with clones require the `gameMode` parameter to be set to `"TimeAttackClone"`, otherwise the response will contain an empty list. It's recommended to always pass the `gameMode` parameter for consistency. To find out if a map has clones, you can use the Core API's [map info (multiple) ID](/core/maps/info-multiple-id) or [map info (multiple) UID](/core/maps/info-multiple-uid) endpoints.
 - `mapIdList` and `seasonIdList` should not both be provided in the same request as they both get applied on every result.
 - This endpoint's `mapIdList` parameter only accepts `mapId`s - to translate `mapUid`s to `mapId`s, you can use the [map info (multiple) UID endpoint](/core/maps/info-multiple-uid).
 - This endpoint has no intrinsic limit on the number of map/season IDs requested, but it will return a `414` error if the request URI length is 8220 characters or more (corresponding to just over 200 map IDs, depending on how you encode the URI).
-- If the map author has set a secret threshold score for their map, this endpoint will not return any actual `time` values for some entries. Instead, those leaderboard entries will contain `4294967295` in the `time` field. Additionally, the `url` link will result in a `403` error when requested.
+- If you do not have a record on a map, it will be omitted from the response. This means this endpoint cannot easily be used to get mapRecordIds in bulk.
+- If the map author has set a secret threshold score for their map, this endpoint will not return real values for some entries:
+  - Records by the authenticated account will always be returned as normal.
+  - in `TimeAttack` and `TimeAttackClone` gamemodes, if `time` is below the secret threshold then the `time` field will contain `4294967295`.
+  - in `Stunt` gamemode, if `score` is above the secret threshold then the `score` field will contain `0`.
+  - in `Platform` gamemode, if `respawnCount` is below the secret threshold then the `respawnCount` field will contain `4294967295`.
+  - Additionally, the `url` link will result in a `403` error when requested.
 
 ---
 
@@ -130,6 +136,38 @@ GET https://prod.trackmania.core.nadeo.online/v2/accounts/5b4d42f4-c2de-407d-b36
     "timestamp": "2024-07-02T18:11:11+00:00",
     "url": "https://core.trackmania.nadeo.live/storageObjects/f1ad31f8-aceb-43f7-844d-623e0aca2de0"
   }
+]
+```
+
+**Example request** for Platform records:
+
+```plain
+GET https://prod.trackmania.core.nadeo.online/v2/accounts/fc8467b8-b253-457f-b8bb-3bbd2bb5bfdd/mapRecords?mapIdList=8782990b-cfa9-4d40-91f0-68c14c2c5ae0&gameMode=Platform
+```
+
+**Example response**:
+
+```json
+[
+	{
+		"accountId": "fc8467b8-b253-457f-b8bb-3bbd2bb5bfdd",
+		"gameModeCustomData": "",
+		"medal": 4,
+		"mapId": "8782990b-cfa9-4d40-91f0-68c14c2c5ae0",
+		"scopeType": "PersonalBest",
+		"filename": "Replays\\Downloaded\\8782990b-cfa9-4d40-91f0-68c14c2c5ae0_fc8467b8-b253-457f-b8bb-3bbd2bb5bfdd_(0-0'24''41).replay.gbx",
+		"mapRecordId": "62c4bd91-98bd-41a6-b38e-d8786c7894ad",
+		"url": "https://core.trackmania.nadeo.live/storageObjects/6c8f0239-6fbb-4100-9083-73a47b3534e9",
+		"removed": false,
+		"gameMode": "Platform",
+		"timestamp": "2024-10-02T16:28:51+00:00",
+		"recordScore": {
+			"score": 0,
+			"time": 24412,
+			"respawnCount": 0
+		},
+		"scopeId": null
+	}
 ]
 ```
 
