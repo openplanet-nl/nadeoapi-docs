@@ -1,8 +1,16 @@
 # Trackmania API documentation
+
 [Visit the documentation here](https://webservices.openplanet.dev/).
 
-## Running the documentation locally
-The documentation is built with [Golda](https://codeberg.org/PersonalTechHelp/golda) (a fork of [Hugo](https://gohugo.io/)). Once you have Golda installed, you can run `golda serve` to work on the documentation. File changes are automatically refreshed.
+## Local setup
 
-## Building the documentation
-Run `golda` to build the documentation into the `public` folder. These are the files that will be served from the webservices documentation.
+The documentation is built with [Golda](https://codeberg.org/PersonalTechHelp/golda) (a fork of [Hugo](https://gohugo.io/)).
+
+You can find some prebuilt binaries on their [releases page](https://codeberg.org/PersonalTechHelp/golda/releases). If your environment is not covered by those you can [build it yourself](https://golda.personaltechhelp.com/getting-started/installation/#build-from-source) (Standard edition is sufficient).
+
+Once you have a binary, it's a good idea to add it to your `PATH` so you can call it from anywhere.
+
+### Common commands
+
+- `golda serve` to locally run the documentation site (with hot-reload enabled)
+- `golda` to build the documentation site into the `public` folder
