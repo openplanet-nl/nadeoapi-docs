@@ -45,12 +45,7 @@ params:
 - `mapIdList` and `seasonIdList` should not both be provided in the same request as they both get applied on every result.
 - This endpoint's `mapIdList` parameter only accepts `mapId`s - to translate `mapUid`s to `mapId`s, you can use the [map info (multiple) UID endpoint](/core/maps/info-multiple-uid).
 - This endpoint has no intrinsic limit on the number of map/season IDs requested, but it will return a `414` error if the request URI length is 8220 characters or more (corresponding to just over 200 map IDs, depending on how you encode the URI).
-- If the map author has set a secret threshold score for their map, this endpoint will not return real values for some entries:
-  - Records by the authenticated account will always be returned as normal.
-  - In `TimeAttack` and `TimeAttackClone` gamemodes, if `time` is below the secret threshold then the `time` field will contain `4294967295`.
-  - In `Stunt` gamemode, if `score` is above the secret threshold then the `score` field will contain `0`.
-  - In `Platform` gamemode, if `respawnCount` is below the secret threshold then the `respawnCount` field will contain `4294967295`.
-  - Additionally, the `url` link will result in a `403` error when requested.
+- Since secret records for the authenticated account aren't hidden, this endpoint won't need to hide secret records.
 
 ---
 
