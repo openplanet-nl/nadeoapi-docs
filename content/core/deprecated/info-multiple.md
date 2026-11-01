@@ -3,6 +3,11 @@ title: Get map info (multiple)
 description: Gets information about multiple maps via their IDs/UIDs.
 layout: api
 
+menus:
+  main:
+    parent: Deprecated
+    identifier: mapInfoMultiple_deprecated
+
 params:
   url: https://prod.trackmania.core.nadeo.online
   method: GET

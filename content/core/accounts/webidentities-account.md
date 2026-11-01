@@ -1,6 +1,6 @@
 ---
 title: Get player webIdentities
-description: Gets player webIdentities from account IDs
+description: Gets player webIdentities from account IDs.
 layout: api
 
 menus:

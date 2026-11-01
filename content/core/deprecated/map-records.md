@@ -3,6 +3,10 @@ title: Get map records
 description: Gets map records for a set of maps and a set of accounts.
 layout: api
 
+menus:
+  main:
+    parent: Deprecated
+
 params:
   url: https://prod.trackmania.core.nadeo.online
   method: GET

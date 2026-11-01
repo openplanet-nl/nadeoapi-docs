@@ -3,6 +3,11 @@ title: Get player webIdentities
 description: Gets player webIdentities from account IDs.
 layout: api
 
+menus:
+  main:
+    parent: Deprecated
+    identifier: webIdentities_deprecated
+
 params:
   url: https://prod.trackmania.core.nadeo.online
   method: GET
