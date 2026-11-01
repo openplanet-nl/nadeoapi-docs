@@ -44,7 +44,7 @@ params:
 - `mapIdList` and `seasonIdList` should not both be provided in the same request as they both get applied on every result.
 - This endpoint's `mapIdList` parameter only accepts `mapId`s - to translate `mapUid`s to `mapId`s, you can use the [map info (multiple) UID endpoint](/core/maps/info-multiple-uid).
 - This endpoint has no intrinsic limit on the number of map/season IDs requested, but it will return a `414` error if the request URI length is 8220 characters or more (corresponding to just over 200 map IDs, depending on how you encode the URI).
-- Since secret records for the authenticated account aren't hidden, this endpoint won't need to hide secret records.
+- Since this endpoint only returns the authenticated account's records, on maps with secret thresholds it returns the original time, score and respawnCount values instead of obscuring them
 
 ---
 
