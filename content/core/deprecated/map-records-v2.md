@@ -41,7 +41,12 @@ params:
 - The `seasonId` parameter does not accept the value `"Personal_Best"`- to retrieve records on the PB leaderboards, simply omit the `seasonId` parameter from the URL.
 - Stunt and Platform maps (with the map type `TrackMania\TM_Stunt`/`Trackmania\TM_Platform`) require the `gameMode` parameter to be set to `"Stunt"`/`"Platform"`, otherwise the response will contain a "Not found" error.
 - When omitting the `seasonId` parameter, Race maps with clones require the `gameMode` parameter to be set to `"TimeAttackClone"`, otherwise the response will contain an empty list. It's recommended to always pass the `gameMode` parameter for consistency. To find out if a map has clones, you can use the Core API's [map info (multiple) ID](/core/maps/info-multiple-id) or [map info (multiple) UID](/core/maps/info-multiple-uid) endpoints.
-- If the map author has set a secret threshold score for their map, this endpoint will not return any actual `time` values for some entries. Instead, those leaderboard entries will contain `4294967295` in the `time` field. Additionally, the `url` link will result in a `403` error when requested.
+- If the map author has set a secret threshold score for their map, this endpoint will not return real values for some entries:
+  - Records by the authenticated account will always be returned as normal.
+  - In `TimeAttack` and `TimeAttackClone` gamemodes, if `time` is below the secret threshold then the `time` field will contain `4294967295`.
+  - In `Stunt` gamemode, if `score` is above the secret threshold then the `score` field will contain `0`.
+  - In `Platform` gamemode, if `respawnCount` is below the secret threshold then the `respawnCount` field will contain `4294967295`.
+  - Additionally, the `url` link will result in a `403` error when requested.
 
 ---
 

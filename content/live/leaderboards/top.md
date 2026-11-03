@@ -51,7 +51,7 @@ params:
 - This endpoint only allows you to read a leaderboard's first 10,000 records. The rest of the leaderboard is not available at this level of detail.
 - If a `length` higher than `100` is requested, the API will successfully return only the first 100 records.
 - As of December 11th 2024, this endpoint's response also contains a `timestamp` for each leaderboard entry, which corresponds to the time the relevant record was set.
-- If the map author has set a secret threshold score for their map, this endpoint will not return any actual `score` values for some entries. Instead, those leaderboard entries will contain `-1` in the `score` field.
+- If the map author has set a secret threshold score for their map, this endpoint will not return any actual `score` values if the returned entry would be less than the secret threshold (regardless of gamemode). Instead, those leaderboard entries will contain `-1` in the `score` field.
 - If requesting records for a specific zone, only the top 5 records will be returned.
 - If using `onlyWorld=true`, the `zoneId` will be ignored.
 - See the [zones](/core/meta/zones) endpoint for available zone IDs.

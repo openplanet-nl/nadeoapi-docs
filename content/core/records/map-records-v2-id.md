@@ -25,7 +25,12 @@ params:
 
 - This endpoint only accepts a `mapRecordId` - you can use the [map records by accounts (v2) endpoint](/core/records/map-records-v2-account) to find these identifiers.
 - This endpoint has no intrinsic limit on the number of records requested, but it will return a 414 error if the request URI length is 8220 characters or more (e.g. corresponding to just above 200 records, depending on how you encode the URI).
-- If the map author has set a secret threshold score for their map, this endpoint will not return any actual `time` values for some entries. Instead, those leaderboard entries will contain `4294967295` in the `time` field. Additionally, the `url` link will result in a `403` error when requested.
+- If the map author has set a secret threshold score for their map, this endpoint will not return real values for some entries:
+  - Records by the authenticated account will always be returned as normal.
+  - In `TimeAttack` and `TimeAttackClone` gamemodes, if `time` is below the secret threshold then the `time` field will contain `4294967295`.
+  - In `Stunt` gamemode, if `score` is above the secret threshold then the `score` field will contain `0`.
+  - In `Platform` gamemode, if `respawnCount` is below the secret threshold then the `respawnCount` field will contain `4294967295`.
+  - Additionally, the `url` link will result in a `403` error when requested.
 
 ---
 
